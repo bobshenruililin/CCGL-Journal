@@ -33,7 +33,7 @@ export default function PixelRoom({scene=0,aftermath=false}:{scene?:number;after
  {panel?<><PixelPerson name="Mina" x={100} y={94} scale={1.4}/><PixelPerson name="Jules" x={145} y={95} scale={1.4}/><PixelPerson name="Dev" x={193} y={95} scale={1.4}/></>:<><path d="M87 115h28v34H87zM192 117h29v34h-29z" fill="#4a5c56"/><PixelPerson name="Mina" x={83} y={84} scale={1.6}/><PixelPerson name="Jules" x={181} y={88} scale={1.6}/>{day&&<PixelPerson name="Dev" x={249} y={116} scale={1.4}/>}</>}
  <path d="M64 123h174v14H64z" fill="#b8986c"/><path d="M64 137h174v7H64z" fill="#786147"/><path d="M72 144h8v29h-8zm150 0h8v29h-8z" fill="#5d5143"/>
  <path d="M126 105h37v27h-37z" fill="#3f5054"/><path d="M129 108h31v20h-31z" fill={aftermath?'#91b1a2':'#c4cbb8'}/><path d="M121 132h47v4h-47z" fill="#80918b"/><path d="M133 113h18v2h-18zm0 5h23v2h-23zm0 5h13v1h-13z" fill="#788d86"/>
- <path d="M178 124h26v9h-26z" fill="#eee2c5"/><path d="M181 126h16v1h-16zm0 3h13v1h-13z" fill="#a8a18a"/><path d="M209 117h9v13h-9zm9 2h4v8h-4z" fill="#b66e50"/><path d="M87 122h13v5H87z" fill="#ccab65"/>
+ <path d="M178 124h26v9h-26z" fill="#eee2c5"/><path d="M181 126h16v1h-16zm0 3h13v1h-13z" fill="#a8a18a"/><path d="M209 117h9v13h-9zm9 2h4v8h-4z" fill="#b66e50"/><path d="M87 122h13v5H87z" fill="#ccab65"/>{day&&<g><rect x="180" y="115" width="11" height="8" fill="#cf783e"/><rect x="182" y="117" width="7" height="3" fill="#e6d2a0"/></g>}
  {!day&&<path className="steam" d="M212 112v-3h2v-4h-1" fill="none" stroke="#e9dac0" opacity=".65"/>}
  {panel&&<><PixelPerson name="Mina" x={85} y={148} scale={1.4} back/><PixelPerson name="Dev" x={191} y={149} scale={1.4} back/></>}
  <rect y="181" width="320" height="5" fill="#4c534a" opacity=".4"/>

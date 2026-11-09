@@ -7,7 +7,9 @@ Follow Mina, Jules and Dev through a campus proposal over one week. Write a choi
 ## This version
 
 - Three original connected scenes, nine choices and 27 possible choice sequences.
-- Earlier decisions remembered in later entries and the closing reflection.
+- Earlier decisions remembered through dialogue, handwritten marks and recurring objects.
+- Unchanged answer selections preserve progress; rewriting an earlier answer warns before clearing later choices.
+- An unfoldable quotation restores the crucial “if”; an orange timer connects rehearsal to the route-specific ending.
 - Dotted choice lines that become ink, original pixel illustrations, a quiet colour reveal.
 - Character playbook, optional perspectives, clear-type mode and reduced-motion support.
 - Keyboard controls, responsive layout, browser-local progress and reflection.
@@ -22,7 +24,8 @@ Node 22.13+ required. `npm ci`, then `npm run dev`. Run `npx tsc --noEmit` for t
 ## Where to work
 
 - `app/story.ts`: original scenarios, character playbook, consequences and memory.
-- `app/page.tsx`: journal state, accessible controls, export and persistence.
+- `app/page.tsx`: accessible journal controls, export and persistence.
+- `app/state.ts`: validated saves, safe revisits and guarded branch rewrites.
 - `app/PixelRoom.tsx`, `app/AfterRain.tsx`: original pixel illustrations.
 - `app/globals.css`: paper, typography, motion, responsive and print rules.
 - `docs/creative-handoff.md`: focused Opus and Gemini briefs and honest model-use record.
@@ -31,4 +34,4 @@ Node 22.13+ required. `npm ci`, then `npm run dev`. Run `npx tsc --noEmit` for t
 
 Caveat and DM Sans are self-hosted under the SIL Open Font License; their license files are in `public/fonts`. The pixel artwork is original SVG. No paid assets, media-generation credits, external tracking, or model API calls are required at runtime. Choices and reflections are stored only in the visitor's browser. Browser storage can be unavailable; use text or print export to preserve a path.
 
-Prototype 0.1. The scenario and visual standard remain open to Bob's direction.
+Prototype 0.2. The scenario and visual standard remain open to Bob's direction.

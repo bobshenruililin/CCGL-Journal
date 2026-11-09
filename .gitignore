@@ -43,3 +43,7 @@ yarn-error.log*
 
 # OS metadata
 .DS_Store
+
+# Captured QA images remain local deliverables.
+/qa/*.png
+/qa/*.jpg

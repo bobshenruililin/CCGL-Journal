@@ -46,3 +46,30 @@ export function endingEcho(choices:number[]) {
  ['I didn’t fill the silence with a number. I made the next question clear.','I let someone else answer the part they knew. The gap didn’t disappear; we held it together.','I made a promise. Now the work is to keep it, including an honest update if the answer takes longer.'][choices[2]]
  ];
 }
+
+// These callbacks are actions and objects inside the scene, not a score or diagnosis.
+export function entryParagraphs(scene:number,choices:number[]):string[] {
+ if(scene===0)return scenes[0].paragraphs;
+ if(scene===1){
+  const callback=[
+   'Jules puts the marked-up quote beside my laptop. This time, I read the whole line before I touch the file.',
+   'Jules arrives with three tiny headings in the margin: claim, voice, limit. They tap the empty space under “limit.”',
+   'Jules lays our two versions side by side. Midnight is circled on one; 2 a.m. on the other. Dev draws one box around the agreed request.'
+  ][choices[0]];
+  return [callback,scenes[1].paragraphs[0], 'Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”', 'We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money.'];
+ }
+ const handover=[
+  'Jules waits half a beat for the handover. We didn’t rehearse this part together. I move my notes aside so they can see the next line.',
+  'Dev stops the orange timer at seven minutes. This is the handover we practised. He looks up, and I let the last sentence land.',
+  'Jules puts our agreed caveat beside the laptop, with their original concern still circled. I read both before I reach the last slide.'
+ ][choices[1]];
+ return [handover,'A panel member leans forward. “What would the extra staffing cost?”',scenes[2].paragraphs[2],scenes[2].paragraphs[3]];
+}
+export function closingMoment(choices:number[]):{caption:string;paragraph:string;owner:'Mina'|'Jules'|'Dev'} {
+ const moments=[
+  {caption:'Jules puts the phone face down.\nThe orange timer stays off.',paragraph:'Outside, Jules’s phone lights up. They turn it over without opening the message. Dev sets the orange timer between us, switched off. We can give each other this minute.',owner:'Jules' as const},
+  {caption:'Dev takes out the orange timer.\nThis time, he doesn’t start it.',paragraph:'On the bench, Dev takes the orange timer out of his pocket. My shoulders tighten before I notice he has put it face down. “No run-through,” he says. “Just sitting.”',owner:'Dev' as const},
+  {caption:'Jules reaches for the orange timer.\n“Can we have a minute without this?”',paragraph:'Jules picks up the orange timer and puts it back in Dev’s bag. “Can we have a minute without this?” Dev moves the bag under the bench. Nobody calls a vote.',owner:'Jules' as const}
+ ];
+ return moments[choices[1]];
+}
