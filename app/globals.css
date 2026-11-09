@@ -13,3 +13,30 @@
 .site-header .icon-button{border:1px solid #a7a99e!important;width:44px;height:44px}.site-header .icon-button:before{content:none}
 .choice.selected strong{animation:none}.choice.selected.fresh-ink strong{animation:ink-in .7s cubic-bezier(.4,0,.2,1) both}.restored-ink{display:inline-block;max-width:100%}.quote-slip button[aria-expanded=true]{font-size:19px;color:#75654f}.still .choice.selected.fresh-ink strong{animation:none!important}@media(prefers-reduced-motion:reduce){.choice.selected.fresh-ink strong,.restored-ink{animation:none!important;clip-path:none!important}}
 .peek span,.quote-slip button>span,.fresh-start span,.signature span{font-family:var(--sans)}.still{animation:none!important;transition:none!important}
+
+/* Reading rhythm: show the whole situation, let interpretation wait in the margin. */
+.opening-notebook{min-height:100svh;display:grid;place-items:center;font-family:var(--hand);font-size:28px;color:var(--blue)}
+.reader-role{font-size:12px;line-height:1.6;color:var(--rust);margin:-9px 0 20px}
+.reflection{display:flex;flex-direction:column;gap:24px}
+.reflection .continue{margin-top:0}
+.reflection-note{position:relative;background:#ebe0c3;box-shadow:2px 4px 6px #51432e16;transform:rotate(-.65deg);border-bottom:1px solid #c4b38d}
+.reflection-note:after{content:'';position:absolute;right:0;bottom:0;width:24px;height:24px;pointer-events:none;background:linear-gradient(135deg,#d0c09b 0,#f7f0df 60%);clip-path:polygon(100% 0,100% 100%,0 100%)}
+.reflection-note summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:70px;padding:17px 23px;font-family:var(--hand);font-size:28px;line-height:1.2;color:var(--blue);cursor:pointer}
+.reflection-note summary::-webkit-details-marker{display:none}
+.reflection-note summary:focus-visible{outline:3px solid #b55e3d;outline-offset:5px}
+.reflection-note summary:hover{background:#decea744}
+.fold-mark{font-family:var(--sans);font-size:22px;font-weight:300;color:var(--rust);transition:transform .2s}
+.reflection-note[open] .fold-mark{transform:rotate(45deg)}
+.reflection-note-content{padding:0 23px 28px}
+.reflection-note .reflect-question{margin:3px 0 23px;font-size:26px}
+.reflection-note h2{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.5px;line-height:1.5;margin:0 0 14px;color:var(--rust)}
+.reflection-note[open] .reflection-note-content{animation:margin-unfold .28s ease-out}
+.book{animation:paper-turn-forward .5s cubic-bezier(.22,.61,.36,1)}
+.book.turn-backward{animation-name:paper-turn-backward}
+@keyframes paper-turn-forward{from{opacity:.8;transform:perspective(1800px) rotateY(-3deg) translateX(8px)}to{opacity:1;transform:perspective(1800px) rotateY(0) translateX(0)}}
+@keyframes paper-turn-backward{from{opacity:.8;transform:perspective(1800px) rotateY(3deg) translateX(-8px)}to{opacity:1;transform:perspective(1800px) rotateY(0) translateX(0)}}
+@keyframes margin-unfold{from{opacity:.5;transform:translateY(-3px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){.reader-role{font-size:13px;margin-bottom:20px}.reflection{gap:24px}.reflection-note summary{font-size:28px;padding:18px 20px}.reflection-note-content{padding:0 20px 27px}.reflection-note h2{font-size:12px}.reflection-note .reflect-question{font-size:27px}.reflection .continue{margin-top:0}}
+@media print{.opening-notebook{display:none}}
+.clear-type .reflection-note summary{font-family:var(--sans);font-size:17px;line-height:1.5}
+.clear-type .reflection-note .reflect-question{font-family:var(--serif);font-size:18px;line-height:1.5}
