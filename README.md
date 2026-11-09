@@ -19,16 +19,17 @@ The characters and narrative are fictional. Amanda and Hannah's workbook provide
 
 ## Develop
 
-Node 22.13+ required. `npm ci`, then `npm run dev`. Run `npx tsc --noEmit` for type checking and `npm run build` for production output. The project uses the Sites Vinext starter and retains its Worker build integration. Deployment configuration lives in `.openai/hosting.json`; never replace an existing project ID.
+Node 22.13+ required. `npm ci`, then `npm run dev`. Run `npm test` for all route/state and narrative-continuity regressions, `npx tsc --noEmit` for type checking and `npm run build` for production output. The project uses the Sites Vinext starter and retains its Worker build integration. Deployment configuration lives in `.openai/hosting.json`; never replace an existing project ID.
 
 ## Where to work
 
-- `app/story.ts`: original scenarios, character playbook, consequences and memory.
+- `app/story.ts`: original scenarios, character playbook, route-resolved consequences, endings and shared text exports. Use `choiceOutcome`, `journalEntries` and `endingParagraphs` when displaying an existing route instead of reading raw choice results.
 - `app/page.tsx`: accessible journal controls, export and persistence.
 - `app/state.ts`: validated saves, safe revisits and guarded branch rewrites.
 - `app/PixelRoom.tsx`, `app/AfterRain.tsx`: original pixel illustrations.
 - `app/globals.css`: paper, typography, motion, responsive and print rules.
 - `docs/creative-handoff.md`: focused Opus and Gemini briefs and honest model-use record.
+- `docs/continuity-revision.md`: choice-contract repairs and verification limits for this branch.
 
 ## Assets and privacy
 
