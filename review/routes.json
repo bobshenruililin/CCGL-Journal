@@ -1,0 +1,2570 @@
+{
+  "storySha256": "7a610fc99577758c29a8a70f889bf38bab09a55734e7866b3dfb2c65d9dec6f0",
+  "routes": [
+    {
+      "id": "1-1-1",
+      "choices": [
+        0,
+        0,
+        0
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Send me the file. I’ll reshape it tonight.”",
+            "detail": "Protect tomorrow’s rehearsal. Take the edit on yourself.",
+            "approach": "Setting the pace",
+            "gain": "You protected the rehearsal by taking on the structural edit.",
+            "cost": "The time came from your sleep. Jules still had to check that the shortened quotations meant the same thing.",
+            "question": "Before taking over, what would you agree about what can change—and who gets the final check?",
+            "result": [
+              "By 1:18, the deck has eight slides. The argument is clearer. I’ve made the last train, barely.",
+              "In the morning, Jules circles one of my edits. “This person said they’d stay late if the buses still ran. You’ve cut the ‘if’.”",
+              "The rehearsal slot is safe. One sentence isn’t. We put the condition back."
+            ],
+            "voice": "I was relieved when Mina offered. Then I saw the quote. I don’t need every word kept. I need to know which ones are being cut.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules puts the marked-up quote beside my laptop. This time, I read the whole line before I touch the file.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Check that one thing. We’ll agree a fallback.”",
+            "detail": "Jules follows up. You and Dev rehearse without them.",
+            "approach": "Testing an assumption",
+            "gain": "You put an important assumption to the people affected, with a fallback if they did not reply.",
+            "cost": "Jules missed the run-through. One reply would still be too little to establish demand.",
+            "question": "What answer would change your plan—and what will you do if no answer arrives?",
+            "result": [
+              "We agree the line before Jules sends the message: demand for this particular room is still unconfirmed.",
+              "One reply comes in before the panel. “Maybe, if the late bus stop is close.” Useful. Not a yes.",
+              "Dev and I have practised the handover twice. Jules has to learn it on the day."
+            ],
+            "voice": "We got a better question, not the reassurance I’d hoped for. I’m glad we agreed what we’d say before the reply arrived.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules waits half a beat for the handover. We didn’t rehearse this part together. I move my notes aside so they can see the next line.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "Explain the assumptions. Ask for a feasibility review.",
+            "detail": "Keep the conversation moving while naming what is unknown.",
+            "approach": "Giving direction with limits",
+            "gain": "You made a specific next step possible without inventing a cost.",
+            "cost": "The panel could reasonably question your assumptions before supporting a review.",
+            "question": "Which assumption would you be willing to have someone challenge in public?",
+            "result": [
+              "“We don’t have a staffing estimate,” I say. “The request is a feasibility review of one room for two weeks, including who would need to be there.”",
+              "The panel member writes something down. “Then put staffing and late transport in the review questions.”",
+              "I do. We have a next step to propose, not a promise that the room will open."
+            ],
+            "voice": "I could hear the difference between not having an answer and trying to hide it. This time we let the question stay a question.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "I fixed the deck quickly. I also learned that an edit can change what someone meant. Next time, I want a check before a handover.",
+        "We asked a better question and got a conditional reply. I want to remember that evidence can make a plan less tidy and more useful.",
+        "I didn’t fill the silence with a number. I made the next question clear."
+      ],
+      "closing": {
+        "caption": "Jules puts the phone face down.\nThe orange timer stays off.",
+        "paragraph": "Outside, Jules’s phone lights up. They turn it over without opening the message. Dev sets the orange timer between us, switched off. We can give each other this minute.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "1-1-2",
+      "choices": [
+        0,
+        0,
+        1
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Send me the file. I’ll reshape it tonight.”",
+            "detail": "Protect tomorrow’s rehearsal. Take the edit on yourself.",
+            "approach": "Setting the pace",
+            "gain": "You protected the rehearsal by taking on the structural edit.",
+            "cost": "The time came from your sleep. Jules still had to check that the shortened quotations meant the same thing.",
+            "question": "Before taking over, what would you agree about what can change—and who gets the final check?",
+            "result": [
+              "By 1:18, the deck has eight slides. The argument is clearer. I’ve made the last train, barely.",
+              "In the morning, Jules circles one of my edits. “This person said they’d stay late if the buses still ran. You’ve cut the ‘if’.”",
+              "The rehearsal slot is safe. One sentence isn’t. We put the condition back."
+            ],
+            "voice": "I was relieved when Mina offered. Then I saw the quote. I don’t need every word kept. I need to know which ones are being cut.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules puts the marked-up quote beside my laptop. This time, I read the whole line before I touch the file.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Check that one thing. We’ll agree a fallback.”",
+            "detail": "Jules follows up. You and Dev rehearse without them.",
+            "approach": "Testing an assumption",
+            "gain": "You put an important assumption to the people affected, with a fallback if they did not reply.",
+            "cost": "Jules missed the run-through. One reply would still be too little to establish demand.",
+            "question": "What answer would change your plan—and what will you do if no answer arrives?",
+            "result": [
+              "We agree the line before Jules sends the message: demand for this particular room is still unconfirmed.",
+              "One reply comes in before the panel. “Maybe, if the late bus stop is close.” Useful. Not a yes.",
+              "Dev and I have practised the handover twice. Jules has to learn it on the day."
+            ],
+            "voice": "We got a better question, not the reassurance I’d hoped for. I’m glad we agreed what we’d say before the reply arrived.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules waits half a beat for the handover. We didn’t rehearse this part together. I move my notes aside so they can see the next line.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“Dev, can you explain what we do know?”",
+            "detail": "Invite relevant knowledge. Leave room for its limits.",
+            "approach": "Making room for expertise",
+            "gain": "You made space for a teammate to contribute the knowledge they actually had.",
+            "cost": "Passing the microphone could feel like passing the pressure. Dev still could not supply a cost.",
+            "question": "How would you invite someone’s expertise without making them responsible for an answer they do not have?",
+            "result": [
+              "I turn to Dev. “You’ve checked the room rules. Can you explain that part? We don’t have the costs yet.”",
+              "Dev puts both hands on the table. “The current rules don’t tell us what extra staffing would be required. We need to ask facilities.”",
+              "It isn’t a rescue. It is a more accurate answer than I could have given alone."
+            ],
+            "voice": "The words “that part” helped. I knew what I was being asked to own, and what I wasn’t.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "I fixed the deck quickly. I also learned that an edit can change what someone meant. Next time, I want a check before a handover.",
+        "We asked a better question and got a conditional reply. I want to remember that evidence can make a plan less tidy and more useful.",
+        "I let someone else answer the part they knew. The gap didn’t disappear; we held it together."
+      ],
+      "closing": {
+        "caption": "Jules puts the phone face down.\nThe orange timer stays off.",
+        "paragraph": "Outside, Jules’s phone lights up. They turn it over without opening the message. Dev sets the orange timer between us, switched off. We can give each other this minute.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "1-1-3",
+      "choices": [
+        0,
+        0,
+        2
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Send me the file. I’ll reshape it tonight.”",
+            "detail": "Protect tomorrow’s rehearsal. Take the edit on yourself.",
+            "approach": "Setting the pace",
+            "gain": "You protected the rehearsal by taking on the structural edit.",
+            "cost": "The time came from your sleep. Jules still had to check that the shortened quotations meant the same thing.",
+            "question": "Before taking over, what would you agree about what can change—and who gets the final check?",
+            "result": [
+              "By 1:18, the deck has eight slides. The argument is clearer. I’ve made the last train, barely.",
+              "In the morning, Jules circles one of my edits. “This person said they’d stay late if the buses still ran. You’ve cut the ‘if’.”",
+              "The rehearsal slot is safe. One sentence isn’t. We put the condition back."
+            ],
+            "voice": "I was relieved when Mina offered. Then I saw the quote. I don’t need every word kept. I need to know which ones are being cut.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules puts the marked-up quote beside my laptop. This time, I read the whole line before I touch the file.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Check that one thing. We’ll agree a fallback.”",
+            "detail": "Jules follows up. You and Dev rehearse without them.",
+            "approach": "Testing an assumption",
+            "gain": "You put an important assumption to the people affected, with a fallback if they did not reply.",
+            "cost": "Jules missed the run-through. One reply would still be too little to establish demand.",
+            "question": "What answer would change your plan—and what will you do if no answer arrives?",
+            "result": [
+              "We agree the line before Jules sends the message: demand for this particular room is still unconfirmed.",
+              "One reply comes in before the panel. “Maybe, if the late bus stop is close.” Useful. Not a yes.",
+              "Dev and I have practised the handover twice. Jules has to learn it on the day."
+            ],
+            "voice": "We got a better question, not the reassurance I’d hoped for. I’m glad we agreed what we’d say before the reply arrived.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules waits half a beat for the handover. We didn’t rehearse this part together. I move my notes aside so they can see the next line.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“We’ll check with facilities and follow up on Monday.”",
+            "detail": "Offer a concrete follow-up instead of a speculative answer.",
+            "approach": "Taking accountable follow-up",
+            "gain": "You protected the accuracy of the answer and named a time to return.",
+            "cost": "The panel left without a cost. Your promise now needed an owner and a realistic fallback if facilities did not reply.",
+            "question": "What would your follow-up contain if the person with the answer has not replied by the date you promised?",
+            "result": [
+              "“We can’t give you a reliable figure today,” I say. “We’ll contact facilities and send an update on Monday, even if the estimate is still pending.”",
+              "Outside, Dev stops me. “Who’s writing that email?”",
+              "We divide it there: I contact facilities, Jules lists the open questions, Dev checks the draft. Monday becomes a shared task, not a line I said to fill the silence."
+            ],
+            "voice": "A date sounds solid when you say it into a quiet room. I’m glad we worked out what it actually meant before we went home.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "I fixed the deck quickly. I also learned that an edit can change what someone meant. Next time, I want a check before a handover.",
+        "We asked a better question and got a conditional reply. I want to remember that evidence can make a plan less tidy and more useful.",
+        "I made a promise. Now the work is to keep it, including an honest update if the answer takes longer."
+      ],
+      "closing": {
+        "caption": "Jules puts the phone face down.\nThe orange timer stays off.",
+        "paragraph": "Outside, Jules’s phone lights up. They turn it over without opening the message. Dev sets the orange timer between us, switched off. We can give each other this minute.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "1-2-1",
+      "choices": [
+        0,
+        1,
+        0
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Send me the file. I’ll reshape it tonight.”",
+            "detail": "Protect tomorrow’s rehearsal. Take the edit on yourself.",
+            "approach": "Setting the pace",
+            "gain": "You protected the rehearsal by taking on the structural edit.",
+            "cost": "The time came from your sleep. Jules still had to check that the shortened quotations meant the same thing.",
+            "question": "Before taking over, what would you agree about what can change—and who gets the final check?",
+            "result": [
+              "By 1:18, the deck has eight slides. The argument is clearer. I’ve made the last train, barely.",
+              "In the morning, Jules circles one of my edits. “This person said they’d stay late if the buses still ran. You’ve cut the ‘if’.”",
+              "The rehearsal slot is safe. One sentence isn’t. We put the condition back."
+            ],
+            "voice": "I was relieved when Mina offered. Then I saw the quote. I don’t need every word kept. I need to know which ones are being cut.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules puts the marked-up quote beside my laptop. This time, I read the whole line before I touch the file.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Let’s rehearse. We’ll name the gap.”",
+            "detail": "Practise the delivery. Describe room demand as unconfirmed.",
+            "approach": "Making uncertainty visible",
+            "gain": "You practised a clear, honest request instead of treating an assumption as evidence.",
+            "cost": "You still had not checked whether this room suited the students you hoped to help.",
+            "question": "When does naming uncertainty make a proposal honest, and when does it become an excuse not to investigate?",
+            "result": [
+              "We change one sentence: “Students want later access. Whether this room works for them is a question for the trial.”",
+              "Our first run is nine minutes. The second is seven. Dev points out the slide where I keep speeding up.",
+              "We leave with a cleaner presentation and the same unanswered question. At least it is on the page now."
+            ],
+            "voice": "I’m glad we used the time. I also know a good delivery can make a thin bit of evidence sound thicker than it is.",
+            "speaker": "Dev"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Dev stops the orange timer at seven minutes. This is the handover we practised. He looks up, and I let the last sentence land.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "Explain the assumptions. Ask for a feasibility review.",
+            "detail": "Keep the conversation moving while naming what is unknown.",
+            "approach": "Giving direction with limits",
+            "gain": "You made a specific next step possible without inventing a cost.",
+            "cost": "The panel could reasonably question your assumptions before supporting a review.",
+            "question": "Which assumption would you be willing to have someone challenge in public?",
+            "result": [
+              "“We don’t have a staffing estimate,” I say. “The request is a feasibility review of one room for two weeks, including who would need to be there.”",
+              "The panel member writes something down. “Then put staffing and late transport in the review questions.”",
+              "I do. We have a next step to propose, not a promise that the room will open."
+            ],
+            "voice": "I could hear the difference between not having an answer and trying to hide it. This time we let the question stay a question.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "I fixed the deck quickly. I also learned that an edit can change what someone meant. Next time, I want a check before a handover.",
+        "We said what we didn’t know. I want to remember to come back to it, now that the presentation is over.",
+        "I didn’t fill the silence with a number. I made the next question clear."
+      ],
+      "closing": {
+        "caption": "Dev takes out the orange timer.\nThis time, he doesn’t start it.",
+        "paragraph": "On the bench, Dev takes the orange timer out of his pocket. My shoulders tighten before I notice he has put it face down. “No run-through,” he says. “Just sitting.”",
+        "owner": "Dev"
+      }
+    },
+    {
+      "id": "1-2-2",
+      "choices": [
+        0,
+        1,
+        1
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Send me the file. I’ll reshape it tonight.”",
+            "detail": "Protect tomorrow’s rehearsal. Take the edit on yourself.",
+            "approach": "Setting the pace",
+            "gain": "You protected the rehearsal by taking on the structural edit.",
+            "cost": "The time came from your sleep. Jules still had to check that the shortened quotations meant the same thing.",
+            "question": "Before taking over, what would you agree about what can change—and who gets the final check?",
+            "result": [
+              "By 1:18, the deck has eight slides. The argument is clearer. I’ve made the last train, barely.",
+              "In the morning, Jules circles one of my edits. “This person said they’d stay late if the buses still ran. You’ve cut the ‘if’.”",
+              "The rehearsal slot is safe. One sentence isn’t. We put the condition back."
+            ],
+            "voice": "I was relieved when Mina offered. Then I saw the quote. I don’t need every word kept. I need to know which ones are being cut.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules puts the marked-up quote beside my laptop. This time, I read the whole line before I touch the file.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Let’s rehearse. We’ll name the gap.”",
+            "detail": "Practise the delivery. Describe room demand as unconfirmed.",
+            "approach": "Making uncertainty visible",
+            "gain": "You practised a clear, honest request instead of treating an assumption as evidence.",
+            "cost": "You still had not checked whether this room suited the students you hoped to help.",
+            "question": "When does naming uncertainty make a proposal honest, and when does it become an excuse not to investigate?",
+            "result": [
+              "We change one sentence: “Students want later access. Whether this room works for them is a question for the trial.”",
+              "Our first run is nine minutes. The second is seven. Dev points out the slide where I keep speeding up.",
+              "We leave with a cleaner presentation and the same unanswered question. At least it is on the page now."
+            ],
+            "voice": "I’m glad we used the time. I also know a good delivery can make a thin bit of evidence sound thicker than it is.",
+            "speaker": "Dev"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Dev stops the orange timer at seven minutes. This is the handover we practised. He looks up, and I let the last sentence land.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“Dev, can you explain what we do know?”",
+            "detail": "Invite relevant knowledge. Leave room for its limits.",
+            "approach": "Making room for expertise",
+            "gain": "You made space for a teammate to contribute the knowledge they actually had.",
+            "cost": "Passing the microphone could feel like passing the pressure. Dev still could not supply a cost.",
+            "question": "How would you invite someone’s expertise without making them responsible for an answer they do not have?",
+            "result": [
+              "I turn to Dev. “You’ve checked the room rules. Can you explain that part? We don’t have the costs yet.”",
+              "Dev puts both hands on the table. “The current rules don’t tell us what extra staffing would be required. We need to ask facilities.”",
+              "It isn’t a rescue. It is a more accurate answer than I could have given alone."
+            ],
+            "voice": "The words “that part” helped. I knew what I was being asked to own, and what I wasn’t.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "I fixed the deck quickly. I also learned that an edit can change what someone meant. Next time, I want a check before a handover.",
+        "We said what we didn’t know. I want to remember to come back to it, now that the presentation is over.",
+        "I let someone else answer the part they knew. The gap didn’t disappear; we held it together."
+      ],
+      "closing": {
+        "caption": "Dev takes out the orange timer.\nThis time, he doesn’t start it.",
+        "paragraph": "On the bench, Dev takes the orange timer out of his pocket. My shoulders tighten before I notice he has put it face down. “No run-through,” he says. “Just sitting.”",
+        "owner": "Dev"
+      }
+    },
+    {
+      "id": "1-2-3",
+      "choices": [
+        0,
+        1,
+        2
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Send me the file. I’ll reshape it tonight.”",
+            "detail": "Protect tomorrow’s rehearsal. Take the edit on yourself.",
+            "approach": "Setting the pace",
+            "gain": "You protected the rehearsal by taking on the structural edit.",
+            "cost": "The time came from your sleep. Jules still had to check that the shortened quotations meant the same thing.",
+            "question": "Before taking over, what would you agree about what can change—and who gets the final check?",
+            "result": [
+              "By 1:18, the deck has eight slides. The argument is clearer. I’ve made the last train, barely.",
+              "In the morning, Jules circles one of my edits. “This person said they’d stay late if the buses still ran. You’ve cut the ‘if’.”",
+              "The rehearsal slot is safe. One sentence isn’t. We put the condition back."
+            ],
+            "voice": "I was relieved when Mina offered. Then I saw the quote. I don’t need every word kept. I need to know which ones are being cut.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules puts the marked-up quote beside my laptop. This time, I read the whole line before I touch the file.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Let’s rehearse. We’ll name the gap.”",
+            "detail": "Practise the delivery. Describe room demand as unconfirmed.",
+            "approach": "Making uncertainty visible",
+            "gain": "You practised a clear, honest request instead of treating an assumption as evidence.",
+            "cost": "You still had not checked whether this room suited the students you hoped to help.",
+            "question": "When does naming uncertainty make a proposal honest, and when does it become an excuse not to investigate?",
+            "result": [
+              "We change one sentence: “Students want later access. Whether this room works for them is a question for the trial.”",
+              "Our first run is nine minutes. The second is seven. Dev points out the slide where I keep speeding up.",
+              "We leave with a cleaner presentation and the same unanswered question. At least it is on the page now."
+            ],
+            "voice": "I’m glad we used the time. I also know a good delivery can make a thin bit of evidence sound thicker than it is.",
+            "speaker": "Dev"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Dev stops the orange timer at seven minutes. This is the handover we practised. He looks up, and I let the last sentence land.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“We’ll check with facilities and follow up on Monday.”",
+            "detail": "Offer a concrete follow-up instead of a speculative answer.",
+            "approach": "Taking accountable follow-up",
+            "gain": "You protected the accuracy of the answer and named a time to return.",
+            "cost": "The panel left without a cost. Your promise now needed an owner and a realistic fallback if facilities did not reply.",
+            "question": "What would your follow-up contain if the person with the answer has not replied by the date you promised?",
+            "result": [
+              "“We can’t give you a reliable figure today,” I say. “We’ll contact facilities and send an update on Monday, even if the estimate is still pending.”",
+              "Outside, Dev stops me. “Who’s writing that email?”",
+              "We divide it there: I contact facilities, Jules lists the open questions, Dev checks the draft. Monday becomes a shared task, not a line I said to fill the silence."
+            ],
+            "voice": "A date sounds solid when you say it into a quiet room. I’m glad we worked out what it actually meant before we went home.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "I fixed the deck quickly. I also learned that an edit can change what someone meant. Next time, I want a check before a handover.",
+        "We said what we didn’t know. I want to remember to come back to it, now that the presentation is over.",
+        "I made a promise. Now the work is to keep it, including an honest update if the answer takes longer."
+      ],
+      "closing": {
+        "caption": "Dev takes out the orange timer.\nThis time, he doesn’t start it.",
+        "paragraph": "On the bench, Dev takes the orange timer out of his pocket. My shoulders tighten before I notice he has put it face down. “No run-through,” he says. “Just sitting.”",
+        "owner": "Dev"
+      }
+    },
+    {
+      "id": "1-3-1",
+      "choices": [
+        0,
+        2,
+        0
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Send me the file. I’ll reshape it tonight.”",
+            "detail": "Protect tomorrow’s rehearsal. Take the edit on yourself.",
+            "approach": "Setting the pace",
+            "gain": "You protected the rehearsal by taking on the structural edit.",
+            "cost": "The time came from your sleep. Jules still had to check that the shortened quotations meant the same thing.",
+            "question": "Before taking over, what would you agree about what can change—and who gets the final check?",
+            "result": [
+              "By 1:18, the deck has eight slides. The argument is clearer. I’ve made the last train, barely.",
+              "In the morning, Jules circles one of my edits. “This person said they’d stay late if the buses still ran. You’ve cut the ‘if’.”",
+              "The rehearsal slot is safe. One sentence isn’t. We put the condition back."
+            ],
+            "voice": "I was relieved when Mina offered. Then I saw the quote. I don’t need every word kept. I need to know which ones are being cut.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules puts the marked-up quote beside my laptop. This time, I read the whole line before I touch the file.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Ten minutes. What can we all stand behind?”",
+            "detail": "Let everyone argue for a plan, then make a timed group decision.",
+            "approach": "Deciding together",
+            "gain": "Everyone had a direct say in the risk the group would take.",
+            "cost": "The discussion used a third of the remaining time, and a majority decision did not remove the disagreement.",
+            "question": "What should a group decide together—and what would make that decision binding when time runs out?",
+            "result": [
+              "Jules wants to check. Dev wants one full rehearsal. I give us ten minutes to decide, and set the timer where we can all see it.",
+              "Two of us choose rehearsal with the uncertainty stated. Jules disagrees, then helps write the sentence.",
+              "We only manage one run. There is no extra time for having made the decision carefully."
+            ],
+            "voice": "I can work with a decision I didn’t vote for. But I want the reason I disagreed to survive the vote.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules puts our agreed caveat beside the laptop, with their original concern still circled. I read both before I reach the last slide.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "Explain the assumptions. Ask for a feasibility review.",
+            "detail": "Keep the conversation moving while naming what is unknown.",
+            "approach": "Giving direction with limits",
+            "gain": "You made a specific next step possible without inventing a cost.",
+            "cost": "The panel could reasonably question your assumptions before supporting a review.",
+            "question": "Which assumption would you be willing to have someone challenge in public?",
+            "result": [
+              "“We don’t have a staffing estimate,” I say. “The request is a feasibility review of one room for two weeks, including who would need to be there.”",
+              "The panel member writes something down. “Then put staffing and late transport in the review questions.”",
+              "I do. We have a next step to propose, not a promise that the room will open."
+            ],
+            "voice": "I could hear the difference between not having an answer and trying to hide it. This time we let the question stay a question.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "I fixed the deck quickly. I also learned that an edit can change what someone meant. Next time, I want a check before a handover.",
+        "We made a decision together. I want to remember the concern that lost the vote. It might matter more later.",
+        "I didn’t fill the silence with a number. I made the next question clear."
+      ],
+      "closing": {
+        "caption": "Jules reaches for the orange timer.\n“Can we have a minute without this?”",
+        "paragraph": "Jules picks up the orange timer and puts it back in Dev’s bag. “Can we have a minute without this?” Dev moves the bag under the bench. Nobody calls a vote.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "1-3-2",
+      "choices": [
+        0,
+        2,
+        1
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Send me the file. I’ll reshape it tonight.”",
+            "detail": "Protect tomorrow’s rehearsal. Take the edit on yourself.",
+            "approach": "Setting the pace",
+            "gain": "You protected the rehearsal by taking on the structural edit.",
+            "cost": "The time came from your sleep. Jules still had to check that the shortened quotations meant the same thing.",
+            "question": "Before taking over, what would you agree about what can change—and who gets the final check?",
+            "result": [
+              "By 1:18, the deck has eight slides. The argument is clearer. I’ve made the last train, barely.",
+              "In the morning, Jules circles one of my edits. “This person said they’d stay late if the buses still ran. You’ve cut the ‘if’.”",
+              "The rehearsal slot is safe. One sentence isn’t. We put the condition back."
+            ],
+            "voice": "I was relieved when Mina offered. Then I saw the quote. I don’t need every word kept. I need to know which ones are being cut.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules puts the marked-up quote beside my laptop. This time, I read the whole line before I touch the file.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Ten minutes. What can we all stand behind?”",
+            "detail": "Let everyone argue for a plan, then make a timed group decision.",
+            "approach": "Deciding together",
+            "gain": "Everyone had a direct say in the risk the group would take.",
+            "cost": "The discussion used a third of the remaining time, and a majority decision did not remove the disagreement.",
+            "question": "What should a group decide together—and what would make that decision binding when time runs out?",
+            "result": [
+              "Jules wants to check. Dev wants one full rehearsal. I give us ten minutes to decide, and set the timer where we can all see it.",
+              "Two of us choose rehearsal with the uncertainty stated. Jules disagrees, then helps write the sentence.",
+              "We only manage one run. There is no extra time for having made the decision carefully."
+            ],
+            "voice": "I can work with a decision I didn’t vote for. But I want the reason I disagreed to survive the vote.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules puts our agreed caveat beside the laptop, with their original concern still circled. I read both before I reach the last slide.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“Dev, can you explain what we do know?”",
+            "detail": "Invite relevant knowledge. Leave room for its limits.",
+            "approach": "Making room for expertise",
+            "gain": "You made space for a teammate to contribute the knowledge they actually had.",
+            "cost": "Passing the microphone could feel like passing the pressure. Dev still could not supply a cost.",
+            "question": "How would you invite someone’s expertise without making them responsible for an answer they do not have?",
+            "result": [
+              "I turn to Dev. “You’ve checked the room rules. Can you explain that part? We don’t have the costs yet.”",
+              "Dev puts both hands on the table. “The current rules don’t tell us what extra staffing would be required. We need to ask facilities.”",
+              "It isn’t a rescue. It is a more accurate answer than I could have given alone."
+            ],
+            "voice": "The words “that part” helped. I knew what I was being asked to own, and what I wasn’t.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "I fixed the deck quickly. I also learned that an edit can change what someone meant. Next time, I want a check before a handover.",
+        "We made a decision together. I want to remember the concern that lost the vote. It might matter more later.",
+        "I let someone else answer the part they knew. The gap didn’t disappear; we held it together."
+      ],
+      "closing": {
+        "caption": "Jules reaches for the orange timer.\n“Can we have a minute without this?”",
+        "paragraph": "Jules picks up the orange timer and puts it back in Dev’s bag. “Can we have a minute without this?” Dev moves the bag under the bench. Nobody calls a vote.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "1-3-3",
+      "choices": [
+        0,
+        2,
+        2
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Send me the file. I’ll reshape it tonight.”",
+            "detail": "Protect tomorrow’s rehearsal. Take the edit on yourself.",
+            "approach": "Setting the pace",
+            "gain": "You protected the rehearsal by taking on the structural edit.",
+            "cost": "The time came from your sleep. Jules still had to check that the shortened quotations meant the same thing.",
+            "question": "Before taking over, what would you agree about what can change—and who gets the final check?",
+            "result": [
+              "By 1:18, the deck has eight slides. The argument is clearer. I’ve made the last train, barely.",
+              "In the morning, Jules circles one of my edits. “This person said they’d stay late if the buses still ran. You’ve cut the ‘if’.”",
+              "The rehearsal slot is safe. One sentence isn’t. We put the condition back."
+            ],
+            "voice": "I was relieved when Mina offered. Then I saw the quote. I don’t need every word kept. I need to know which ones are being cut.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules puts the marked-up quote beside my laptop. This time, I read the whole line before I touch the file.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Ten minutes. What can we all stand behind?”",
+            "detail": "Let everyone argue for a plan, then make a timed group decision.",
+            "approach": "Deciding together",
+            "gain": "Everyone had a direct say in the risk the group would take.",
+            "cost": "The discussion used a third of the remaining time, and a majority decision did not remove the disagreement.",
+            "question": "What should a group decide together—and what would make that decision binding when time runs out?",
+            "result": [
+              "Jules wants to check. Dev wants one full rehearsal. I give us ten minutes to decide, and set the timer where we can all see it.",
+              "Two of us choose rehearsal with the uncertainty stated. Jules disagrees, then helps write the sentence.",
+              "We only manage one run. There is no extra time for having made the decision carefully."
+            ],
+            "voice": "I can work with a decision I didn’t vote for. But I want the reason I disagreed to survive the vote.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules puts our agreed caveat beside the laptop, with their original concern still circled. I read both before I reach the last slide.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“We’ll check with facilities and follow up on Monday.”",
+            "detail": "Offer a concrete follow-up instead of a speculative answer.",
+            "approach": "Taking accountable follow-up",
+            "gain": "You protected the accuracy of the answer and named a time to return.",
+            "cost": "The panel left without a cost. Your promise now needed an owner and a realistic fallback if facilities did not reply.",
+            "question": "What would your follow-up contain if the person with the answer has not replied by the date you promised?",
+            "result": [
+              "“We can’t give you a reliable figure today,” I say. “We’ll contact facilities and send an update on Monday, even if the estimate is still pending.”",
+              "Outside, Dev stops me. “Who’s writing that email?”",
+              "We divide it there: I contact facilities, Jules lists the open questions, Dev checks the draft. Monday becomes a shared task, not a line I said to fill the silence."
+            ],
+            "voice": "A date sounds solid when you say it into a quiet room. I’m glad we worked out what it actually meant before we went home.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "I fixed the deck quickly. I also learned that an edit can change what someone meant. Next time, I want a check before a handover.",
+        "We made a decision together. I want to remember the concern that lost the vote. It might matter more later.",
+        "I made a promise. Now the work is to keep it, including an honest update if the answer takes longer."
+      ],
+      "closing": {
+        "caption": "Jules reaches for the orange timer.\n“Can we have a minute without this?”",
+        "paragraph": "Jules picks up the orange timer and puts it back in Dev’s bag. “Can we have a minute without this?” Dev moves the bag under the bench. Nobody calls a vote.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "2-1-1",
+      "choices": [
+        1,
+        0,
+        0
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Let’s find the shape of it together.”",
+            "detail": "Work through three slides together, then share the rest.",
+            "approach": "Coaching together",
+            "gain": "Both of you learned how to shape the evidence into an argument.",
+            "cost": "The shared edit ran long. Three slides were still unfinished when Dev arrived.",
+            "question": "What is the smallest useful thing you could work through together before handing ownership back?",
+            "result": [
+              "We spend twenty minutes on one slide. Jules asks what I mean by “the point.” I realise I haven’t said it clearly either.",
+              "By midnight we have a pattern: a claim, a voice, a limit. Jules starts the next slide without asking me.",
+              "Tomorrow, Dev arrives to three unfinished slides. “We can rehearse with gaps,” he says. “Just tell me where they are.”"
+            ],
+            "voice": "The first twenty minutes felt slow. Then I could see the pattern. I wish we’d told Dev sooner that we were running behind.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules arrives with three tiny headings in the margin: claim, voice, limit. They tap the empty space under “limit.”",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Check that one thing. We’ll agree a fallback.”",
+            "detail": "Jules follows up. You and Dev rehearse without them.",
+            "approach": "Testing an assumption",
+            "gain": "You put an important assumption to the people affected, with a fallback if they did not reply.",
+            "cost": "Jules missed the run-through. One reply would still be too little to establish demand.",
+            "question": "What answer would change your plan—and what will you do if no answer arrives?",
+            "result": [
+              "We agree the line before Jules sends the message: demand for this particular room is still unconfirmed.",
+              "One reply comes in before the panel. “Maybe, if the late bus stop is close.” Useful. Not a yes.",
+              "Dev and I have practised the handover twice. Jules has to learn it on the day."
+            ],
+            "voice": "We got a better question, not the reassurance I’d hoped for. I’m glad we agreed what we’d say before the reply arrived.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules waits half a beat for the handover. We didn’t rehearse this part together. I move my notes aside so they can see the next line.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "Explain the assumptions. Ask for a feasibility review.",
+            "detail": "Keep the conversation moving while naming what is unknown.",
+            "approach": "Giving direction with limits",
+            "gain": "You made a specific next step possible without inventing a cost.",
+            "cost": "The panel could reasonably question your assumptions before supporting a review.",
+            "question": "Which assumption would you be willing to have someone challenge in public?",
+            "result": [
+              "“We don’t have a staffing estimate,” I say. “The request is a feasibility review of one room for two weeks, including who would need to be there.”",
+              "The panel member writes something down. “Then put staffing and late transport in the review questions.”",
+              "I do. We have a next step to propose, not a promise that the room will open."
+            ],
+            "voice": "I could hear the difference between not having an answer and trying to hide it. This time we let the question stay a question.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Working together taught us a pattern. The time still came from somewhere. Next time, I want to name that cost earlier.",
+        "We asked a better question and got a conditional reply. I want to remember that evidence can make a plan less tidy and more useful.",
+        "I didn’t fill the silence with a number. I made the next question clear."
+      ],
+      "closing": {
+        "caption": "Jules puts the phone face down.\nThe orange timer stays off.",
+        "paragraph": "Outside, Jules’s phone lights up. They turn it over without opening the message. Dev sets the orange timer between us, switched off. We can give each other this minute.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "2-1-2",
+      "choices": [
+        1,
+        0,
+        1
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Let’s find the shape of it together.”",
+            "detail": "Work through three slides together, then share the rest.",
+            "approach": "Coaching together",
+            "gain": "Both of you learned how to shape the evidence into an argument.",
+            "cost": "The shared edit ran long. Three slides were still unfinished when Dev arrived.",
+            "question": "What is the smallest useful thing you could work through together before handing ownership back?",
+            "result": [
+              "We spend twenty minutes on one slide. Jules asks what I mean by “the point.” I realise I haven’t said it clearly either.",
+              "By midnight we have a pattern: a claim, a voice, a limit. Jules starts the next slide without asking me.",
+              "Tomorrow, Dev arrives to three unfinished slides. “We can rehearse with gaps,” he says. “Just tell me where they are.”"
+            ],
+            "voice": "The first twenty minutes felt slow. Then I could see the pattern. I wish we’d told Dev sooner that we were running behind.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules arrives with three tiny headings in the margin: claim, voice, limit. They tap the empty space under “limit.”",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Check that one thing. We’ll agree a fallback.”",
+            "detail": "Jules follows up. You and Dev rehearse without them.",
+            "approach": "Testing an assumption",
+            "gain": "You put an important assumption to the people affected, with a fallback if they did not reply.",
+            "cost": "Jules missed the run-through. One reply would still be too little to establish demand.",
+            "question": "What answer would change your plan—and what will you do if no answer arrives?",
+            "result": [
+              "We agree the line before Jules sends the message: demand for this particular room is still unconfirmed.",
+              "One reply comes in before the panel. “Maybe, if the late bus stop is close.” Useful. Not a yes.",
+              "Dev and I have practised the handover twice. Jules has to learn it on the day."
+            ],
+            "voice": "We got a better question, not the reassurance I’d hoped for. I’m glad we agreed what we’d say before the reply arrived.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules waits half a beat for the handover. We didn’t rehearse this part together. I move my notes aside so they can see the next line.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“Dev, can you explain what we do know?”",
+            "detail": "Invite relevant knowledge. Leave room for its limits.",
+            "approach": "Making room for expertise",
+            "gain": "You made space for a teammate to contribute the knowledge they actually had.",
+            "cost": "Passing the microphone could feel like passing the pressure. Dev still could not supply a cost.",
+            "question": "How would you invite someone’s expertise without making them responsible for an answer they do not have?",
+            "result": [
+              "I turn to Dev. “You’ve checked the room rules. Can you explain that part? We don’t have the costs yet.”",
+              "Dev puts both hands on the table. “The current rules don’t tell us what extra staffing would be required. We need to ask facilities.”",
+              "It isn’t a rescue. It is a more accurate answer than I could have given alone."
+            ],
+            "voice": "The words “that part” helped. I knew what I was being asked to own, and what I wasn’t.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Working together taught us a pattern. The time still came from somewhere. Next time, I want to name that cost earlier.",
+        "We asked a better question and got a conditional reply. I want to remember that evidence can make a plan less tidy and more useful.",
+        "I let someone else answer the part they knew. The gap didn’t disappear; we held it together."
+      ],
+      "closing": {
+        "caption": "Jules puts the phone face down.\nThe orange timer stays off.",
+        "paragraph": "Outside, Jules’s phone lights up. They turn it over without opening the message. Dev sets the orange timer between us, switched off. We can give each other this minute.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "2-1-3",
+      "choices": [
+        1,
+        0,
+        2
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Let’s find the shape of it together.”",
+            "detail": "Work through three slides together, then share the rest.",
+            "approach": "Coaching together",
+            "gain": "Both of you learned how to shape the evidence into an argument.",
+            "cost": "The shared edit ran long. Three slides were still unfinished when Dev arrived.",
+            "question": "What is the smallest useful thing you could work through together before handing ownership back?",
+            "result": [
+              "We spend twenty minutes on one slide. Jules asks what I mean by “the point.” I realise I haven’t said it clearly either.",
+              "By midnight we have a pattern: a claim, a voice, a limit. Jules starts the next slide without asking me.",
+              "Tomorrow, Dev arrives to three unfinished slides. “We can rehearse with gaps,” he says. “Just tell me where they are.”"
+            ],
+            "voice": "The first twenty minutes felt slow. Then I could see the pattern. I wish we’d told Dev sooner that we were running behind.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules arrives with three tiny headings in the margin: claim, voice, limit. They tap the empty space under “limit.”",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Check that one thing. We’ll agree a fallback.”",
+            "detail": "Jules follows up. You and Dev rehearse without them.",
+            "approach": "Testing an assumption",
+            "gain": "You put an important assumption to the people affected, with a fallback if they did not reply.",
+            "cost": "Jules missed the run-through. One reply would still be too little to establish demand.",
+            "question": "What answer would change your plan—and what will you do if no answer arrives?",
+            "result": [
+              "We agree the line before Jules sends the message: demand for this particular room is still unconfirmed.",
+              "One reply comes in before the panel. “Maybe, if the late bus stop is close.” Useful. Not a yes.",
+              "Dev and I have practised the handover twice. Jules has to learn it on the day."
+            ],
+            "voice": "We got a better question, not the reassurance I’d hoped for. I’m glad we agreed what we’d say before the reply arrived.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules waits half a beat for the handover. We didn’t rehearse this part together. I move my notes aside so they can see the next line.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“We’ll check with facilities and follow up on Monday.”",
+            "detail": "Offer a concrete follow-up instead of a speculative answer.",
+            "approach": "Taking accountable follow-up",
+            "gain": "You protected the accuracy of the answer and named a time to return.",
+            "cost": "The panel left without a cost. Your promise now needed an owner and a realistic fallback if facilities did not reply.",
+            "question": "What would your follow-up contain if the person with the answer has not replied by the date you promised?",
+            "result": [
+              "“We can’t give you a reliable figure today,” I say. “We’ll contact facilities and send an update on Monday, even if the estimate is still pending.”",
+              "Outside, Dev stops me. “Who’s writing that email?”",
+              "We divide it there: I contact facilities, Jules lists the open questions, Dev checks the draft. Monday becomes a shared task, not a line I said to fill the silence."
+            ],
+            "voice": "A date sounds solid when you say it into a quiet room. I’m glad we worked out what it actually meant before we went home.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Working together taught us a pattern. The time still came from somewhere. Next time, I want to name that cost earlier.",
+        "We asked a better question and got a conditional reply. I want to remember that evidence can make a plan less tidy and more useful.",
+        "I made a promise. Now the work is to keep it, including an honest update if the answer takes longer."
+      ],
+      "closing": {
+        "caption": "Jules puts the phone face down.\nThe orange timer stays off.",
+        "paragraph": "Outside, Jules’s phone lights up. They turn it over without opening the message. Dev sets the orange timer between us, switched off. We can give each other this minute.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "2-2-1",
+      "choices": [
+        1,
+        1,
+        0
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Let’s find the shape of it together.”",
+            "detail": "Work through three slides together, then share the rest.",
+            "approach": "Coaching together",
+            "gain": "Both of you learned how to shape the evidence into an argument.",
+            "cost": "The shared edit ran long. Three slides were still unfinished when Dev arrived.",
+            "question": "What is the smallest useful thing you could work through together before handing ownership back?",
+            "result": [
+              "We spend twenty minutes on one slide. Jules asks what I mean by “the point.” I realise I haven’t said it clearly either.",
+              "By midnight we have a pattern: a claim, a voice, a limit. Jules starts the next slide without asking me.",
+              "Tomorrow, Dev arrives to three unfinished slides. “We can rehearse with gaps,” he says. “Just tell me where they are.”"
+            ],
+            "voice": "The first twenty minutes felt slow. Then I could see the pattern. I wish we’d told Dev sooner that we were running behind.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules arrives with three tiny headings in the margin: claim, voice, limit. They tap the empty space under “limit.”",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Let’s rehearse. We’ll name the gap.”",
+            "detail": "Practise the delivery. Describe room demand as unconfirmed.",
+            "approach": "Making uncertainty visible",
+            "gain": "You practised a clear, honest request instead of treating an assumption as evidence.",
+            "cost": "You still had not checked whether this room suited the students you hoped to help.",
+            "question": "When does naming uncertainty make a proposal honest, and when does it become an excuse not to investigate?",
+            "result": [
+              "We change one sentence: “Students want later access. Whether this room works for them is a question for the trial.”",
+              "Our first run is nine minutes. The second is seven. Dev points out the slide where I keep speeding up.",
+              "We leave with a cleaner presentation and the same unanswered question. At least it is on the page now."
+            ],
+            "voice": "I’m glad we used the time. I also know a good delivery can make a thin bit of evidence sound thicker than it is.",
+            "speaker": "Dev"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Dev stops the orange timer at seven minutes. This is the handover we practised. He looks up, and I let the last sentence land.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "Explain the assumptions. Ask for a feasibility review.",
+            "detail": "Keep the conversation moving while naming what is unknown.",
+            "approach": "Giving direction with limits",
+            "gain": "You made a specific next step possible without inventing a cost.",
+            "cost": "The panel could reasonably question your assumptions before supporting a review.",
+            "question": "Which assumption would you be willing to have someone challenge in public?",
+            "result": [
+              "“We don’t have a staffing estimate,” I say. “The request is a feasibility review of one room for two weeks, including who would need to be there.”",
+              "The panel member writes something down. “Then put staffing and late transport in the review questions.”",
+              "I do. We have a next step to propose, not a promise that the room will open."
+            ],
+            "voice": "I could hear the difference between not having an answer and trying to hide it. This time we let the question stay a question.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Working together taught us a pattern. The time still came from somewhere. Next time, I want to name that cost earlier.",
+        "We said what we didn’t know. I want to remember to come back to it, now that the presentation is over.",
+        "I didn’t fill the silence with a number. I made the next question clear."
+      ],
+      "closing": {
+        "caption": "Dev takes out the orange timer.\nThis time, he doesn’t start it.",
+        "paragraph": "On the bench, Dev takes the orange timer out of his pocket. My shoulders tighten before I notice he has put it face down. “No run-through,” he says. “Just sitting.”",
+        "owner": "Dev"
+      }
+    },
+    {
+      "id": "2-2-2",
+      "choices": [
+        1,
+        1,
+        1
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Let’s find the shape of it together.”",
+            "detail": "Work through three slides together, then share the rest.",
+            "approach": "Coaching together",
+            "gain": "Both of you learned how to shape the evidence into an argument.",
+            "cost": "The shared edit ran long. Three slides were still unfinished when Dev arrived.",
+            "question": "What is the smallest useful thing you could work through together before handing ownership back?",
+            "result": [
+              "We spend twenty minutes on one slide. Jules asks what I mean by “the point.” I realise I haven’t said it clearly either.",
+              "By midnight we have a pattern: a claim, a voice, a limit. Jules starts the next slide without asking me.",
+              "Tomorrow, Dev arrives to three unfinished slides. “We can rehearse with gaps,” he says. “Just tell me where they are.”"
+            ],
+            "voice": "The first twenty minutes felt slow. Then I could see the pattern. I wish we’d told Dev sooner that we were running behind.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules arrives with three tiny headings in the margin: claim, voice, limit. They tap the empty space under “limit.”",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Let’s rehearse. We’ll name the gap.”",
+            "detail": "Practise the delivery. Describe room demand as unconfirmed.",
+            "approach": "Making uncertainty visible",
+            "gain": "You practised a clear, honest request instead of treating an assumption as evidence.",
+            "cost": "You still had not checked whether this room suited the students you hoped to help.",
+            "question": "When does naming uncertainty make a proposal honest, and when does it become an excuse not to investigate?",
+            "result": [
+              "We change one sentence: “Students want later access. Whether this room works for them is a question for the trial.”",
+              "Our first run is nine minutes. The second is seven. Dev points out the slide where I keep speeding up.",
+              "We leave with a cleaner presentation and the same unanswered question. At least it is on the page now."
+            ],
+            "voice": "I’m glad we used the time. I also know a good delivery can make a thin bit of evidence sound thicker than it is.",
+            "speaker": "Dev"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Dev stops the orange timer at seven minutes. This is the handover we practised. He looks up, and I let the last sentence land.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“Dev, can you explain what we do know?”",
+            "detail": "Invite relevant knowledge. Leave room for its limits.",
+            "approach": "Making room for expertise",
+            "gain": "You made space for a teammate to contribute the knowledge they actually had.",
+            "cost": "Passing the microphone could feel like passing the pressure. Dev still could not supply a cost.",
+            "question": "How would you invite someone’s expertise without making them responsible for an answer they do not have?",
+            "result": [
+              "I turn to Dev. “You’ve checked the room rules. Can you explain that part? We don’t have the costs yet.”",
+              "Dev puts both hands on the table. “The current rules don’t tell us what extra staffing would be required. We need to ask facilities.”",
+              "It isn’t a rescue. It is a more accurate answer than I could have given alone."
+            ],
+            "voice": "The words “that part” helped. I knew what I was being asked to own, and what I wasn’t.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Working together taught us a pattern. The time still came from somewhere. Next time, I want to name that cost earlier.",
+        "We said what we didn’t know. I want to remember to come back to it, now that the presentation is over.",
+        "I let someone else answer the part they knew. The gap didn’t disappear; we held it together."
+      ],
+      "closing": {
+        "caption": "Dev takes out the orange timer.\nThis time, he doesn’t start it.",
+        "paragraph": "On the bench, Dev takes the orange timer out of his pocket. My shoulders tighten before I notice he has put it face down. “No run-through,” he says. “Just sitting.”",
+        "owner": "Dev"
+      }
+    },
+    {
+      "id": "2-2-3",
+      "choices": [
+        1,
+        1,
+        2
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Let’s find the shape of it together.”",
+            "detail": "Work through three slides together, then share the rest.",
+            "approach": "Coaching together",
+            "gain": "Both of you learned how to shape the evidence into an argument.",
+            "cost": "The shared edit ran long. Three slides were still unfinished when Dev arrived.",
+            "question": "What is the smallest useful thing you could work through together before handing ownership back?",
+            "result": [
+              "We spend twenty minutes on one slide. Jules asks what I mean by “the point.” I realise I haven’t said it clearly either.",
+              "By midnight we have a pattern: a claim, a voice, a limit. Jules starts the next slide without asking me.",
+              "Tomorrow, Dev arrives to three unfinished slides. “We can rehearse with gaps,” he says. “Just tell me where they are.”"
+            ],
+            "voice": "The first twenty minutes felt slow. Then I could see the pattern. I wish we’d told Dev sooner that we were running behind.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules arrives with three tiny headings in the margin: claim, voice, limit. They tap the empty space under “limit.”",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Let’s rehearse. We’ll name the gap.”",
+            "detail": "Practise the delivery. Describe room demand as unconfirmed.",
+            "approach": "Making uncertainty visible",
+            "gain": "You practised a clear, honest request instead of treating an assumption as evidence.",
+            "cost": "You still had not checked whether this room suited the students you hoped to help.",
+            "question": "When does naming uncertainty make a proposal honest, and when does it become an excuse not to investigate?",
+            "result": [
+              "We change one sentence: “Students want later access. Whether this room works for them is a question for the trial.”",
+              "Our first run is nine minutes. The second is seven. Dev points out the slide where I keep speeding up.",
+              "We leave with a cleaner presentation and the same unanswered question. At least it is on the page now."
+            ],
+            "voice": "I’m glad we used the time. I also know a good delivery can make a thin bit of evidence sound thicker than it is.",
+            "speaker": "Dev"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Dev stops the orange timer at seven minutes. This is the handover we practised. He looks up, and I let the last sentence land.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“We’ll check with facilities and follow up on Monday.”",
+            "detail": "Offer a concrete follow-up instead of a speculative answer.",
+            "approach": "Taking accountable follow-up",
+            "gain": "You protected the accuracy of the answer and named a time to return.",
+            "cost": "The panel left without a cost. Your promise now needed an owner and a realistic fallback if facilities did not reply.",
+            "question": "What would your follow-up contain if the person with the answer has not replied by the date you promised?",
+            "result": [
+              "“We can’t give you a reliable figure today,” I say. “We’ll contact facilities and send an update on Monday, even if the estimate is still pending.”",
+              "Outside, Dev stops me. “Who’s writing that email?”",
+              "We divide it there: I contact facilities, Jules lists the open questions, Dev checks the draft. Monday becomes a shared task, not a line I said to fill the silence."
+            ],
+            "voice": "A date sounds solid when you say it into a quiet room. I’m glad we worked out what it actually meant before we went home.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Working together taught us a pattern. The time still came from somewhere. Next time, I want to name that cost earlier.",
+        "We said what we didn’t know. I want to remember to come back to it, now that the presentation is over.",
+        "I made a promise. Now the work is to keep it, including an honest update if the answer takes longer."
+      ],
+      "closing": {
+        "caption": "Dev takes out the orange timer.\nThis time, he doesn’t start it.",
+        "paragraph": "On the bench, Dev takes the orange timer out of his pocket. My shoulders tighten before I notice he has put it face down. “No run-through,” he says. “Just sitting.”",
+        "owner": "Dev"
+      }
+    },
+    {
+      "id": "2-3-1",
+      "choices": [
+        1,
+        2,
+        0
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Let’s find the shape of it together.”",
+            "detail": "Work through three slides together, then share the rest.",
+            "approach": "Coaching together",
+            "gain": "Both of you learned how to shape the evidence into an argument.",
+            "cost": "The shared edit ran long. Three slides were still unfinished when Dev arrived.",
+            "question": "What is the smallest useful thing you could work through together before handing ownership back?",
+            "result": [
+              "We spend twenty minutes on one slide. Jules asks what I mean by “the point.” I realise I haven’t said it clearly either.",
+              "By midnight we have a pattern: a claim, a voice, a limit. Jules starts the next slide without asking me.",
+              "Tomorrow, Dev arrives to three unfinished slides. “We can rehearse with gaps,” he says. “Just tell me where they are.”"
+            ],
+            "voice": "The first twenty minutes felt slow. Then I could see the pattern. I wish we’d told Dev sooner that we were running behind.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules arrives with three tiny headings in the margin: claim, voice, limit. They tap the empty space under “limit.”",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Ten minutes. What can we all stand behind?”",
+            "detail": "Let everyone argue for a plan, then make a timed group decision.",
+            "approach": "Deciding together",
+            "gain": "Everyone had a direct say in the risk the group would take.",
+            "cost": "The discussion used a third of the remaining time, and a majority decision did not remove the disagreement.",
+            "question": "What should a group decide together—and what would make that decision binding when time runs out?",
+            "result": [
+              "Jules wants to check. Dev wants one full rehearsal. I give us ten minutes to decide, and set the timer where we can all see it.",
+              "Two of us choose rehearsal with the uncertainty stated. Jules disagrees, then helps write the sentence.",
+              "We only manage one run. There is no extra time for having made the decision carefully."
+            ],
+            "voice": "I can work with a decision I didn’t vote for. But I want the reason I disagreed to survive the vote.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules puts our agreed caveat beside the laptop, with their original concern still circled. I read both before I reach the last slide.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "Explain the assumptions. Ask for a feasibility review.",
+            "detail": "Keep the conversation moving while naming what is unknown.",
+            "approach": "Giving direction with limits",
+            "gain": "You made a specific next step possible without inventing a cost.",
+            "cost": "The panel could reasonably question your assumptions before supporting a review.",
+            "question": "Which assumption would you be willing to have someone challenge in public?",
+            "result": [
+              "“We don’t have a staffing estimate,” I say. “The request is a feasibility review of one room for two weeks, including who would need to be there.”",
+              "The panel member writes something down. “Then put staffing and late transport in the review questions.”",
+              "I do. We have a next step to propose, not a promise that the room will open."
+            ],
+            "voice": "I could hear the difference between not having an answer and trying to hide it. This time we let the question stay a question.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Working together taught us a pattern. The time still came from somewhere. Next time, I want to name that cost earlier.",
+        "We made a decision together. I want to remember the concern that lost the vote. It might matter more later.",
+        "I didn’t fill the silence with a number. I made the next question clear."
+      ],
+      "closing": {
+        "caption": "Jules reaches for the orange timer.\n“Can we have a minute without this?”",
+        "paragraph": "Jules picks up the orange timer and puts it back in Dev’s bag. “Can we have a minute without this?” Dev moves the bag under the bench. Nobody calls a vote.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "2-3-2",
+      "choices": [
+        1,
+        2,
+        1
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Let’s find the shape of it together.”",
+            "detail": "Work through three slides together, then share the rest.",
+            "approach": "Coaching together",
+            "gain": "Both of you learned how to shape the evidence into an argument.",
+            "cost": "The shared edit ran long. Three slides were still unfinished when Dev arrived.",
+            "question": "What is the smallest useful thing you could work through together before handing ownership back?",
+            "result": [
+              "We spend twenty minutes on one slide. Jules asks what I mean by “the point.” I realise I haven’t said it clearly either.",
+              "By midnight we have a pattern: a claim, a voice, a limit. Jules starts the next slide without asking me.",
+              "Tomorrow, Dev arrives to three unfinished slides. “We can rehearse with gaps,” he says. “Just tell me where they are.”"
+            ],
+            "voice": "The first twenty minutes felt slow. Then I could see the pattern. I wish we’d told Dev sooner that we were running behind.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules arrives with three tiny headings in the margin: claim, voice, limit. They tap the empty space under “limit.”",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Ten minutes. What can we all stand behind?”",
+            "detail": "Let everyone argue for a plan, then make a timed group decision.",
+            "approach": "Deciding together",
+            "gain": "Everyone had a direct say in the risk the group would take.",
+            "cost": "The discussion used a third of the remaining time, and a majority decision did not remove the disagreement.",
+            "question": "What should a group decide together—and what would make that decision binding when time runs out?",
+            "result": [
+              "Jules wants to check. Dev wants one full rehearsal. I give us ten minutes to decide, and set the timer where we can all see it.",
+              "Two of us choose rehearsal with the uncertainty stated. Jules disagrees, then helps write the sentence.",
+              "We only manage one run. There is no extra time for having made the decision carefully."
+            ],
+            "voice": "I can work with a decision I didn’t vote for. But I want the reason I disagreed to survive the vote.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules puts our agreed caveat beside the laptop, with their original concern still circled. I read both before I reach the last slide.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“Dev, can you explain what we do know?”",
+            "detail": "Invite relevant knowledge. Leave room for its limits.",
+            "approach": "Making room for expertise",
+            "gain": "You made space for a teammate to contribute the knowledge they actually had.",
+            "cost": "Passing the microphone could feel like passing the pressure. Dev still could not supply a cost.",
+            "question": "How would you invite someone’s expertise without making them responsible for an answer they do not have?",
+            "result": [
+              "I turn to Dev. “You’ve checked the room rules. Can you explain that part? We don’t have the costs yet.”",
+              "Dev puts both hands on the table. “The current rules don’t tell us what extra staffing would be required. We need to ask facilities.”",
+              "It isn’t a rescue. It is a more accurate answer than I could have given alone."
+            ],
+            "voice": "The words “that part” helped. I knew what I was being asked to own, and what I wasn’t.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Working together taught us a pattern. The time still came from somewhere. Next time, I want to name that cost earlier.",
+        "We made a decision together. I want to remember the concern that lost the vote. It might matter more later.",
+        "I let someone else answer the part they knew. The gap didn’t disappear; we held it together."
+      ],
+      "closing": {
+        "caption": "Jules reaches for the orange timer.\n“Can we have a minute without this?”",
+        "paragraph": "Jules picks up the orange timer and puts it back in Dev’s bag. “Can we have a minute without this?” Dev moves the bag under the bench. Nobody calls a vote.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "2-3-3",
+      "choices": [
+        1,
+        2,
+        2
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“Let’s find the shape of it together.”",
+            "detail": "Work through three slides together, then share the rest.",
+            "approach": "Coaching together",
+            "gain": "Both of you learned how to shape the evidence into an argument.",
+            "cost": "The shared edit ran long. Three slides were still unfinished when Dev arrived.",
+            "question": "What is the smallest useful thing you could work through together before handing ownership back?",
+            "result": [
+              "We spend twenty minutes on one slide. Jules asks what I mean by “the point.” I realise I haven’t said it clearly either.",
+              "By midnight we have a pattern: a claim, a voice, a limit. Jules starts the next slide without asking me.",
+              "Tomorrow, Dev arrives to three unfinished slides. “We can rehearse with gaps,” he says. “Just tell me where they are.”"
+            ],
+            "voice": "The first twenty minutes felt slow. Then I could see the pattern. I wish we’d told Dev sooner that we were running behind.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules arrives with three tiny headings in the margin: claim, voice, limit. They tap the empty space under “limit.”",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Ten minutes. What can we all stand behind?”",
+            "detail": "Let everyone argue for a plan, then make a timed group decision.",
+            "approach": "Deciding together",
+            "gain": "Everyone had a direct say in the risk the group would take.",
+            "cost": "The discussion used a third of the remaining time, and a majority decision did not remove the disagreement.",
+            "question": "What should a group decide together—and what would make that decision binding when time runs out?",
+            "result": [
+              "Jules wants to check. Dev wants one full rehearsal. I give us ten minutes to decide, and set the timer where we can all see it.",
+              "Two of us choose rehearsal with the uncertainty stated. Jules disagrees, then helps write the sentence.",
+              "We only manage one run. There is no extra time for having made the decision carefully."
+            ],
+            "voice": "I can work with a decision I didn’t vote for. But I want the reason I disagreed to survive the vote.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules puts our agreed caveat beside the laptop, with their original concern still circled. I read both before I reach the last slide.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“We’ll check with facilities and follow up on Monday.”",
+            "detail": "Offer a concrete follow-up instead of a speculative answer.",
+            "approach": "Taking accountable follow-up",
+            "gain": "You protected the accuracy of the answer and named a time to return.",
+            "cost": "The panel left without a cost. Your promise now needed an owner and a realistic fallback if facilities did not reply.",
+            "question": "What would your follow-up contain if the person with the answer has not replied by the date you promised?",
+            "result": [
+              "“We can’t give you a reliable figure today,” I say. “We’ll contact facilities and send an update on Monday, even if the estimate is still pending.”",
+              "Outside, Dev stops me. “Who’s writing that email?”",
+              "We divide it there: I contact facilities, Jules lists the open questions, Dev checks the draft. Monday becomes a shared task, not a line I said to fill the silence."
+            ],
+            "voice": "A date sounds solid when you say it into a quiet room. I’m glad we worked out what it actually meant before we went home.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Working together taught us a pattern. The time still came from somewhere. Next time, I want to name that cost earlier.",
+        "We made a decision together. I want to remember the concern that lost the vote. It might matter more later.",
+        "I made a promise. Now the work is to keep it, including an honest update if the answer takes longer."
+      ],
+      "closing": {
+        "caption": "Jules reaches for the orange timer.\n“Can we have a minute without this?”",
+        "paragraph": "Jules picks up the orange timer and puts it back in Dev’s bag. “Can we have a minute without this?” Dev moves the bag under the bench. Nobody calls a vote.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "3-1-1",
+      "choices": [
+        2,
+        0,
+        0
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“One smaller case. You pick the evidence.”",
+            "detail": "Cut the scope. Give each person a clear piece to own.",
+            "approach": "Sharing ownership",
+            "gain": "The work became smaller and each of you had a part to own.",
+            "cost": "A narrower proposal left some students out. Your separately written sections also disagreed about the opening hours.",
+            "question": "When you divide the work, what shared decision needs to stay shared?",
+            "result": [
+              "We stop trying to solve every late-night problem. One room. A two-week trial. Jules chooses the evidence; I write the request.",
+              "The next day, my section says midnight. Jules’s says 2 a.m. We’ve divided the slides without agreeing on the hours.",
+              "We settle on midnight for the feasibility review. Jules keeps the 2 a.m. accounts in the notes, so the limit is visible."
+            ],
+            "voice": "The smaller case is easier to explain. But the people going home at two are still in my notes. I don’t want “out of scope” to mean forgotten.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules lays our two versions side by side. Midnight is circled on one; 2 a.m. on the other. Dev draws one box around the agreed request.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Check that one thing. We’ll agree a fallback.”",
+            "detail": "Jules follows up. You and Dev rehearse without them.",
+            "approach": "Testing an assumption",
+            "gain": "You put an important assumption to the people affected, with a fallback if they did not reply.",
+            "cost": "Jules missed the run-through. One reply would still be too little to establish demand.",
+            "question": "What answer would change your plan—and what will you do if no answer arrives?",
+            "result": [
+              "We agree the line before Jules sends the message: demand for this particular room is still unconfirmed.",
+              "One reply comes in before the panel. “Maybe, if the late bus stop is close.” Useful. Not a yes.",
+              "Dev and I have practised the handover twice. Jules has to learn it on the day."
+            ],
+            "voice": "We got a better question, not the reassurance I’d hoped for. I’m glad we agreed what we’d say before the reply arrived.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules waits half a beat for the handover. We didn’t rehearse this part together. I move my notes aside so they can see the next line.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "Explain the assumptions. Ask for a feasibility review.",
+            "detail": "Keep the conversation moving while naming what is unknown.",
+            "approach": "Giving direction with limits",
+            "gain": "You made a specific next step possible without inventing a cost.",
+            "cost": "The panel could reasonably question your assumptions before supporting a review.",
+            "question": "Which assumption would you be willing to have someone challenge in public?",
+            "result": [
+              "“We don’t have a staffing estimate,” I say. “The request is a feasibility review of one room for two weeks, including who would need to be there.”",
+              "The panel member writes something down. “Then put staffing and late transport in the review questions.”",
+              "I do. We have a next step to propose, not a promise that the room will open."
+            ],
+            "voice": "I could hear the difference between not having an answer and trying to hide it. This time we let the question stay a question.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Dividing the work gave us room. It didn’t give us agreement. Next time, I want to decide the boundaries together first.",
+        "We asked a better question and got a conditional reply. I want to remember that evidence can make a plan less tidy and more useful.",
+        "I didn’t fill the silence with a number. I made the next question clear."
+      ],
+      "closing": {
+        "caption": "Jules puts the phone face down.\nThe orange timer stays off.",
+        "paragraph": "Outside, Jules’s phone lights up. They turn it over without opening the message. Dev sets the orange timer between us, switched off. We can give each other this minute.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "3-1-2",
+      "choices": [
+        2,
+        0,
+        1
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“One smaller case. You pick the evidence.”",
+            "detail": "Cut the scope. Give each person a clear piece to own.",
+            "approach": "Sharing ownership",
+            "gain": "The work became smaller and each of you had a part to own.",
+            "cost": "A narrower proposal left some students out. Your separately written sections also disagreed about the opening hours.",
+            "question": "When you divide the work, what shared decision needs to stay shared?",
+            "result": [
+              "We stop trying to solve every late-night problem. One room. A two-week trial. Jules chooses the evidence; I write the request.",
+              "The next day, my section says midnight. Jules’s says 2 a.m. We’ve divided the slides without agreeing on the hours.",
+              "We settle on midnight for the feasibility review. Jules keeps the 2 a.m. accounts in the notes, so the limit is visible."
+            ],
+            "voice": "The smaller case is easier to explain. But the people going home at two are still in my notes. I don’t want “out of scope” to mean forgotten.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules lays our two versions side by side. Midnight is circled on one; 2 a.m. on the other. Dev draws one box around the agreed request.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Check that one thing. We’ll agree a fallback.”",
+            "detail": "Jules follows up. You and Dev rehearse without them.",
+            "approach": "Testing an assumption",
+            "gain": "You put an important assumption to the people affected, with a fallback if they did not reply.",
+            "cost": "Jules missed the run-through. One reply would still be too little to establish demand.",
+            "question": "What answer would change your plan—and what will you do if no answer arrives?",
+            "result": [
+              "We agree the line before Jules sends the message: demand for this particular room is still unconfirmed.",
+              "One reply comes in before the panel. “Maybe, if the late bus stop is close.” Useful. Not a yes.",
+              "Dev and I have practised the handover twice. Jules has to learn it on the day."
+            ],
+            "voice": "We got a better question, not the reassurance I’d hoped for. I’m glad we agreed what we’d say before the reply arrived.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules waits half a beat for the handover. We didn’t rehearse this part together. I move my notes aside so they can see the next line.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“Dev, can you explain what we do know?”",
+            "detail": "Invite relevant knowledge. Leave room for its limits.",
+            "approach": "Making room for expertise",
+            "gain": "You made space for a teammate to contribute the knowledge they actually had.",
+            "cost": "Passing the microphone could feel like passing the pressure. Dev still could not supply a cost.",
+            "question": "How would you invite someone’s expertise without making them responsible for an answer they do not have?",
+            "result": [
+              "I turn to Dev. “You’ve checked the room rules. Can you explain that part? We don’t have the costs yet.”",
+              "Dev puts both hands on the table. “The current rules don’t tell us what extra staffing would be required. We need to ask facilities.”",
+              "It isn’t a rescue. It is a more accurate answer than I could have given alone."
+            ],
+            "voice": "The words “that part” helped. I knew what I was being asked to own, and what I wasn’t.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Dividing the work gave us room. It didn’t give us agreement. Next time, I want to decide the boundaries together first.",
+        "We asked a better question and got a conditional reply. I want to remember that evidence can make a plan less tidy and more useful.",
+        "I let someone else answer the part they knew. The gap didn’t disappear; we held it together."
+      ],
+      "closing": {
+        "caption": "Jules puts the phone face down.\nThe orange timer stays off.",
+        "paragraph": "Outside, Jules’s phone lights up. They turn it over without opening the message. Dev sets the orange timer between us, switched off. We can give each other this minute.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "3-1-3",
+      "choices": [
+        2,
+        0,
+        2
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“One smaller case. You pick the evidence.”",
+            "detail": "Cut the scope. Give each person a clear piece to own.",
+            "approach": "Sharing ownership",
+            "gain": "The work became smaller and each of you had a part to own.",
+            "cost": "A narrower proposal left some students out. Your separately written sections also disagreed about the opening hours.",
+            "question": "When you divide the work, what shared decision needs to stay shared?",
+            "result": [
+              "We stop trying to solve every late-night problem. One room. A two-week trial. Jules chooses the evidence; I write the request.",
+              "The next day, my section says midnight. Jules’s says 2 a.m. We’ve divided the slides without agreeing on the hours.",
+              "We settle on midnight for the feasibility review. Jules keeps the 2 a.m. accounts in the notes, so the limit is visible."
+            ],
+            "voice": "The smaller case is easier to explain. But the people going home at two are still in my notes. I don’t want “out of scope” to mean forgotten.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules lays our two versions side by side. Midnight is circled on one; 2 a.m. on the other. Dev draws one box around the agreed request.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Check that one thing. We’ll agree a fallback.”",
+            "detail": "Jules follows up. You and Dev rehearse without them.",
+            "approach": "Testing an assumption",
+            "gain": "You put an important assumption to the people affected, with a fallback if they did not reply.",
+            "cost": "Jules missed the run-through. One reply would still be too little to establish demand.",
+            "question": "What answer would change your plan—and what will you do if no answer arrives?",
+            "result": [
+              "We agree the line before Jules sends the message: demand for this particular room is still unconfirmed.",
+              "One reply comes in before the panel. “Maybe, if the late bus stop is close.” Useful. Not a yes.",
+              "Dev and I have practised the handover twice. Jules has to learn it on the day."
+            ],
+            "voice": "We got a better question, not the reassurance I’d hoped for. I’m glad we agreed what we’d say before the reply arrived.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules waits half a beat for the handover. We didn’t rehearse this part together. I move my notes aside so they can see the next line.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“We’ll check with facilities and follow up on Monday.”",
+            "detail": "Offer a concrete follow-up instead of a speculative answer.",
+            "approach": "Taking accountable follow-up",
+            "gain": "You protected the accuracy of the answer and named a time to return.",
+            "cost": "The panel left without a cost. Your promise now needed an owner and a realistic fallback if facilities did not reply.",
+            "question": "What would your follow-up contain if the person with the answer has not replied by the date you promised?",
+            "result": [
+              "“We can’t give you a reliable figure today,” I say. “We’ll contact facilities and send an update on Monday, even if the estimate is still pending.”",
+              "Outside, Dev stops me. “Who’s writing that email?”",
+              "We divide it there: I contact facilities, Jules lists the open questions, Dev checks the draft. Monday becomes a shared task, not a line I said to fill the silence."
+            ],
+            "voice": "A date sounds solid when you say it into a quiet room. I’m glad we worked out what it actually meant before we went home.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Dividing the work gave us room. It didn’t give us agreement. Next time, I want to decide the boundaries together first.",
+        "We asked a better question and got a conditional reply. I want to remember that evidence can make a plan less tidy and more useful.",
+        "I made a promise. Now the work is to keep it, including an honest update if the answer takes longer."
+      ],
+      "closing": {
+        "caption": "Jules puts the phone face down.\nThe orange timer stays off.",
+        "paragraph": "Outside, Jules’s phone lights up. They turn it over without opening the message. Dev sets the orange timer between us, switched off. We can give each other this minute.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "3-2-1",
+      "choices": [
+        2,
+        1,
+        0
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“One smaller case. You pick the evidence.”",
+            "detail": "Cut the scope. Give each person a clear piece to own.",
+            "approach": "Sharing ownership",
+            "gain": "The work became smaller and each of you had a part to own.",
+            "cost": "A narrower proposal left some students out. Your separately written sections also disagreed about the opening hours.",
+            "question": "When you divide the work, what shared decision needs to stay shared?",
+            "result": [
+              "We stop trying to solve every late-night problem. One room. A two-week trial. Jules chooses the evidence; I write the request.",
+              "The next day, my section says midnight. Jules’s says 2 a.m. We’ve divided the slides without agreeing on the hours.",
+              "We settle on midnight for the feasibility review. Jules keeps the 2 a.m. accounts in the notes, so the limit is visible."
+            ],
+            "voice": "The smaller case is easier to explain. But the people going home at two are still in my notes. I don’t want “out of scope” to mean forgotten.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules lays our two versions side by side. Midnight is circled on one; 2 a.m. on the other. Dev draws one box around the agreed request.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Let’s rehearse. We’ll name the gap.”",
+            "detail": "Practise the delivery. Describe room demand as unconfirmed.",
+            "approach": "Making uncertainty visible",
+            "gain": "You practised a clear, honest request instead of treating an assumption as evidence.",
+            "cost": "You still had not checked whether this room suited the students you hoped to help.",
+            "question": "When does naming uncertainty make a proposal honest, and when does it become an excuse not to investigate?",
+            "result": [
+              "We change one sentence: “Students want later access. Whether this room works for them is a question for the trial.”",
+              "Our first run is nine minutes. The second is seven. Dev points out the slide where I keep speeding up.",
+              "We leave with a cleaner presentation and the same unanswered question. At least it is on the page now."
+            ],
+            "voice": "I’m glad we used the time. I also know a good delivery can make a thin bit of evidence sound thicker than it is.",
+            "speaker": "Dev"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Dev stops the orange timer at seven minutes. This is the handover we practised. He looks up, and I let the last sentence land.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "Explain the assumptions. Ask for a feasibility review.",
+            "detail": "Keep the conversation moving while naming what is unknown.",
+            "approach": "Giving direction with limits",
+            "gain": "You made a specific next step possible without inventing a cost.",
+            "cost": "The panel could reasonably question your assumptions before supporting a review.",
+            "question": "Which assumption would you be willing to have someone challenge in public?",
+            "result": [
+              "“We don’t have a staffing estimate,” I say. “The request is a feasibility review of one room for two weeks, including who would need to be there.”",
+              "The panel member writes something down. “Then put staffing and late transport in the review questions.”",
+              "I do. We have a next step to propose, not a promise that the room will open."
+            ],
+            "voice": "I could hear the difference between not having an answer and trying to hide it. This time we let the question stay a question.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Dividing the work gave us room. It didn’t give us agreement. Next time, I want to decide the boundaries together first.",
+        "We said what we didn’t know. I want to remember to come back to it, now that the presentation is over.",
+        "I didn’t fill the silence with a number. I made the next question clear."
+      ],
+      "closing": {
+        "caption": "Dev takes out the orange timer.\nThis time, he doesn’t start it.",
+        "paragraph": "On the bench, Dev takes the orange timer out of his pocket. My shoulders tighten before I notice he has put it face down. “No run-through,” he says. “Just sitting.”",
+        "owner": "Dev"
+      }
+    },
+    {
+      "id": "3-2-2",
+      "choices": [
+        2,
+        1,
+        1
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“One smaller case. You pick the evidence.”",
+            "detail": "Cut the scope. Give each person a clear piece to own.",
+            "approach": "Sharing ownership",
+            "gain": "The work became smaller and each of you had a part to own.",
+            "cost": "A narrower proposal left some students out. Your separately written sections also disagreed about the opening hours.",
+            "question": "When you divide the work, what shared decision needs to stay shared?",
+            "result": [
+              "We stop trying to solve every late-night problem. One room. A two-week trial. Jules chooses the evidence; I write the request.",
+              "The next day, my section says midnight. Jules’s says 2 a.m. We’ve divided the slides without agreeing on the hours.",
+              "We settle on midnight for the feasibility review. Jules keeps the 2 a.m. accounts in the notes, so the limit is visible."
+            ],
+            "voice": "The smaller case is easier to explain. But the people going home at two are still in my notes. I don’t want “out of scope” to mean forgotten.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules lays our two versions side by side. Midnight is circled on one; 2 a.m. on the other. Dev draws one box around the agreed request.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Let’s rehearse. We’ll name the gap.”",
+            "detail": "Practise the delivery. Describe room demand as unconfirmed.",
+            "approach": "Making uncertainty visible",
+            "gain": "You practised a clear, honest request instead of treating an assumption as evidence.",
+            "cost": "You still had not checked whether this room suited the students you hoped to help.",
+            "question": "When does naming uncertainty make a proposal honest, and when does it become an excuse not to investigate?",
+            "result": [
+              "We change one sentence: “Students want later access. Whether this room works for them is a question for the trial.”",
+              "Our first run is nine minutes. The second is seven. Dev points out the slide where I keep speeding up.",
+              "We leave with a cleaner presentation and the same unanswered question. At least it is on the page now."
+            ],
+            "voice": "I’m glad we used the time. I also know a good delivery can make a thin bit of evidence sound thicker than it is.",
+            "speaker": "Dev"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Dev stops the orange timer at seven minutes. This is the handover we practised. He looks up, and I let the last sentence land.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“Dev, can you explain what we do know?”",
+            "detail": "Invite relevant knowledge. Leave room for its limits.",
+            "approach": "Making room for expertise",
+            "gain": "You made space for a teammate to contribute the knowledge they actually had.",
+            "cost": "Passing the microphone could feel like passing the pressure. Dev still could not supply a cost.",
+            "question": "How would you invite someone’s expertise without making them responsible for an answer they do not have?",
+            "result": [
+              "I turn to Dev. “You’ve checked the room rules. Can you explain that part? We don’t have the costs yet.”",
+              "Dev puts both hands on the table. “The current rules don’t tell us what extra staffing would be required. We need to ask facilities.”",
+              "It isn’t a rescue. It is a more accurate answer than I could have given alone."
+            ],
+            "voice": "The words “that part” helped. I knew what I was being asked to own, and what I wasn’t.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Dividing the work gave us room. It didn’t give us agreement. Next time, I want to decide the boundaries together first.",
+        "We said what we didn’t know. I want to remember to come back to it, now that the presentation is over.",
+        "I let someone else answer the part they knew. The gap didn’t disappear; we held it together."
+      ],
+      "closing": {
+        "caption": "Dev takes out the orange timer.\nThis time, he doesn’t start it.",
+        "paragraph": "On the bench, Dev takes the orange timer out of his pocket. My shoulders tighten before I notice he has put it face down. “No run-through,” he says. “Just sitting.”",
+        "owner": "Dev"
+      }
+    },
+    {
+      "id": "3-2-3",
+      "choices": [
+        2,
+        1,
+        2
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“One smaller case. You pick the evidence.”",
+            "detail": "Cut the scope. Give each person a clear piece to own.",
+            "approach": "Sharing ownership",
+            "gain": "The work became smaller and each of you had a part to own.",
+            "cost": "A narrower proposal left some students out. Your separately written sections also disagreed about the opening hours.",
+            "question": "When you divide the work, what shared decision needs to stay shared?",
+            "result": [
+              "We stop trying to solve every late-night problem. One room. A two-week trial. Jules chooses the evidence; I write the request.",
+              "The next day, my section says midnight. Jules’s says 2 a.m. We’ve divided the slides without agreeing on the hours.",
+              "We settle on midnight for the feasibility review. Jules keeps the 2 a.m. accounts in the notes, so the limit is visible."
+            ],
+            "voice": "The smaller case is easier to explain. But the people going home at two are still in my notes. I don’t want “out of scope” to mean forgotten.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules lays our two versions side by side. Midnight is circled on one; 2 a.m. on the other. Dev draws one box around the agreed request.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Let’s rehearse. We’ll name the gap.”",
+            "detail": "Practise the delivery. Describe room demand as unconfirmed.",
+            "approach": "Making uncertainty visible",
+            "gain": "You practised a clear, honest request instead of treating an assumption as evidence.",
+            "cost": "You still had not checked whether this room suited the students you hoped to help.",
+            "question": "When does naming uncertainty make a proposal honest, and when does it become an excuse not to investigate?",
+            "result": [
+              "We change one sentence: “Students want later access. Whether this room works for them is a question for the trial.”",
+              "Our first run is nine minutes. The second is seven. Dev points out the slide where I keep speeding up.",
+              "We leave with a cleaner presentation and the same unanswered question. At least it is on the page now."
+            ],
+            "voice": "I’m glad we used the time. I also know a good delivery can make a thin bit of evidence sound thicker than it is.",
+            "speaker": "Dev"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Dev stops the orange timer at seven minutes. This is the handover we practised. He looks up, and I let the last sentence land.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“We’ll check with facilities and follow up on Monday.”",
+            "detail": "Offer a concrete follow-up instead of a speculative answer.",
+            "approach": "Taking accountable follow-up",
+            "gain": "You protected the accuracy of the answer and named a time to return.",
+            "cost": "The panel left without a cost. Your promise now needed an owner and a realistic fallback if facilities did not reply.",
+            "question": "What would your follow-up contain if the person with the answer has not replied by the date you promised?",
+            "result": [
+              "“We can’t give you a reliable figure today,” I say. “We’ll contact facilities and send an update on Monday, even if the estimate is still pending.”",
+              "Outside, Dev stops me. “Who’s writing that email?”",
+              "We divide it there: I contact facilities, Jules lists the open questions, Dev checks the draft. Monday becomes a shared task, not a line I said to fill the silence."
+            ],
+            "voice": "A date sounds solid when you say it into a quiet room. I’m glad we worked out what it actually meant before we went home.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Dividing the work gave us room. It didn’t give us agreement. Next time, I want to decide the boundaries together first.",
+        "We said what we didn’t know. I want to remember to come back to it, now that the presentation is over.",
+        "I made a promise. Now the work is to keep it, including an honest update if the answer takes longer."
+      ],
+      "closing": {
+        "caption": "Dev takes out the orange timer.\nThis time, he doesn’t start it.",
+        "paragraph": "On the bench, Dev takes the orange timer out of his pocket. My shoulders tighten before I notice he has put it face down. “No run-through,” he says. “Just sitting.”",
+        "owner": "Dev"
+      }
+    },
+    {
+      "id": "3-3-1",
+      "choices": [
+        2,
+        2,
+        0
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“One smaller case. You pick the evidence.”",
+            "detail": "Cut the scope. Give each person a clear piece to own.",
+            "approach": "Sharing ownership",
+            "gain": "The work became smaller and each of you had a part to own.",
+            "cost": "A narrower proposal left some students out. Your separately written sections also disagreed about the opening hours.",
+            "question": "When you divide the work, what shared decision needs to stay shared?",
+            "result": [
+              "We stop trying to solve every late-night problem. One room. A two-week trial. Jules chooses the evidence; I write the request.",
+              "The next day, my section says midnight. Jules’s says 2 a.m. We’ve divided the slides without agreeing on the hours.",
+              "We settle on midnight for the feasibility review. Jules keeps the 2 a.m. accounts in the notes, so the limit is visible."
+            ],
+            "voice": "The smaller case is easier to explain. But the people going home at two are still in my notes. I don’t want “out of scope” to mean forgotten.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules lays our two versions side by side. Midnight is circled on one; 2 a.m. on the other. Dev draws one box around the agreed request.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Ten minutes. What can we all stand behind?”",
+            "detail": "Let everyone argue for a plan, then make a timed group decision.",
+            "approach": "Deciding together",
+            "gain": "Everyone had a direct say in the risk the group would take.",
+            "cost": "The discussion used a third of the remaining time, and a majority decision did not remove the disagreement.",
+            "question": "What should a group decide together—and what would make that decision binding when time runs out?",
+            "result": [
+              "Jules wants to check. Dev wants one full rehearsal. I give us ten minutes to decide, and set the timer where we can all see it.",
+              "Two of us choose rehearsal with the uncertainty stated. Jules disagrees, then helps write the sentence.",
+              "We only manage one run. There is no extra time for having made the decision carefully."
+            ],
+            "voice": "I can work with a decision I didn’t vote for. But I want the reason I disagreed to survive the vote.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules puts our agreed caveat beside the laptop, with their original concern still circled. I read both before I reach the last slide.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "Explain the assumptions. Ask for a feasibility review.",
+            "detail": "Keep the conversation moving while naming what is unknown.",
+            "approach": "Giving direction with limits",
+            "gain": "You made a specific next step possible without inventing a cost.",
+            "cost": "The panel could reasonably question your assumptions before supporting a review.",
+            "question": "Which assumption would you be willing to have someone challenge in public?",
+            "result": [
+              "“We don’t have a staffing estimate,” I say. “The request is a feasibility review of one room for two weeks, including who would need to be there.”",
+              "The panel member writes something down. “Then put staffing and late transport in the review questions.”",
+              "I do. We have a next step to propose, not a promise that the room will open."
+            ],
+            "voice": "I could hear the difference between not having an answer and trying to hide it. This time we let the question stay a question.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Dividing the work gave us room. It didn’t give us agreement. Next time, I want to decide the boundaries together first.",
+        "We made a decision together. I want to remember the concern that lost the vote. It might matter more later.",
+        "I didn’t fill the silence with a number. I made the next question clear."
+      ],
+      "closing": {
+        "caption": "Jules reaches for the orange timer.\n“Can we have a minute without this?”",
+        "paragraph": "Jules picks up the orange timer and puts it back in Dev’s bag. “Can we have a minute without this?” Dev moves the bag under the bench. Nobody calls a vote.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "3-3-2",
+      "choices": [
+        2,
+        2,
+        1
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“One smaller case. You pick the evidence.”",
+            "detail": "Cut the scope. Give each person a clear piece to own.",
+            "approach": "Sharing ownership",
+            "gain": "The work became smaller and each of you had a part to own.",
+            "cost": "A narrower proposal left some students out. Your separately written sections also disagreed about the opening hours.",
+            "question": "When you divide the work, what shared decision needs to stay shared?",
+            "result": [
+              "We stop trying to solve every late-night problem. One room. A two-week trial. Jules chooses the evidence; I write the request.",
+              "The next day, my section says midnight. Jules’s says 2 a.m. We’ve divided the slides without agreeing on the hours.",
+              "We settle on midnight for the feasibility review. Jules keeps the 2 a.m. accounts in the notes, so the limit is visible."
+            ],
+            "voice": "The smaller case is easier to explain. But the people going home at two are still in my notes. I don’t want “out of scope” to mean forgotten.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules lays our two versions side by side. Midnight is circled on one; 2 a.m. on the other. Dev draws one box around the agreed request.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Ten minutes. What can we all stand behind?”",
+            "detail": "Let everyone argue for a plan, then make a timed group decision.",
+            "approach": "Deciding together",
+            "gain": "Everyone had a direct say in the risk the group would take.",
+            "cost": "The discussion used a third of the remaining time, and a majority decision did not remove the disagreement.",
+            "question": "What should a group decide together—and what would make that decision binding when time runs out?",
+            "result": [
+              "Jules wants to check. Dev wants one full rehearsal. I give us ten minutes to decide, and set the timer where we can all see it.",
+              "Two of us choose rehearsal with the uncertainty stated. Jules disagrees, then helps write the sentence.",
+              "We only manage one run. There is no extra time for having made the decision carefully."
+            ],
+            "voice": "I can work with a decision I didn’t vote for. But I want the reason I disagreed to survive the vote.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules puts our agreed caveat beside the laptop, with their original concern still circled. I read both before I reach the last slide.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“Dev, can you explain what we do know?”",
+            "detail": "Invite relevant knowledge. Leave room for its limits.",
+            "approach": "Making room for expertise",
+            "gain": "You made space for a teammate to contribute the knowledge they actually had.",
+            "cost": "Passing the microphone could feel like passing the pressure. Dev still could not supply a cost.",
+            "question": "How would you invite someone’s expertise without making them responsible for an answer they do not have?",
+            "result": [
+              "I turn to Dev. “You’ve checked the room rules. Can you explain that part? We don’t have the costs yet.”",
+              "Dev puts both hands on the table. “The current rules don’t tell us what extra staffing would be required. We need to ask facilities.”",
+              "It isn’t a rescue. It is a more accurate answer than I could have given alone."
+            ],
+            "voice": "The words “that part” helped. I knew what I was being asked to own, and what I wasn’t.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Dividing the work gave us room. It didn’t give us agreement. Next time, I want to decide the boundaries together first.",
+        "We made a decision together. I want to remember the concern that lost the vote. It might matter more later.",
+        "I let someone else answer the part they knew. The gap didn’t disappear; we held it together."
+      ],
+      "closing": {
+        "caption": "Jules reaches for the orange timer.\n“Can we have a minute without this?”",
+        "paragraph": "Jules picks up the orange timer and puts it back in Dev’s bag. “Can we have a minute without this?” Dev moves the bag under the bench. Nobody calls a vote.",
+        "owner": "Jules"
+      }
+    },
+    {
+      "id": "3-3-3",
+      "choices": [
+        2,
+        2,
+        2
+      ],
+      "entries": [
+        {
+          "date": "Tuesday",
+          "title": "I could fix this.\nThat was the problem.",
+          "paragraphs": [
+            "Eighteen slides. Seven minutes to speak. Three days until we ask the campus panel to look into keeping one study room open later.",
+            "Jules has spent a week listening to students. Every slide is full of their words. I can see a cleaner story hiding underneath. I can also see how long it will take to explain it.",
+            "“Every time I cut a quote,” Jules says, “it sounds like we’re speaking for them.”",
+            "My phone lights up. Dev: “Tomorrow’s rehearsal is still happening, right? I start work at six.”"
+          ],
+          "choice": {
+            "title": "“One smaller case. You pick the evidence.”",
+            "detail": "Cut the scope. Give each person a clear piece to own.",
+            "approach": "Sharing ownership",
+            "gain": "The work became smaller and each of you had a part to own.",
+            "cost": "A narrower proposal left some students out. Your separately written sections also disagreed about the opening hours.",
+            "question": "When you divide the work, what shared decision needs to stay shared?",
+            "result": [
+              "We stop trying to solve every late-night problem. One room. A two-week trial. Jules chooses the evidence; I write the request.",
+              "The next day, my section says midnight. Jules’s says 2 a.m. We’ve divided the slides without agreeing on the hours.",
+              "We settle on midnight for the feasibility review. Jules keeps the 2 a.m. accounts in the notes, so the limit is visible."
+            ],
+            "voice": "The smaller case is easier to explain. But the people going home at two are still in my notes. I don’t want “out of scope” to mean forgotten.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Wednesday",
+          "title": "The room we chose.\nThe question we missed.",
+          "paragraphs": [
+            "Jules lays our two versions side by side. Midnight is circled on one; 2 a.m. on the other. Dev draws one box around the agreed request.",
+            "Jules has noticed something. People asked for later study space. Nobody clearly said they would use this room, on this side of campus.",
+            "Dev sets his small orange timer on the table. “Thirty minutes. Then I really have to go.”",
+            "We can check the room assumption or give the presentation a proper run-through. The panel can recommend a feasibility review; it can’t approve staffing or money."
+          ],
+          "choice": {
+            "title": "“Ten minutes. What can we all stand behind?”",
+            "detail": "Let everyone argue for a plan, then make a timed group decision.",
+            "approach": "Deciding together",
+            "gain": "Everyone had a direct say in the risk the group would take.",
+            "cost": "The discussion used a third of the remaining time, and a majority decision did not remove the disagreement.",
+            "question": "What should a group decide together—and what would make that decision binding when time runs out?",
+            "result": [
+              "Jules wants to check. Dev wants one full rehearsal. I give us ten minutes to decide, and set the timer where we can all see it.",
+              "Two of us choose rehearsal with the uncertainty stated. Jules disagrees, then helps write the sentence.",
+              "We only manage one run. There is no extra time for having made the decision carefully."
+            ],
+            "voice": "I can work with a decision I didn’t vote for. But I want the reason I disagreed to survive the vote.",
+            "speaker": "Jules"
+          }
+        },
+        {
+          "date": "Friday",
+          "title": "Then someone asked\nabout the money.",
+          "paragraphs": [
+            "Jules puts our agreed caveat beside the laptop, with their original concern still circled. I read both before I reach the last slide.",
+            "A panel member leans forward. “What would the extra staffing cost?”",
+            "We haven’t got a verified estimate. Dev has read the room’s opening rules, but none of us knows the staffing rates or who would need to be on duty.",
+            "The question hangs there. I feel the familiar urge to make the gap disappear."
+          ],
+          "choice": {
+            "title": "“We’ll check with facilities and follow up on Monday.”",
+            "detail": "Offer a concrete follow-up instead of a speculative answer.",
+            "approach": "Taking accountable follow-up",
+            "gain": "You protected the accuracy of the answer and named a time to return.",
+            "cost": "The panel left without a cost. Your promise now needed an owner and a realistic fallback if facilities did not reply.",
+            "question": "What would your follow-up contain if the person with the answer has not replied by the date you promised?",
+            "result": [
+              "“We can’t give you a reliable figure today,” I say. “We’ll contact facilities and send an update on Monday, even if the estimate is still pending.”",
+              "Outside, Dev stops me. “Who’s writing that email?”",
+              "We divide it there: I contact facilities, Jules lists the open questions, Dev checks the draft. Monday becomes a shared task, not a line I said to fill the silence."
+            ],
+            "voice": "A date sounds solid when you say it into a quiet room. I’m glad we worked out what it actually meant before we went home.",
+            "speaker": "Dev"
+          }
+        }
+      ],
+      "echo": [
+        "Dividing the work gave us room. It didn’t give us agreement. Next time, I want to decide the boundaries together first.",
+        "We made a decision together. I want to remember the concern that lost the vote. It might matter more later.",
+        "I made a promise. Now the work is to keep it, including an honest update if the answer takes longer."
+      ],
+      "closing": {
+        "caption": "Jules reaches for the orange timer.\n“Can we have a minute without this?”",
+        "paragraph": "Jules picks up the orange timer and puts it back in Dev’s bag. “Can we have a minute without this?” Dev moves the bag under the bench. Nobody calls a vote.",
+        "owner": "Jules"
+      }
+    }
+  ]
+}
