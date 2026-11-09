@@ -1,0 +1,5 @@
+export type Save = {version:1;page:number;choices:number[];notes:string;clearType:boolean;still:boolean};
+export const initial:Save={version:1,page:0,choices:[],notes:'',clearType:false,still:false};
+export function isSave(value:unknown):value is Save {if(!value||typeof value!=='object')return false;const s=value as Save;return s.version===1&&Number.isInteger(s.page)&&s.page>=0&&s.page<=6&&Array.isArray(s.choices)&&s.choices.length<=3&&s.choices.every(c=>Number.isInteger(c)&&c>=0&&c<3)&&s.choices.length>=Math.ceil(s.page/2)&&typeof s.notes==='string'&&s.notes.length<=4000&&typeof s.clearType==='boolean'&&typeof s.still==='boolean';}
+export function choose(state:Save,index:number):Save{if(state.page===6||state.page%2===1||!Number.isInteger(index)||index<0||index>2)return state;const scene=Math.floor(state.page/2);return {...state,choices:[...state.choices.slice(0,scene),index]};}
+export function advance(state:Save):Save{if(state.page===6||state.choices.length<=Math.floor(state.page/2))return state;return {...state,page:state.page+1};}
