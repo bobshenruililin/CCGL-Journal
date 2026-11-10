@@ -1,12 +1,12 @@
-import {type Save, initial, isSave} from './state';
+import {type Save, initial, isSave} from './state.ts';
 
-export const journalKey = 'ccgl-journal-v1';
+export const journalKey = 'six-flights-v2';
 type Storage = Pick<globalThis.Storage, 'getItem' | 'setItem'>;
 export type JournalSnapshot = {state: Save; saveOK: boolean; hasSaved: boolean};
 
 /** One notebook per mounted reader. Merely opening it never overwrites a save. */
 export function createJournalStore(getStorage: () => Storage) {
- let snapshot: JournalSnapshot = {state: {...initial, choices: []}, saveOK: true, hasSaved: false};
+ let snapshot: JournalSnapshot = {state: {...initial}, saveOK: true, hasSaved: false};
  try {
   const raw = getStorage().getItem(journalKey);
   if (raw) {
