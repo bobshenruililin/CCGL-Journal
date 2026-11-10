@@ -40,3 +40,8 @@ Node 22.13+ required. `npm ci`, then `npm run dev`. Run `npm test` for all route
 Caveat and DM Sans are self-hosted under the SIL Open Font License; their license files are in `public/fonts`. The pixel artwork is original SVG. No paid assets, media-generation credits, external tracking, or model API calls are required at runtime. Choices and reflections are stored only in the visitor's browser. Browser storage can be unavailable; use text or print export to preserve a path.
 
 Prototype 0.2. The scenario and visual standard remain open to Bob's direction.
+
+
+## Fable consolidated starting version
+
+Read [the setup handoff](docs/fable-setup.md), [Jamie design backbone](docs/jamie-design-backbone.md), and [Asterwind import guide](reference/asterwind/IMPORT.md). Active Journal code is at root; Asterwind reference runtimes and assets are under reference/asterwind.

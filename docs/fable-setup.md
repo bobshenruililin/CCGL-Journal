@@ -1,88 +1,91 @@
-# Fable setup: CCGL Journal and Asterwind
+# Fable handoff: CCGL Journal and Asterwind
 
-Setup only. No creative content, story, art or other branch was changed. Work is on `setup/fable-haiku-20261110`.
+Updated 10 November 2026. This is the current handoff. The branch history below is context, not a set of competing starting versions.
 
-## Starting point
+## One starting version, room to rethink
 
-- Created from `feat/journal-reading-rhythm`.
-- Starting commit: `449be9a` "Let journal consequences breathe before reflection".
-- Git status at start: clean, tracking `origin/setup/fable-haiku-20261110` at the same commit.
+Use `setup/fable-haiku-20261110` in CCGL-Journal as the consolidated starting branch. It contains the latest Journal reading-rhythm implementation, the two design guides, and a pinned Asterwind runtime/asset snapshot. The active Journal is at the repository root. `reference/asterwind/` is a material library to inspect and adapt, not a second app to deploy or a requirement to combine every prototype.
 
-## Branch map (origin/CCGL-Journal)
+Fable has creative autonomy to rethink the experience, writing, visual language and interaction. The current story and front end are starting materials, not fixed requirements. Keep one coordinated implementation rather than parallel competing versions. Preserve useful state and accessibility work where it serves the new direction, and coordinate overlapping changes before editing.
 
-Every branch except `main` carries the full app. `main` is a single "Initial commit" with no app code, so `main...branch` diffs are large. Read commit-level history instead.
+The source Asterwind repository and its other branches remain available as references. Their branch index is in `reference/asterwind/IMPORT.md`. Choose relevant experiments deliberately; the index does not mean every branch has been copied here or that private production material may be published.
 
-| Branch | Head | Purpose and where to look |
-| --- | --- | --- |
-| `main` | `de2b1a6` | Initial commit only. Not the app. |
-| `feat/playable-journal` | `7b011d3` | First playable story (`69ea4c6`) plus replay history and story callbacks. `app/story.ts`, `app/state.ts`. |
-| `feat/journal-choice-continuity` | `2843317` | Narrative promises across routes. `qa/continuity-check.mjs`, `qa/print-check.mjs`, `app/PrintableJournal.tsx`, `docs/continuity-revision.md`. |
-| `feat/journal-reading-rhythm` | `449be9a` | Reading-flow revision, optional folded reflection, page motion. `app/ReflectionNote.tsx`, `app/journal-store.ts`, `qa/reading-check.mjs`, `docs/reading-rhythm.md`, `docs/screenshots/`. Same as this setup's starting point. |
-| `review/choice-contracts-20261109` | `5a62e38` | Independent route reading desk, branched from `7b011d3` (not from the continuity branch). `review/editorial-review.md`, `review/routes.json`, `review/route-atlas.html`, `qa/atlas-check.mjs`. |
-| `docs/creative-reference-manifest` | `a8fdc7e` | Doc-only commit on `7b011d3`. `docs/creative-reference-manifest.md`. |
-| `docs/jamie-design-backbone` | `a6cd310` | Doc-only commit on top of the manifest. `docs/jamie-design-backbone.md`. |
-| `setup/fable-haiku-20261110` | this branch | Starting commit plus this setup commit. |
+## Read first
 
-## Design guides (linked, not copied)
+1. `docs/jamie-design-backbone.md`: design for substance and understanding before choosing treatments.
+2. `docs/creative-reference-manifest.md`: the latest creative direction, admired references and asset-production guidance. This supersedes the narrower historical brief in `docs/creative-handoff.md`.
+3. `README.md`: the active Journal's current scope and code map.
+4. `docs/reading-rhythm.md`: the latest Journal revision and its screenshots.
+5. `reference/asterwind/IMPORT.md`: included materials, entry points, provenance, exclusions and source branches.
+6. Play the current Journal and the relevant Asterwind prototypes before deciding what to preserve or replace.
 
-- Jamie design guide: https://github.com/bobshenruililin/CCGL-Journal/blob/a6cd310/docs/jamie-design-backbone.md
-- Creative reference guide: https://github.com/bobshenruililin/CCGL-Journal/blob/a8fdc7e/docs/creative-reference-manifest.md
+The design guides are present locally in `docs/`; no separate branch checkout is required. Inspect `app/story.ts` for the scenarios, character playbook and route-resolved consequences, and `app/page.tsx`, `app/globals.css`, `app/PixelRoom.tsx` and `app/AfterRain.tsx` for the current interface and illustrations.
 
-Neither file is on this branch.
+Other useful paths: `app/state.ts`, `app/journal-store.ts`, `app/ReflectionNote.tsx`, `app/PrintableJournal.tsx`, `docs/continuity-revision.md`, `docs/verification-v02.md` and `qa/*.mjs`.
 
-## Read first (CCGL-Journal, on this branch)
+## Asterwind material included here
 
-1. `README.md`: current scope and the "Where to work" map.
-2. `docs/creative-handoff.md`: earlier briefs and their stated limits.
-3. `docs/reading-rhythm.md`: the latest revision and its screenshots.
-4. `app/story.ts`: scenarios, playbook, route-resolved consequences.
-5. `app/page.tsx`, `app/globals.css`, `app/PixelRoom.tsx`, `app/AfterRain.tsx`: current interface and illustrations.
+Source snapshot: `bobshenruililin/asterwind` at `d2037277a63cc56325dbed264d7b0c73635a2111`.
 
-Other relevant paths: `app/state.ts`, `app/journal-store.ts`, `app/ReflectionNote.tsx`, `app/PrintableJournal.tsx`, `docs/continuity-revision.md`, `docs/verification-v02.md`, `qa/*.mjs`.
+- `reference/asterwind/app/index.html`: original nine-scenario paper theatre and delivery artwork.
+- `reference/asterwind/film/index.html`: The Seam, with story, artwork and optional synthetic timing-guide speech.
+- `reference/asterwind/hub/index.html`: dispenser prototype linking the film and anthology.
+- `reference/asterwind/anthology/`: five episode prototypes, runtime assets and builders.
+- `reference/asterwind/snapshot-manifest.json`: the exact 201 source files, source paths, Git blob hashes and sizes.
 
-## Asterwind (read-only reference)
+Serve `reference/asterwind/` as a static directory to inspect the split runtimes. Offline exports are not part of the imported source snapshot. If needed, build The Seam with `python film/build.py`, then the anthology with `python anthology/build-all.py`, then the offline hub with `python hub/build.py`, running from that snapshot directory.
 
-- Local copy: `/home/user/bobshenruililin/asterwind`, outside this repository and not committed. Anonymous shallow clone (`--depth 1`, `GIT_LFS_SKIP_SMUDGE=1`) at `d2037277a63cc56325dbed264d7b0c73635a2111`.
-- Access: the session's GitHub scope lists only CCGL-Journal. The first attach attempt was denied by the auto-mode classifier. After your explicit request, the attach tool reported that anonymous read of this public repository was already available and attached nothing. The clone succeeded.
-- Limits: this session cannot push to Asterwind, cannot use the GitHub API tools against it, and has no credentials for it. No LFS objects were needed; media files are stored directly in git.
-- Disclosure: before the attach call I ran one `git ls-remote` against Asterwind to list refs. I read no file contents at that point.
-- Read first: `README.md` (film-first section), `AGENTS.md` (film composition rules), `film/README.md`, `film/REPOSITORY-QA.md`, `docs/HANDOFF.md`, `docs/CREATIVE-DIRECTION-2026-11-03.md`.
-- Older app: `app/index.html`, `app/app.js`, `app/scenarios.js`, `app/style.css`.
-- Asterwind's own QA notes say its browser test could not run in its environment. That is specific to its environment, not this one.
+A fresh checkout has the included assets. It no longer depends on the earlier separate Asterwind clone or that session's local paths. Reference code is excluded from the Journal's TypeScript and lint scopes and is not placed under `public/`. The independent prototypes do not become Journal routes automatically.
 
-## Commands and outcomes (each run once)
+Private-only production prompts, writer/source notes, Git history and dependency trees were excluded. Runtime artwork and fiction are not documentary evidence; the workbook's leadership context is not a validated assessment. Read the import guide's attribution and rights limits before reuse. No blanket publication permission is implied for other source materials.
 
-| Command | Outcome |
+## Verification: distinguish the two stages
+
+### Consolidation checks
+
+An independent read-only check confirmed that all 201 imported files match the source blob hashes in `snapshot-manifest.json`. Static HTML/CSS file references resolved. This is a material-integrity check, not a browser playthrough or creative acceptance. See [consolidation verification](consolidation-verification.md) for the final Journal test/build results.
+
+### Earlier setup results, before consolidation
+
+The original setup began from `feat/journal-reading-rhythm` at `449be9a` ("Let journal consequences breathe before reflection"), with a clean working tree. Setup commit `1593698` added the handoff and optional stop-slop skill. The following results were recorded in that earlier environment; they are historical evidence, not a claim that this consolidation has already repeated them.
+
+| Command | Recorded outcome |
 | --- | --- |
-| `npm run install:ci` | Exit 0. 687 packages. Portable profile (no `.sites-runtime` file). |
-| `npm test` | Exit 0. Route, continuity, print and reading checks all PASS. |
+| `npm run install:ci` | Exit 0. 687 packages. Portable profile, without a `.sites-runtime` file. |
+| `npm test` | Exit 0. Route, continuity, print and reading checks passed. |
 | `npx tsc --noEmit` | Exit 0. |
 | `npm run lint` | Exit 0. |
-| `npm run build` | Exit 0. vinext warns that route `/` could not be classified. Non-fatal. |
-| `npm run dev` | Serves `http://127.0.0.1:5173/`, HTTP 200, about 7 s to ready. |
-| `npm start` (after build) | Wrangler ready on `127.0.0.1:8787`, `GET /` 200. |
+| `npm run build` | Exit 0. Non-fatal vinext warning that route `/` could not be classified. |
+| `npm run dev` | HTTP 200 at `http://127.0.0.1:5173/`, about 7 seconds to ready. |
+| `npm start`, after build | Wrangler served `GET /` with HTTP 200 at `127.0.0.1:8787`. |
 
-Both servers were stopped after checking.
+Both servers were stopped after checking. Headless Chromium loaded the development page with HTTP 200, title "CCGL Journal — The things we carry", an h1, 12 buttons, and no page or console errors. The screenshot showed the first journal spread and choices. That check did not cover a full route, phone widths, reduced motion or the built-in preview pane.
 
-## Browser status
+The earlier Asterwind environment's inability to run a browser test is not a blocker inherited by this checkout. Verify the actual experience here, including mobile, keyboard, reduced motion, revisit/rewrite and exports as affected by new work.
 
-- Headless Chromium through the pre-installed Playwright: the dev page loaded with HTTP 200, title "CCGL Journal — The things we carry", an h1, 12 buttons, and no page or console errors. The screenshot shows the journal spread with its first choices.
-- Not tested: the built-in browser or preview pane, a full route playthrough, phone widths, reduced motion.
+## Optional editorial skill: stop-slop
 
-## Skill: stop-slop
+- Location: `.claude/skills/stop-slop/`, including `SKILL.md`, three reference files and the MIT license (Hardik Pandya).
+- Source: https://github.com/hardikpandya/stop-slop at `8da1f030185bdfe8471220585162991eaeb970e9` (18 March 2026).
+- The original setup copied and diffed these files byte-for-byte from a public clone. No installer or script was run. The upstream README and CHANGELOG were not installed.
+- Automatic project-skill discovery was not verified in that session; the files can be read directly.
+- Its hard rules are prompts, not bans. Keep meaning, uncertainty and character voice ahead of mechanical compliance. The upstream skill itself is unmodified.
 
-- Location: `.claude/skills/stop-slop/`. Files: `SKILL.md`, `references/phrases.md`, `references/structures.md`, `references/examples.md`, `LICENSE` (MIT, Hardik Pandya).
-- Source: https://github.com/hardikpandya/stop-slop at `8da1f030185bdfe8471220585162991eaeb970e9` (2026-03-18).
-- Method: plain public clone into a scratch directory, no credentials. Files were copied byte-identical and diffed against the source. No installer or script was run. The upstream README and CHANGELOG were not installed.
-- Discovery: not verified in this session. `ListSkills` lists only account-level claude.ai skills and returned no match. `SKILL.md` has valid `name` and `description` frontmatter.
-- Use: optional editorial guidance. Its hard rules (cut adverbs, no em dashes, revise below 35/50) are prompts, not bans. Keep meaning, uncertainty and character voice ahead of mechanical compliance. `SKILL.md` is unmodified upstream.
+## Historical branch map
 
-## Blockers and limits
+At the original setup, every listed branch except `main` carried the full app. `main` was only an initial commit, so `main...branch` diffs were large. Use commit-level history when comparing experiments. These are historical branch heads, not additional canonical versions.
 
-- Asterwind is read-only and outside the session's GitHub scope (see above).
-- Project-skill discovery is unverified in-session.
-- No other blockers.
+| Branch | Recorded head | Purpose |
+| --- | --- | --- |
+| `main` | `de2b1a6` | Initial commit only, not the app. |
+| `feat/playable-journal` | `7b011d3` | First playable story, replay history and callbacks. |
+| `feat/journal-choice-continuity` | `2843317` | Narrative promises across routes and print checks. |
+| `feat/journal-reading-rhythm` | `449be9a` | Reading flow, folded reflection and page motion. Basis of this consolidated version. |
+| `review/choice-contracts-20261109` | `5a62e38` | Independent route reading desk, based on `7b011d3`, not the later continuity branch. |
+| `docs/creative-reference-manifest` | `a8fdc7e` | Original guide commit; the guide is now local on this branch. |
+| `docs/jamie-design-backbone` | `a6cd310` | Original design-backbone commit; the guide is now local on this branch. |
+| `setup/fable-haiku-20261110` | Current branch | The single consolidated starting version. |
 
-## Deliberately not done
+## Scope of this handoff
 
-No creative content changes. No changes to `main` or other branches. No PR, merge or deploy. No image generation, paid service, new credential, plugin or MCP server, or security or global settings change.
+This consolidation gathers the working Journal and authorized reference materials. It does not itself redesign the experience, validate its creative quality, merge another branch or deploy a site. No paid generation, new credential, plugin, MCP server or security-setting change is part of it. Publication and deployment are separate from Fable's freedom to design.

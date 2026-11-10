@@ -1,0 +1,1219 @@
+{
+  "source_repository": "bobshenruililin/asterwind",
+  "source_commit": "d2037277a63cc56325dbed264d7b0c73635a2111",
+  "files": [
+    {
+      "source_path": "anthology/build-all.py",
+      "path": "reference/asterwind/anthology/build-all.py",
+      "sha": "5147dac7536e3c7dd1926536153b5c17f9c421f5",
+      "bytes": 756
+    },
+    {
+      "source_path": "anthology/build.py",
+      "path": "reference/asterwind/anthology/build.py",
+      "sha": "7b81a8c36c62397ae9b110c4df3128f5131bc357",
+      "bytes": 1920
+    },
+    {
+      "source_path": "anthology/episodes/pixel/art-data.js",
+      "path": "reference/asterwind/anthology/episodes/pixel/art-data.js",
+      "sha": "2aa3ca0519d0ba28ad001771352ccd46ee542f00",
+      "bytes": 2300
+    },
+    {
+      "source_path": "anthology/episodes/pixel/art-manifest.json",
+      "path": "reference/asterwind/anthology/episodes/pixel/art-manifest.json",
+      "sha": "e7567a046cff02ad1b059a14d0cb503d66516958",
+      "bytes": 3113
+    },
+    {
+      "source_path": "anthology/episodes/pixel/assets/connect.webp",
+      "path": "reference/asterwind/anthology/episodes/pixel/assets/connect.webp",
+      "sha": "96967e78c5aa6fc24d746a0a05f2fb12f9f878c5",
+      "bytes": 343770
+    },
+    {
+      "source_path": "anthology/episodes/pixel/assets/decision.webp",
+      "path": "reference/asterwind/anthology/episodes/pixel/assets/decision.webp",
+      "sha": "22907eaca57775e2e97b4de1b81065771008f6d2",
+      "bytes": 374558
+    },
+    {
+      "source_path": "anthology/episodes/pixel/assets/lower.webp",
+      "path": "reference/asterwind/anthology/episodes/pixel/assets/lower.webp",
+      "sha": "85a5f7a70f1870ac276be2d8f380885e29cd5ba7",
+      "bytes": 292082
+    },
+    {
+      "source_path": "anthology/episodes/pixel/assets/master.webp",
+      "path": "reference/asterwind/anthology/episodes/pixel/assets/master.webp",
+      "sha": "35f17b1ab1c7b5708b57e0af46cf44d6c65656da",
+      "bytes": 348650
+    },
+    {
+      "source_path": "anthology/episodes/pixel/build.py",
+      "path": "reference/asterwind/anthology/episodes/pixel/build.py",
+      "sha": "16788353b47577bf82d573be600e3aace29e93de",
+      "bytes": 1934
+    },
+    {
+      "source_path": "anthology/episodes/pixel/index.html",
+      "path": "reference/asterwind/anthology/episodes/pixel/index.html",
+      "sha": "4f781a9a58c1c276aae7a193ed91aa99334ea408",
+      "bytes": 4465
+    },
+    {
+      "source_path": "anthology/episodes/pixel/layout.js",
+      "path": "reference/asterwind/anthology/episodes/pixel/layout.js",
+      "sha": "25a16d066003200690a37fe22c3cae98cfbea869",
+      "bytes": 970
+    },
+    {
+      "source_path": "anthology/episodes/pixel/scene.css",
+      "path": "reference/asterwind/anthology/episodes/pixel/scene.css",
+      "sha": "45f2fe4d3f2ddb64a511c187dac1f84aeef1ac2e",
+      "bytes": 8753
+    },
+    {
+      "source_path": "anthology/episodes/pixel/scene.js",
+      "path": "reference/asterwind/anthology/episodes/pixel/scene.js",
+      "sha": "86976695cef3b42d925819bafaebf2f4271c229e",
+      "bytes": 4891
+    },
+    {
+      "source_path": "anthology/episodes/pixel/scene.svg",
+      "path": "reference/asterwind/anthology/episodes/pixel/scene.svg",
+      "sha": "35ecbab130a1d42428e13fa62de735eb3fa1e0f3",
+      "bytes": 2942
+    },
+    {
+      "source_path": "anthology/episodes/pixel/story-data.js",
+      "path": "reference/asterwind/anthology/episodes/pixel/story-data.js",
+      "sha": "798d4f8600dcc62abf65f1467276dbc590db3285",
+      "bytes": 3415
+    },
+    {
+      "source_path": "anthology/episodes/pixel/story.json",
+      "path": "reference/asterwind/anthology/episodes/pixel/story.json",
+      "sha": "e9d338ff6aee9e68448aa03a2c53e61800476360",
+      "bytes": 4350
+    },
+    {
+      "source_path": "anthology/episodes/pixel/test-square.cjs",
+      "path": "reference/asterwind/anthology/episodes/pixel/test-square.cjs",
+      "sha": "267c1791c10b3e1a2d5b6911c2b0375e11316de7",
+      "bytes": 5524
+    },
+    {
+      "source_path": "anthology/episodes/pixel/timeline.js",
+      "path": "reference/asterwind/anthology/episodes/pixel/timeline.js",
+      "sha": "6a1e5f90678fdf69bdd54a04f09c3bcd4d4066aa",
+      "bytes": 1268
+    },
+    {
+      "source_path": "anthology/episodes/scope/art-data.js",
+      "path": "reference/asterwind/anthology/episodes/scope/art-data.js",
+      "sha": "c4e68cd1d99cf589de6b7d1084332761310b2c9f",
+      "bytes": 2506
+    },
+    {
+      "source_path": "anthology/episodes/scope/art-manifest.json",
+      "path": "reference/asterwind/anthology/episodes/scope/art-manifest.json",
+      "sha": "f616d0cb1467da06f4caf5ec350de0f9e993cbbd",
+      "bytes": 3092
+    },
+    {
+      "source_path": "anthology/episodes/scope/assets/runtime/capacity.webp",
+      "path": "reference/asterwind/anthology/episodes/scope/assets/runtime/capacity.webp",
+      "sha": "ca9065bd5b7e7e1898ac62ebd5beb1a19b551357",
+      "bytes": 308674
+    },
+    {
+      "source_path": "anthology/episodes/scope/assets/runtime/card-action.webp",
+      "path": "reference/asterwind/anthology/episodes/scope/assets/runtime/card-action.webp",
+      "sha": "4605215cd663b6330251aa673553216e8bdd9cf3",
+      "bytes": 318182
+    },
+    {
+      "source_path": "anthology/episodes/scope/assets/runtime/chair-action.webp",
+      "path": "reference/asterwind/anthology/episodes/scope/assets/runtime/chair-action.webp",
+      "sha": "51e3f2d3802835d618b00c90e3d0ab6a2d40d9a8",
+      "bytes": 315304
+    },
+    {
+      "source_path": "anthology/episodes/scope/assets/runtime/decision.webp",
+      "path": "reference/asterwind/anthology/episodes/scope/assets/runtime/decision.webp",
+      "sha": "62767f07369c813fa452400735f4c8d27d695e3f",
+      "bytes": 351724
+    },
+    {
+      "source_path": "anthology/episodes/scope/assets/runtime/extend.webp",
+      "path": "reference/asterwind/anthology/episodes/scope/assets/runtime/extend.webp",
+      "sha": "52007f95d76f62b76a4eddc111885ae0965b8b94",
+      "bytes": 396882
+    },
+    {
+      "source_path": "anthology/episodes/scope/assets/runtime/master.webp",
+      "path": "reference/asterwind/anthology/episodes/scope/assets/runtime/master.webp",
+      "sha": "6c90088a997b2144b67d5a78ab97fc63b4b63dbe",
+      "bytes": 345974
+    },
+    {
+      "source_path": "anthology/episodes/scope/assets/runtime/offer.webp",
+      "path": "reference/asterwind/anthology/episodes/scope/assets/runtime/offer.webp",
+      "sha": "065e82e29024fd715c8f612ee2dfcffcc4e9a796",
+      "bytes": 374186
+    },
+    {
+      "source_path": "anthology/episodes/scope/assets/runtime/return.webp",
+      "path": "reference/asterwind/anthology/episodes/scope/assets/runtime/return.webp",
+      "sha": "1b46004c71d7f0f0223ec73cebd81e46faba0cd8",
+      "bytes": 437180
+    },
+    {
+      "source_path": "anthology/episodes/scope/assets/runtime/teach.webp",
+      "path": "reference/asterwind/anthology/episodes/scope/assets/runtime/teach.webp",
+      "sha": "bc02ce4fee0fdd45d48fda01e901b1d936bd8ebf",
+      "bytes": 337432
+    },
+    {
+      "source_path": "anthology/episodes/scope/index.html",
+      "path": "reference/asterwind/anthology/episodes/scope/index.html",
+      "sha": "1a9d781499f631cc16b37024b8967faa4f7cbcd6",
+      "bytes": 7566
+    },
+    {
+      "source_path": "anthology/episodes/scope/layout.js",
+      "path": "reference/asterwind/anthology/episodes/scope/layout.js",
+      "sha": "8abfc8abb9811b56849c29c8ca244c7f6ce06548",
+      "bytes": 948
+    },
+    {
+      "source_path": "anthology/episodes/scope/scene.css",
+      "path": "reference/asterwind/anthology/episodes/scope/scene.css",
+      "sha": "efd224eb70d606efe267857656bd6cd4371290fb",
+      "bytes": 7683
+    },
+    {
+      "source_path": "anthology/episodes/scope/scene.js",
+      "path": "reference/asterwind/anthology/episodes/scope/scene.js",
+      "sha": "1f44188c72d94dd8f4eac45a84c3cee4de8eaced",
+      "bytes": 4726
+    },
+    {
+      "source_path": "anthology/episodes/scope/scene.svg",
+      "path": "reference/asterwind/anthology/episodes/scope/scene.svg",
+      "sha": "62df3823fc925c2d72f8c3aa4433bffb5e112fb7",
+      "bytes": 5994
+    },
+    {
+      "source_path": "anthology/episodes/scope/story-data.js",
+      "path": "reference/asterwind/anthology/episodes/scope/story-data.js",
+      "sha": "da531321fa5168a688c9869dbd04b00a4274c585",
+      "bytes": 3227
+    },
+    {
+      "source_path": "anthology/episodes/scope/story.json",
+      "path": "reference/asterwind/anthology/episodes/scope/story.json",
+      "sha": "0a71f07a85a3ea32b614474003eef3b63f0ec353",
+      "bytes": 4191
+    },
+    {
+      "source_path": "anthology/episodes/scope/timeline.js",
+      "path": "reference/asterwind/anthology/episodes/scope/timeline.js",
+      "sha": "95ecb9c65d921d3d3389a7ec762f0cc5c5eadaa7",
+      "bytes": 1267
+    },
+    {
+      "source_path": "anthology/episodes/ship/art-data.js",
+      "path": "reference/asterwind/anthology/episodes/ship/art-data.js",
+      "sha": "3ba4690baa0ae675132aee329e65a0b3552c6671",
+      "bytes": 2872
+    },
+    {
+      "source_path": "anthology/episodes/ship/art-manifest.json",
+      "path": "reference/asterwind/anthology/episodes/ship/art-manifest.json",
+      "sha": "b30abe968fd6dc97473343652dcb20661983503a",
+      "bytes": 3828
+    },
+    {
+      "source_path": "anthology/episodes/ship/assets/decision.webp",
+      "path": "reference/asterwind/anthology/episodes/ship/assets/decision.webp",
+      "sha": "9543bc285d0fec7af75645745bff741d7e41be30",
+      "bytes": 433024
+    },
+    {
+      "source_path": "anthology/episodes/ship/assets/live.webp",
+      "path": "reference/asterwind/anthology/episodes/ship/assets/live.webp",
+      "sha": "97c91734321ce0176f87b6027441f197e917c624",
+      "bytes": 331326
+    },
+    {
+      "source_path": "anthology/episodes/ship/assets/master.webp",
+      "path": "reference/asterwind/anthology/episodes/ship/assets/master.webp",
+      "sha": "ac421155f8c052b6a6a0b4ce3e5129517216f5f5",
+      "bytes": 374776
+    },
+    {
+      "source_path": "anthology/episodes/ship/assets/performance-double.webp",
+      "path": "reference/asterwind/anthology/episodes/ship/assets/performance-double.webp",
+      "sha": "4a71c790e4dbd43f54167cdd916618adf8896cd4",
+      "bytes": 324850
+    },
+    {
+      "source_path": "anthology/episodes/ship/assets/performance-reach.webp",
+      "path": "reference/asterwind/anthology/episodes/ship/assets/performance-reach.webp",
+      "sha": "42b56b288be7574166cd9b9c92b13c18f0c88233",
+      "bytes": 286566
+    },
+    {
+      "source_path": "anthology/episodes/ship/assets/performance-ready.webp",
+      "path": "reference/asterwind/anthology/episodes/ship/assets/performance-ready.webp",
+      "sha": "5aa446c25fdb1d1d639b862c905961538ebe3cd8",
+      "bytes": 323728
+    },
+    {
+      "source_path": "anthology/episodes/ship/assets/rehearsal.webp",
+      "path": "reference/asterwind/anthology/episodes/ship/assets/rehearsal.webp",
+      "sha": "91b252bbe8516409d583388f296fd13abbe4939b",
+      "bytes": 313262
+    },
+    {
+      "source_path": "anthology/episodes/ship/build.py",
+      "path": "reference/asterwind/anthology/episodes/ship/build.py",
+      "sha": "5a4b309522cef1770c585e4187914c808b710705",
+      "bytes": 1921
+    },
+    {
+      "source_path": "anthology/episodes/ship/index.html",
+      "path": "reference/asterwind/anthology/episodes/ship/index.html",
+      "sha": "fdd4c128e5530ad7ee0283f2aa463ba8a06fa1c9",
+      "bytes": 5664
+    },
+    {
+      "source_path": "anthology/episodes/ship/layout.js",
+      "path": "reference/asterwind/anthology/episodes/ship/layout.js",
+      "sha": "315ce6313d406bfd403aaa7034758cee6e07de98",
+      "bytes": 982
+    },
+    {
+      "source_path": "anthology/episodes/ship/scene.css",
+      "path": "reference/asterwind/anthology/episodes/ship/scene.css",
+      "sha": "40c122f3e801d587369dcf8a37745857a1508d0e",
+      "bytes": 9086
+    },
+    {
+      "source_path": "anthology/episodes/ship/scene.js",
+      "path": "reference/asterwind/anthology/episodes/ship/scene.js",
+      "sha": "085b608ac0a8e9dd24ff70ddb8c49cb1af3d85f1",
+      "bytes": 4955
+    },
+    {
+      "source_path": "anthology/episodes/ship/scene.svg",
+      "path": "reference/asterwind/anthology/episodes/ship/scene.svg",
+      "sha": "e1369e11e827628f106f1e95d2a17e5490f387b6",
+      "bytes": 4148
+    },
+    {
+      "source_path": "anthology/episodes/ship/story-data.js",
+      "path": "reference/asterwind/anthology/episodes/ship/story-data.js",
+      "sha": "4326b4b8bf6409eba578140a17a2639b572e956a",
+      "bytes": 3317
+    },
+    {
+      "source_path": "anthology/episodes/ship/story.json",
+      "path": "reference/asterwind/anthology/episodes/ship/story.json",
+      "sha": "594d8f822b29bf289f4b2587f1cc6cd2a45f8916",
+      "bytes": 4321
+    },
+    {
+      "source_path": "anthology/episodes/ship/test-doors.cjs",
+      "path": "reference/asterwind/anthology/episodes/ship/test-doors.cjs",
+      "sha": "804f8561f5cb06714534473b0395330a5a6984e9",
+      "bytes": 6240
+    },
+    {
+      "source_path": "anthology/episodes/ship/timeline.js",
+      "path": "reference/asterwind/anthology/episodes/ship/timeline.js",
+      "sha": "ee6b20ccc3d718c9dbd40fea5eb31937947b58dc",
+      "bytes": 1267
+    },
+    {
+      "source_path": "anthology/episodes/slides/art-data.js",
+      "path": "reference/asterwind/anthology/episodes/slides/art-data.js",
+      "sha": "e3323c643b8c154d187139d29fcdae39ed3ec2f5",
+      "bytes": 3786
+    },
+    {
+      "source_path": "anthology/episodes/slides/art-manifest.json",
+      "path": "reference/asterwind/anthology/episodes/slides/art-manifest.json",
+      "sha": "2e64d4c167de9029daf44f3bd4ee8e99fdd5efed",
+      "bytes": 4971
+    },
+    {
+      "source_path": "anthology/episodes/slides/assets/decision.webp",
+      "path": "reference/asterwind/anthology/episodes/slides/assets/decision.webp",
+      "sha": "46c0bc249fa7302debd21edc65afe49efbfe2deb",
+      "bytes": 337388
+    },
+    {
+      "source_path": "anthology/episodes/slides/assets/master.webp",
+      "path": "reference/asterwind/anthology/episodes/slides/assets/master.webp",
+      "sha": "80652cb28d6dcdff03eef24bd1dcadcbb864cc4e",
+      "bytes": 245840
+    },
+    {
+      "source_path": "anthology/episodes/slides/assets/microphone.webp",
+      "path": "reference/asterwind/anthology/episodes/slides/assets/microphone.webp",
+      "sha": "de555a2b3a7e5fb685f8ea34fa11b52d429a11ce",
+      "bytes": 213358
+    },
+    {
+      "source_path": "anthology/episodes/slides/assets/notebook.webp",
+      "path": "reference/asterwind/anthology/episodes/slides/assets/notebook.webp",
+      "sha": "b4169d6fc81101ca61f0c8e8e518ed14df0deb3c",
+      "bytes": 249744
+    },
+    {
+      "source_path": "anthology/episodes/slides/assets/performance-invite.webp",
+      "path": "reference/asterwind/anthology/episodes/slides/assets/performance-invite.webp",
+      "sha": "00f255c45dd32b1caab704b411c977a9b687c78d",
+      "bytes": 250198
+    },
+    {
+      "source_path": "anthology/episodes/slides/assets/performance-microphone-action.webp",
+      "path": "reference/asterwind/anthology/episodes/slides/assets/performance-microphone-action.webp",
+      "sha": "0db6a19bc9ef96989c5d64b972df41faa6b7325d",
+      "bytes": 313240
+    },
+    {
+      "source_path": "anthology/episodes/slides/assets/performance-microphone-offer.webp",
+      "path": "reference/asterwind/anthology/episodes/slides/assets/performance-microphone-offer.webp",
+      "sha": "980e935dca1f437be95e2aa354df988b2896aa26",
+      "bytes": 226622
+    },
+    {
+      "source_path": "anthology/episodes/slides/assets/performance-notebook-action.webp",
+      "path": "reference/asterwind/anthology/episodes/slides/assets/performance-notebook-action.webp",
+      "sha": "5963ceb5dd63a52b1c683673b62729fda7dc4f9c",
+      "bytes": 320946
+    },
+    {
+      "source_path": "anthology/episodes/slides/assets/performance-source-credit.webp",
+      "path": "reference/asterwind/anthology/episodes/slides/assets/performance-source-credit.webp",
+      "sha": "84c72fa858a545194d0ab58e439d9081c605462d",
+      "bytes": 237244
+    },
+    {
+      "source_path": "anthology/episodes/slides/build.py",
+      "path": "reference/asterwind/anthology/episodes/slides/build.py",
+      "sha": "a8dc56fc77a989e945ea7ebaf4a196285d57b432",
+      "bytes": 1931
+    },
+    {
+      "source_path": "anthology/episodes/slides/index.html",
+      "path": "reference/asterwind/anthology/episodes/slides/index.html",
+      "sha": "a3c11c9275279323a23dae676daaaec21a13d640",
+      "bytes": 4359
+    },
+    {
+      "source_path": "anthology/episodes/slides/layout.js",
+      "path": "reference/asterwind/anthology/episodes/slides/layout.js",
+      "sha": "319387e5cb2ad338b3109373785d065d1dc59485",
+      "bytes": 955
+    },
+    {
+      "source_path": "anthology/episodes/slides/scene.css",
+      "path": "reference/asterwind/anthology/episodes/slides/scene.css",
+      "sha": "8cad95e98a2a8881ab183876854d86db04d73b3e",
+      "bytes": 9009
+    },
+    {
+      "source_path": "anthology/episodes/slides/scene.js",
+      "path": "reference/asterwind/anthology/episodes/slides/scene.js",
+      "sha": "26f36e77df87f797b26804bb41d68092663eeff2",
+      "bytes": 4986
+    },
+    {
+      "source_path": "anthology/episodes/slides/scene.svg",
+      "path": "reference/asterwind/anthology/episodes/slides/scene.svg",
+      "sha": "543211636e5aa1dc067d08b533b87a1c025cc7cc",
+      "bytes": 2823
+    },
+    {
+      "source_path": "anthology/episodes/slides/story-data.js",
+      "path": "reference/asterwind/anthology/episodes/slides/story-data.js",
+      "sha": "228bac105dfe0c37ceb561cb01bb9a724327779e",
+      "bytes": 3809
+    },
+    {
+      "source_path": "anthology/episodes/slides/story.json",
+      "path": "reference/asterwind/anthology/episodes/slides/story.json",
+      "sha": "dd9f136cf71be90c9c3a9230278281f1ff447f08",
+      "bytes": 5002
+    },
+    {
+      "source_path": "anthology/episodes/slides/test-name.cjs",
+      "path": "reference/asterwind/anthology/episodes/slides/test-name.cjs",
+      "sha": "d2d0c629a8c95f655b274d21261292e1de9ebf7d",
+      "bytes": 6811
+    },
+    {
+      "source_path": "anthology/episodes/slides/timeline.js",
+      "path": "reference/asterwind/anthology/episodes/slides/timeline.js",
+      "sha": "b9a5bdac7eca6d4f406a92ffb02b32643486a2b7",
+      "bytes": 1266
+    },
+    {
+      "source_path": "anthology/episodes/standup/art-data.js",
+      "path": "reference/asterwind/anthology/episodes/standup/art-data.js",
+      "sha": "6707e260917c7ef3fa2389a6ceef1147a798517b",
+      "bytes": 2254
+    },
+    {
+      "source_path": "anthology/episodes/standup/art-manifest.json",
+      "path": "reference/asterwind/anthology/episodes/standup/art-manifest.json",
+      "sha": "ce54a9e6e9f842ccee5893e766be86f32b752bcf",
+      "bytes": 3108
+    },
+    {
+      "source_path": "anthology/episodes/standup/build.py",
+      "path": "reference/asterwind/anthology/episodes/standup/build.py",
+      "sha": "53c8e0237e46897de81f397012500f74a7f60a4d",
+      "bytes": 1937
+    },
+    {
+      "source_path": "anthology/episodes/standup/index.html",
+      "path": "reference/asterwind/anthology/episodes/standup/index.html",
+      "sha": "c5fc3c006ca35083d7d37c485f9b3ebdc73b8fd0",
+      "bytes": 4613
+    },
+    {
+      "source_path": "anthology/episodes/standup/layout.js",
+      "path": "reference/asterwind/anthology/episodes/standup/layout.js",
+      "sha": "b6273635920da43f620a2f8f1fd1f343a11d9f52",
+      "bytes": 942
+    },
+    {
+      "source_path": "anthology/episodes/standup/scene.css",
+      "path": "reference/asterwind/anthology/episodes/standup/scene.css",
+      "sha": "f8102634371c65dee60b8614df31614465f3c0fc",
+      "bytes": 8266
+    },
+    {
+      "source_path": "anthology/episodes/standup/scene.js",
+      "path": "reference/asterwind/anthology/episodes/standup/scene.js",
+      "sha": "0ed1e4eb53850037884452588c0fa7e50df22475",
+      "bytes": 4836
+    },
+    {
+      "source_path": "anthology/episodes/standup/scene.svg",
+      "path": "reference/asterwind/anthology/episodes/standup/scene.svg",
+      "sha": "17c9e07357b7773003ed7083ab3693166680b813",
+      "bytes": 3135
+    },
+    {
+      "source_path": "anthology/episodes/standup/story-data.js",
+      "path": "reference/asterwind/anthology/episodes/standup/story-data.js",
+      "sha": "442480b5b9d48cf6c38388ce44849259766da8e3",
+      "bytes": 2942
+    },
+    {
+      "source_path": "anthology/episodes/standup/story.json",
+      "path": "reference/asterwind/anthology/episodes/standup/story.json",
+      "sha": "3365b403a48a3a7928cf0489ace2bea9e408d5c5",
+      "bytes": 3932
+    },
+    {
+      "source_path": "anthology/episodes/standup/test-quiet.cjs",
+      "path": "reference/asterwind/anthology/episodes/standup/test-quiet.cjs",
+      "sha": "3c5fc860077439c01e4886da13d9fce4097ca95e",
+      "bytes": 4364
+    },
+    {
+      "source_path": "anthology/episodes/standup/timeline.js",
+      "path": "reference/asterwind/anthology/episodes/standup/timeline.js",
+      "sha": "cd940aff4452c34f8b5bc48b0c2699d1c0b25dbb",
+      "bytes": 1267
+    },
+    {
+      "source_path": "anthology/progress.js",
+      "path": "reference/asterwind/anthology/progress.js",
+      "sha": "15a35846e0595dc423e0328ff0daaf6e87f623f7",
+      "bytes": 1551
+    },
+    {
+      "source_path": "anthology/registry.json",
+      "path": "reference/asterwind/anthology/registry.json",
+      "sha": "8ccf679f4a9051fcc6ef1a72f4b5b160e80f3699",
+      "bytes": 2397
+    },
+    {
+      "source_path": "anthology/test-anthology.cjs",
+      "path": "reference/asterwind/anthology/test-anthology.cjs",
+      "sha": "a74b031edff602cccf9500f447e07a429234cc67",
+      "bytes": 3427
+    },
+    {
+      "source_path": "anthology/test-art.cjs",
+      "path": "reference/asterwind/anthology/test-art.cjs",
+      "sha": "5d157f84c19c80903e00c00ae1ba9cfb1a49bf53",
+      "bytes": 4138
+    },
+    {
+      "source_path": "app/app.js",
+      "path": "reference/asterwind/app/app.js",
+      "sha": "8ed24a7d23598c115585b1d466fab3268a3d9ce7",
+      "bytes": 17064
+    },
+    {
+      "source_path": "app/assets/castle-hero.png",
+      "path": "reference/asterwind/app/assets/castle-hero.png",
+      "sha": "2659b295ae2b78dd8a418fa0797f1eed0f26d08e",
+      "bytes": 2621074
+    },
+    {
+      "source_path": "app/assets/fonts/Kalam-Bold.ttf",
+      "path": "reference/asterwind/app/assets/fonts/Kalam-Bold.ttf",
+      "sha": "321272d977887fefb4911789a2691d3131d1bcf0",
+      "bytes": 460896
+    },
+    {
+      "source_path": "app/assets/fonts/Kalam-Regular.ttf",
+      "path": "reference/asterwind/app/assets/fonts/Kalam-Regular.ttf",
+      "sha": "0c956a29348e69bff24a1ae8952fd0b42569311c",
+      "bytes": 427360
+    },
+    {
+      "source_path": "app/assets/fonts/OFL.txt",
+      "path": "reference/asterwind/app/assets/fonts/OFL.txt",
+      "sha": "6dd809659a8ccace7ccee108d024d33cd4f936da",
+      "bytes": 4373
+    },
+    {
+      "source_path": "app/assets/scenes/Q1.webp",
+      "path": "reference/asterwind/app/assets/scenes/Q1.webp",
+      "sha": "9c9c6ca98ac2495d5254a002658fe31103e7d64f",
+      "bytes": 274432
+    },
+    {
+      "source_path": "app/assets/scenes/Q2.webp",
+      "path": "reference/asterwind/app/assets/scenes/Q2.webp",
+      "sha": "62f9781361510aabda4094e48e8096f548524f4a",
+      "bytes": 299242
+    },
+    {
+      "source_path": "app/assets/scenes/Q3.webp",
+      "path": "reference/asterwind/app/assets/scenes/Q3.webp",
+      "sha": "a9387ef199d5a4684e4a95ab565b52319d922472",
+      "bytes": 248842
+    },
+    {
+      "source_path": "app/assets/scenes/Q4.webp",
+      "path": "reference/asterwind/app/assets/scenes/Q4.webp",
+      "sha": "3b562b1d45cb746951bcfbfc10b48c7f2d8507d2",
+      "bytes": 293292
+    },
+    {
+      "source_path": "app/assets/scenes/Q5.png",
+      "path": "reference/asterwind/app/assets/scenes/Q5.png",
+      "sha": "19a098dbee2aa68dd49bbced0b599c837d3be0fb",
+      "bytes": 2219152
+    },
+    {
+      "source_path": "app/assets/scenes/Q6.webp",
+      "path": "reference/asterwind/app/assets/scenes/Q6.webp",
+      "sha": "308bd870d5d80891d0f7ebbc529106796e76451d",
+      "bytes": 293232
+    },
+    {
+      "source_path": "app/assets/scenes/Q7.webp",
+      "path": "reference/asterwind/app/assets/scenes/Q7.webp",
+      "sha": "d74a07c77f0e9c4f4a0fdec784feb99e45a820ed",
+      "bytes": 281588
+    },
+    {
+      "source_path": "app/assets/scenes/Q8.webp",
+      "path": "reference/asterwind/app/assets/scenes/Q8.webp",
+      "sha": "61ba69bf92c3635aa3fa76eb9b4fe000f58cbed8",
+      "bytes": 281674
+    },
+    {
+      "source_path": "app/assets/scenes/Q9.webp",
+      "path": "reference/asterwind/app/assets/scenes/Q9.webp",
+      "sha": "26e19f0b52f957bd3beb2bbc9ef4c4377195ea37",
+      "bytes": 266604
+    },
+    {
+      "source_path": "app/index.html",
+      "path": "reference/asterwind/app/index.html",
+      "sha": "53fade88fc86fd930f152c3e8e672eb65d5b3971",
+      "bytes": 6718
+    },
+    {
+      "source_path": "app/scenarios.js",
+      "path": "reference/asterwind/app/scenarios.js",
+      "sha": "1a349da7aa9ca75a364bf8b1aa7f8d19c8db4725",
+      "bytes": 67159
+    },
+    {
+      "source_path": "app/style.css",
+      "path": "reference/asterwind/app/style.css",
+      "sha": "963bd60f432b8bc6b24254c9cefb9000e23af237",
+      "bytes": 15437
+    },
+    {
+      "source_path": "film/.gitignore",
+      "path": "reference/asterwind/film/.gitignore",
+      "sha": "f6e2f446d84d30bf7e3de2ca779ad3cc966d040c",
+      "bytes": 86
+    },
+    {
+      "source_path": "film/asset-manifest.json",
+      "path": "reference/asterwind/film/asset-manifest.json",
+      "sha": "df6865c29ea30c81e18795f7cbfc47673046754a",
+      "bytes": 7911
+    },
+    {
+      "source_path": "film/assets/brush.webp",
+      "path": "reference/asterwind/film/assets/brush.webp",
+      "sha": "dd945c04c21eb80872c109972b79d0cfef8ac30e",
+      "bytes": 199324
+    },
+    {
+      "source_path": "film/assets/decisionPortrait.webp",
+      "path": "reference/asterwind/film/assets/decisionPortrait.webp",
+      "sha": "51948f737f2a74f311b6a140355d93059150077d",
+      "bytes": 340698
+    },
+    {
+      "source_path": "film/assets/fatigue.webp",
+      "path": "reference/asterwind/film/assets/fatigue.webp",
+      "sha": "8fb8a48733c9e60ceb40501ab4c69f4485ffb40c",
+      "bytes": 317524
+    },
+    {
+      "source_path": "film/assets/julian.webp",
+      "path": "reference/asterwind/film/assets/julian.webp",
+      "sha": "96532d784c31926376d8d2d670369984fd82095c",
+      "bytes": 248990
+    },
+    {
+      "source_path": "film/assets/left.webp",
+      "path": "reference/asterwind/film/assets/left.webp",
+      "sha": "f59a536d97e991c1c5f33ba475f837ea6f93785a",
+      "bytes": 220736
+    },
+    {
+      "source_path": "film/assets/morningA.webp",
+      "path": "reference/asterwind/film/assets/morningA.webp",
+      "sha": "49e2dae9058dcdcc09b3b1c4eef5265195d23018",
+      "bytes": 256410
+    },
+    {
+      "source_path": "film/assets/morningB.webp",
+      "path": "reference/asterwind/film/assets/morningB.webp",
+      "sha": "1385226b36b8ef4eec96a3a4f66853076da3f981",
+      "bytes": 224632
+    },
+    {
+      "source_path": "film/assets/offer.webp",
+      "path": "reference/asterwind/film/assets/offer.webp",
+      "sha": "03c6bf12ddba3c64a8d74a636d6eb958df11a153",
+      "bytes": 189374
+    },
+    {
+      "source_path": "film/assets/payoffA.webp",
+      "path": "reference/asterwind/film/assets/payoffA.webp",
+      "sha": "4f18ae6891bd70c28be9af61fd236048a7ddbe52",
+      "bytes": 333340
+    },
+    {
+      "source_path": "film/assets/payoffB.webp",
+      "path": "reference/asterwind/film/assets/payoffB.webp",
+      "sha": "2909f1ee812636e2108d39d041f2cfd7c37ca5de",
+      "bytes": 341870
+    },
+    {
+      "source_path": "film/assets/performanceBraceOriginal.webp",
+      "path": "reference/asterwind/film/assets/performanceBraceOriginal.webp",
+      "sha": "9590f51231cc570d1e87bbf9503efcbd765c959c",
+      "bytes": 226254
+    },
+    {
+      "source_path": "film/assets/performanceBuckle.webp",
+      "path": "reference/asterwind/film/assets/performanceBuckle.webp",
+      "sha": "de74d488b30df4261e3d46586ccfc956c8ee8c19",
+      "bytes": 231108
+    },
+    {
+      "source_path": "film/assets/performanceGraspSpare.webp",
+      "path": "reference/asterwind/film/assets/performanceGraspSpare.webp",
+      "sha": "280aa491ee526729a972f48850501d3d2c0277db",
+      "bytes": 219050
+    },
+    {
+      "source_path": "film/assets/performanceOffer.webp",
+      "path": "reference/asterwind/film/assets/performanceOffer.webp",
+      "sha": "570e44e326e697ab8b0ec61aa65fe25db82d029f",
+      "bytes": 225978
+    },
+    {
+      "source_path": "film/assets/performanceReachOriginal.webp",
+      "path": "reference/asterwind/film/assets/performanceReachOriginal.webp",
+      "sha": "88328dda9f6a18e2f6572c26363fc8ff077b005a",
+      "bytes": 234716
+    },
+    {
+      "source_path": "film/assets/performanceReachSpare.webp",
+      "path": "reference/asterwind/film/assets/performanceReachSpare.webp",
+      "sha": "69558e4cc17f07b0f37391dbc1fd22351c86f699",
+      "bytes": 229074
+    },
+    {
+      "source_path": "film/assets/performanceSlip.webp",
+      "path": "reference/asterwind/film/assets/performanceSlip.webp",
+      "sha": "79346fbeca0ec35c43da71907b1cd5770cad4c94",
+      "bytes": 247158
+    },
+    {
+      "source_path": "film/assets/performanceStable.webp",
+      "path": "reference/asterwind/film/assets/performanceStable.webp",
+      "sha": "6e336945aa18e19435ec7c6e1a91ed8f521604ca",
+      "bytes": 282400
+    },
+    {
+      "source_path": "film/assets/restOffer.webp",
+      "path": "reference/asterwind/film/assets/restOffer.webp",
+      "sha": "6072d472197a1d2d3922d6cd3a0b76255af3ca7c",
+      "bytes": 293802
+    },
+    {
+      "source_path": "film/assets/right.webp",
+      "path": "reference/asterwind/film/assets/right.webp",
+      "sha": "a9c11e110d76cf661e4b63ddae123d0561e8168b",
+      "bytes": 170956
+    },
+    {
+      "source_path": "film/assets/workA.webp",
+      "path": "reference/asterwind/film/assets/workA.webp",
+      "sha": "89261fbac107decc0a8ba5eda3fbf8d947f81575",
+      "bytes": 229800
+    },
+    {
+      "source_path": "film/assets/workB.webp",
+      "path": "reference/asterwind/film/assets/workB.webp",
+      "sha": "b3da23df44b2643894fe4cdce9598d0ff141235d",
+      "bytes": 298678
+    },
+    {
+      "source_path": "film/audio/backup-00-00.mp3",
+      "path": "reference/asterwind/film/audio/backup-00-00.mp3",
+      "sha": "b590c7bac723b0bfda0cac7f25483071c3955731",
+      "bytes": 25388
+    },
+    {
+      "source_path": "film/audio/backup-01-00.mp3",
+      "path": "reference/asterwind/film/audio/backup-01-00.mp3",
+      "sha": "e9e045043a6fa546ba55b6046025652f03a301c2",
+      "bytes": 25580
+    },
+    {
+      "source_path": "film/audio/backup-04-00.mp3",
+      "path": "reference/asterwind/film/audio/backup-04-00.mp3",
+      "sha": "6a93977ca322d55b8aaa8c55933b7e637c2e9460",
+      "bytes": 13676
+    },
+    {
+      "source_path": "film/audio/backup-06-00.mp3",
+      "path": "reference/asterwind/film/audio/backup-06-00.mp3",
+      "sha": "bd79f9f2e2d2df582692e514231894d3ace11e45",
+      "bytes": 5996
+    },
+    {
+      "source_path": "film/audio/backup-07-00.mp3",
+      "path": "reference/asterwind/film/audio/backup-07-00.mp3",
+      "sha": "3ec8be9d09f8ab75cbdff372e2ae5b1f843700bc",
+      "bytes": 8684
+    },
+    {
+      "source_path": "film/audio/backup-08-00.mp3",
+      "path": "reference/asterwind/film/audio/backup-08-00.mp3",
+      "sha": "5fe095d8290eb981cab13fb9a7b72efa29b0dfce",
+      "bytes": 17900
+    },
+    {
+      "source_path": "film/audio/backup-09-00.mp3",
+      "path": "reference/asterwind/film/audio/backup-09-00.mp3",
+      "sha": "740afc73f547286b78c9dc830f2cc0c02ae7c690",
+      "bytes": 10028
+    },
+    {
+      "source_path": "film/audio/backup-10-00.mp3",
+      "path": "reference/asterwind/film/audio/backup-10-00.mp3",
+      "sha": "4a8ca21e1d6b38d250e263ff85a7f00b8caef386",
+      "bytes": 28076
+    },
+    {
+      "source_path": "film/audio/backup-11-00.mp3",
+      "path": "reference/asterwind/film/audio/backup-11-00.mp3",
+      "sha": "c197432925a54ecbfde3e296437fe1ceb0594c49",
+      "bytes": 16364
+    },
+    {
+      "source_path": "film/audio/backup-12-00.mp3",
+      "path": "reference/asterwind/film/audio/backup-12-00.mp3",
+      "sha": "6ffbcbdf6e7e06c762a9a80e97fd2c042eab8cd5",
+      "bytes": 15212
+    },
+    {
+      "source_path": "film/audio/backup-checkin-00.mp3",
+      "path": "reference/asterwind/film/audio/backup-checkin-00.mp3",
+      "sha": "f0c28443cd3c7b9b520b8deee8514aafef86a0cd",
+      "bytes": 24236
+    },
+    {
+      "source_path": "film/audio/manifest.json",
+      "path": "reference/asterwind/film/audio/manifest.json",
+      "sha": "6d27bdff808e409c3ad75b2304a74085bde47941",
+      "bytes": 3823
+    },
+    {
+      "source_path": "film/audio/repair-00-00.mp3",
+      "path": "reference/asterwind/film/audio/repair-00-00.mp3",
+      "sha": "ac653a09ffe7be1e1abc93783ac6124880b3c201",
+      "bytes": 16172
+    },
+    {
+      "source_path": "film/audio/repair-01-00.mp3",
+      "path": "reference/asterwind/film/audio/repair-01-00.mp3",
+      "sha": "9cdc565563c2063a221be078a3ac084b5095df77",
+      "bytes": 20204
+    },
+    {
+      "source_path": "film/audio/repair-02-00.mp3",
+      "path": "reference/asterwind/film/audio/repair-02-00.mp3",
+      "sha": "5303e2eb877900d7071c1c495b03b95a7b3f4a08",
+      "bytes": 10796
+    },
+    {
+      "source_path": "film/audio/repair-03-00.mp3",
+      "path": "reference/asterwind/film/audio/repair-03-00.mp3",
+      "sha": "f88de93bea04e3e6dece5560f6576411c3830106",
+      "bytes": 7532
+    },
+    {
+      "source_path": "film/audio/repair-06-00.mp3",
+      "path": "reference/asterwind/film/audio/repair-06-00.mp3",
+      "sha": "8c2073f633f64e2141475a47170e00c19a76d6ff",
+      "bytes": 7148
+    },
+    {
+      "source_path": "film/audio/repair-07-00.mp3",
+      "path": "reference/asterwind/film/audio/repair-07-00.mp3",
+      "sha": "fe568e3373cc9a5c0e322403088826003dc2b650",
+      "bytes": 8876
+    },
+    {
+      "source_path": "film/audio/repair-08-00.mp3",
+      "path": "reference/asterwind/film/audio/repair-08-00.mp3",
+      "sha": "7c9a7a5067af4be099f65cae80cd21231651579e",
+      "bytes": 26348
+    },
+    {
+      "source_path": "film/audio/repair-09-00.mp3",
+      "path": "reference/asterwind/film/audio/repair-09-00.mp3",
+      "sha": "2866bb84216a97083943586e783dfaea19d1c07e",
+      "bytes": 10028
+    },
+    {
+      "source_path": "film/audio/repair-10-00.mp3",
+      "path": "reference/asterwind/film/audio/repair-10-00.mp3",
+      "sha": "f49eec90c21e087f762c1219db0fc140589c1e34",
+      "bytes": 13484
+    },
+    {
+      "source_path": "film/audio/setup-00-00.mp3",
+      "path": "reference/asterwind/film/audio/setup-00-00.mp3",
+      "sha": "396a9233ff274ee1a2fb717301e313af3ae5a541",
+      "bytes": 6956
+    },
+    {
+      "source_path": "film/audio/setup-01-00.mp3",
+      "path": "reference/asterwind/film/audio/setup-01-00.mp3",
+      "sha": "4691c0aac85b9d9fea11818fd819cf3539660e8f",
+      "bytes": 23084
+    },
+    {
+      "source_path": "film/audio/setup-02-00.mp3",
+      "path": "reference/asterwind/film/audio/setup-02-00.mp3",
+      "sha": "99b61f77e4ccfe6b7e99e62d184547af1fd0d61b",
+      "bytes": 25196
+    },
+    {
+      "source_path": "film/audio/setup-03-00.mp3",
+      "path": "reference/asterwind/film/audio/setup-03-00.mp3",
+      "sha": "e6ceab6b5127dc335355cd7ae0bbe2cf41f19c75",
+      "bytes": 26540
+    },
+    {
+      "source_path": "film/audio/setup-04-00.mp3",
+      "path": "reference/asterwind/film/audio/setup-04-00.mp3",
+      "sha": "e8dbd7a29878db064c488628fdb98f09fcaafc31",
+      "bytes": 39020
+    },
+    {
+      "source_path": "film/audio/setup-05-00.mp3",
+      "path": "reference/asterwind/film/audio/setup-05-00.mp3",
+      "sha": "c24454e98dc0f7c8e5d4990b3b25418dfc61e2d9",
+      "bytes": 31148
+    },
+    {
+      "source_path": "film/audio/setup-06-00.mp3",
+      "path": "reference/asterwind/film/audio/setup-06-00.mp3",
+      "sha": "b12e8927390bf55bf8c3c7a57ae616385f7def80",
+      "bytes": 31148
+    },
+    {
+      "source_path": "film/audio/setup-07-00.mp3",
+      "path": "reference/asterwind/film/audio/setup-07-00.mp3",
+      "sha": "94dc61bb78f1993e2212b94420254c68bbb99b02",
+      "bytes": 29420
+    },
+    {
+      "source_path": "film/build.py",
+      "path": "reference/asterwind/film/build.py",
+      "sha": "8699b34c9e2b58fe8801199777fc980ac4bfbebb",
+      "bytes": 2371
+    },
+    {
+      "source_path": "film/data.js",
+      "path": "reference/asterwind/film/data.js",
+      "sha": "8e545f5268d4afbe9a2fcbd034401df9c410edd2",
+      "bytes": 13180
+    },
+    {
+      "source_path": "film/index.html",
+      "path": "reference/asterwind/film/index.html",
+      "sha": "08a03c449bd9b85258a0a65db519a83c6cdaa9b4",
+      "bytes": 2461
+    },
+    {
+      "source_path": "film/player.css",
+      "path": "reference/asterwind/film/player.css",
+      "sha": "54483c6cd5ff11206dc5e17e8f195e527cdc6361",
+      "bytes": 4827
+    },
+    {
+      "source_path": "film/player.js",
+      "path": "reference/asterwind/film/player.js",
+      "sha": "d5a9e52b18939feb90aecfff38b8a0329b4de663",
+      "bytes": 9123
+    },
+    {
+      "source_path": "film/qa/browser.cjs",
+      "path": "reference/asterwind/film/qa/browser.cjs",
+      "sha": "22b6d5681c58c85b47d00d3f1faf4af8e9ae2e90",
+      "bytes": 2436
+    },
+    {
+      "source_path": "film/story.json",
+      "path": "reference/asterwind/film/story.json",
+      "sha": "ef8957be2143ecdf04e20d5bed4e8da001316393",
+      "bytes": 16796
+    },
+    {
+      "source_path": "film/test-state.cjs",
+      "path": "reference/asterwind/film/test-state.cjs",
+      "sha": "92edb16eeff25ad8e71cae8855fbbacf2cc61515",
+      "bytes": 7014
+    },
+    {
+      "source_path": "hub/asset-manifest.json",
+      "path": "reference/asterwind/hub/asset-manifest.json",
+      "sha": "f46255539afc0eade01e91ddd8aeab3dd1ff0aae",
+      "bytes": 302
+    },
+    {
+      "source_path": "hub/assets/corridor.webp",
+      "path": "reference/asterwind/hub/assets/corridor.webp",
+      "sha": "0f09ab9bc37a949b33421ca47c95743d39d0d655",
+      "bytes": 200704
+    },
+    {
+      "source_path": "hub/assets/studio-opening.webp",
+      "path": "reference/asterwind/hub/assets/studio-opening.webp",
+      "sha": "6e336945aa18e19435ec7c6e1a91ed8f521604ca",
+      "bytes": 282400
+    },
+    {
+      "source_path": "hub/bridge-data.js",
+      "path": "reference/asterwind/hub/bridge-data.js",
+      "sha": "6c519f9d866d5e7a95e8aa0a3a977a8d871a8e25",
+      "bytes": 228
+    },
+    {
+      "source_path": "hub/bridge-manifest.json",
+      "path": "reference/asterwind/hub/bridge-manifest.json",
+      "sha": "609fa6d86e75ffa377422563d121de11b4b61016",
+      "bytes": 211
+    },
+    {
+      "source_path": "hub/bridge-types.d.ts",
+      "path": "reference/asterwind/hub/bridge-types.d.ts",
+      "sha": "69bbb1e05bf6685c717cbb365979c3dd956e357d",
+      "bytes": 603
+    },
+    {
+      "source_path": "hub/bridge.js",
+      "path": "reference/asterwind/hub/bridge.js",
+      "sha": "2b28a47a869b7d3077178b776b10fa881e794692",
+      "bytes": 2299
+    },
+    {
+      "source_path": "hub/build.py",
+      "path": "reference/asterwind/hub/build.py",
+      "sha": "1c820f9f0ca970540b7fc6e234d2acdb64a0e7b2",
+      "bytes": 4693
+    },
+    {
+      "source_path": "hub/catalog.json",
+      "path": "reference/asterwind/hub/catalog.json",
+      "sha": "26f9bf015c57e42653842863b73196c6aa32ce8d",
+      "bytes": 922
+    },
+    {
+      "source_path": "hub/dispenser.svg",
+      "path": "reference/asterwind/hub/dispenser.svg",
+      "sha": "ecae84c48604279bd25a5f2d07b0d7536db8bf8b",
+      "bytes": 2546
+    },
+    {
+      "source_path": "hub/hub.css",
+      "path": "reference/asterwind/hub/hub.css",
+      "sha": "cc3117537e09325b6c4b4f57ad8ea478141f3e57",
+      "bytes": 8945
+    },
+    {
+      "source_path": "hub/hub.js",
+      "path": "reference/asterwind/hub/hub.js",
+      "sha": "05af976ce4626c4688f8e142b12f72a225052daf",
+      "bytes": 8315
+    },
+    {
+      "source_path": "hub/index.html",
+      "path": "reference/asterwind/hub/index.html",
+      "sha": "292e79d5db9cbcf568de5d93788916b8e4e6d6a7",
+      "bytes": 4013
+    },
+    {
+      "source_path": "hub/legacy-seam.js",
+      "path": "reference/asterwind/hub/legacy-seam.js",
+      "sha": "b721e39b62afc30e3a384e830319ae45f2a2780e",
+      "bytes": 663
+    },
+    {
+      "source_path": "hub/mechanism.js",
+      "path": "reference/asterwind/hub/mechanism.js",
+      "sha": "df2b4f257eb4df6c31dd4f80f53a547387500165",
+      "bytes": 4395
+    },
+    {
+      "source_path": "hub/qa/browser.cjs",
+      "path": "reference/asterwind/hub/qa/browser.cjs",
+      "sha": "43eb3b7998269642532264a4c0b7c8a22ec6665d",
+      "bytes": 1523
+    },
+    {
+      "source_path": "hub/registry-data.js",
+      "path": "reference/asterwind/hub/registry-data.js",
+      "sha": "325807bc7b75c08756b858510e3194461b9ddcca",
+      "bytes": 1880
+    },
+    {
+      "source_path": "hub/test-bridge.cjs",
+      "path": "reference/asterwind/hub/test-bridge.cjs",
+      "sha": "c069eee4bfa029f96b71ba34703a20806eeb55f5",
+      "bytes": 3014
+    },
+    {
+      "source_path": "hub/test-build.py",
+      "path": "reference/asterwind/hub/test-build.py",
+      "sha": "4f5a918c687a7b85b51b54ed57327dd86274138e",
+      "bytes": 2570
+    },
+    {
+      "source_path": "hub/test-layout.cjs",
+      "path": "reference/asterwind/hub/test-layout.cjs",
+      "sha": "6b144afcdc819ba3c303aab4f858ee45f0505df0",
+      "bytes": 3094
+    },
+    {
+      "source_path": "hub/test-legacy-completion.cjs",
+      "path": "reference/asterwind/hub/test-legacy-completion.cjs",
+      "sha": "87bdf86581a07a13e876b1f5ce01d211a32199f7",
+      "bytes": 2180
+    },
+    {
+      "source_path": "hub/test-mechanism.cjs",
+      "path": "reference/asterwind/hub/test-mechanism.cjs",
+      "sha": "64000bfbeedd5c3e4c6e86608ee381be1ec76e87",
+      "bytes": 2866
+    },
+    {
+      "source_path": "hub/test-state.cjs",
+      "path": "reference/asterwind/hub/test-state.cjs",
+      "sha": "140f21ff4dad56018e1ddf9fcac9f176a5e32fd8",
+      "bytes": 18157
+    },
+    {
+      "source_path": "anthology/episodes/standup/assets/reference-v1/01-quiet-minute-master.webp",
+      "path": "reference/asterwind/anthology/episodes/standup/assets/reference-v1/01-quiet-minute-master.webp",
+      "sha": "8e4c080a3f8f32ec73ae9acf1998c9db074c8d49",
+      "bytes": 342030
+    },
+    {
+      "source_path": "anthology/episodes/standup/assets/reference-v1/02-turn-or-pass-decision.webp",
+      "path": "reference/asterwind/anthology/episodes/standup/assets/reference-v1/02-turn-or-pass-decision.webp",
+      "sha": "9f89f2c6a277eeb99b8a52218862fd1fc4d64f06",
+      "bytes": 420488
+    },
+    {
+      "source_path": "anthology/episodes/standup/assets/reference-v1/03-turn-shared-unfinished.webp",
+      "path": "reference/asterwind/anthology/episodes/standup/assets/reference-v1/03-turn-shared-unfinished.webp",
+      "sha": "4e4b9a9606856446412a914470069fdd77d13b6b",
+      "bytes": 344026
+    },
+    {
+      "source_path": "anthology/episodes/standup/assets/reference-v1/04-slips-nuance-unresolved.webp",
+      "path": "reference/asterwind/anthology/episodes/standup/assets/reference-v1/04-slips-nuance-unresolved.webp",
+      "sha": "b7488cae16bf72b4e2b22d039395281e7c6f73d1",
+      "bytes": 321766
+    },
+    {
+      "source_path": "film/assets/reference/people.webp",
+      "path": "reference/asterwind/film/assets/reference/people.webp",
+      "sha": "63d5531cab7e9de3e276269a612ff9f38bc80b04",
+      "bytes": 243654
+    },
+    {
+      "source_path": "film/assets/reference/seam.webp",
+      "path": "reference/asterwind/film/assets/reference/seam.webp",
+      "sha": "f09834d0d28eb7b9e7281d6ac40e7c374807b80a",
+      "bytes": 126056
+    },
+    {
+      "source_path": "film/assets/reference/studio.webp",
+      "path": "reference/asterwind/film/assets/reference/studio.webp",
+      "sha": "17608d9b6773edbe22d8637abf947638e2d29cc5",
+      "bytes": 145042
+    }
+  ],
+  "exclusions": [
+    "Production prompts and internal notes",
+    "Story-development source folders",
+    "Historical QA and authoring documentation",
+    "Private source asset metadata and Library identifiers",
+    "Git history, dependencies, caches and generated offline exports"
+  ]
+}

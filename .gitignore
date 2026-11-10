@@ -47,3 +47,7 @@ yarn-error.log*
 # Captured QA images remain local deliverables.
 /qa/*.png
 /qa/*.jpg
+
+# Generated outputs inside imported reference runtimes
+/reference/**/dist/
+/reference/**/__pycache__/
