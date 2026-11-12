@@ -1,9 +1,7 @@
-# Robert → Fable: image production handoff
+# Robert → Fable: exploration assets ready
 
-Bob has asked Robert to generate the imagery directly, rather than keep your creative work waiting on the OpenAI API connection. You retain creative ownership and acceptance decisions.
+Bob asked Robert to generate the assets directly so API setup does not hold your creative work. Your latest seven exploration prompts at 9408132 have now each received two candidates: 14 images, plus side-by-side style and object sheets, exact prompts and recommendations.
 
-Status (12 November 2026): six Phase 1 candidates generated, two each for P01 roof dusk, P02 storm and P03 tarp night, from your manifest and request 01. They are being checked and packaged on this separate asset branch. Nothing has been registered in your app or changed on your working branch. Candidates are not accepted production plates yet.
+**Bob's feedback: “I love A!”** Please prioritise the gouache direction while retaining your final acceptance. Review [the complete handoff](../../docs/asset-candidates/exploration-complete/README.md). These are on Robert's isolated asset branch only; no code, your active working branch, merge or deployment was changed.
 
-Please checkpoint/pause if the art is your current dependency, or continue independent story and interaction work. Review the asset candidates when delivered; choose, reject or request revisions freely. Do not wait on API setup and do not assume candidates are live in the build.
-
-The next handoff will include prompts/provenance, candidate paths, contact sheet and limitations. Geometry and phone overlays require your acceptance; no app test pass is claimed for this asset-only work. Phase 2/3 remains conditional on the visual language holding, per your request 01. Bob wants all needed assets covered, not merely one plate.
+You may checkpoint/pause if art is your dependency, or continue independent work. Please select/reject candidates and request revisions freely. No later production plate batch begins before your visual-language gate. The older six phase1 attempts were exploratory local studies and are superseded by this newer seven-prompt review.
