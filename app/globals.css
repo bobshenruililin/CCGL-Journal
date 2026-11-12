@@ -139,8 +139,8 @@ svg .jlabel .jn { font-weight: 700; font-size: 26px; }
 .decided .thought:not(.inked) .pencil { text-decoration: line-through rgba(138, 131, 119, .9); text-decoration-thickness: .05em; }
 .decided .thought:not(.inked):is(:hover, :focus-visible) { opacity: .85; }
 @keyframes bob { 0%, 100% { translate: 0 0; rotate: -.25deg; } 50% { translate: 0 -.16em; rotate: .3deg; } }
-[data-nudge='a'] :is(.thought:not(.inked), .knockbtn, .tick.next, .typing, .unfold, .carry, .lampbtn, .passbtn) { animation: nudgeA .5s ease; }
-[data-nudge='b'] :is(.thought:not(.inked), .knockbtn, .tick.next, .typing, .unfold, .carry, .lampbtn, .passbtn) { animation: nudgeB .5s ease; }
+[data-nudge='a'] :is(.thought:not(.inked), .knockbtn, .tick.next, .typing, .unfold, .carry, .lampbtn, .passbtn) { animation: nudgeA .5s ease; opacity: 1; }
+[data-nudge='b'] :is(.thought:not(.inked), .knockbtn, .tick.next, .typing, .unfold, .carry, .lampbtn, .passbtn) { animation: nudgeB .5s ease; opacity: 1; }
 @keyframes nudgeA { 30% { transform: translateX(.5em) rotate(1deg); } 60% { transform: translateX(-.3em); } }
 @keyframes nudgeB { 30% { transform: translateX(.5em) rotate(1deg); } 60% { transform: translateX(-.3em); } }
 

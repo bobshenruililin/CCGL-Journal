@@ -8,7 +8,7 @@ export const views = { desktop: { width: 1440, height: 900 }, phone: { width: 39
 const order = { mon: ['self', 'post', 'find'], wed: ['cut', 'aside', 'round'], fri: ['self', 'ask', 'name'] };
 const beatButtons = '.knockbtn, .tick.next, .typing, .unfold, .carry:not(.busy), .lampbtn, .passbtn';
 
-export async function play({ route, said = null, view = 'desktop', out = null, keys = false, still = false, url = process.env.JOURNAL_URL || 'http://127.0.0.1:5173/', browser, context: given, scale = 1, onSpread }) {
+export async function play({ route, said = null, view = 'desktop', out = null, keys = false, still = false, url = process.env.JOURNAL_URL || 'http://127.0.0.1:5173/', browser, context: given, scale = 1, onSpread, pace = 0 }) {
   const own = !browser;
   browser ??= await chromium.launch();
   const context = given ?? await browser.newContext({ viewport: views[view], deviceScaleFactor: scale, reducedMotion: still ? 'reduce' : 'no-preference', hasTouch: view === 'phone' });
@@ -40,6 +40,7 @@ export async function play({ route, said = null, view = 'desktop', out = null, k
 
   for (let guard = 0; guard < 40; guard++) {
     const here = await id();
+    if (pace) await page.waitForTimeout(pace);
     await onSpread?.(page, here);
     clipped.push(...await page.evaluate(h => [...document.querySelectorAll('.live .pg:not(.platepg):not(.coverpg)')].filter(p => p.scrollHeight > p.clientHeight + 3).map(p => h + ' ' + p.className + ' +' + (p.scrollHeight - p.clientHeight)), here));
     await shot(here.replace(/\s+/g, '-') + '-a');
@@ -48,6 +49,13 @@ export async function play({ route, said = null, view = 'desktop', out = null, k
       const idx = order[key].indexOf(route[key]);
       // The page will not turn until a thought is written down.
       if (await page.locator('.corner.next').count()) throw new Error('page could be turned before choosing at ' + here);
+      if (keys) {
+        // Trying to turn early is refused, and the thoughts stay on the page afterwards.
+        await page.keyboard.press('ArrowRight'); await page.waitForTimeout(still ? 60 : 800);
+        if (await id() !== here) throw new Error('page turned without a decision at ' + here);
+        const shown = await page.evaluate(() => [...document.querySelectorAll('.live .thought')].every(t => +getComputedStyle(t).opacity > 0.9));
+        if (!shown) throw new Error('thoughts vanished after a refused turn at ' + here);
+      }
       const words = said?.[key];
       if (words) {
         // The reader writes the decision themselves; if the page is unsure it offers two lines.
@@ -58,7 +66,7 @@ export async function play({ route, said = null, view = 'desktop', out = null, k
         if (await page.locator('.live .thoughts.unsure').count()) { await shot(here.replace(/\s+/g, '-') + '-unsure'); await page.locator('.live .thought').nth(idx).click({ force: true }); }
       } else if (keys) await page.keyboard.press(String(idx + 1)); else await page.locator('.thought').nth(idx).click({ force: true });
       await page.waitForSelector('.live .thought.inked');
-      await page.waitForTimeout(still ? 50 : 1150);
+      await page.waitForTimeout(still ? 50 : 1150 + pace / 2);
       await shot(here.replace(/\s+/g, '-') + '-inked');
     }
     let did = 0;
@@ -68,10 +76,10 @@ export async function play({ route, said = null, view = 'desktop', out = null, k
       if (await page.locator('.corner.next').count()) throw new Error('page could be turned before the hands were done at ' + here);
       if (keys) { await b.focus(); await page.keyboard.press('Enter'); } else await b.click({ force: true });
       did++;
-      await page.waitForTimeout(still ? 80 : here.includes('thu') ? 1750 : 450);
+      await page.waitForTimeout(still ? 80 : here.includes('thu') ? 1750 : 450 + pace / 3);
       if (out && (i === 0 || here.includes('night'))) await shot(here.replace(/\s+/g, '-') + '-hand' + did);
     }
-    if (did) { await page.waitForTimeout(still ? 60 : 900); await shot(here.replace(/\s+/g, '-') + '-done'); }
+    if (did) { await page.waitForTimeout(still ? 60 : 900 + pace); await shot(here.replace(/\s+/g, '-') + '-done'); }
     if (here.startsWith('s-last')) break;
     await turn();
   }

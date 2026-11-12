@@ -1,47 +1,76 @@
-# CCGL-Journal
+# Six Flights
 
-A playable paper journal about the small choices that shape a team. Co-created with Bob.
+A playable illustrated notebook. Co-created with Bob for CCGL.
 
-Follow Mina, Jules and Dev through a campus proposal over one week. Write a choice into the notebook, read another person's perspective, and find out what your decision leaves for someone else to carry.
+Yan has inherited a rooftop film night, a ring of keys and a blank notebook. It is Monday. The last screening of term is on Friday, the lift is out, and the first-year who runs the projector has not answered a message in five days. You make three decisions as Yan and turn the pages to find out who ended up carrying what.
 
-## This version
+![The roof on Friday night, under the tarp](docs/screenshots/09-night-under-the-tarp.jpg)
 
-- Three original connected scenes, nine choices and 27 possible choice sequences.
-- Earlier decisions remembered through dialogue, handwritten marks and recurring objects.
-- Unchanged answer selections preserve progress; rewriting an earlier answer warns before clearing later choices.
-- An unfoldable quotation restores the crucial “if”; an orange timer connects rehearsal to the route-specific ending.
-- Dotted choice lines that become ink, original pixel illustrations, a quiet colour reveal.
-- Complete situations first, with optional folded reflection and gentle directional page motion.
-- Character playbook, optional perspectives, clear-type mode and reduced-motion support.
-- Keyboard controls, responsive layout, browser-local progress and reflection.
-- Printable route (use Print / Save PDF) and plain-text download.
+## What is here
 
-The characters and narrative are fictional. Amanda and Hannah's workbook provided leadership context; this is not a copy of its quiz or a validated personality assessment. The feedback discusses the approach chosen in a particular situation. No moral score or six-style personality profile is calculated.
+- Twelve spreads, three decisions, 27 routes, four Fridays.
+- A decision starts as three pencilled thoughts. The one you choose is written over in ink. You can also write it **in your own words**; the page reads what you meant and the story follows the nearest authored line.
+- Consequences arrive as things you do and things other people leave in the book: knocking on a door, a checklist with one line you cannot tick, twenty-four chairs carried up six flights (fewer trips if people are still willing to help), a note stuck to the page, and on Saturday four entries in four other hands.
+- The last painting is resolved from your route: where the film was shown, how many chairs are empty, and who is in colour.
+- Ticket stubs collect in the back pocket across replays. Changing an earlier line tears out the pages after it, and asks first.
+- Saved in the browser. Keyboard: arrow keys turn pages, 1/2/3 write a thought. The ribbon holds plain type, still pages, sound, print and a new notebook. Print gives the route as plain text; "Keep it as text" downloads it.
 
-## Develop
+The people and the roof are invented. The three situations draw on a leadership workbook by Amanda, refined by Hannah; this is a story, not an assessment, and it names no styles and gives no score.
 
-Node 22.13+ required. `npm ci`, then `npm run dev`. Run `npm test` for all route/state and narrative-continuity regressions, `npx tsc --noEmit` for type checking and `npm run build` for production output. The project uses the Sites Vinext starter and retains its Worker build integration. Deployment configuration lives in `.openai/hosting.json`; never replace an existing project ID.
+## Run it
 
-## Where to work
+Node 22.13+.
 
-- `app/story.ts`: original scenarios, character playbook, route-resolved consequences, endings and shared text exports. Use `choiceOutcome`, `journalEntries` and `endingParagraphs` when displaying an existing route instead of reading raw choice results.
-- `app/page.tsx`: accessible journal controls, page movement and export.
-- `app/journal-store.ts`: restore before interaction, synchronous saves and session-only fallback.
-- `app/ReflectionNote.tsx`: native, keyboard-operable optional reflection.
-- `app/state.ts`: validated saves, safe revisits and guarded branch rewrites.
-- `app/PixelRoom.tsx`, `app/AfterRain.tsx`: original pixel illustrations.
-- `app/globals.css`: paper, typography, motion, responsive and print rules.
-- `docs/creative-handoff.md`: focused Opus and Gemini briefs and honest model-use record.
-- `docs/continuity-revision.md`: choice-contract repairs and their original verification limits.
-- `docs/reading-rhythm.md`: reading-flow revision, current verification and actual review screenshots.
+```bash
+npm ci
+```
 
-## Assets and privacy
+```bash
+npm run dev
+```
 
-Caveat and DM Sans are self-hosted under the SIL Open Font License; their license files are in `public/fonts`. The pixel artwork is original SVG. No paid assets, media-generation credits, external tracking, or model API calls are required at runtime. Choices and reflections are stored only in the visitor's browser. Browser storage can be unavailable; use text or print export to preserve a path.
+Then open http://127.0.0.1:5173/.
 
-Prototype 0.2. The scenario and visual standard remain open to Bob's direction.
+| Check | Command |
+| --- | --- |
+| Story, state and own-words logic (no browser) | `npm test` |
+| Real browser playthroughs; needs `npm run dev` running and Playwright available | `npm run test:e2e` |
+| Photograph a route | `node qa/play.mjs find,cut,name desktop qa/shots` (`phone`, `--keys`, `--still`, `--2x`) |
+| Types, lint, build | `npx tsc --noEmit`, `npm run lint`, `npm run build` |
 
+Deployment configuration is in `.openai/hosting.json`; never replace an existing project ID. Nothing on this branch has been deployed.
 
-## Fable consolidated starting version
+## Where things live
 
-Read [the setup handoff](docs/fable-setup.md), [Jamie design backbone](docs/jamie-design-backbone.md), and [Asterwind import guide](reference/asterwind/IMPORT.md). Active Journal code is at root; Asterwind reference runtimes and assets are under reference/asterwind.
+| Path | What |
+| --- | --- |
+| `app/story.ts` | Every word of the story, resolved from the three decisions. Screen, print and text export all read from here. |
+| `app/state.ts`, `app/journal-store.ts` | The save: pages gated by decisions and hand-work, guarded rewrites, the pocket of stubs. |
+| `app/interpret.ts` | Reading a decision written in the reader's own words. Local and instant; one seam for an optional live reader. |
+| `app/Spreads.tsx` | The twelve spreads and their interactions. |
+| `app/art.tsx`, `app/plates.ts` | Ink-and-wash drawings in SVG, and the registry where painted plates replace their backgrounds. |
+| `app/Journal.tsx` | The book: page turns, keyboard, focus, dialogs, print. |
+| `app/sound.ts` | Synthesised paper, pencil, knock and rain. No audio files. |
+| `qa/` | `story-check`, `state-check`, `interpret-check` (Node) and `e2e` + `play` (Playwright). |
+| `docs/creative-thesis.md` | What this is about, how the insight is derived, and what is deliberately absent. |
+| `docs/asset-manifest.md` | The painted artwork to make: language, geometry, prompts, review steps. Nothing in it has been generated yet. |
+| `coordination/requests/` | Six briefs for Robert: painted plates, live reader, Friday by voice, sound, a fresh-eyes playtest, the Asterwind machine. |
+| `docs/screenshots/`, `docs/recordings/` | Real captures from this build: fifteen stills and a silent 110-second playthrough of one route. |
+| `docs/jamie-design-backbone.md`, `docs/creative-reference-manifest.md`, `docs/fable-setup.md` | The design backbone and reference guide this was built against. |
+| `docs/history/` | Notes on the earlier three-scene prototype this replaced. |
+| `reference/asterwind/` | Asterwind snapshot. Reference only; not built or deployed. |
+
+`db/`, `drizzle/`, `lib/`, `worker/`, `scripts/` and `vendor/` belong to the hosting starter and are untouched.
+
+## Known limits
+
+- All artwork is drawn in code. It holds together, and the figures are simple; painted plates are planned, not made.
+- Sound was written without being listened to. Treat it as a draft (request 04).
+- No person has played this cold. The automated playthroughs prove it works, not that it lands (request 05).
+- Own-words reading is a keyword reading. Oblique phrasings get "I can read that two ways" and a choice of two lines until a live reader is added (request 02).
+- The Asterwind bridge is a token in the back pocket and one sentence. It opens nothing yet (request 06).
+- Tested in Chromium only.
+
+## Fonts and privacy
+
+Caveat, Reenie Beanie, Covered By Your Grace, Patrick Hand, La Belle Aurore and Newsreader are under the SIL Open Font License; Special Elite is Apache 2.0. Licence texts are in `public/fonts/licences/`. No tracking, no network calls at runtime, nothing leaves the browser.

@@ -59,7 +59,7 @@ function Thoughts<K extends string>({ night, lead, options, order, chosen, own, 
       {said && <p className="ownwords" key={said}><span className="sr">In your own words: </span>“{said}”</p>}
       {unsure && <p className="pc whichone" role="status">I can read that two ways. Which did I mean?</p>}
       {order.map((k, i) => (
-        <button key={k} type="button" className={'thought' + (chosen === k && !unsure ? ' inked' : '') + (inked === k ? ' fresh' : '') + (unsure ? (unsure.near.includes(k) ? ' near' : ' far') : '')} aria-pressed={chosen === k} onClick={() => pick(k)} style={q.d(0.35, { '--i': i })}>
+        <button key={k} type="button" className={'thought fade' + (chosen === k && !unsure ? ' inked' : '') + (inked === k ? ' fresh' : '') + (unsure ? (unsure.near.includes(k) ? ' near' : ' far') : '')} aria-pressed={chosen === k} onClick={() => pick(k)} style={q.d(0.35, { '--i': i })}>
           <span className="pencil">{options[k]}</span>
           <span className="inkover" aria-hidden="true">{options[k]}</span>
         </button>
