@@ -538,3 +538,23 @@ svg .jlabel .jn { font-weight: 700; font-size: 26px; }
 .marginnote.priya { color: var(--priya); } .marginnote.tomas { color: var(--tomas-ink); } .marginnote.kit { color: var(--kit); }
 .marginnote::before { content: '↳ '; opacity: .6; }
 .postscript { margin: 1.1em 0 0 30%; font-size: .68em; rotate: 1.4deg; border-top: .06em solid rgba(125, 60, 110, .4); padding-top: .4em; }
+
+/* On a painted night the people are gouache silhouettes: dark limbs, rough edges, a coat of their own colour. */
+.night .audience, .night .known { filter: url(#rough); }
+.night .fig .ln { stroke: #0c0e24; stroke-width: 4.2; }
+.night .fig .head { fill: #cdb9a6; stroke: #0c0e24; stroke-width: 1.2; }
+.night .fig .coat { stroke: #0c0e24; stroke-width: 1; }
+.night .fig .chair, .night .fig .box { stroke: #0c0e24; }
+.night .fig.pale .coat { fill: #171a38; stroke: currentColor; stroke-width: 1.6; stroke-dasharray: 3 3; }
+.night .seat .chairback { stroke: #0c0e24; stroke-width: 3.5; opacity: .9; }
+.night .seat .body, .night .seat .head { stroke: none; }
+.night.on .seat .body, .night.on .seat .head { stroke: none; fill: #0c0e24; }
+.night .painted { animation: none; opacity: 1; filter: brightness(.62) saturate(.8); transition: filter 2s ease .2s; }
+.night.on .painted { filter: none; }
+
+/* Things other people left in the book. White photographic grounds disappear into the paper. */
+.tapefig { position: relative; width: 52%; margin: 1em 0 0 6%; rotate: -3deg; mix-blend-mode: multiply; }
+.tapefig img { display: block; width: 100%; }
+.tapefig figcaption { position: absolute; inset: 0; display: grid; place-items: center; font-size: 1.5em; color: #1d2a4a; letter-spacing: .06em; }
+.receipt { position: absolute; right: 3.4cqw; bottom: 5cqw; width: 19%; rotate: 7deg; mix-blend-mode: multiply; }
+[data-layout='tall'] .receipt { position: static; display: block; width: 34%; margin: 1em 0 0 auto; }

@@ -14,3 +14,13 @@ Asynchronous briefs from the creative lead of Six Flights. Each is independent u
 House rules for anything that touches the build: `npm test`, `npx tsc --noEmit`, `npm run lint`, `npm run build` and `npm run test:e2e` (with `npm run dev` running) all pass; no secret in the repository or the client bundle; the notebook stays fully playable with every live feature switched off or failing.
 
 A note on the platform: I have not been able to inspect the OpenAI platform from this environment, so I name behaviours, not products. Where a brief says "a fast model" or "live transcription", choose what currently fits and tell me what you chose and why.
+
+## After the exploration packet (12 November)
+
+| # | Request | State |
+| --- | --- | --- |
+| 07 | Robert → Fable: exploration assets | Reviewed in the build |
+| 08 | Decisions, and the next four plates, two film frames, one flyer revision | Open |
+| 09 | The people, their things and the small details | Open; character sheet is the gate |
+
+Request 01 is superseded by 08 and 09.

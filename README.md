@@ -64,7 +64,7 @@ Deployment configuration is in `.openai/hosting.json`; never replace an existing
 
 ## Known limits
 
-- All artwork is drawn in code. It holds together, and the figures are simple; painted plates are planned, not made.
+- One scene (the roof under the tarp) is a gouache painting with live figures, light and film on top; the film still, a receipt and a strip of tape are also generated images. Every other scene is drawn in code, so the two looks sit side by side until the remaining plates arrive (`coordination/requests/08`). Sources are in `docs/asset-provenance.md`.
 - Sound was written without being listened to. Treat it as a draft (request 04).
 - No person has played this cold. The automated playthroughs prove it works, not that it lands (request 05).
 - Own-words reading is a keyword reading. Oblique phrasings get "I can read that two ways" and a choice of two lines until a live reader is added (request 02).

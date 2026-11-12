@@ -1,6 +1,6 @@
 # Six Flights: asset manifest
 
-Status on this branch: **nothing below has been generated.** Every image in the build today is SVG drawn in `app/art.tsx`. This manifest is the production plan for painted replacements. Record tool, version, prompt as run, accepted and rejected files, and licence against each asset when it is made.
+Status on this branch: **direction A (gouache) is accepted.** P03, the film still, a receipt and a strip of tape are integrated (see `docs/asset-provenance.md`). Every other scene is still SVG drawn in `app/art.tsx`. Geometry given below is now a guide, not a constraint: each plate's own screen rectangle is recorded in `app/plates.ts` and the live layers follow it. Current requests are in `coordination/requests/08-art-direction-after-exploration.md`. This manifest is the production plan for painted replacements. Record tool, version, prompt as run, accepted and rejected files, and licence against each asset when it is made.
 
 ## How paintings enter the build
 

@@ -311,7 +311,7 @@ function WedAfter({ s, a }: SpreadProps) {
       <div className="pg r">
         <div className="slips">{slip(2)}{slip(3)}</div>
         {!done && <button type="button" className="unfold fade" style={q.d()} onClick={() => a.beat('slips')}>unfold {['the first slip', 'the next', 'another', 'the last one'][n]}</button>}
-        {done && <div className="then" key="then">{w.after.map(t => q2.p(t))}</div>}
+        {done && <div className="then" key="then">{w.after.map(t => q2.p(t))}<img className="receipt fade" style={q2.d()} src="/plates/eph-receipt.webp" alt="Priya’s till receipt from October, creased from her wallet, one amount circled twice in red." /></div>}
       </div>
     </section>
   );
@@ -450,6 +450,7 @@ function Sat({ s, a }: SpreadProps) {
         {n >= 2 && pass}
         {n >= 4 && <p className="postscript lhand fade" style={{ '--d': '2.2s' } as V}><span className="sr">Mrs Leung adds: </span>{d.postscript}</p>}
         {n >= 4 && d.unsent && <p className="unsent fade" style={{ '--d': '2.4s' } as V}>{d.unsent}</p>}
+        {r.mon === 'post' && n >= 4 && <figure className="tapefig fade" style={{ '--d': '2.8s' } as V}><img src="/plates/eph-tape.webp" alt="A strip of yellow tape from the projector lid." /><figcaption className="khand">KIT — PROJ.</figcaption></figure>}
       </div>
     </section>
   );

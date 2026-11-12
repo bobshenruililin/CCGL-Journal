@@ -5,7 +5,7 @@
  */
 import type { CSSProperties, ReactNode } from 'react';
 import type { Light, Who } from './story.ts';
-import { plates, type PlateId } from './plates.ts';
+import { plates, filmStill, type PlateId } from './plates.ts';
 
 type V = CSSProperties & Record<`--${string}`, string | number>;
 const dl = (n: number, more: V = {}): V => ({ '--d': n.toFixed(2) + 's', ...more });
@@ -44,6 +44,10 @@ export function InkDefs() {
           <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.5" result="ga" />
           <feComposite in="b" in2="ga" operator="in" />
         </filter>
+        <filter id="rough" x="-3%" y="-3%" width="106%" height="106%">
+          <feTurbulence type="fractalNoise" baseFrequency=".09" numOctaves="2" seed="11" result="n" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="5" />
+        </filter>
         <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14" /></filter>
         <filter id="glow-s" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" /></filter>
         <linearGradient id="g-dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#5d5a96" /><stop offset=".45" stopColor="#d9807e" /><stop offset=".8" stopColor="#f5b77f" /><stop offset="1" stopColor="#f9d9a4" /></linearGradient>
@@ -58,7 +62,7 @@ export function InkDefs() {
 
 /** A registered painting covers the drawn background of its scene; everything that moves stays on top. */
 function Painted({ id, w, h }: { id: PlateId; w: number; h: number }) {
-  const src = plates[id];
+  const src = plates[id]?.src;
   return src ? <image className="painted fade" href={src} x="0" y="0" width={w} height={h} preserveAspectRatio="xMidYMid slice" /> : null;
 }
 
@@ -476,8 +480,10 @@ function Film() {
   return (
     <g className="film">
       <path d="M0 0h460v280H0z" fill="#fdf6dc" />
-      <g className="frameA"><path d="M226 30v250" stroke="#2a2833" strokeWidth="7" /><path d="M150 280v-96q0-30 26-30t26 30l18-22M176 150a22 22 0 100-44 22 22 0 000 44z" fill="#3a3745" stroke="#3a3745" strokeWidth="6" strokeLinejoin="round" /><path d="M306 280v-90q0-30-26-30t-24 26l-20-16M282 156a22 22 0 100-44 22 22 0 000 44z" fill="#57525f" stroke="#57525f" strokeWidth="6" strokeLinejoin="round" /></g>
+      {filmStill && <g className="still"><image href={filmStill} x="0" y="-32" width="460" height="345" preserveAspectRatio="xMidYMid slice" clipPath="inset(32px 0 33px 0)" /><path d="M0 0h460v280H0z" fill="#f6e3b0" opacity=".16" /></g>}
+      {!filmStill && <><g className="frameA"><path d="M226 30v250" stroke="#2a2833" strokeWidth="7" /><path d="M150 280v-96q0-30 26-30t26 30l18-22M176 150a22 22 0 100-44 22 22 0 000 44z" fill="#3a3745" stroke="#3a3745" strokeWidth="6" strokeLinejoin="round" /><path d="M306 280v-90q0-30-26-30t-24 26l-20-16M282 156a22 22 0 100-44 22 22 0 000 44z" fill="#57525f" stroke="#57525f" strokeWidth="6" strokeLinejoin="round" /></g>
       <g className="frameB"><path d="M226 30v250" stroke="#2a2833" strokeWidth="7" /><path d="M140 280v-96q0-30 26-30t30 24l22-34M168 150a22 22 0 100-44 22 22 0 000 44z" fill="#3a3745" stroke="#3a3745" strokeWidth="6" strokeLinejoin="round" /><path d="M316 280v-90q0-30-26-30t-28 20l-24-30M290 156a22 22 0 100-44 22 22 0 000 44z" fill="#57525f" stroke="#57525f" strokeWidth="6" strokeLinejoin="round" /></g>
+</>}
       <path className="scratch" d="M90 0v280M380 0v280" stroke="#fff" strokeWidth="1.500" opacity=".5" />
     </g>
   );
@@ -501,10 +507,11 @@ export function Night({ ending, lights, on, label }: NightProps) {
   } else {
     [[640, 0.9, 12, 140], [730, 1.1, 10, 120], [826, 1.3, 8, 100]].forEach(([y, s, n, x0], r) => { for (let c = 0; c < n; c++) { const x = x0 + c * ((1400 - 2 * x0) / (n - 1)) + (r % 2) * 22; if (Math.abs(x - 700) < 100 && r === 2) continue; rows.push(<Seat key={r + '-' + c} x={x} y={y} s={s} floor />); } });
   }
-  const sx = 470, sy = roof ? 190 : 170;
+  const plate = plates[ending === 'tarp' ? 'P03-roof-night-tarp' : ending === 'half' ? 'P04-roof-night-after-rain' : 'P05-common-room-night'];
+  const [sx, sy, sw, sh] = plate?.screen ?? [470, roof ? 190 : 170, 460, 280];
   return (
     <svg className={'plate night ' + (on ? 'on ' : 'off ') + ending} viewBox="0 0 1400 933" preserveAspectRatio="xMidYMid slice" role="img" aria-label={label}>
-      {roof ? <>
+      {plate ? null : roof ? <>
         <path filter="url(#wash)" d="M12 14q690-14 1376 0l-4 906q-690 12-1370-4z" fill="url(#g-night)" />
         <g transform="translate(0 90)"><Skyline base={372} lit={0.62} fill="#0f1128" opacity={0.95} /></g>
         <path filter="url(#wash)" d="M12 470h1376v450H12z" fill="#15173a" opacity=".9" />
@@ -525,8 +532,8 @@ export function Night({ ending, lights, on, label }: NightProps) {
       <Painted id={ending === 'tarp' ? 'P03-roof-night-tarp' : ending === 'half' ? 'P04-roof-night-after-rain' : 'P05-common-room-night'} w={1400} h={933} />
 
       {/* the screen */}
-      <g transform={`translate(${sx} ${sy})` + (roof ? '' : ' skewY(-.6)')}>
-        <path className="screen-off" d={roof ? 'M0 0h460v280H0z' : 'M-30-20q260 26 520 0l-10 350q-250-14-500 0z'} />
+      <g transform={`translate(${sx} ${sy}) scale(${sw / 460} ${sh / 280})` + (roof ? '' : ' skewY(-.6)')}>
+        {!plate && <path className="screen-off" d={roof ? 'M0 0h460v280H0z' : 'M-30-20q260 26 520 0l-10 350q-250-14-500 0z'} />}
         {!roof && <><path className="pegs" d="M-24-26v14M484-26v14M228-10v12" /><path className="sock" d="M470-10l14-1v30l12 9-7 7-19-12z" /></>}
         {on && <g className="screen-on"><g transform={roof ? undefined : 'translate(-8 14) scale(1.035 1.05)'}><Film /></g></g>}
       </g>
@@ -540,7 +547,7 @@ export function Night({ ending, lights, on, label }: NightProps) {
         </>}
         <g className="halo self" style={{ color: 'var(--yan)' }}><path filter="url(#pool)" fill="currentColor" d="M560 830q10-90 130-95t140 80q0 95-130 100t-140-85z" /></g>
       </g>}
-      {on && <path className="beam" d={`M700 ${roof ? 838 : 826}L${sx} ${sy + 280}V${sy}h460v280z`} fill="#fff3c4" />}
+      {on && <path className="beam" d={`M700 ${roof ? 838 : 826}L${sx} ${sy + sh}V${sy}h${sw}v${sh}z`} fill="#fff3c4" />}
 
       <g className="audience">{rows}</g>
 
@@ -563,13 +570,13 @@ export function Night({ ending, lights, on, label }: NightProps) {
         <g className="machine"><path d="M660 838h84v40h-84z" /><path d="M650 878h104M664 878v40M740 878v40" /><circle cx="702" cy="840" r="10" /></g>
       </g>
 
-      {ending === 'tarp' && <g className="canopy">
+      {ending === 'tarp' && !plate && <g className="canopy">
         <path filter="url(#wash)" d="M-10-10h1420v118q-118 62-236 18-116 58-236 12-120 60-238 14-118 58-236 12-120 60-238 16Q120 172-10 112z" />
         <path className="ropes" d="M228 130l-40 180M464 124v60M938 126v56M1174 126l150 180" />
         <g className="drips">{[228, 464, 700, 938, 1174].map((x, i) => <path key={x} style={{ '--i': i } as V} d={`M${x} ${150 + (i % 2) * 6}v18`} />)}</g>
       </g>}
       {roof && <g className={'rain ' + (ending === 'tarp' ? 'beyond' : 'gone')}>{Array.from({ length: 40 }, (_, i) => <path key={i} style={{ '--i': i % 9 } as V} d={`M${(i * 173) % 1380 + 10} ${200 + (i * 89) % 260}l-6 28`} />)}</g>}
-      {roof && <g className="bulbs"><path d="M198 300q270 110 272-110M930 190q200 200 388 112" />{[250, 310, 372, 430, 990, 1060, 1140, 1220, 1290].map((x, i) => <circle key={x} style={{ '--i': i } as V} cx={x} cy={x < 500 ? 318 + (x - 198) * 0.06 - Math.abs(x - 340) * 0.05 : 250 + Math.abs(x - 930) * 0.16} r="5" />)}</g>}
+      {roof && !plate && <g className="bulbs"><path d="M198 300q270 110 272-110M930 190q200 200 388 112" />{[250, 310, 372, 430, 990, 1060, 1140, 1220, 1290].map((x, i) => <circle key={x} style={{ '--i': i } as V} cx={x} cy={x < 500 ? 318 + (x - 198) * 0.06 - Math.abs(x - 340) * 0.05 : 250 + Math.abs(x - 930) * 0.16} r="5" />)}</g>}
     </svg>
   );
 }
