@@ -98,6 +98,7 @@ export function mondayAfter(mon: Mon) {
     ],
     drawing: 'prop the vent open (chopstick) or it cuts out after 40 min. — K',
     paste: { who: 'priya' as Who, label: 'stuck to my door, Tuesday', text: 'Licence form was due at MIDNIGHT. Sent it myself, 12:40. You said you had it. — P' },
+    boundary: '“I can’t do the group chat,” he said, at the door. “Friday, maybe.” I said maybe was fine.',
     after2: ['I did say that. At midnight I was outside room 509.'],
   };
 }
@@ -112,7 +113,7 @@ export function wednesday(mon: Mon) {
       {
         self: 'Kit sent a thumbs-up to the time and didn’t come.',
         post: 'Tomás has brought the projector manual, printed, with tabs.',
-        find: 'Kit came. He’s by the stairwell socket, measuring a cable against his arm.',
+        find: 'Kit came, which nobody mentions in case it stops being true. He’s by the stairwell socket, measuring a cable against his arm.',
       }[mon],
     ],
     priya: '—doors at half six, intro at seven SHARP, I’ve cut the interval, nobody needs an interval, speakers go HERE, and the screen faces the harbour because of the light, and—',
@@ -175,7 +176,7 @@ export function wednesdayAfter(mon: Mon, wed: Wed) {
       { who: 'leung', text: 'Six flights. My knees. Out by ten, please.' },
     ] as Slip[],
     after: [
-      'Tomás took the rain. Priya’s $340 goes in Friday’s hat. Mrs Leung gets her ten o’clock, in writing.' + (mon === 'find' ? ' Kit is borrowing ten metres of cable from the lab.' : ''),
+      'Tomás took the rain. Mrs Leung gets her ten o’clock, in writing. We’ll pass a hat on Friday for Priya’s $340. Priya says a hat won’t cover it. She is probably right.' + (mon === 'find' ? ' Kit is borrowing ten metres of cable from the lab.' : ''),
       'By the time we’d read them the sun had gone and the key was jingling. We never tested the sound.',
     ],
   };
@@ -235,7 +236,7 @@ export function friday(mon: Mon, wed: Wed) {
   return {
     heading: 'Friday, 6:50 pm · the roof',
     paragraphs: [
-      'The picture just went. There was a countdown on the screen, then the fan made a sound like a sigh, and now there’s a white sheet and a dark roof.',
+      'The picture just went. On the screen a man had his ear pressed to a wall, listening for his neighbour. Then the fan made a sound like a sigh, and now there’s a white sheet and a dark roof.',
       'A drop on my hand. Another on this page.',
       'Forty people are queuing down six flights and I can hear every one of them.',
       {
@@ -344,8 +345,8 @@ export function fridayAfter(r: FullRoute): { heading: string; paragraphs: string
     }[wed]);
     p.push('Nobody argued. I had expected somebody to.');
     p.push({
-      find: 'Kit had the vent propped in under a minute. At 7:05 the countdown came back up, under a tarp, in the rain. Somebody on the stairs cheered.',
-      self: 'Kit took a chopstick out of his own pocket and had the vent propped in under a minute. He had brought it with him. At 7:05 the countdown came back up, under a tarp, in the rain.',
+      find: 'Kit had the vent propped in under a minute. At 7:05 the man and his wall came back up, under a tarp, in the rain. Somebody on the stairs cheered.',
+      self: 'Kit took a chopstick out of his own pocket and had the vent propped in under a minute. He had brought it with him. At 7:05 the man and his wall came back up, under a tarp, in the rain.',
       post: 'I pressed things for a while. The fan came back at 7:12 on its own, once it had cooled. By then there was a bedsheet on the common-room wall and forty people on the floor in front of it.',
     }[mon]);
     jobs = [
@@ -386,38 +387,52 @@ export function night(r: FullRoute) {
 
 /* ───────────── Saturday: the notebook goes round ───────────── */
 
-export type Entry = { who: Who; text: string; label?: string; kind: 'hand' | 'text' };
+export type Entry = { who: Who; text: string; label?: string; kind: 'hand' | 'text'; margin?: { who: Who; text: string; after: number } };
 
-export function saturday(r: FullRoute): { heading: string; opening: string[]; entries: Entry[]; unsent: string | null } {
+/** What forty wet people put in a hat. It is never $340. Only known on routes where Priya said the number. */
+export function hat(r: FullRoute): string | null {
+  if (r.wed !== 'round') return null;
+  return ending(r) === 'tarp' ? '$203' : '$146.50';
+}
+
+export function saturday(r: FullRoute): { heading: string; opening: string[]; entries: Entry[]; postscript: string; unsent: string | null } {
   const { mon, wed, fri } = r;
   const e = ending(r);
+  const indoors = e === 'sheet' || e === 'leung';
+  const money = hat(r);
   const kit: Entry = mon === 'post'
-    ? { who: 'kit', kind: 'text', label: 'Kit · 10:14 am', text: 'heard it went ok. glad. sorry again.' }
+    ? { who: 'kit', kind: 'text', label: 'Kit · 10:14 am', text: indoors
+      ? (wed === 'round' ? 'could hear it up the stairwell from my door. left speaker has a bad earth, wiggle the jack. ' : 'could hear people laughing up the stairwell from my door. ') + 'glad it went ok. sorry again.'
+      : 'heard the chairs going back down at eleven. it sounded like a lot of chairs. glad. sorry again.' }
     : { who: 'kit', kind: 'hand', text: mon === 'find'
       ? fri === 'name' ? 'You knocked. Then on Friday you said my name like it was obvious I’d be there. Both of those. (Vent’s fine. I checked twice.) — K'
         : fri === 'self' ? 'I drew you the vent so you’d know. I didn’t think it meant you wouldn’t need me. It worked, though. It’s ok. — K'
         : wed === 'round' ? 'I said “vent” and everybody stopped talking. That has never happened to me before. — K'
         : 'I said “it’s the vent” four times. I counted. — K'
       : fri === 'name' ? 'I only came on Friday to give back the cupboard key. Then you said “Kit. Projector. Please.” I’d been waiting since Monday for somebody to need something. — K'
-        : 'You tested it without me and it worked. I keep meaning to say thank you and I keep meaning to say something else. — K' };
+        : 'You tested it without me and it worked. I keep meaning to say thank you and I keep meaning to say something else. — K',
+      margin: mon === 'find' && (fri === 'name' || (fri === 'ask' && wed === 'round')) ? { who: 'tomas', text: 'teach me the vent?? — T', after: 4 } : undefined };
+  const termTwo = ' Term two we charge at the bottom of the stairs. — P';
   const priya: Entry = { who: 'priya', kind: 'hand', text: wed === 'cut'
     ? fri === 'name' ? 'Wednesday you shut me up in front of a first-year and I was furious until Friday, 6:51 pm, when you did the same thing to all of us and it was correct. Work out the difference. I’m still working on it. — P'
       : 'I did the running order. I did the cashbox. I’d have done the rain plan too. Nobody instructed me to. — P'
     : wed === 'aside'
       ? fri === 'name' ? 'You knew about the rain for TWO DAYS. I have a tarp guy. Tell me things. (Friday, though. Fine. Good.) — P'
         : 'You knew about the rain for TWO DAYS? I have a tarp guy. I’d have had it sorted by Thursday lunch. — P'
-      : fri === 'ask' ? 'The slips again. On a roof. In the rain. I suggested it myself and I’m disgusted. It worked twice. — P'
-        : '$340. I carried that for a month and it took one slip of paper. Don’t make it a ritual, we’ll never finish a meeting. Do it sometimes. — P' };
+      : fri === 'ask' ? 'The slips again. On a roof. In the rain. I suggested it myself and I’m disgusted. The hat made ' + money + ' and a button. It was never going to be $340.' + termTwo
+        : 'The hat made ' + money + ' and a button. It was never going to be $340. But I said the number out loud on Wednesday and nobody died.' + termTwo,
+    margin: wed !== 'round' ? undefined : mon === 'post' ? { who: 'tomas', text: 'I have $15 and a good umbrella — T', after: 2 } : { who: 'kit', text: '(I have $20. it’s yours.) — K', after: 3 } };
   const tomas: Entry = { who: 'tomas', kind: 'hand', text: mon === 'post'
     ? fri === 'self' ? 'I had the projector for four days and then for zero minutes. You were right to take it! I think. I would like to learn it properly. Maybe from Kit. — T'
-      : fri === 'name' ? 'I had a projector for four days. On Friday you gave me the rain instead, and that was the right swap. I kept Kit’s name on the lid. — T'
+      : fri === 'name' ? 'I had a projector for four days. On Friday I got the rain instead, which was the right swap. I kept Kit’s name on the lid. — T'
       : 'I had a projector for four days and a manual with tabs, and when it stopped I didn’t know one useful thing. I kept Kit’s name on the lid. — T'
     : wed === 'cut' ? 'Nobody ever stopped a meeting for me before. I was so embarrassed I nearly forgot the forecast. Priya didn’t look at me for two days. Worth it? I think yes? — T'
     : wed === 'aside'
       ? fri === 'name' ? 'On the stairs I gave you my worry and you carried it for me. On Friday you gave me a job and I carried that. I liked Friday better. — T'
         : 'I told you on the stairs because it was easier. Then on Friday I knew about the rain and I still waited for you to say it. I think I learned the wrong thing. — T'
-      : fri === 'name' ? 'On Friday you gave me the rain. I’d had it since Wednesday (my slip!) but it was nice to be given it. — T'
-        : 'My slip was my job. Nobody had to tell me on Friday. I just went. — T' };
+      : e === 'tarp' ? 'I held a rope for two hours and saw the whole film sideways. My slip said rain and then it rained. I am never writing anything down again. — T'
+        : 'My slip said rain, so the rain was mine. Nobody had to tell me. I moved forty people down four flights and lost only one, and he came back. — T',
+    margin: mon !== 'post' && wed === 'cut' ? { who: 'priya', text: 'I was looking at the rain radar. — P', after: 3 } : undefined };
   const leung: Entry = { who: 'leung', kind: 'hand', text: {
     tarp: 'Twenty-six years I have opened that door. This is the first time anybody kept a chair for me. I saw that film when I was nine years old. I did not tell you. — Leung',
     sheet: 'The common room is not for films. I sat at the back and I did not see anything. It was very funny, the part I did not see. — Leung',
@@ -428,6 +443,7 @@ export function saturday(r: FullRoute): { heading: string; opening: string[]; en
     heading: 'Saturday, 10 am · the roof',
     opening: ['Chairs go down easier than they go up.', 'Priya took the notebook out of my hands. “Give it. You’re not the only one who was there.”'],
     entries: [priya, tomas, kit, leung],
+    postscript: 'Key in the pigeonhole by noon, please. Not Monday.',
     unsent: mon === 'post' ? 'Four replies typed, none sent. The one I mean: “One floor down. I’m coming.”' : null,
   };
 }
@@ -496,7 +512,7 @@ export function journalSections(route: Route, own: Partial<Record<keyof Route, s
   out.push({ heading: ma.heading, lines: ma.kind === 'self'
     ? [...ma.before, 'Kit’s checklist: ' + ma.checklist.join('; '), ...ma.after, ma.paste.label + ': ' + ma.paste.text]
     : ma.kind === 'post' ? [...ma.messages.map(m => m.who === 'system' ? '[' + m.text + ']' : names[m.who] + ' (' + m.time + '): ' + m.text), ...ma.after]
-    : [...ma.before, ...ma.after, 'Kit drew the projector, and wrote: ' + ma.drawing, 'Priya, ' + ma.paste.label + ': ' + ma.paste.text, ...ma.after2] });
+    : [...ma.before, ...ma.after, 'Kit drew the projector, and wrote: ' + ma.drawing, ma.boundary, 'Priya, ' + ma.paste.label + ': ' + ma.paste.text, ...ma.after2] });
   const w = wednesday(mon);
   out.push({ heading: w.heading, lines: [...w.paragraphs, 'Priya: ' + w.priya, 'Tomás: ' + w.tomas.join(' … '), w.close, ...(wed ? wrote(w.thoughts[wed], own.wed, 'I wrote') : [])] });
   if (!wed) return out;
@@ -515,7 +531,7 @@ export function journalSections(route: Route, own: Partial<Record<keyof Route, s
   const n = night(full);
   out.push({ heading: n.when, lines: [n.line, ...(n.aside ? [n.aside] : [])] });
   const s = saturday(full);
-  out.push({ heading: s.heading, lines: [...s.opening, ...s.entries.map(e => (e.kind === 'text' ? e.label + ': ' : names[e.who] + ' wrote: ') + e.text), ...(s.unsent ? [s.unsent] : [])] });
+  out.push({ heading: s.heading, lines: [...s.opening, ...s.entries.flatMap(e => [(e.kind === 'text' ? e.label + ': ' : names[e.who] + ' wrote: ') + e.text, ...(e.margin ? [names[e.margin.who] + ', in the margin: ' + e.margin.text] : [])]), 'Mrs Leung, at the bottom of the page: ' + s.postscript, ...(s.unsent ? [s.unsent] : [])] });
   const l = lastPage(full);
   out.push({ heading: l.heading, lines: l.paragraphs });
   return out;

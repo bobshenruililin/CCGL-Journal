@@ -69,6 +69,13 @@ for (const r of routes) {
   // Saturday: four voices, each signed by the right person.
   assert.deepEqual(sat.entries.map(e => e.who), ['priya', 'tomas', 'kit', 'leung']);
   for (const en of sat.entries) if (en.kind === 'hand') assert(en.text.endsWith('— ' + { priya: 'P', tomas: 'T', kit: 'K', leung: 'Leung' }[en.who]), 'unsigned ' + id);
+  // Margin notes: written by someone who is on the roof on Saturday, after the entry they answer exists.
+  sat.entries.forEach((en, i) => { if (!en.margin) return; assert(en.margin.who !== en.who); assert(en.margin.after > i && en.margin.after <= 4); if (r.mon === 'post') assert.notEqual(en.margin.who, 'kit', 'absent Kit writes in the margin ' + id); });
+  // The $340: only spoken of where Priya said it on Wednesday, and a hat never covers it.
+  assert.equal(/\$340|hat made/.test(text(sat)), r.wed === 'round', 'money ' + id);
+  if (r.wed === 'round') { assert(/Term two/.test(text(sat))); assert(parseFloat(S.hat(r).slice(1)) < 340); } else assert.equal(S.hat(r), null);
+  // Kit's text after leaving: what he heard matches where the film was shown.
+  if (r.mon === 'post') assert.equal(/stairwell/.test(sat.entries[2].text), n.venue === 'room', 'what Kit heard ' + id);
   // Beats exist where hands are needed.
   assert.equal(S.beatFor('monAfter', r).steps, { self: 5, post: 5, find: 3 }[r.mon]);
   assert.equal(S.beatFor('wedAfter', r) === null, r.wed !== 'round');

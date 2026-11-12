@@ -36,6 +36,14 @@ export function InkDefs() {
           <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1 1.3" result="ga" />
           <feComposite in="b" in2="ga" operator="in" />
         </filter>
+        <filter id="pool" x="-30%" y="-30%" width="160%" height="160%">
+          <feTurbulence type="fractalNoise" baseFrequency=".009" numOctaves="3" seed="21" result="n" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="70" result="d" />
+          <feGaussianBlur in="d" stdDeviation="9" result="b" />
+          <feTurbulence type="fractalNoise" baseFrequency=".35" numOctaves="3" seed="4" result="g" />
+          <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.5" result="ga" />
+          <feComposite in="b" in2="ga" operator="in" />
+        </filter>
         <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14" /></filter>
         <filter id="glow-s" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5" /></filter>
         <linearGradient id="g-dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#5d5a96" /><stop offset=".45" stopColor="#d9807e" /><stop offset=".8" stopColor="#f5b77f" /><stop offset="1" stopColor="#f9d9a4" /></linearGradient>
@@ -476,7 +484,13 @@ function Film() {
 }
 
 type NightProps = { ending: 'tarp' | 'sheet' | 'leung' | 'half'; lights: Record<Exclude<Who, 'yan'>, Light>; on: boolean; label: string };
-const halo = (who: Who, x: number, y: number, l: Light, r = 150) => l === 'lit' ? <ellipse key={who} className="halo" cx={x} cy={y} rx={r} ry={r * 0.8} fill={hue[who]} filter="url(#glow)" /> : null;
+/** A pool of pigment, not a spotlight: an uneven wash that has bled into the dark paper around one person. */
+const halo = (who: Who, x: number, y: number, l: Light, r = 150) => l === 'lit' ? (
+  <g key={who} className="halo" style={{ color: hue[who] }}>
+    <path filter="url(#pool)" fill="currentColor" d={`M${x - r} ${y}q${r * 0.1}-${r * 0.75} ${r * 0.9}-${r * 0.8}t${r * 1.15} ${r * 0.55}q${r * 0.1} ${r * 0.8}-${r * 0.85} ${r * 0.95}t-${r * 1.2}-${r * 0.7}z`} />
+    <path filter="url(#pool)" fill="currentColor" opacity=".55" d={`M${x - r * 0.5} ${y - r * 0.1}q${r * 0.3}-${r * 0.5} ${r * 0.7}-${r * 0.3}t${r * 0.3} ${r * 0.6}q-${r * 0.4} ${r * 0.5}-${r * 0.8} ${r * 0.2}t-${r * 0.2}-${r * 0.5}z`} />
+  </g>
+) : null;
 
 export function Night({ ending, lights, on, label }: NightProps) {
   const roof = ending === 'tarp' || ending === 'half';
@@ -524,7 +538,7 @@ export function Night({ ending, lights, on, label }: NightProps) {
         </> : <>
           {halo('kit', 770, 810, lights.kit)}{halo('priya', 330, 620, lights.priya)}{halo('tomas', 1000, 640, lights.tomas)}{halo('leung', ending === 'leung' ? 1130 : 1150, ending === 'leung' ? 400 : 700, lights.leung, ending === 'leung' ? 190 : 120)}
         </>}
-        <ellipse className="halo self" cx="690" cy="830" rx="150" ry="110" fill="var(--yan)" filter="url(#glow)" />
+        <g className="halo self" style={{ color: 'var(--yan)' }}><path filter="url(#pool)" fill="currentColor" d="M560 830q10-90 130-95t140 80q0 95-130 100t-140-85z" /></g>
       </g>}
       {on && <path className="beam" d={`M700 ${roof ? 838 : 826}L${sx} ${sy + 280}V${sy}h460v280z`} fill="#fff3c4" />}
 

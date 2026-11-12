@@ -229,6 +229,7 @@ function MonAfter({ s, a }: SpreadProps) {
         {open && <div className="then" key="then">
           {m.after.slice(1).map(t => q2.p(t))}
           <figure className="ventfig"><VentDrawing /><figcaption className="khand fade" style={q2.d(0.8)}>{m.drawing}</figcaption></figure>
+          {q2.p(m.boundary)}
           <Paste who="priya" label={m.paste.label} text={m.paste.text} style={q2.d(0.5)} />
           {m.after2.map(t => q2.p(t))}
         </div>}
@@ -410,12 +411,13 @@ function Night_({ s, a }: SpreadProps) {
 
 /* ───────────── Saturday ───────────── */
 
-function entry(e: Entry, q: Q) {
+function entry(e: Entry, q: Q, n: number) {
   if (e.kind === 'text') return <Paste key={e.who} who={e.who} label={e.label ?? ''} text={e.text} kind="strip" style={q.d(0.6)} />;
   return (
     <blockquote key={e.who} className={'entry ' + e.who}>
       <span className="swash" aria-hidden="true" />
       <p className={hand[e.who]}><span className="sr">{whoName(e.who)} writes: </span>{q.w(e.text)}</p>
+      {e.margin && n >= e.margin.after && <p className={'marginnote ' + e.margin.who + ' ' + hand[e.margin.who]} key="m"><span className="sr">{whoName(e.margin.who)} adds, in the margin: </span>{e.margin.text}</p>}
     </blockquote>
   );
 }
@@ -433,7 +435,7 @@ function Sat({ s, a }: SpreadProps) {
       <span>{next.kind === 'text' ? 'my phone buzzes' : n === 0 ? 'Priya writes first' : `pass it to ${whoName(next.who)}`}</span>
     </button>
   );
-  const shown = (i: number) => i < n ? entry(d.entries[i], i === n - 1 ? q2 : makeQ(0)) : null;
+  const shown = (i: number) => i < n ? entry(d.entries[i], i === n - 1 ? q2 : makeQ(0), n) : null;
   return (
     <section className="spread s-sat">
       <div className="pg l">
@@ -446,6 +448,7 @@ function Sat({ s, a }: SpreadProps) {
       <div className="pg r">
         <div aria-live="polite">{shown(2)}{shown(3)}</div>
         {n >= 2 && pass}
+        {n >= 4 && <p className="postscript lhand fade" style={{ '--d': '2.2s' } as V}><span className="sr">Mrs Leung adds: </span>{d.postscript}</p>}
         {n >= 4 && d.unsent && <p className="unsent fade" style={{ '--d': '2.4s' } as V}>{d.unsent}</p>}
       </div>
     </section>
