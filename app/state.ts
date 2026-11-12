@@ -9,6 +9,7 @@ export type Save = {
   furthest: number;      // furthest spread reached on this path
   route: Route;
   beats: Partial<Record<BeatId, number>>;
+  own?: Partial<Record<keyof Route, string>>; // a decision the reader wrote in their own words
   notes: string;
   stubs: EndingId[];     // endings kept in the back pocket, across replays
   clear: boolean;        // plain type instead of handwriting
@@ -19,6 +20,7 @@ export type Save = {
 export const LAST = spreads.length - 1;
 export const initial: Save = { version: 2, at: 0, furthest: 0, route: {}, beats: {}, notes: '', stubs: [], clear: false, still: false, sound: true };
 
+export const OWN_MAX = 140;
 const beatIds = Object.keys(beatHome) as BeatId[];
 const routeKeys = ['mon', 'wed', 'fri'] as const;
 const options = { mon: MON, wed: WED, fri: FRI } as const;
@@ -47,6 +49,10 @@ export function isSave(v: unknown): v is Save {
   if ((s.route.wed && !s.route.mon) || (s.route.fri && !s.route.wed)) return false;
   if (!s.beats || typeof s.beats !== 'object' || Array.isArray(s.beats)) return false;
   for (const [k, n] of Object.entries(s.beats)) if (!beatIds.includes(k as BeatId) || !Number.isInteger(n) || (n as number) < 0 || (n as number) > 12) return false;
+  if (s.own !== undefined) {
+    if (!s.own || typeof s.own !== 'object' || Array.isArray(s.own)) return false;
+    for (const [k, t] of Object.entries(s.own)) if (!(routeKeys as readonly string[]).includes(k) || typeof t !== 'string' || !t || t.length > OWN_MAX || !s.route[k as keyof Route]) return false;
+  }
   if (typeof s.notes !== 'string' || s.notes.length > 600) return false;
   if (!Array.isArray(s.stubs) || s.stubs.length > endingIds.length || s.stubs.some(e => !endingIds.includes(e)) || new Set(s.stubs).size !== s.stubs.length) return false;
   if (typeof s.clear !== 'boolean' || typeof s.still !== 'boolean' || typeof s.sound !== 'boolean') return false;
@@ -82,15 +88,24 @@ export function tearsPages(s: Save, key: keyof Route, value: string): boolean {
   return s.route[key] !== undefined && s.route[key] !== value && s.furthest > s.at;
 }
 
-export function choose(s: Save, key: keyof Route, value: string): Save {
+export function choose(s: Save, key: keyof Route, value: string, words?: string): Save {
   if (choiceAt[spreads[s.at]] !== key) return s;
-  if (!(options[key] as readonly string[]).includes(value) || s.route[key] === value) return s;
+  if (!(options[key] as readonly string[]).includes(value)) return s;
+  const said = words?.trim().replace(/\s+/g, ' ').slice(0, OWN_MAX) || undefined;
+  if (s.route[key] === value) {
+    // Same decision: nothing is torn out. Only the wording on the page can change.
+    if (said === undefined || said === s.own?.[key]) return s;
+    return { ...s, own: { ...s.own, [key]: said } };
+  }
   const route: Route = {};
   for (const k of routeKeys) { if (k === key) break; route[k] = s.route[k] as never; }
   (route as Record<string, string>)[key] = value;
   const beats: Save['beats'] = {};
   for (const b of beatIds) if (spreads.indexOf(beatHome[b]) < s.at && s.beats[b] !== undefined) beats[b] = s.beats[b];
-  return { ...s, route, beats, furthest: s.at };
+  const own: NonNullable<Save['own']> = {};
+  for (const k of routeKeys) { if (k === key) break; if (s.own?.[k]) own[k] = s.own[k]; }
+  if (said) own[key] = said;
+  return { ...s, route, beats, own, furthest: s.at };
 }
 
 /** One step of whatever the hands are doing on this page. */

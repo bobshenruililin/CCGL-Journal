@@ -5,6 +5,7 @@
  */
 import type { CSSProperties, ReactNode } from 'react';
 import type { Light, Who } from './story.ts';
+import { plates, type PlateId } from './plates.ts';
 
 type V = CSSProperties & Record<`--${string}`, string | number>;
 const dl = (n: number, more: V = {}): V => ({ '--d': n.toFixed(2) + 's', ...more });
@@ -45,6 +46,12 @@ export function InkDefs() {
       </defs>
     </svg>
   );
+}
+
+/** A registered painting covers the drawn background of its scene; everything that moves stays on top. */
+function Painted({ id, w, h }: { id: PlateId; w: number; h: number }) {
+  const src = plates[id];
+  return src ? <image className="painted fade" href={src} x="0" y="0" width={w} height={h} preserveAspectRatio="xMidYMid slice" /> : null;
 }
 
 /** A sequencer for lines that draw themselves in order. */
@@ -309,6 +316,7 @@ export function RoofDusk({ kit }: { kit: boolean }) {
         <Racks x={1120} y={300} />
         <path className="pcl" d="M250 270q160 60 310-30M830 240q150 70 290 62" />
       </g>
+      <Painted id="P01-roof-dusk" w={1400} h={520} />
       <g className="fade" style={dl(1.2)}>
         <Fig who="leung" x={118} y={468} s={1.100} pose="fold" />
         <Fig who="priya" x={668} y={486} s={1.250} pose="point" />
@@ -402,6 +410,7 @@ export function Storm({ kit, priyaStare }: { kit: 'kneel' | 'guest' | 'absent'; 
       <g opacity=".8"><path d="M52 500h70v84H52z" fill="#23264a" stroke="#6b7198" strokeWidth="1.500" /><path d="M60 584v48M114 584v48" stroke="#6b7198" strokeWidth="1.500" /></g>
       <path d="M196 330v310M520 330v310" stroke="#8d93b6" strokeWidth="3" />
       <g className="deadscreen"><path d="M196 336l324-8 4 208-326 6z" fill="#e9e7df" /><path d="M196 336l324-8 4 208-326 6z" fill="#fff" opacity=".5" filter="url(#glow-s)" /></g>
+      <Painted id="P02-roof-storm" w={700} h={933} />
       <g className="dim">
         <Fig who="priya" x={150} y={706} s={1.200} pose="hold" className={priyaStare ? 'stare' : ''} />
         <Fig who="tomas" x={kit === 'absent' ? 300 : 580} y={kit === 'absent' ? 770 : 712} s={1.200} flip={kit !== 'absent'} />
@@ -445,7 +454,7 @@ export function Jobs({ jobs, names }: { jobs: { who: Who; job: string }[]; names
         {jobs.map((j, i) => {
           const a = (-150 + i * (alone ? 80 : 300 / Math.max(1, jobs.length - 1) || 0)) * Math.PI / 180;
           const ang = jobs.length === 1 ? 0 : a;
-          const x = cx + Math.cos(ang) * 190, y = cy + Math.sin(ang) * 150;
+          const x = cx + Math.cos(ang) * (alone ? 226 : 190), y = cy + Math.sin(ang) * (alone ? 172 : 150);
           return <text key={i} className="fade lbl jlabel" style={dl(0.7 + i * 0.3, { fill: hue[j.who] })} x={x} y={y} textAnchor="middle"><tspan className="jn">{alone ? 'me' : names(j.who)}</tspan><tspan x={x} dy="1.05em">{j.job}</tspan></text>;
         })}
       </g>}
@@ -498,6 +507,8 @@ export function Night({ ending, lights, on, label }: NightProps) {
         <path d="M1070 170h120v390h-120z" fill={ending === 'leung' ? '#f0d9a0' : '#1c1524'} stroke="#8c7a70" strokeWidth="4" />
         <path d="M440 150l-10-16M962 148l10-16" stroke="#cbb" strokeWidth="2" />
       </>}
+
+      <Painted id={ending === 'tarp' ? 'P03-roof-night-tarp' : ending === 'half' ? 'P04-roof-night-after-rain' : 'P05-common-room-night'} w={1400} h={933} />
 
       {/* the screen */}
       <g transform={`translate(${sx} ${sy})` + (roof ? '' : ' skewY(-.6)')}>

@@ -5,12 +5,13 @@ import {
   cast, inside, monday, mondayAfter, wednesday, wednesdayAfter, thursday, friday, fridayAfter, night, saturday, lastPage,
   endings, endingIds, ending, isFull, whoName, MON, WED, FRI,
 } from './story.ts';
-import type { Save } from './state.ts';
+import { type Save, OWN_MAX } from './state.ts';
+import type { Reading } from './interpret.ts';
 import { Portrait, RoofPlan, Phone, Keys, ProjectorAlone, Door, VentDrawing, RoofDusk, Silence, Stairwell, Building, Storm, Jobs, Night, Morning } from './art';
 
 type V = CSSProperties & Record<`--${string}`, string | number>;
 export type Acts = {
-  open(): void; choose(key: keyof Route, value: string): void; beat(id: BeatId, to?: number): void; note(text: string): void;
+  open(): void; choose(key: keyof Route, value: string, words?: string): void; read(key: keyof Route, text: string, thoughts: Record<string, string>): Promise<Reading>; beat(id: BeatId, to?: number): void; note(text: string): void;
   turnBack(): void; print(): void; download(): void;
 };
 export type SpreadProps = { s: Save; a: Acts; inked: string | null; resume?: boolean; still?: boolean };
@@ -34,16 +35,41 @@ function makeQ(start = 0.3) {
 }
 type Q = ReturnType<typeof makeQ>;
 
-function Thoughts<K extends string>({ lead, options, order, chosen, inked, onPick, q }: { lead: string; options: Record<K, string>; order: readonly K[]; chosen?: K; inked: string | null; onPick(k: K): void; q: Q }) {
+function Thoughts<K extends string>({ night, lead, options, order, chosen, own, inked, a, q }: { night: keyof Route; lead: string; options: Record<K, string>; order: readonly K[]; chosen?: K; own?: string; inked: string | null; a: Acts; q: Q }) {
+  const [writing, setWriting] = useState(false);
+  const [draft, setDraft] = useState('');
+  const [unsure, setUnsure] = useState<{ words: string; near: string[] } | null>(null);
+  const [busy, setBusy] = useState(false);
+  const field = useRef<HTMLInputElement>(null);
+  useEffect(() => { if (writing) field.current?.focus(); }, [writing]);
+  const pick = (k: K) => { a.choose(night, k, unsure?.words); setUnsure(null); setWriting(false); };
+  const submit = async () => {
+    const words = draft.trim();
+    if (!words || busy) return;
+    setBusy(true);
+    const r = await a.read(night, words, options);
+    setBusy(false);
+    setWriting(false); setDraft('');
+    if (r.pick) { setUnsure(null); a.choose(night, r.pick, words); } else setUnsure({ words, near: r.near });
+  };
+  const said = unsure?.words ?? own;
   return (
-    <div className={'thoughts' + (chosen ? ' decided' : '')} role="group" aria-label={chosen ? 'What you wrote' : 'Three thoughts. Choose one to write down.'}>
+    <div className={'thoughts' + (chosen ? ' decided' : '') + (unsure ? ' unsure' : '')} role="group" aria-label={chosen ? 'What you wrote' : 'Three thoughts. Choose one to write down, or write your own.'}>
       <p className="lead fade" style={q.d(0.4)}>{lead}<span className="dots" aria-hidden="true"> . . .</span></p>
+      {said && <p className="ownwords" key={said}><span className="sr">In your own words: </span>“{said}”</p>}
+      {unsure && <p className="pc whichone" role="status">I can read that two ways. Which did I mean?</p>}
       {order.map((k, i) => (
-        <button key={k} type="button" className={'thought' + (chosen === k ? ' inked' : '') + (inked === k ? ' fresh' : '')} aria-pressed={chosen === k} onClick={() => onPick(k)} style={q.d(0.35, { '--i': i })}>
+        <button key={k} type="button" className={'thought' + (chosen === k && !unsure ? ' inked' : '') + (inked === k ? ' fresh' : '') + (unsure ? (unsure.near.includes(k) ? ' near' : ' far') : '')} aria-pressed={chosen === k} onClick={() => pick(k)} style={q.d(0.35, { '--i': i })}>
           <span className="pencil">{options[k]}</span>
           <span className="inkover" aria-hidden="true">{options[k]}</span>
         </button>
       ))}
+      {!writing && !unsure && <button type="button" className="ownbtn fade" style={q.d(0.3)} onClick={() => { setDraft(''); setWriting(true); }}>{chosen ? 'or say it differently' : 'or in my own words'}</button>}
+      {writing && <form className="ownform" onSubmit={e => { e.preventDefault(); void submit(); }}>
+        <label className="sr" htmlFor={'own-' + night}>Write it in your own words</label>
+        <input id={'own-' + night} ref={field} value={draft} maxLength={OWN_MAX} onChange={e => setDraft(e.target.value)} onKeyDown={e => { if (e.key === 'Escape') { e.stopPropagation(); setWriting(false); } }} autoComplete="off" spellCheck={false} disabled={busy} />
+        <button type="submit" disabled={busy || !draft.trim()}>{busy ? 'reading…' : 'write it'}</button>
+      </form>}
     </div>
   );
 }
@@ -116,7 +142,7 @@ function Mon_({ s, a, inked }: SpreadProps) {
       </div>
       <div className="pg r">
         <div className="keysfig fade" style={q.d(0.3)}><Keys /></div>
-        <Thoughts lead={monday.lead} options={monday.thoughts} order={MON} chosen={s.route.mon} inked={inked} onPick={k => a.choose('mon', k)} q={q} />
+        <Thoughts night="mon" lead={monday.lead} options={monday.thoughts} order={MON} chosen={s.route.mon} own={s.own?.mon} inked={inked} a={a} q={q} />
       </div>
     </section>
   );
@@ -229,7 +255,7 @@ function Wed_({ s, a, inked }: SpreadProps) {
       <div className="pg l">{head}{paras}</div>
       <div className="pg r">
         {q.p(w.close)}
-        <Thoughts lead={w.lead} options={w.thoughts} order={WED} chosen={s.route.wed} inked={inked} onPick={k => a.choose('wed', k)} q={q} />
+        <Thoughts night="wed" lead={w.lead} options={w.thoughts} order={WED} chosen={s.route.wed} own={s.own?.wed} inked={inked} a={a} q={q} />
       </div>
     </section>
   );
@@ -342,7 +368,7 @@ function Fri_({ s, a, inked }: SpreadProps) {
       <div className="pg r">
         <span className="blot b1" aria-hidden="true" /><span className="blot b2" aria-hidden="true" /><span className="blot b3" aria-hidden="true" />
         {f.paragraphs.slice(1).map(t => q.p(t))}
-        <Thoughts lead={f.lead} options={f.thoughts} order={FRI} chosen={s.route.fri} inked={inked} onPick={k => a.choose('fri', k)} q={q} />
+        <Thoughts night="fri" lead={f.lead} options={f.thoughts} order={FRI} chosen={s.route.fri} own={s.own?.fri} inked={inked} a={a} q={q} />
       </div>
     </section>
   );

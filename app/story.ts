@@ -486,10 +486,11 @@ const names: Record<Who, string> = { yan: 'Yan', kit: 'Kit', priya: 'Priya', tom
 export const whoName = (w: Who) => names[w];
 
 export type Section = { heading: string; lines: string[] };
-export function journalSections(route: Route): Section[] {
+const wrote = (line: string, said: string | undefined, verb: string) => said ? ['In my own words: “' + said + '”', 'Which is to say: ' + line] : [verb + ': ' + line];
+export function journalSections(route: Route, own: Partial<Record<keyof Route, string>> = {}): Section[] {
   const out: Section[] = [{ heading: 'Inside the cover', lines: [inside.programme.join(' · '), ...inside.note, ...Object.values(cast).map(c => c.name + ': ' + c.note)] }];
   const { mon, wed, fri } = route;
-  out.push({ heading: monday.heading, lines: [...monday.paragraphs, ...(mon ? ['I wrote: ' + monday.thoughts[mon]] : [])] });
+  out.push({ heading: monday.heading, lines: [...monday.paragraphs, ...(mon ? wrote(monday.thoughts[mon], own.mon, 'I wrote') : [])] });
   if (!mon) return out;
   const ma = mondayAfter(mon);
   out.push({ heading: ma.heading, lines: ma.kind === 'self'
@@ -497,7 +498,7 @@ export function journalSections(route: Route): Section[] {
     : ma.kind === 'post' ? [...ma.messages.map(m => m.who === 'system' ? '[' + m.text + ']' : names[m.who] + ' (' + m.time + '): ' + m.text), ...ma.after]
     : [...ma.before, ...ma.after, 'Kit drew the projector, and wrote: ' + ma.drawing, 'Priya, ' + ma.paste.label + ': ' + ma.paste.text, ...ma.after2] });
   const w = wednesday(mon);
-  out.push({ heading: w.heading, lines: [...w.paragraphs, 'Priya: ' + w.priya, 'Tomás: ' + w.tomas.join(' … '), w.close, ...(wed ? ['I wrote: ' + w.thoughts[wed]] : [])] });
+  out.push({ heading: w.heading, lines: [...w.paragraphs, 'Priya: ' + w.priya, 'Tomás: ' + w.tomas.join(' … '), w.close, ...(wed ? wrote(w.thoughts[wed], own.wed, 'I wrote') : [])] });
   if (!wed) return out;
   const wa = wednesdayAfter(mon, wed);
   out.push({ heading: wa.heading, lines: wa.kind === 'cut' ? [...wa.before, 'Tomás: ' + wa.tomas, ...wa.after, wa.paste.label + ': ' + wa.paste.text]
@@ -506,7 +507,7 @@ export function journalSections(route: Route): Section[] {
   const th = thursday(route);
   out.push({ heading: th.heading, lines: [...th.paragraphs, ...th.lines] });
   const f = friday(mon, wed);
-  out.push({ heading: f.heading, lines: [...f.paragraphs, ...(fri ? ['I said: ' + f.thoughts[fri]] : [])] });
+  out.push({ heading: f.heading, lines: [...f.paragraphs, ...(fri ? wrote(f.thoughts[fri], own.fri, 'I said') : [])] });
   if (!fri) return out;
   const full = { mon, wed, fri };
   const fa = fridayAfter(full);
@@ -520,12 +521,12 @@ export function journalSections(route: Route): Section[] {
   return out;
 }
 
-export function journalText(route: Route, notes: string): string {
+export function journalText(route: Route, notes: string, own: Partial<Record<keyof Route, string>> = {}): string {
   const full = isFull(route);
   return [
     'SIX FLIGHTS — a notebook',
     'Original fiction. The people and the roof are invented.',
-    ...journalSections(route).flatMap(s => [s.heading.toUpperCase(), ...s.lines]),
+    ...journalSections(route, own).flatMap(s => [s.heading.toUpperCase(), ...s.lines]),
     ...(full ? ['Ticket stub: ' + endings[ending(route)].title, 'The last line, in my own hand:', notes.trim() || '(left blank)'] : []),
   ].join('\n\n');
 }

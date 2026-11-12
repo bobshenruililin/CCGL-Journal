@@ -516,3 +516,18 @@ svg .jlabel .jn { font-weight: 700; font-size: 26px; }
 /* the cover copy on a turning leaf never reacts to the pointer */
 .turnlayer .coverface { transition: none; transform: none !important; box-shadow: none; }
 .turnlayer .tag { animation: none; }
+
+/* ───────── a decision in the reader's own hand ───────── */
+.ownwords { color: var(--you); font-size: 1.14em; line-height: 1.12; margin: .2em 0 .1em 1.2em; animation: wIn .7s ease-out both; }
+.whichone { margin: .1em 0 0 1.2em; font-size: .9em; }
+.ownbtn { display: block; margin: .5em 0 0 1.2em; padding: .1em 0; background: none; border: 0; font-size: .9em; color: var(--pencil); text-decoration: underline dotted rgba(138, 131, 119, .7); text-underline-offset: .22em; text-decoration-thickness: .06em; }
+.ownbtn:is(:hover, :focus-visible) { color: var(--you); }
+.ownform { display: flex; gap: .6em; align-items: baseline; margin: .5em 0 0 1.2em; }
+.ownform input { flex: 1; min-width: 0; padding: 0 .1em .05em; border: 0; border-bottom: .07em solid var(--you); background: none; font: inherit; font-size: 1.1em; color: var(--you); caret-color: var(--you); }
+.ownform input:focus { outline: none; background: rgba(31, 111, 107, .07); }
+.ownform button { flex: none; background: none; border: 0; padding: 0; font-size: .95em; color: var(--you); text-decoration: underline dotted; text-underline-offset: .22em; }
+.ownform button:disabled { opacity: .45; cursor: default; }
+.unsure .thought.near { opacity: 1; animation: beckon 1.6s ease-in-out infinite; }
+.unsure .thought.near .pencil { color: #46414d; text-decoration: underline dotted var(--you); }
+.unsure .thought.far { opacity: .3; animation: none; }
+.s-wed .ownbtn, .s-wed .ownform { margin-top: .15em; }

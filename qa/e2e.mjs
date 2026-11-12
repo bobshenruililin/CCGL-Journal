@@ -6,7 +6,7 @@ import { play } from './play.mjs';
 const { chromium } = createRequire(import.meta.url)('playwright');
 const titles = { tarp: 'Under the Tarp', sheet: 'The Bedsheet Screening', leung: 'Mrs Leung’s Orders', half: 'Half a Queue' };
 const runs = [
-  { route: { mon: 'find', wed: 'round', fri: 'name' }, view: 'desktop', want: 'tarp' },
+  { route: { mon: 'find', wed: 'round', fri: 'name' }, said: { mon: 'go downstairs and knock on his door', fri: 'sort it out somehow' }, view: 'desktop', want: 'tarp' },
   { route: { mon: 'post', wed: 'round', fri: 'ask' }, view: 'desktop', keys: true, want: 'sheet' },
   { route: { mon: 'self', wed: 'cut', fri: 'ask' }, view: 'phone', want: 'leung' },
   { route: { mon: 'post', wed: 'aside', fri: 'self' }, view: 'phone', still: true, keys: true, want: 'half' },
@@ -19,6 +19,7 @@ for (const r of runs) {
   assert.deepEqual(res.errors, [], 'console errors ' + tag);
   assert.equal(res.stub, titles[r.want], 'ending ' + tag);
   assert.deepEqual(res.save.route, r.route);
+  if (r.said) assert.deepEqual(res.save.own, r.said, 'own words kept ' + tag);
   assert.equal(res.overflow, false, 'sideways scroll ' + tag);
   assert.deepEqual(res.clipped, [], 'text cut off by the page edge ' + tag);
   const { page, context } = res;
@@ -53,4 +54,4 @@ for (const r of runs) {
   console.log('ok', tag);
 }
 await browser.close();
-console.log('PASS e2e: 5 full playthroughs (mouse, keyboard, phone, reduced motion), 4 endings, gates, no clipped text or sideways scroll, reload/resume, reflection saved, guarded rewrite, print view.');
+console.log('PASS e2e: 5 full playthroughs (mouse, keyboard, phone, reduced motion), 4 endings, gates, own-words decisions (clear and doubtful), no clipped text or sideways scroll, reload/resume, reflection saved, guarded rewrite, print view.');

@@ -8,10 +8,11 @@ import { type Route, type BeatId, spreads, tabs, moods, choiceAt, beatFor, journ
 import { SpreadView, type Acts } from './Spreads';
 import { InkDefs } from './art';
 import { sfx } from './sound';
+import { read } from './interpret.ts';
 
 const options = { mon: MON, wed: WED, fri: FRI } as const;
 const WIDE = '(min-width: 900px) and (min-aspect-ratio: 11/10)';
-const noActs: Acts = { open() {}, choose() {}, beat() {}, note() {}, turnBack() {}, print() {}, download() {} };
+const noActs: Acts = { open() {}, choose() {}, read: async () => ({ pick: null, near: [], by: 'page' }), beat() {}, note() {}, turnBack() {}, print() {}, download() {} };
 const beatSound: Record<BeatId, () => void> = { knock: sfx.knock, ticks: sfx.tick, msgs: sfx.pop, slips: sfx.page, chairs: sfx.step, lamp: sfx.lamp, pass: sfx.ink };
 const hints: Partial<Record<string, string>> = {
   knock: 'The door is shut. Knock.', ticks: 'The checklist isn’t finished.', msgs: 'The chat is still going.', slips: 'There are slips still folded.',
@@ -33,7 +34,7 @@ export default function Journal() {
   const [resume] = useState(() => hasSaved && s.furthest > 1);
   const [turn, setTurn] = useState<Turn | null>(null);
   const [inked, setInked] = useState<string | null>(null);
-  const [pending, setPending] = useState<{ key: keyof Route; value: string } | null>(null);
+  const [pending, setPending] = useState<{ key: keyof Route; value: string; words?: string } | null>(null);
   const [menu, setMenu] = useState(false);
   const [say, setSay] = useState('');
   const [nudge, setNudge] = useState(0);
@@ -100,19 +101,24 @@ export default function Journal() {
   };
   const prev = () => { if (!pending && !menu && at > 0) go(back); };
 
-  const commit = (key: keyof Route, value: string) => {
-    store.update(x => choose(x, key, value));
+  const commit = (key: keyof Route, value: string, words?: string) => {
+    store.update(x => choose(x, key, value, words));
     setInked(value); sfx.ink();
     setSay('Written in ink. Turn the page when you are ready.');
   };
   const acts: Acts = {
     open: openBook,
-    choose(key, value) {
+    choose(key, value, words) {
       const cur = store.getSnapshot().state;
-      if (cur.route[key] === value) { setSay('That line is already in ink.'); return; }
-      if (tearsPages(cur, key, value)) { setPending({ key, value }); return; }
-      commit(key, value);
+      if (cur.route[key] === value) {
+        if (words) { store.update(x => choose(x, key, value, words)); setSay('Your words are on the page. It comes to the same thing.'); }
+        else setSay('That line is already in ink.');
+        return;
+      }
+      if (tearsPages(cur, key, value)) { setPending({ key, value, words }); return; }
+      commit(key, value, words);
     },
+    read,
     beat(b, to) {
       const before = store.getSnapshot().state;
       store.update(x => doBeat(x, b, to));
@@ -125,7 +131,7 @@ export default function Journal() {
     turnBack() { go(turnBack); },
     print() { window.print(); },
     download() {
-      const url = URL.createObjectURL(new Blob([journalText(s.route, s.notes)], { type: 'text/plain;charset=utf-8' }));
+      const url = URL.createObjectURL(new Blob([journalText(s.route, s.notes, s.own)], { type: 'text/plain;charset=utf-8' }));
       const link = Object.assign(document.createElement('a'), { href: url, download: 'six-flights-notebook.txt' });
       document.body.appendChild(link); link.click(); link.remove(); URL.revokeObjectURL(url);
     },
@@ -149,7 +155,7 @@ export default function Journal() {
 
   const canNext = at > 0 && at < LAST && pageOpen(id, s);
   const opening = turn?.fromAt === 0;
-  const sections = journalSections(s.route);
+  const sections = journalSections(s.route, s.own);
 
   return (
     <main className="desk" data-mood={moods[id]} data-still={still || undefined} data-clear={s.clear || undefined} data-layout={wide ? 'wide' : 'tall'}>
@@ -187,7 +193,7 @@ export default function Journal() {
         <p id="tear-title">Writing this instead means tearing out every page after tonight.</p>
         <p className="pc">The ticket stubs in the back pocket stay.</p>
         <div className="acts">
-          <button type="button" onClick={() => { if (pending) { sfx.tear(); commit(pending.key, pending.value); } setPending(null); }}>Tear them out</button>
+          <button type="button" onClick={() => { if (pending) { sfx.tear(); commit(pending.key, pending.value, pending.words); } setPending(null); }}>Tear them out</button>
           <button type="button" autoFocus onClick={() => setPending(null)}>Leave it as it is</button>
         </div>
       </dialog>

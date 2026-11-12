@@ -8,7 +8,7 @@ export const views = { desktop: { width: 1440, height: 900 }, phone: { width: 39
 const order = { mon: ['self', 'post', 'find'], wed: ['cut', 'aside', 'round'], fri: ['self', 'ask', 'name'] };
 const beatButtons = '.knockbtn, .tick.next, .typing, .unfold, .carry:not(.busy), .lampbtn, .passbtn';
 
-export async function play({ route, view = 'desktop', out = null, keys = false, still = false, url = process.env.JOURNAL_URL || 'http://127.0.0.1:5173/', browser, context: given, scale = 1, onSpread }) {
+export async function play({ route, said = null, view = 'desktop', out = null, keys = false, still = false, url = process.env.JOURNAL_URL || 'http://127.0.0.1:5173/', browser, context: given, scale = 1, onSpread }) {
   const own = !browser;
   browser ??= await chromium.launch();
   const context = given ?? await browser.newContext({ viewport: views[view], deviceScaleFactor: scale, reducedMotion: still ? 'reduce' : 'no-preference', hasTouch: view === 'phone' });
@@ -48,8 +48,16 @@ export async function play({ route, view = 'desktop', out = null, keys = false, 
       const idx = order[key].indexOf(route[key]);
       // The page will not turn until a thought is written down.
       if (await page.locator('.corner.next').count()) throw new Error('page could be turned before choosing at ' + here);
-      if (keys) await page.keyboard.press(String(idx + 1)); else await page.locator('.thought').nth(idx).click({ force: true });
-      await page.waitForSelector('.thought.inked');
+      const words = said?.[key];
+      if (words) {
+        // The reader writes the decision themselves; if the page is unsure it offers two lines.
+        await page.locator('.live .ownbtn').click({ force: true });
+        await page.locator('.live .ownform input').fill(words);
+        await page.keyboard.press('Enter');
+        await page.waitForSelector('.live .thought.inked, .live .thoughts.unsure');
+        if (await page.locator('.live .thoughts.unsure').count()) { await shot(here.replace(/\s+/g, '-') + '-unsure'); await page.locator('.live .thought').nth(idx).click({ force: true }); }
+      } else if (keys) await page.keyboard.press(String(idx + 1)); else await page.locator('.thought').nth(idx).click({ force: true });
+      await page.waitForSelector('.live .thought.inked');
       await page.waitForTimeout(still ? 50 : 1150);
       await shot(here.replace(/\s+/g, '-') + '-inked');
     }
