@@ -458,6 +458,28 @@ export function saturday(r: FullRoute): { heading: string; opening: string[]; en
   };
 }
 
+/**
+ * When the notebook went round on Saturday, nobody stayed on Saturday's page.
+ * These are what they left on the earlier ones. They only exist once the book has been passed.
+ */
+export type Afterthought = { who: Who; text: string };
+export function afterthoughts(r: FullRoute): Record<'mon' | 'wed' | 'thu' | 'fri', Afterthought> {
+  const { mon, wed } = r;
+  return {
+    mon: mon === 'find' ? { who: 'kit', text: 'The 24th one was a knock. That one I could answer. — K' }
+      : mon === 'self' ? { who: 'kit', text: 'I read all 23. I just couldn’t write one back. — K' }
+      : { who: 'priya', text: 'For the record, I’d have gone down and knocked. Eventually. — P' },
+    wed: { who: 'priya', text: wed === 'cut' ? 'Fine. I can see it. I take up the whole sky. — P'
+      : wed === 'aside' ? 'You could have told me on the roof. I can be told things. — P'
+      : 'I take up the whole sky. Tomás, write bigger. — P' },
+    thu: wed === 'cut' ? { who: 'priya', text: 'I didn’t have a tutorial. — P' }
+      : mon === 'self' ? { who: 'kit', text: 'You could have asked. I’d have carried chairs. — K' }
+      : mon === 'post' ? { who: 'tomas', text: 'PROJECTOR BASICS (2011) is 94 minutes long. I watched all of it. — T' }
+      : { who: 'tomas', text: 'It was a real song. I will teach you the words. — T' },
+    fri: { who: 'leung', text: '6:50. I had my hand on the switch for the stair lights, in case you needed them. — Leung' },
+  };
+}
+
 export function lastPage(r: FullRoute) {
   return {
     heading: 'Saturday, later',
@@ -469,6 +491,7 @@ export function lastPage(r: FullRoute) {
         leung: 'Next term, before I open my mouth, I want to know who does what if it rains. Mrs Leung has offered to teach me the voice.',
         half: 'Next term I’d like to see the film.',
       }[ending(r)],
+      'On the way down I turned back to Monday. Somebody had been there before me.',
     ],
     prompt: 'There is one line left on this page. It’s yours.',
   };
@@ -544,6 +567,8 @@ export function journalSections(route: Route, own: Partial<Record<keyof Route, s
   out.push({ heading: s.heading, lines: [...s.opening, ...s.entries.flatMap(e => [(e.kind === 'text' ? e.label + ': ' : names[e.who] + ' wrote: ') + e.text, ...(e.margin ? [names[e.margin.who] + ', in the margin: ' + e.margin.text] : [])]), 'Mrs Leung, at the bottom of the page: ' + s.postscript, ...(s.unsent ? [s.unsent] : [])] });
   const l = lastPage(full);
   out.push({ heading: l.heading, lines: l.paragraphs });
+  const at = afterthoughts(full);
+  out.push({ heading: 'Written on the earlier pages, afterwards', lines: (['mon', 'wed', 'thu', 'fri'] as const).map(d => ({ mon: 'Monday', wed: 'Wednesday', thu: 'Thursday', fri: 'Friday' })[d] + ', ' + names[at[d].who] + ': ' + at[d].text) });
   return out;
 }
 

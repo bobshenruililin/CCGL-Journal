@@ -17,6 +17,15 @@ Yan has inherited a rooftop film night, a ring of keys and a blank notebook. It 
 
 The people and the roof are invented. The three situations draw on a leadership workbook by Amanda, refined by Hannah; this is a story, not an assessment, and it names no styles and gives no score.
 
+## This pass (13 November)
+
+- **After Saturday, the earlier pages have been written on.** Once the notebook has gone round, turn back: Kit, Priya, Tomás and Mrs Leung have each left a line on Monday, Wednesday, Thursday and Friday. Under "Priya has a tutorial. She said." it now says "I didn't have a tutorial. — P".
+- Each person in colour on the last night has a few words beside them naming what was theirs to carry.
+- The page says how it read words the reader wrote themselves.
+- `vercel.json` builds with plain `next build`; the notebook is a static page and needs no environment variables.
+
+**Not done in this pass:** integrating the wave-two artwork (more gouache plates, film frames, objects, the revised character sheet and five back-facing figures). Those files never reached the repository or the build workspace. The exact list is in `coordination/requests/11-final-pass-missing-files.md`. Until they do, one ending is painted and three are drawn.
+
 ## Run it
 
 Node 22.13+.
@@ -38,7 +47,7 @@ Then open http://127.0.0.1:5173/.
 | Photograph a route | `node qa/play.mjs find,cut,name desktop qa/shots` (`phone`, `--keys`, `--still`, `--2x`) |
 | Types, lint, build | `npx tsc --noEmit`, `npm run lint`, `npm run build` |
 
-Deployment configuration is in `.openai/hosting.json`; never replace an existing project ID. Nothing on this branch has been deployed.
+**Deploying on Vercel:** import the repository and deploy `main`. `vercel.json` sets the framework to Next.js and the build to `next build`; there are no environment variables. `npm run build` is the older Sites/Cloudflare build (`.openai/hosting.json`) and is not used by Vercel. Nothing has been deployed from this repository by Fable.
 
 ## Where things live
 

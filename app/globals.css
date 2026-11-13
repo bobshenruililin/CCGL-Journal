@@ -571,3 +571,15 @@ svg .jlabel .jn { font-weight: 700; font-size: 26px; }
 [data-layout='tall'] .shout { width: 72%; }
 [data-layout='tall'] .onplate { position: relative; top: auto; }
 .desk[data-mood='dark'] .corner.next em { right: 5.4cqw; }
+
+/* Afterwards: other people went back through the book. */
+.afterthought { position: relative; margin: .8em 0 0 8% !important; padding-left: .7em; font-size: .9em; line-height: 1.12; rotate: -1.6deg; border-left: .1em solid currentColor; animation: wIn 1.2s ease-out .4s both; }
+.afterthought.khand { font-size: 1.2em; } .afterthought.lhand { font-size: .76em; line-height: 1.35; } .afterthought.thand { font-size: .8em; }
+.afterthought.kit { color: var(--kit); } .afterthought.priya { color: var(--priya); } .afterthought.tomas { color: var(--tomas-ink); } .afterthought.leung { color: var(--leung); }
+.s-mon .afterthought { position: absolute; left: 4cqw; bottom: 9cqw; width: 46%; margin: 0 !important; }
+[data-layout='tall'] .s-mon .afterthought { position: relative; left: auto; bottom: auto; width: auto; margin: .8em 0 0 !important; }
+.tabs.written-in .tab:not(.sat) { animation: tabcall 2.4s ease-in-out 2.5s 3; }
+@keyframes tabcall { 50% { translate: .6cqw 0; filter: none; } }
+
+.s-fri .platepg .afterthought { position: absolute; left: 9%; right: 14%; bottom: 4.5%; margin: 0 !important; color: #e9c9e2; z-index: 2; font-size: .8em; text-shadow: 0 0 .5cqw #0d0f22; }
+[data-layout='tall'] .s-fri .platepg .afterthought { position: relative; left: auto; right: auto; bottom: auto; margin: 0 7.5cqw 6cqw !important; }

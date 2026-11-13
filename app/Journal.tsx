@@ -181,7 +181,7 @@ export default function Journal() {
         )}
         {at > 0 && <div className="gutter" aria-hidden="true" />}
         {at > 1 && (
-          <nav className="tabs" aria-label="Days of the week">
+          <nav className={'tabs' + (at === LAST && (s.beats.pass ?? 0) >= 4 ? ' written-in' : '')} aria-label="Days of the week">
             {tabs.map(t => { const i = spreads.indexOf(t.id); if (i > s.furthest) return null; const cur = at >= i && !tabs.some(o => spreads.indexOf(o.id) > i && spreads.indexOf(o.id) <= at); return <button key={t.id} type="button" className={'tab ' + t.id} aria-current={cur ? 'page' : undefined} onClick={() => go(x => visit(x, i))}>{t.label}</button>; })}
           </nav>
         )}
