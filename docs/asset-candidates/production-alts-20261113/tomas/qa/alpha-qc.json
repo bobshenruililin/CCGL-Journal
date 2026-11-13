@@ -1,0 +1,86 @@
+{
+  "T01-neutral-arms-down.png": {
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "zero_alpha_pixel_fraction": 0.7619419097900391,
+    "alpha_1_or_2_pixel_fraction": 0.009298960367838541,
+    "visible_bbox": {
+      "alpha_gt_0": [
+        25,
+        19,
+        1008,
+        1502
+      ],
+      "alpha_gt_2": [
+        289,
+        81,
+        698,
+        1471
+      ],
+      "alpha_gt_10": [
+        290,
+        82,
+        696,
+        1471
+      ],
+      "alpha_gt_100": [
+        291,
+        83,
+        695,
+        1470
+      ]
+    },
+    "frame_edge_alpha_max": 0,
+    "sha256": "ba092e9ca10ef82712881cd153dabcb8f466b66ebf057bd5139c3bef22d577a5",
+    "native_source_preserved": true
+  },
+  "T02-neutral-hands-pockets.png": {
+    "dimensions": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "zero_alpha_pixel_fraction": 0.7686926523844401,
+    "alpha_1_or_2_pixel_fraction": 0.013402303059895834,
+    "visible_bbox": {
+      "alpha_gt_0": [
+        0,
+        17,
+        1008,
+        1536
+      ],
+      "alpha_gt_2": [
+        237,
+        72,
+        727,
+        1485
+      ],
+      "alpha_gt_10": [
+        238,
+        74,
+        726,
+        1482
+      ],
+      "alpha_gt_100": [
+        239,
+        74,
+        725,
+        1481
+      ]
+    },
+    "frame_edge_alpha_max": 1,
+    "sha256": "265ee0e6c188bd6a37946e0ef2ad4149420393efc60b62cac055a71941cfc38a",
+    "native_source_preserved": true
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "coordinate_convention": "x0,y0,x1,y1; origin top left; percentages of full delivered image, including painted cream paper edge; conservative axis-aligned film-safe inset",
+  "dimensions": [
+    1086,
+    1448
+  ],
+  "assets": {
+    "e14": {
+      "screen_safe_px": [
+        306,
+        608,
+        775,
+        879
+      ],
+      "screen_safe_pct": [
+        28.18,
+        41.99,
+        71.36,
+        60.7
+      ],
+      "door_safe_approximate_px": [
+        988,
+        814,
+        1029,
+        1009
+      ],
+      "door_safe_approximate_pct": [
+        90.98,
+        56.22,
+        94.75,
+        69.68
+      ],
+      "files": {
+        "P02-roof-storm-e14-hero.png": {
+          "bytes": 2174490,
+          "sha256": "b41008e03172f16ec23fea74aec7db3ca6a243a3a0617c8d74834338c6eb6d10"
+        },
+        "P02-roof-storm-e14-hero.webp": {
+          "bytes": 165196,
+          "sha256": "756453b0276c141127dd3992426b6ac2768723b3e022a2878b8122b52ddccae3"
+        }
+      }
+    },
+    "e18": {
+      "screen_safe_px": [
+        305,
+        605,
+        775,
+        879
+      ],
+      "screen_safe_pct": [
+        28.08,
+        41.78,
+        71.36,
+        60.7
+      ],
+      "door_safe_approximate_px": [
+        988,
+        814,
+        1029,
+        1009
+      ],
+      "door_safe_approximate_pct": [
+        90.98,
+        56.22,
+        94.75,
+        69.68
+      ],
+      "files": {
+        "P02-roof-storm-e18-hero.png": {
+          "bytes": 2239033,
+          "sha256": "6f50ea4aac8ca778749272b89e04bcf886ce8eef2dadd26ca8c246eed85eda3a"
+        },
+        "P02-roof-storm-e18-hero.webp": {
+          "bytes": 183806,
+          "sha256": "588cb29e88ca649dad35b2fa7da27efb9702297bed0b69c8856db27c11506c9c"
+        }
+      }
+    },
+    "e23": {
+      "screen_safe_px": [
+        404,
+        670,
+        784,
+        851
+      ],
+      "screen_safe_pct": [
+        37.2,
+        46.27,
+        72.19,
+        58.77
+      ],
+      "door_safe_approximate_px": [
+        985,
+        784,
+        1019,
+        908
+      ],
+      "door_safe_approximate_pct": [
+        90.7,
+        54.14,
+        93.83,
+        62.71
+      ],
+      "files": {
+        "P02-roof-storm-e23-hero.png": {
+          "bytes": 2306088,
+          "sha256": "6f016ec3b2e683cdc68fbfc421143681786f0f7f309f025ea096c7685a3b9fb5"
+        },
+        "P02-roof-storm-e23-hero.webp": {
+          "bytes": 192876,
+          "sha256": "3dc55f2be2a95788b23c4153ced80fdab3c8d74c65e7ceed6658d2f017b3ecbf"
+        }
+      }
+    }
+  }
+}

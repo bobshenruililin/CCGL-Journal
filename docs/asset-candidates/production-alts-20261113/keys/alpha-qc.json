@@ -1,0 +1,123 @@
+{
+  "keys-tag-diagonal-b.png": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "native_source_preserved": true,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "zero_alpha_pixel_fraction": 0.74754,
+    "alpha_1_or_2_pixel_fraction": 0.00963,
+    "visible_bbox_alpha_gt_2": [
+      147,
+      40,
+      1246,
+      941
+    ],
+    "ring_alpha_sample": {
+      "xy": [
+        676,
+        184
+      ],
+      "alpha": 0
+    },
+    "image_frame_alpha_max": 1,
+    "sha256": "58c967a3f9d5debdd4e245e8d8bf821315cd15bcd5ae7e0b6bebf5203bd5619e"
+  },
+  "keys-tag-fan-a.png": {
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "native_source_preserved": true,
+    "alpha_range": [
+      0,
+      255
+    ],
+    "zero_alpha_pixel_fraction": 0.66247,
+    "alpha_1_or_2_pixel_fraction": 0.02695,
+    "visible_bbox_alpha_gt_2": [
+      84,
+      93,
+      1180,
+      1167
+    ],
+    "ring_alpha_sample": {
+      "xy": [
+        514,
+        288
+      ],
+      "alpha": 0
+    },
+    "image_frame_alpha_max": 1,
+    "sha256": "48aac74f5dd9a5316cf3d2feb172d25e0866fb5ae1ce9106042ba40f107ea3f9"
+  },
+  "keys-tag-overhead-c.png": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "native_source_preserved": true,
+    "alpha_range": [
+      0,
+      254
+    ],
+    "zero_alpha_pixel_fraction": 0.73686,
+    "alpha_1_or_2_pixel_fraction": 0.0143,
+    "visible_bbox_alpha_gt_2": [
+      4,
+      11,
+      1536,
+      985
+    ],
+    "ring_alpha_sample": {
+      "xy": [
+        687,
+        470
+      ],
+      "alpha": 0
+    },
+    "image_frame_alpha_max": 5,
+    "sha256": "c3456b396639154987abca198d7b3e5809289ba0c6bb68fd48cc72d69167f04a"
+  },
+  "keys-tag-overhead-c2.png": {
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "zero_alpha_pixel_fraction": 0.83579,
+    "alpha_1_or_2_pixel_fraction": 0.00816,
+    "visible_bbox_alpha_gt_2": [
+      162,
+      130,
+      1375,
+      900
+    ],
+    "padding_percent_left_top_right_bottom": [
+      10.55,
+      12.7,
+      10.48,
+      12.11
+    ],
+    "ring_alpha_sample": {
+      "xy": [
+        686,
+        478
+      ],
+      "alpha": 0
+    },
+    "image_frame_alpha_max": 0,
+    "sha256": "5fcdb828869308566b92a6af120327346c140fc04208d14c8e5d508fe3a4cd93"
+  }
+}

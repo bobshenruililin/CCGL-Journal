@@ -1,0 +1,314 @@
+{
+  "title": "Six Flights full-size alternatives",
+  "date": "2026-11-13",
+  "selectable_candidate_count": 8,
+  "native_generation_count": 9,
+  "iteration_control_count": 1,
+  "status": "unapproved; not integrated",
+  "tool": "built-in OpenAI image generation",
+  "selected_native_paths": [
+    "tomas/T01-neutral-arms-down.png",
+    "tomas/T02-neutral-hands-pockets.png",
+    "keys/keys-tag-fan-a.png",
+    "keys/keys-tag-diagonal-b.png",
+    "keys/keys-tag-overhead-c2.png",
+    "storm/P02-roof-storm-e14-hero.png",
+    "storm/P02-roof-storm-e18-hero.png",
+    "storm/P02-roof-storm-e23-hero.png"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4410,
+      "sha256": "5ad6220f467098d859efa5ba604fc76fc054fb30ae2105cfbedc11365673cc18",
+      "role": "documentation/provenance/QA"
+    },
+    {
+      "path": "keys/README.md",
+      "bytes": 8880,
+      "sha256": "88897b60d8fd8298f5c4c613bfce34b1a0201faa0087c19a67ed29f546242031",
+      "role": "documentation/provenance/QA"
+    },
+    {
+      "path": "keys/alpha-qc.json",
+      "bytes": 2348,
+      "sha256": "085411d01e975f643dc6ea4f9423abad9f7d3d41b56067f3c815fedbc0cc9fe3",
+      "role": "documentation/provenance/QA"
+    },
+    {
+      "path": "keys/keys-tag-diagonal-b.png",
+      "bytes": 1857852,
+      "sha256": "58c967a3f9d5debdd4e245e8d8bf821315cd15bcd5ae7e0b6bebf5203bd5619e",
+      "role": "selectable native production-resolution candidate; unapproved",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "keys/keys-tag-fan-a.png",
+      "bytes": 1303095,
+      "sha256": "48aac74f5dd9a5316cf3d2feb172d25e0866fb5ae1ce9106042ba40f107ea3f9",
+      "role": "selectable native production-resolution candidate; unapproved",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "keys/keys-tag-overhead-c.png",
+      "bytes": 1772294,
+      "sha256": "c3456b396639154987abca198d7b3e5809289ba0c6bb68fd48cc72d69167f04a",
+      "role": "iteration control; C2 is preferred framing",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "keys/keys-tag-overhead-c2-provenance.json",
+      "bytes": 1643,
+      "sha256": "2cef252ea0dca18c5b047260942d4d63a84104fc94a82928e30bfdd200ec6a10",
+      "role": "documentation/provenance/QA"
+    },
+    {
+      "path": "keys/keys-tag-overhead-c2.png",
+      "bytes": 1424863,
+      "sha256": "5fcdb828869308566b92a6af120327346c140fc04208d14c8e5d508fe3a4cd93",
+      "role": "selectable native production-resolution candidate; unapproved",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "keys/prompts.json",
+      "bytes": 7933,
+      "sha256": "9d80a0f29fa4494a5fc77eaf89e08c3be26d19604cdae7f9cf83514301cefc7c",
+      "role": "documentation/provenance/QA"
+    },
+    {
+      "path": "keys/qa/keys-tag-diagonal-b-dark.png",
+      "bytes": 801556,
+      "sha256": "9b6ae8ca4ffb4150d01efa7e5bcedbdd46e8091733364baa67d26bc474b87d73",
+      "role": "diagnostic only; not artwork source",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "keys/qa/keys-tag-fan-a-dark.png",
+      "bytes": 974891,
+      "sha256": "656c9169bf7b2a8080a30a51b15612de2a18a5c7a7062435c2c6a0746a2aff31",
+      "role": "diagnostic only; not artwork source",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "keys/qa/keys-tag-overhead-c-dark.png",
+      "bytes": 720963,
+      "sha256": "03b17073e123cf4f3c78fa064bd11f407f71201b1d9b62896c036236c8f36c95",
+      "role": "diagnostic only; not artwork source",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "keys/qa/keys-tag-overhead-c2-dark.png",
+      "bytes": 454723,
+      "sha256": "2cf9a6a4af2fd02ed27758485843253948198e02669e22a8e73f941a3df1ab3d",
+      "role": "diagnostic only; not artwork source",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "storm/P02-roof-storm-e14-hero.png",
+      "bytes": 2174490,
+      "sha256": "b41008e03172f16ec23fea74aec7db3ca6a243a3a0617c8d74834338c6eb6d10",
+      "role": "selectable native production-resolution candidate; unapproved",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "storm/P02-roof-storm-e14-hero.webp",
+      "bytes": 165196,
+      "sha256": "756453b0276c141127dd3992426b6ac2768723b3e022a2878b8122b52ddccae3",
+      "role": "same-size q92 delivery derivative; not additional option",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "storm/P02-roof-storm-e18-hero.png",
+      "bytes": 2239033,
+      "sha256": "6f50ea4aac8ca778749272b89e04bcf886ce8eef2dadd26ca8c246eed85eda3a",
+      "role": "selectable native production-resolution candidate; unapproved",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "storm/P02-roof-storm-e18-hero.webp",
+      "bytes": 183806,
+      "sha256": "588cb29e88ca649dad35b2fa7da27efb9702297bed0b69c8856db27c11506c9c",
+      "role": "same-size q92 delivery derivative; not additional option",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "storm/P02-roof-storm-e23-hero.png",
+      "bytes": 2306088,
+      "sha256": "6f016ec3b2e683cdc68fbfc421143681786f0f7f309f025ea096c7685a3b9fb5",
+      "role": "selectable native production-resolution candidate; unapproved",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "storm/P02-roof-storm-e23-hero.webp",
+      "bytes": 192876,
+      "sha256": "3dc55f2be2a95788b23c4153ced80fdab3c8d74c65e7ceed6658d2f017b3ecbf",
+      "role": "same-size q92 delivery derivative; not additional option",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "storm/README.md",
+      "bytes": 3399,
+      "sha256": "59bc948d92efa26a17e0b2ee72868717ebc2fe7e4c825b8cf770593cd2c45747",
+      "role": "documentation/provenance/QA"
+    },
+    {
+      "path": "storm/executed-prompts.json",
+      "bytes": 7355,
+      "sha256": "73da696135981195f0a8b368149b946221e333b88d573913ee76b8cb3c7997cb",
+      "role": "documentation/provenance/QA"
+    },
+    {
+      "path": "storm/geometry-and-integrity.json",
+      "bytes": 2519,
+      "sha256": "6b39285688cd1f4ca0dcc00e15e1c45bb47c3ce7e4c70527f642d780acabf8ee",
+      "role": "documentation/provenance/QA"
+    },
+    {
+      "path": "tomas/README.md",
+      "bytes": 3469,
+      "sha256": "54d32a68c941fc2c7fe14853b1c4f5ea428ec014194dcaa3d76097b54b8a7811",
+      "role": "documentation/provenance/QA"
+    },
+    {
+      "path": "tomas/T01-neutral-arms-down.png",
+      "bytes": 1545394,
+      "sha256": "ba092e9ca10ef82712881cd153dabcb8f466b66ebf057bd5139c3bef22d577a5",
+      "role": "selectable native production-resolution candidate; unapproved",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "tomas/T02-neutral-hands-pockets.png",
+      "bytes": 1553226,
+      "sha256": "265ee0e6c188bd6a37946e0ef2ad4149420393efc60b62cac055a71941cfc38a",
+      "role": "selectable native production-resolution candidate; unapproved",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "path": "tomas/prompts/T01-neutral-arms-down.txt",
+      "bytes": 2525,
+      "sha256": "1c1201e59f46bbabf7881b1df66fd51f0d2768184756592406ce026eaae539d0",
+      "role": "documentation/provenance/QA"
+    },
+    {
+      "path": "tomas/prompts/T02-neutral-hands-pockets.txt",
+      "bytes": 2454,
+      "sha256": "6e563d4e7ce0e4db354a8cede31f92a410ed81e7b43d311aa130330064830620",
+      "role": "documentation/provenance/QA"
+    },
+    {
+      "path": "tomas/qa/T01-dark-backing.png",
+      "bytes": 1207780,
+      "sha256": "d02f54f21deedbf6830757989f746efe5718e8b4bf41290a122dd78310cc33de",
+      "role": "diagnostic only; not artwork source",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "tomas/qa/T02-dark-backing.png",
+      "bytes": 1240823,
+      "sha256": "4114e6941efda02f288388eab308a95ee3077bece1975fed5db42afc3a8188ac",
+      "role": "diagnostic only; not artwork source",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "tomas/qa/alpha-qc.json",
+      "bytes": 1552,
+      "sha256": "738aaac088d0c8b409955a075a9f79eded3aa6a5922c676d5a911b4e2e1afc43",
+      "role": "diagnostic only; not artwork source"
+    },
+    {
+      "path": "tomas/references/C01-five-people-revised.webp",
+      "bytes": 96848,
+      "sha256": "2b45135819ee28fdae9577928703345caff503985b55d1627ffb5153d949272f",
+      "role": "unchanged previous-art reference/control; not new deliverable",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "tomas/references/tomas-rope-reference.png",
+      "bytes": 1534486,
+      "sha256": "b31498046dd0a3d79b99e87ceb8be1516ea68a4284320df9d2a34ee7ecd64fa9",
+      "role": "unchanged previous-art reference/control; not new deliverable",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "delivery_note": "Repository-copy documentation normalized and cross-linked; all source image bytes and native dimensions remain unchanged."
+}

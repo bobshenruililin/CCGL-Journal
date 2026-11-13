@@ -1,0 +1,8 @@
+{
+  "file": "keys-tag-overhead-c2.png",
+  "tool": "Built-in OpenAI ImageGen",
+  "edit_target": "keys-tag-overhead-c.png",
+  "transparent_background": true,
+  "prompt": "Use case: precise-object-edit. Input is the actual native transparent Six Flights graphite keyring artwork. Revise its framing only. Imagine pulling the camera straight back by about 25%, maintaining a wide 3:2 canvas. The entire existing subject must fit within the central 72–74% of image width and height, i.e., the physical artwork occupies approximately x=13–87% and y=13–87%, with genuine empty transparency in all four gutters. Preserve its orientation and geometry as faithfully as possible: one horizontally left-pointing key with squarish shoulders and teeth, one round-headed down-left key, one small oval gray split ring through both keys, slim tan tie and a broad blank warm cream cardstock tag pointing up-right. Do not add, subtract or reposition any individual piece relative to the others. Preserve the flat matte gray graphite line, sparse hatching, edge shapes, subtle dry-brush fill and warm blank tag. Do not brighten or make dimensional. Maintain an isolated native RGBA cutout. The frame margins and all the original gaps and holes must be true zero-alpha, not a painted checkerboard, paper, backdrop, glow or shadow. Fit all the artwork well within the frame; absolutely no trim near any edge. No added text, symbols or decorations. Output a single native high-resolution image.",
+  "parent_input_lineage": "See prompts.json entry for keys-tag-overhead-c.png. Native PNG copied byte-identically, without post-generation resizing or padding."
+}
