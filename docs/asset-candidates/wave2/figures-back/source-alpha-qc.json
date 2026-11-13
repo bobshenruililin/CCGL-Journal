@@ -1,0 +1,112 @@
+[
+  {
+    "file": "B01-Yan-standing-notebook.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "zero_alpha_fraction": 0.7490158081054688,
+    "alpha_ge_10_bounds": [
+      285,
+      72,
+      720,
+      1497
+    ],
+    "visible_height_px": 1425,
+    "alpha_lt_10_spill_pixels": 20107,
+    "sha256": "9ff139ca925eaf0b5b061d6352a4b3d3b1a6eae90138197a46c58581a2cfaba2"
+  },
+  {
+    "file": "B02-Kit-standing-hood.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "zero_alpha_fraction": 0.8185831705729166,
+    "alpha_ge_10_bounds": [
+      324,
+      146,
+      692,
+      1399
+    ],
+    "visible_height_px": 1253,
+    "alpha_lt_10_spill_pixels": 22518,
+    "sha256": "3054b147523df5e0e72f8733669e11a2085e15a7525bda31e33f25a87620dbb6"
+  },
+  {
+    "file": "B03-Priya-cashbox.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "zero_alpha_fraction": 0.7495822906494141,
+    "alpha_ge_10_bounds": [
+      244,
+      44,
+      775,
+      1488
+    ],
+    "visible_height_px": 1444,
+    "alpha_lt_10_spill_pixels": 43505,
+    "sha256": "739cfb0fefab707de69768c7984a4728fe802502fb7b99336c3d5ed8df8823b6"
+  },
+  {
+    "file": "B04-Tomas-holding-rope.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "zero_alpha_fraction": 0.7860406239827474,
+    "alpha_ge_10_bounds": [
+      278,
+      34,
+      1024,
+      1474
+    ],
+    "visible_height_px": 1440,
+    "alpha_lt_10_spill_pixels": 22205,
+    "sha256": "b31498046dd0a3d79b99e87ceb8be1516ea68a4284320df9d2a34ee7ecd64fa9"
+  },
+  {
+    "file": "B05-Mrs-Leung-seated.png",
+    "size": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "zero_alpha_fraction": 0.6507136027018229,
+    "alpha_ge_10_bounds": [
+      224,
+      75,
+      785,
+      1483
+    ],
+    "visible_height_px": 1408,
+    "alpha_lt_10_spill_pixels": 25905,
+    "sha256": "49d35d0b20e5631b6509445c539d8de1e472b2702ae5a2589eca03ec06910ec6"
+  }
+]

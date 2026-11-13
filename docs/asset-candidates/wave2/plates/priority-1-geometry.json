@@ -1,0 +1,94 @@
+{
+  "P04-roof-after-rain-a.webp": {
+    "source_id": "P04-01",
+    "native_size": [
+      1536,
+      1024
+    ],
+    "measurement_method": "Manual pixel-coordinate inspection, approximate 1% precision. Safe rectangles inset to avoid paint/frame/sock; validate in build.",
+    "screen_pct": [
+      33.2,
+      21.0,
+      64.97,
+      47.07
+    ],
+    "door_pct": [
+      91.6,
+      36.52,
+      95.25,
+      55.18
+    ]
+  },
+  "P04-roof-after-rain-b.webp": {
+    "source_id": "P04-02",
+    "native_size": [
+      1536,
+      1024
+    ],
+    "measurement_method": "Manual pixel-coordinate inspection, approximate 1% precision. Safe rectangles inset to avoid paint/frame/sock; validate in build.",
+    "screen_pct": [
+      33.2,
+      21.0,
+      64.97,
+      47.07
+    ],
+    "door_pct": [
+      91.6,
+      36.52,
+      95.25,
+      55.18
+    ]
+  },
+  "P05-common-room-a.webp": {
+    "source_id": "P05-01",
+    "native_size": [
+      1536,
+      1024
+    ],
+    "measurement_method": "Manual pixel-coordinate inspection, approximate 1% precision. Safe rectangles inset to avoid paint/frame/sock; validate in build.",
+    "sheet_bounds_pct": [
+      32.55,
+      19.92,
+      67.38,
+      47.56
+    ],
+    "sheet_safe_pct": [
+      33.53,
+      23.44,
+      63.8,
+      45.12
+    ],
+    "door_pct": [
+      89.78,
+      27.15,
+      95.38,
+      56.35
+    ]
+  },
+  "P05-common-room-b.webp": {
+    "source_id": "P05-02",
+    "native_size": [
+      1536,
+      1024
+    ],
+    "measurement_method": "Manual pixel-coordinate inspection, approximate 1% precision. Safe rectangles inset to avoid paint/frame/sock; validate in build.",
+    "sheet_bounds_pct": [
+      31.05,
+      18.65,
+      71.42,
+      50.1
+    ],
+    "sheet_safe_pct": [
+      35.55,
+      23.63,
+      69.99,
+      45.9
+    ],
+    "door_pct": [
+      88.22,
+      27.83,
+      93.75,
+      56.45
+    ]
+  }
+}
