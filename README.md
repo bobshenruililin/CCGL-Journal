@@ -61,14 +61,18 @@ Then open http://127.0.0.1:5173/.
 | `app/state.ts`, `app/journal-store.ts` | The save: pages gated by decisions and hand-work, guarded rewrites, the pocket of stubs. |
 | `app/interpret.ts` | Reading a decision written in the reader's own words. Local and instant; one seam for an optional live reader. |
 | `app/Spreads.tsx` | The twelve spreads and their interactions. |
-| `app/art.tsx`, `app/plates.ts` | Ink-and-wash drawings in SVG, and the registry where painted plates replace their backgrounds. |
+| `app/painted.tsx` | The painted scenes: gouache plates with the cast as live figures (shadows, screen light, colour by route, shared grain). |
+| `app/art.tsx` | Yan's and Kit's own ink-and-wash drawings in SVG. |
+| `public/plates/`, `public/cast/` | The web-sized gouache plates, objects and figure cut-outs used by the build. |
 | `app/Journal.tsx` | The book: page turns, keyboard, focus, dialogs, print. |
 | `app/sound.ts` | Synthesised paper, pencil, knock and rain. No audio files. |
 | `qa/` | `story-check`, `state-check`, `interpret-check` (Node) and `e2e` + `play` (Playwright). |
 | `docs/creative-thesis.md` | What this is about, how the insight is derived, and what is deliberately absent. |
-| `docs/asset-manifest.md` | The painted artwork to make: language, geometry, prompts, review steps. Nothing in it has been generated yet. |
-| `coordination/requests/` | Six briefs for Robert: painted plates, live reader, Friday by voice, sound, a fresh-eyes playtest, the Asterwind machine. |
-| `docs/screenshots/`, `docs/recordings/` | Real captures from this build: fifteen stills and a silent 110-second playthrough of one route. |
+| `docs/asset-manifest.md` | The original brief for the painted artwork: language, geometry, prompts, review steps. |
+| `docs/asset-provenance.md` | What Robert's artwork is used where, which alternative was chosen, and what was left out. |
+| `docs/playtest-2026-11-12-model-reviewer.md` | Notes from an uncoached playthrough by a model reviewer (not a person). |
+| `coordination/requests/` | Twelve notes for Robert and Astra. 01–06 are the original briefs (plates, live reader, Friday by voice, sound, a fresh-eyes playtest, the Asterwind machine); 07–12 are the art handoff and decisions, ending with what a further pass would need. |
+| `docs/screenshots/`, `docs/recordings/` | Stills from the current build, and a silent 110-second playthrough of one route recorded before the painted pass. |
 | `docs/jamie-design-backbone.md`, `docs/creative-reference-manifest.md`, `docs/fable-setup.md` | The design backbone and reference guide this was built against. |
 | `docs/history/` | Notes on the earlier three-scene prototype this replaced. |
 | `reference/asterwind/` | Asterwind snapshot. Reference only; not built or deployed. |
