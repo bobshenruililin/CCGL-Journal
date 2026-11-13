@@ -583,3 +583,75 @@ svg .jlabel .jn { font-weight: 700; font-size: 26px; }
 
 .s-fri .platepg .afterthought { position: absolute; left: 9%; right: 14%; bottom: 4.5%; margin: 0 !important; color: #e9c9e2; z-index: 2; font-size: .8em; text-shadow: 0 0 .5cqw #0d0f22; }
 [data-layout='tall'] .s-fri .platepg .afterthought { position: relative; left: auto; right: auto; bottom: auto; margin: 0 7.5cqw 6cqw !important; }
+
+/* ───────── painted scenes: plate, people, shadow, light, one grain ───────── */
+.painted-scene .room { filter: brightness(.6) saturate(.82); transition: filter 2.2s ease .2s; }
+.painted-scene.on .room { filter: none; }
+.painted-scene .grain { mix-blend-mode: overlay; opacity: .55; pointer-events: none; }
+.person .paint { filter: brightness(.34) saturate(.5); transition: filter 1.8s ease var(--d, 0s); }
+.painted-scene.on .person.lit .paint { filter: brightness(.86) saturate(1.04) contrast(1.02); }
+.painted-scene.on .person.pale .paint { filter: brightness(.5) saturate(.1) contrast(.95); }
+.person .rim { opacity: 0; mix-blend-mode: screen; filter: brightness(1.6) saturate(.5) sepia(.25); -webkit-mask-image: linear-gradient(180deg, #000 0, rgba(0, 0, 0, .5) 22%, transparent 55%); mask-image: linear-gradient(180deg, #000 0, rgba(0, 0, 0, .5) 22%, transparent 55%); transition: opacity 1.8s ease var(--d, 0s); }
+.painted-scene.on .person .rim { opacity: .42; }
+.painted-scene.on .person.pale .rim { opacity: .2; filter: brightness(1.5) saturate(0); }
+.person .contact, .sitter .contact, .machine-painted .contact { fill: #04050d; opacity: .62; filter: url(#soft); }
+.person .cast-shadow { fill: #04050d; opacity: 0; filter: url(#soft); transition: opacity 1.8s ease; }
+.painted-scene.on .person .cast-shadow { opacity: .36; }
+.painted-scene .throw { mix-blend-mode: screen; animation: fadeBeam 1.8s ease-out both; }
+.painted-scene .doorglow { fill: #ffd98a; opacity: .78; mix-blend-mode: screen; filter: url(#soft); }
+.painted-scene .sitter .chairback { fill: none; stroke: #0a0c1e; stroke-width: 3.4; stroke-linejoin: round; opacity: .9; }
+.painted-scene .sitter.empty .chairback { stroke: #2a2f55; opacity: .75; }
+.painted-scene .sitter .body, .painted-scene .sitter .head { fill: #0a0c1e; }
+.painted-scene.on .sitter .head { stroke: rgba(255, 236, 190, .22); stroke-width: 1.4; }
+.machine-painted image { filter: brightness(.55) saturate(.7); }
+.painted-scene.on .machine-painted image { filter: brightness(.9); }
+.film3 .f { opacity: 0; animation: film3 5.4s steps(1) infinite; }
+.film3 .f0 { opacity: 1; } .film3 .f1 { animation-delay: -3.6s; } .film3 .f2 { animation-delay: -1.8s; }
+.film3 .f0 { animation: none; }
+@keyframes film3 { 0% { opacity: 1; } 33.4%, 100% { opacity: 0; } }
+[data-still] .film3 .f1, [data-still] .film3 .f2 { opacity: 0; animation: none !important; }
+.painted-scene .halo { opacity: .5; }
+.painted-scene .beam { opacity: .09; }
+
+.s-night .nightwords { width: 27%; bottom: 5%; }
+.painted-scene .sitter .body, .painted-scene .sitter .head { fill: #10122b; }
+.s-night .nightwords { width: 27%; }
+[data-layout='tall'] .s-night .nightwords { width: auto; }
+/* daylight and storm versions of the same people */
+.storm-scene .room { filter: none; }
+.storm-scene .person .paint, .painted-scene.storm-scene.on .person.lit .paint { filter: brightness(.5) saturate(.62) contrast(1.05); }
+.painted-scene.storm-scene.on .person.pale .paint { filter: brightness(.36) saturate(.2); }
+.painted-scene.storm-scene.on .person .rim { opacity: .5; filter: brightness(1.9) saturate(.15); }
+.painted-scene.storm-scene.on .person .cast-shadow { opacity: .45; }
+.storm-scene .machine-painted image { filter: brightness(.5) saturate(.5); }
+.dusk-scene .room, .landing-scene .room, .door-scene .room { filter: none; }
+.painted-scene.dusk-scene.on .person .paint { filter: brightness(.78) saturate(.9) sepia(.12); }
+.painted-scene.dusk-scene.on .person .rim { opacity: .35; filter: brightness(1.5) sepia(.6) saturate(1.6); }
+.painted-scene.dusk-scene.on .person .cast-shadow { opacity: .3; transform: skewX(-38deg); transform-box: fill-box; transform-origin: center top; }
+.painted-scene.landing-scene.on .person .paint { filter: brightness(.6) saturate(.8) sepia(.2); }
+.painted-scene.landing-scene.on .person .rim { opacity: .5; filter: brightness(1.6) sepia(.8) saturate(2); }
+.door-scene .opened { opacity: 0; transition: opacity .9s ease; }
+.door-scene.open .opened { opacity: 1; }
+.door-scene .kitdoor image { mix-blend-mode: multiply; filter: brightness(.82) contrast(1.1); animation: fadeIn 1s ease .5s both; }
+.door-scene .halo { opacity: .45; mix-blend-mode: screen; animation: halo 2.2s ease-out both; }
+.oneam-scene .room { filter: brightness(1.25); }
+.oneam-scene .wallpicture { animation: lampOn 1.6s ease-out both; }
+.oneam-scene .wallpicture .beam { opacity: .16; }
+.painted-scene.oneam-scene .person .paint { filter: brightness(.4) saturate(.5); }
+.painted-scene.oneam-scene.on .person .paint { filter: brightness(.7) saturate(.85); }
+.painted-scene.oneam-scene.on .person .rim { opacity: .0; }
+img.portrait { display: block; width: 100%; mix-blend-mode: multiply; }
+.s-wed .mutter { left: 36.5%; top: 37%; width: 19%; }
+.s-wed .shout { text-shadow: 0 0 .6cqw rgba(60, 30, 60, .35); color: #ffd9c9; }
+
+.s-wed .pg { padding-top: 34cqw; }
+.s-wed .shout { color: #ffb199; text-shadow: 0 .08cqw .5cqw rgba(50, 20, 60, .65); }
+[data-layout='tall'] .s-wed .pg { padding-top: 6cqw; } [data-layout='tall'] .s-wed .pg.r { padding-top: 0; }
+[data-layout='tall'] .shout { font-size: 4.1cqw; width: 70%; }
+[data-layout='tall'] .s-wed .mutter { left: 30%; top: 45%; width: 30%; }
+img.portrait { -webkit-mask-image: radial-gradient(ellipse 60% 62% at 50% 52%, #000 70%, transparent 100%); mask-image: radial-gradient(ellipse 60% 62% at 50% 52%, #000 70%, transparent 100%); }
+
+.hatfig { position: absolute; right: 3.6cqw; top: 15.5cqw; width: 21%; rotate: 6deg; filter: drop-shadow(0 .3cqw .4cqw rgba(60, 40, 20, .3)); }
+[data-layout='tall'] .hatfig { position: static; display: block; width: 38%; margin: .4em 0 0 auto; }
+.s-inside img.portrait { height: 9.2cqw; width: 100%; object-fit: contain; }
+[data-layout='tall'] .s-inside img.portrait { height: 26cqw; }

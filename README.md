@@ -17,14 +17,18 @@ Yan has inherited a rooftop film night, a ring of keys and a blank notebook. It 
 
 The people and the roof are invented. The three situations draw on a leadership workbook by Amanda, refined by Hannah; this is a story, not an assessment, and it names no styles and gives no score.
 
-## This pass (13 November)
+## The painted pass (13 November)
 
-- **After Saturday, the earlier pages have been written on.** Once the notebook has gone round, turn back: Kit, Priya, Tomás and Mrs Leung have each left a line on Monday, Wednesday, Thursday and Friday. Under "Priya has a tutorial. She said." it now says "I didn't have a tutorial. — P".
-- Each person in colour on the last night has a few words beside them naming what was theirs to carry.
-- The page says how it read words the reader wrote themselves.
-- `vercel.json` builds with plain `next build`; the notebook is a static page and needs no environment variables.
+The notebook now uses Robert's gouache artwork throughout the playable scenes.
 
-**Not done in this pass:** integrating the wave-two artwork (more gouache plates, film frames, objects, the revised character sheet and five back-facing figures). Those files never reached the repository or the build workspace. The exact list is in `coordination/requests/11-final-pass-missing-files.md`. Until they do, one ending is painted and three are drawn.
+- **All four endings are painted rooms** with the cast as separate painted figures standing in them. Each figure has its own contact shadow and cast shadow, is lit from the screen, and takes colour or loses it with the route. One grain lies over room and people together.
+- People who were given nothing to carry are still painted people; they are simply not in colour.
+- The film on every screen is three frames of an invented tenement comedy, in sequence.
+- Friday's storm, Wednesday's dusk, the door on the fifth floor, the stair landing and the common room at 1:40 am are painted, with the same figures and the same treatment.
+- The inside cover introduces the four others with painted portraits from the revised character sheet.
+- Yan's and Kit's own drawings stay drawn: the roof plan, the phone, the keys, the vent, the building with its stairs, the "who took what" diagrams, the figure lying beside the chairs.
+
+What was chosen, from which candidate, and what was reviewed and left out: `docs/asset-provenance.md`. Full-size sources stay on the asset branches and are not in `main`.
 
 ## Run it
 
@@ -73,7 +77,7 @@ Then open http://127.0.0.1:5173/.
 
 ## Known limits
 
-- One scene (the roof under the tarp) is a gouache painting with live figures, light and film on top; the film still, a receipt and a strip of tape are also generated images. Every other scene is drawn in code, so the two looks sit side by side until the remaining plates arrive (`coordination/requests/08`). Sources are in `docs/asset-provenance.md`.
+- Front-facing figures are crops of a review sheet (the portraits, Kit in his doorway). Production front poses have not been made, so Thursday's stairs still use drawn figures.
 - Sound was written without being listened to. Treat it as a draft (request 04).
 - No person has played this cold. The automated playthroughs prove it works, not that it lands (request 05).
 - Own-words reading is a keyword reading. Oblique phrasings get "I can read that two ways" and a choice of two lines until a live reader is added (request 02).
