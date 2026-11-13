@@ -2,6 +2,8 @@
 
 Existing wave-two artwork recovered from its source archives and committed for Fable's review. **Candidates, not integrated or approved production assets.** No new artwork was generated for this delivery; no app code, main branch, release, access settings or deployment was changed.
 
+[Scene shortlist, actual alternatives and approval state](SHORTLIST.md).
+
 ## Start here
 
 | Priority | Folder | Delivered |
