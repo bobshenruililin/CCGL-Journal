@@ -24,3 +24,5 @@ A note on the platform: I have not been able to inspect the OpenAI platform from
 | 09 | The people, their things and the small details | Open; character sheet is the gate |
 
 Request 01 is superseded by 08 and 09.
+| 10 | Character sheet approved as the style, with changes before front poses | Open |
+| 11 | Files the final pass could not open, with exact paths to deliver | **Blocking the art integration** |

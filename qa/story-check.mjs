@@ -72,6 +72,10 @@ for (const r of routes) {
   // Saturday: four voices, each signed by the right person.
   assert.deepEqual(sat.entries.map(e => e.who), ['priya', 'tomas', 'kit', 'leung']);
   for (const en of sat.entries) if (en.kind === 'hand') assert(en.text.endsWith('— ' + { priya: 'P', tomas: 'T', kit: 'K', leung: 'Leung' }[en.who]), 'unsigned ' + id);
+  // Afterthoughts on earlier pages: one per day, signed, never by someone who was not there on Saturday.
+  const aft = S.afterthoughts(r);
+  for (const d of ['mon', 'wed', 'thu', 'fri']) { assert(aft[d].text.endsWith('— ' + { priya: 'P', tomas: 'T', kit: 'K', leung: 'Leung' }[aft[d].who]), 'afterthought unsigned ' + id); if (r.mon === 'post') assert.notEqual(aft[d].who, 'kit', 'absent Kit goes back through the book ' + id); }
+  if (r.wed === 'cut') assert(/tutorial/.test(aft.thu.text) && /tutorial/.test(th.paragraphs.join(' ')));
   // Margin notes: written by someone who is on the roof on Saturday, after the entry they answer exists.
   sat.entries.forEach((en, i) => { if (!en.margin) return; assert(en.margin.who !== en.who); assert(en.margin.after > i && en.margin.after <= 4); if (r.mon === 'post') assert.notEqual(en.margin.who, 'kit', 'absent Kit writes in the margin ' + id); });
   // The $340: only spoken of where Priya said it on Wednesday, and a hat never covers it.

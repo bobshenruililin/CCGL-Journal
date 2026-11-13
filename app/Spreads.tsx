@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 
 import {
   type Route, type Who, type BeatId, type SpreadId, type Mon, type Wed, type Fri, type Entry,
   cast, inside, monday, mondayAfter, wednesday, wednesdayAfter, thursday, friday, fridayAfter, night, saturday, lastPage,
-  endings, endingIds, ending, isFull, whoName, MON, WED, FRI,
+  endings, endingIds, ending, isFull, whoName, afterthoughts, MON, WED, FRI,
 } from './story.ts';
 import { type Save, OWN_MAX } from './state.ts';
 import type { Reading } from './interpret.ts';
@@ -84,6 +84,13 @@ function Paste({ who, label, text, kind = 'note', style }: { who: Who; label: st
   );
 }
 
+/** Something another person wrote on an earlier page after the notebook went round on Saturday. */
+function After({ s, day }: { s: Save; day: 'mon' | 'wed' | 'thu' | 'fri' }) {
+  if (!isFull(s.route) || (s.beats.pass ?? 0) < 4) return null;
+  const n = afterthoughts(s.route)[day];
+  return <p className={'afterthought ' + n.who + ' ' + hand[n.who]}><span className="sr">{whoName(n.who)} wrote here afterwards: </span>{n.text}</p>;
+}
+
 /* ───────────── cover and inside ───────────── */
 
 function Cover({ a, resume }: SpreadProps) {
@@ -140,6 +147,7 @@ function Mon_({ s, a, inked }: SpreadProps) {
         <h2 className="hd" tabIndex={-1}>{monday.heading}</h2>
         {monday.paragraphs.map(t => q.p(t))}
         <div className="phonefig"><Phone /></div>
+        <After s={s} day="mon" />
       </div>
       <div className="pg r">
         <div className="keysfig fade" style={q.d(0.3)}><Keys /></div>
@@ -254,7 +262,7 @@ function Wed_({ s, a, inked }: SpreadProps) {
         {shout}
         <p className="mutter thand"><span className="sr">Tomás: </span>{w.tomas.map((t, i) => <span key={t} className="fade" style={{ '--d': (2.6 + i * 1.3).toFixed(1) + 's' } as V}>{t} </span>)}</p>
       </div>
-      <div className="pg l">{head}{paras}</div>
+      <div className="pg l">{head}{paras}<After s={s} day="wed" /></div>
       <div className="pg r">
         {q.p(w.close)}
         <Thoughts night="wed" lead={w.lead} options={w.thoughts} order={WED} chosen={s.route.wed} own={s.own?.wed} inked={inked} a={a} q={q} />
@@ -344,6 +352,7 @@ function Thu({ s, a, still }: SpreadProps) {
         <ol className="trips" aria-live="polite">
           {t.lines.slice(0, done).map((line, i) => <li key={i} className={'trip' + (crew === 0 ? ' tired' + Math.min(5, i) : '')}><span className="tally" aria-hidden="true">{Array.from({ length: i + 1 }, (_, j) => <i key={j} />)}</span><span className="tripline">{line}</span></li>)}
         </ol>
+        <After s={s} day="thu" />
         {done < t.trips && <button type="button" className={'carry fade' + (moving ? ' busy' : '')} style={q.d()} onClick={carry} aria-disabled={moving}>
           <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M14 54l8-44h8l-6 44M22 30h22l8 24M30 10l14 20" /></svg>
           <span>{moving ? 'up we go…' : `carry ${numWord[t.perTrip]} up${crew ? ', between us' : ''}`}</span>
@@ -366,6 +375,7 @@ function Fri_({ s, a, inked }: SpreadProps) {
       <div className="pg l platepg dark">
         <Storm kit={mon === 'find' ? 'kneel' : mon === 'self' ? 'guest' : 'absent'} priyaStare={wed === 'cut'} />
         <div className="onplate">{head}{first}</div>
+        <After s={s} day="fri" />
       </div>
       <div className="pg r">
         <span className="blot b1" aria-hidden="true" /><span className="blot b2" aria-hidden="true" /><span className="blot b3" aria-hidden="true" />

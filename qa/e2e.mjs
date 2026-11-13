@@ -23,6 +23,15 @@ for (const r of runs) {
   assert.equal(res.overflow, false, 'sideways scroll ' + tag);
   assert.deepEqual(res.clipped, [], 'text cut off by the page edge ' + tag);
   const { page, context } = res;
+  // Afterwards, the earlier pages have been written on by other people; nothing is cut off.
+  for (const d of ['mon', 'wed', 'thu', 'fri']) {
+    await page.locator('.tab.' + d).click();
+    await page.waitForFunction(() => !document.querySelector('.turnlayer'));
+    await page.waitForSelector('.live .afterthought');
+    const cut = await page.evaluate(() => [...document.querySelectorAll('.live .pg:not(.platepg):not(.coverpg)')].filter(p => p.scrollHeight > p.clientHeight + 3).length);
+    assert.equal(cut, 0, 'afterthought pushes text off the page on ' + d + ' ' + tag);
+  }
+  await page.locator('.tab.sat').click(); await page.waitForSelector('.live .s-sat'); await page.locator('.corner.next').click(); await page.waitForSelector('.live .s-last');
   // Saved progress: reload, and the ribbon opens at the same page with the stub still in the pocket.
   await page.reload({ waitUntil: 'networkidle' });
   await page.locator('.coverface').click();
