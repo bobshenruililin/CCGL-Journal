@@ -1,0 +1,10 @@
+[
+  {
+    "id": "flyer-indigo",
+    "prompt": "Revise this exact worn paper rooftop cinema flyer. Single-colour deep INDIGO ink print on cream paper, no red/vermilion or any other coloured ink anywhere. Retain physical paper grain and buckled corner. Printed design occupies ONLY upper60% of paper; lower40% entirely blank cream with no ink marks or rain bleed. Within illustration, screen is bare cream paper; tank/floor/skyline all indigo-only risograph with grain. No letters, numbers, symbols, caption, watermark. Top-down isolated on purewhite backdrop. Same tangible handmade flyer, not glossy graphic."
+  },
+  {
+    "id": "flyer-indigo-revised",
+    "prompt": "Edit this flyer only by reducing the printed illustration vertically into upper55% of the cream paper, leaving lower45% COMPLETELY blank cream; no new text or marks. Preserve exact one-colour indigo risograph design, physical ragged paper, colour, buckled corner, grain and white backdrop. The moon/tank/floor remain indigo ink except screen barepaper. This gives the generous writing area requested."
+  }
+]

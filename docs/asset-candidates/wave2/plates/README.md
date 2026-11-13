@@ -44,3 +44,44 @@ Edit the supplied accepted A3 painting for Six Flights. Preserve its exquisite l
 ```text
 Edit the supplied accepted A3 painting for Six Flights. Preserve its exquisite loose gouache and sparse blue-black ink, dry-brush texture, pooled washes, ragged cream notebook margin, student sketchbook character; not photo or3D. No people, figures, chairs, projector, bulbs, film, text, lettering, numerals, painted rain strokes or bright light/reflections on the floor. No saturated cobalt, vermilion, marigold, plum, umber or teal (reserved character colours). Clean background for live animation. NEW worn student common room interior from back,3:2 landscape. Same A-gouache hand, not roof subject. Warm very muted dark brown/slate walls (no bright umber or plum). Grey-white bedsheet pinned to end wall, one plain sock pegged top left. Blank sheet not illuminated, approximately x31–70%,y16–48%. Tall dark night window left; open DARK doorway right. Floor begins at about55% and ALL below is even dark empty floor for thirty live figures and three lines handwriting. No furniture. Second version with modest asymmetry and sagging cloth, quiet gentle domestic character, visible underdrawing. No rain streaks even on window.
 ```
+
+
+## P01 dusk and P02 storm (Priority 2)
+
+All four use native-size opaque WebP q90, sourced from A3-derived edits. Start with dusk A for warmer brushwork and storm A for the simpler upright screen. B storm's canvas is tilted: see the measured four-corner quad in [priority-2-geometry.json](priority-2-geometry.json) if warping the film. The numbers below are approximate and need checking in the running build; all rectangles are percentages in x0, y0, x1, y1 order.
+
+| Candidate | Source ID | Dimensions | Safe screen rectangle (%) | Door rectangle (%) |
+| --- | --- | --- | --- | --- |
+| `P01-roof-dusk-a.webp` | `P01-01` | 2046×768 | 34.7, 34.38, 57.38, 66.02 | 93.84, 50.52, 96.33, 76.3 |
+| `P01-roof-dusk-b.webp` | `P01-02` | 2048×768 | 35.94, 33.59, 58.84, 64.45 | 94.34, 51.43, 96.73, 75.91 |
+| `P02-roof-storm-a.webp` | `P02-01` | 1086×1448 | 26.8, 40.95, 72.28, 61.19 | 91.34, 56.42, 95.03, 70.1 |
+| `P02-roof-storm-b.webp` | `P02-02` | 1086×1448 | 28.08, 47.93, 69.98, 65.4 | 90.7, 61.26, 93.92, 73.62 |
+
+[Executed prompts](priority-2-prompts.json). Dusk floor starts lower in the panorama than in the night plates. Preserve the live film, light and actors.
+
+
+## Executed prompt text
+
+### P02-01
+
+```text
+Edit the supplied accepted A3 gouache painting for Six Flights. Preserve its exquisite loose gouache and sparse blue-black ink, dry-brush texture, pooled washes, ragged cream notebook margin, student sketchbook character; not photo or3D. Keep original roof/tank/door/skyline identity wherever visible. No people, figures, chairs, projector, bulbs, film, text, lettering, numerals, painted rain strokes or bright light/reflections on the floor. No saturated cobalt, vermilion, marigold, plum, umber or teal (reserved character colours). Clean background for live animation. Change to3:4 PORTRAIT view of same roof at nightfall, lower viewpoint behind where projector would stand (do not paint projector). Blank OFF-WHITE screen is brightest object, middle third of picture on two poles. Heavy slate storm clouds, sparse muted warm window dots, cylindrical tank left, little stair door right. Bottom quarter dark and quiet, no floor light. Bold broad slate brush clouds. No tarp.
+```
+
+### P02-02
+
+```text
+Edit the supplied accepted A3 gouache painting for Six Flights. Preserve its exquisite loose gouache and sparse blue-black ink, dry-brush texture, pooled washes, ragged cream notebook margin, student sketchbook character; not photo or3D. Keep original roof/tank/door/skyline identity wherever visible. No people, figures, chairs, projector, bulbs, film, text, lettering, numerals, painted rain strokes or bright light/reflections on the floor. No saturated cobalt, vermilion, marigold, plum, umber or teal (reserved character colours). Clean background for live animation. Change to3:4 PORTRAIT view of same roof at nightfall, lower viewpoint behind where projector would stand (do not paint projector). Blank OFF-WHITE screen brightest object in middle third, slightly crooked on two poles. Heavy slate storm clouds with pooled edges, sparse muted warm window dots, cylindrical tank left, little stair door right. Bottom quarter dark quiet concrete. Try a second expressive composition, storm weight pressing down from upper half. No tarp.
+```
+
+### P01-01
+
+```text
+Edit the supplied accepted A3 painting for Six Flights. Preserve its exquisite loose gouache and sparse blue-black ink, dry-brush texture, pooled washes, ragged cream notebook margin, student sketchbook character; not photo or3D. No people, figures, chairs, projector, bulbs, film, text, lettering, numerals, painted rain strokes or bright light/reflections on the floor. No saturated cobalt, vermilion, marigold, plum, umber or teal (reserved character colours). Clean background for live animation. Same roof AT DUSK, very wide panorama8:3. Keep same tank left, stair-head door right, skyline identity and blank WHITE screen in middle, no tarp. Two drying racks on right with white bedsheet, MUTED slate-blue shirt and pale pink sock. Low sun right of centre. Smooth sky violet to rose to apricot, upper-left half plain for large handwriting. Ground dark muted violet, no painted bright reflection. Aim soulful subdued evening light, broad confident gouache strokes. Roof and figures composited later.
+```
+
+### P01-02
+
+```text
+Edit the supplied accepted A3 painting for Six Flights. Preserve its exquisite loose gouache and sparse blue-black ink, dry-brush texture, pooled washes, ragged cream notebook margin, student sketchbook character; not photo or3D. No people, figures, chairs, projector, bulbs, film, text, lettering, numerals, painted rain strokes or bright light/reflections on the floor. No saturated cobalt, vermilion, marigold, plum, umber or teal (reserved character colours). Clean background for live animation. Same roof AT DUSK, very wide panorama8:3. Keep tank left, stair-head door right, skyline identity and blank WHITE screen in middle, no tarp. Two drying racks on right with white bedsheet, MUTED slate-blue shirt and pale pink sock. Low sun right of centre. Smooth sky violet-to-apricot wash, upper-left half plain for large handwriting. Ground dark muted violet, no painted bright reflection. Second version with softer dusty apricot horizon and more broken brush edges on architecture; preserve handcrafted feeling.
+```

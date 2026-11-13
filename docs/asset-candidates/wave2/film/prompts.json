@@ -1,0 +1,10 @@
+[
+  {
+    "id": "film-kettle",
+    "prompt": "Edit this exact accepted fictional black-and-white1960s Hong Kong comedy still into the very next frame. Change ONLY the man's right hand/kettle lift: kettle rises about one inch, his eyes shift toward the wall. Preserve IDENTICAL two fictional actors, faces, clothing, poses otherwise, woman, plaster wall, every room object/window/laundry/basins/table, exact camera/framing, grain and scratches. No camera change, no new objects, no text. This is frame2 of a tiny three-frame animation and must register with this reference."
+  },
+  {
+    "id": "film-newspaper",
+    "prompt": "Edit this exact accepted fictional black-and-white1960s Hong Kong comedy still into a nearby frame. Change ONLY woman's newspaper arm: she raises the rolled newspaper toward the partition as if about to knock. Preserve IDENTICAL fictional actors, faces, clothing, man and kettle, room geography and all windows/laundry/basins/table, exact camera/framing, grain/scratches. No camera change/new objects/text. Must register against this exact reference frame for tiny animation."
+  }
+]

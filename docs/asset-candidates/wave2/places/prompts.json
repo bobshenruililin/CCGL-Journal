@@ -1,0 +1,22 @@
+[
+  {
+    "id": "S01-corridor-closed",
+    "prompt": "Illustrated background for Six Flights. Match reference A3's gouache and little ink on cream notebook paper: loose confident student brushwork, pooled washes, dry pigment grain, soft uneven edges, restrained wobbly blue-black structure. NOT concept art, not rendered, not photorealistic, no3D. Plain cream ragged unpainted margin2%. NO people, figures, faces, text, signs, numbers or watermark. Entire artwork not a photograph of a book. A fifth-floor student-hall corridor at night, one plain closed dark door centred front-on. Door x39–61%,y18–86%; a thin line of soft warm yellow light directly beneath it, otherwise quiet dim indigo/slate walls and floor. Modest scuffed plaster, spare perspective, subtle worn floor. No labels, room numbers, handles oversized, additional lamps or props. Floor dark and open for later live character. Landscape8:5."
+  },
+  {
+    "id": "S01-corridor-open",
+    "prompt": "Edit this exact corridor painting only by opening its central door inward to reveal an EMPTY small warm room, modest blank walls and empty floor with no person or furniture. Preserve wall, doorframe location, cream margin, brush texture and camera framing exactly. Door hinges left, leaf opens into room; soft warm room light now comes through the open doorway, falls subtly across threshold. No lamp fixture visible, no additional doors or objects, no text/signage. Maintain loose A gouache/ink hand. Landscape8:5."
+  },
+  {
+    "id": "S02-landing",
+    "prompt": "Illustrated background for Six Flights. Match reference A3's gouache and little ink on cream notebook paper: loose confident student brushwork, pooled washes, dry pigment grain, soft uneven edges, restrained wobbly blue-black structure. NOT concept art, not rendered, not photorealistic, no3D. Plain cream ragged unpainted margin2%. NO people, figures, faces, text, signs, numbers or watermark. Entire artwork not a photograph of a book. Fourth-floor stair landing in modest Hong Kong student hall, tall window with last orange evening light, quiet empty landing, simple metal handrail and concrete stairs descending out of view. A soft long orange wash crosses floor from window, enough open space for two figures to be overlaid. Sparse architecture, intimate human scale, indigo shadows and apricot light, no saturated character colours. Nearly square10:9."
+  },
+  {
+    "id": "S03-commonroom-dark",
+    "prompt": "Illustrated background for Six Flights. Match reference A3's gouache and little ink on cream notebook paper: loose confident student brushwork, pooled washes, dry pigment grain, soft uneven edges, restrained wobbly blue-black structure. NOT concept art, not rendered, not photorealistic, no3D. Plain cream ragged unpainted margin2%. NO people, figures, faces, text, signs, numbers or watermark. Entire artwork not a photograph of a book. Second-floor student common room at1:40am. One small plain folding table, bare dark walls, empty room. Wall dark unlit and uninterrupted for a projected rectangle added live later. NO painted light source, no projector beam, no lit lamps, no bright screen, no window light. Sparse warm brown/slate shadows, low even ambient visibility only. Composition wide2:1, table low left of centre, most wall quiet. No people, furniture beyond table or props."
+  },
+  {
+    "id": "S04-saturday-roof",
+    "prompt": "Paint the SAME roof in reference as a quiet EMPTY clear Saturday morning after rain, using same loose gouache and sparse ink on cream paper. Remove tarp/canopy and its overhead ropes, remove film screen/frame, remove all screening equipment. Retain roof geography: cylindrical tank left, small stairhead doorway far right, low parapet, dense Hong Kong-scale harbour skyline beyond. Clear pale apricot sky, soft low morning sun off-frame on right creates LONG shadows leftward from tank/door; shallow puddles drying on concrete, subtle quiet reflections. Absolutely NO people, figures, chairs, keys, notebooks, text, numbers or signs. Empty open concrete and unhurried breathing space. Keep expressive gouache pigment, uneven cream margin, not rendered or photoreal. Wide panorama5:2; roof floor majority of composition, skyline low and restrained."
+  }
+]

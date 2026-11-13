@@ -1,0 +1,517 @@
+{
+  "scope": "Images added for Request 11; pre-existing C00 is not repeated here.",
+  "images": [
+    {
+      "path": "character-gate/C01-five-people-revised.webp",
+      "bytes": 96848,
+      "sha256": "2b45135819ee28fdae9577928703345caff503985b55d1627ffb5153d949272f",
+      "git_blob_sha": "de4dd9c483f9a849421ed1cca60382a25d8864d7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "figures-back/contact-sheet.webp",
+      "bytes": 158120,
+      "sha256": "47707517992ae077625ca91e889143af43b58bf6e56f8b874fe66f5efba25e48",
+      "git_blob_sha": "f41849649eefede11385004d629634dcccf2216e",
+      "dimensions": [
+        1800,
+        1395
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "figures-back/kit-back.png",
+      "bytes": 1323726,
+      "sha256": "3054b147523df5e0e72f8733669e11a2085e15a7525bda31e33f25a87620dbb6",
+      "git_blob_sha": "efae75fcee7e699832abebb95b529e8111ecabf7",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "figures-back/leung-back.png",
+      "bytes": 1745406,
+      "sha256": "49d35d0b20e5631b6509445c539d8de1e472b2702ae5a2589eca03ec06910ec6",
+      "git_blob_sha": "4e3e07b1b03e83782b0ce474ccc26614597fa19d",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "figures-back/priya-back.png",
+      "bytes": 1529473,
+      "sha256": "739cfb0fefab707de69768c7984a4728fe802502fb7b99336c3d5ed8df8823b6",
+      "git_blob_sha": "2004fce5f2fc2f58e49e1278ffd435f1a3e642b3",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "figures-back/tomas-back.png",
+      "bytes": 1534486,
+      "sha256": "b31498046dd0a3d79b99e87ceb8be1516ea68a4284320df9d2a34ee7ecd64fa9",
+      "git_blob_sha": "9e1b415b704d69b3b368ffb4ffb9fcec33a6dfe9",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "figures-back/yan-back.png",
+      "bytes": 1529666,
+      "sha256": "9ff139ca925eaf0b5b061d6352a4b3d3b1a6eae90138197a46c58581a2cfaba2",
+      "git_blob_sha": "249341459b5fbaf72718c572a3a921543da9a949",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "film/film-frame-3.webp",
+      "bytes": 170586,
+      "sha256": "412a5e8726311327605c97d4c0852cae8c46d22b489ba6a888f61c5b1348ef6b",
+      "git_blob_sha": "bfcdaed095a8ce52940e9244d7c25a3d9f17c894",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "film/film-frame-4.webp",
+      "bytes": 163624,
+      "sha256": "9ffc44e13d3ebaef6140cd51c13c399747bc3cbf6bdbaf73866bd456e4ff519e",
+      "git_blob_sha": "7f73c3f3d18efc022c822b8615d81a90ea1c9e98",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "flyer/flyer-indigo-a.webp",
+      "bytes": 402818,
+      "sha256": "d7206472030ec82436752df0b38b98d011739f9c621cc2c12790cdaad265f310",
+      "git_blob_sha": "fed8cafd503ff41a762fa8a706f7d878abfa7927",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "flyer/flyer-indigo-b.webp",
+      "bytes": 350462,
+      "sha256": "b23cf8911d404350b055f7db24822dac800a5fbf3378ea8e09012774c77863d4",
+      "git_blob_sha": "0f5c249b930c68275c46c759a3830133e3187ca3",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "objects/bamboo-chopstick.png",
+      "bytes": 1081987,
+      "sha256": "1c7b68c730cd2c504826eb94a6c86f45f54785fb47af15d1563fccf64648bac5",
+      "git_blob_sha": "6c1b99ca41d129ad643be04fed3b456308cdfa18",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "objects/brass-token-both-faces.png",
+      "bytes": 1522380,
+      "sha256": "46c97263a1320c48d758cbd1ed8b976c9e93f9d2b20909798c0d0f15f50bcdd7",
+      "git_blob_sha": "bc2564181b0ab5eda8a1ba7e1f07711a5b1f2aac",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "objects/cashbox.png",
+      "bytes": 2105297,
+      "sha256": "2af49d9082cb7e46063809e27d0b94ef12ad53d93ecd1f9fe43d5d28ee0bdb22",
+      "git_blob_sha": "8f3a7ec3b0c7087dfc11b6be441f79b6d85f5d6e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "objects/chairs-open-and-stack.png",
+      "bytes": 2198868,
+      "sha256": "e923479e177a440d04abf05de644f42662b2442eb0057e8e7af10251eb3a03ed",
+      "git_blob_sha": "a1d30e66c90faa0d7ffdadbd4ffa5297736eca65",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "objects/extension-lead.png",
+      "bytes": 864598,
+      "sha256": "659fadadc0d05bf994d70100d40ee38072e6c1662a55960253fb068c8c84b014",
+      "git_blob_sha": "c94060ae3853382ea4804ecb798e20b4a19b7e4f",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "objects/folded-olive-tarp.png",
+      "bytes": 2196382,
+      "sha256": "bf1467d410187665cf53bb5483bf67177ca77b078a31cec816313efe45b9444c",
+      "git_blob_sha": "a17eb85bb577ccefbb628ef93d5d06341b2447fb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "objects/hat-coins.png",
+      "bytes": 2324495,
+      "sha256": "2d9cacc8440f8e0dcf1fb3b42d52c2609797c90b702feb0ad49544fa0cb9b3a3",
+      "git_blob_sha": "97a5a4a5acc48d70762b03f6dc6da9ee4ff0523b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "objects/masking-tape.png",
+      "bytes": 1185052,
+      "sha256": "5c84a95019cfd789d4c5d666aa323741cf1f821aca6381de41d8113f9a70ece4",
+      "git_blob_sha": "c7987b5de95bdd6aecaf320e9e88a9a8a9e7e636",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        253
+      ]
+    },
+    {
+      "path": "objects/navy-notebook.png",
+      "bytes": 1424267,
+      "sha256": "4406f37292bbf5a72d7e62985ca8c6a6e8869c9698837fb622c6d60c2120ab2a",
+      "git_blob_sha": "86dad1d05d6fc7fddeff4e294b5f8f2353bf4432",
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "objects/optional-contact-shadows.png",
+      "bytes": 693297,
+      "sha256": "bb12c9a4489bd7afa86d51042fe26c6aed412ff7947e335b6ab400f677a4ddf2",
+      "git_blob_sha": "a92e6cd84ecf70551889330faf60dae43f497d44",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        233
+      ]
+    },
+    {
+      "path": "objects/projector-two-views.png",
+      "bytes": 1886465,
+      "sha256": "2cb3b5bff46934b086ed8dad788d8378e27fec524cc2574973a49e1280ee835f",
+      "git_blob_sha": "86880b2d36f83c07cddcf7db1b6ed633296a3415",
+      "dimensions": [
+        1920,
+        819
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ]
+    },
+    {
+      "path": "objects/sheet-with-sock.png",
+      "bytes": 1957744,
+      "sha256": "308a894a58fa0074c186985385b7bab3c39133e68c013cd558fa470c2a6d9524",
+      "git_blob_sha": "a826ac6304cc7f5f2e9845649d7aec35580973da",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "objects/ticket-stubs-four-yellows.png",
+      "bytes": 1525330,
+      "sha256": "ac66999d6a0919195ab6d9fb26db4ec382dc7832b8a89e796ba549735fb58e4b",
+      "git_blob_sha": "cde04e4e7f9ac1d0435be085e1ffcabe686c6186",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "path": "places/S01-corridor-door.webp",
+      "bytes": 167138,
+      "sha256": "7e35defb7295687868695270b6a456c586874ef78fe4d21b8c472417a30a5052",
+      "git_blob_sha": "2d2097437ab62e3aa9810318f19a4ea99417b46f",
+      "dimensions": [
+        1586,
+        992
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "places/S01b-corridor-door-open.webp",
+      "bytes": 116292,
+      "sha256": "74c9cb74b627225c5816ca08daa43db8d8858008cac74dbf9690d557d3bdcc40",
+      "git_blob_sha": "f26ada23c4d598237cc5a15ed73b930a0ffbde31",
+      "dimensions": [
+        1585,
+        992
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "places/S02-stair-landing.webp",
+      "bytes": 282442,
+      "sha256": "6c78b04424fbf64f8a8005dd8beb10f8472032534c102ed4e4d0bb2deecbdbf2",
+      "git_blob_sha": "e808e0cab1c6763d7712308f0edecc2d07ed0be1",
+      "dimensions": [
+        1322,
+        1190
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "places/S03-common-room-1am.webp",
+      "bytes": 112254,
+      "sha256": "97a1698446412c7676af43dd68cbf9d5ef2308fb66b71b4f860422ca23e4243e",
+      "git_blob_sha": "f1cbbae33bb68bebb30402893c3030c25c20c6d3",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "places/S04-roof-morning.webp",
+      "bytes": 248242,
+      "sha256": "39e8340149e014a9f6e09566c360f097236252912529d64c6075a33076671d9f",
+      "git_blob_sha": "d9318eb32b6d2fb34cbafd1965b9bdb1348c91b7",
+      "dimensions": [
+        1983,
+        793
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "plates/P01-roof-dusk-a.webp",
+      "bytes": 190644,
+      "sha256": "492d6121c98bf8fd83dc84d1f28c7a4c7c23e032181f64a3b580cc5552ee8279",
+      "git_blob_sha": "b696b5e88eeb98185dffbc6754832361ef97571a",
+      "dimensions": [
+        2046,
+        768
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "plates/P01-roof-dusk-b.webp",
+      "bytes": 202272,
+      "sha256": "e26d9ed2e2bcfb1f0a5aba79f5535f8cf2b81aceb0de136c53d15069beb5beb5",
+      "git_blob_sha": "c4cf185d22ccf3ef144f83201aa029db3a1d8f55",
+      "dimensions": [
+        2048,
+        768
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "plates/P02-roof-storm-a.webp",
+      "bytes": 182780,
+      "sha256": "379add73f71f82541ef0a53b2b7cebc38cf77f0c072c6fb39d2b21f11ddaab05",
+      "git_blob_sha": "720edb0bd3e2383ca67bb42562435cfbaded20eb",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "plates/P02-roof-storm-b.webp",
+      "bytes": 188184,
+      "sha256": "2f213ab831f38d2d48925190fa6cc87c69439e77f5972b54000d4210b78243db",
+      "git_blob_sha": "5fda7b72bfeb0c0b159b7a668fc9dc416373fd77",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "plates/P04-roof-after-rain-a.webp",
+      "bytes": 206902,
+      "sha256": "90c235ae45301b58cda649810ebb237a507b5764bdbe35870167a167493cac66",
+      "git_blob_sha": "2164428f3254b2d2b42793eba5eb77c36cb1a914",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "plates/P04-roof-after-rain-b.webp",
+      "bytes": 206456,
+      "sha256": "2d4dc931053ec8ce30f0fba490fa3b9f3588a57d6d160c6e190185bdb3446417",
+      "git_blob_sha": "dd539a7766e381f99b9fabf79515b9b48091808f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "plates/P05-common-room-a.webp",
+      "bytes": 210360,
+      "sha256": "4a624bc2bdf7554cdaf2e59303d90679ea6824b3544d66c764920a1a40a0b2c0",
+      "git_blob_sha": "e4b0163366538a2ec1fee48dc0994abae8a2cf43",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "plates/P05-common-room-b.webp",
+      "bytes": 230518,
+      "sha256": "9a57ce911a92d5d3f4ced7d0dac42340f5abc200955e5a90f9e45242b9374f56",
+      "git_blob_sha": "b586ec985196b73105d2a0e86cd21f4eae987432",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "surfaces/cloth-navy.webp",
+      "bytes": 243894,
+      "sha256": "98898a8417f42c7d8da9da645668018d05e5f06dc5ed20233e6cf5eda84d3a6d",
+      "git_blob_sha": "861f545679b00a15d3e9e7ce5a4fac93c4a657c4",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "surfaces/kraft.webp",
+      "bytes": 198912,
+      "sha256": "eb8ae65d051a6f326f0ad0e30cc3a30234b853576c459149669a5d25c697aa6b",
+      "git_blob_sha": "80108c6f3052a04bd777d56782ccb8a6d8e04941",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "surfaces/paper-cream.webp",
+      "bytes": 50240,
+      "sha256": "52c59851d33594060fdd69d7c3f7682478f319b1632542b487d4eee2b8c2a1bc",
+      "git_blob_sha": "f02ed2be5f8cfaaac64ea5054c6f4e4500da8b9d",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB"
+    }
+  ]
+}
