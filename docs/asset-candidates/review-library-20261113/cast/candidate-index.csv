@@ -1,0 +1,133 @@
+id,sheet,row_1based,column_1based,subject,intended_study,review_shortlist,qa_note,production_ready
+R001,sheets/R01-cast-waiting.png,1,1,Yan,"notebook low, attentive lean",True,Visually plausible review candidate; not approved or production-validated.,False
+R002,sheets/R01-cast-waiting.png,1,2,Kit,"hands in pouch, weight on one foot",False,Visually plausible review candidate; not approved or production-validated.,False
+R003,sheets/R01-cast-waiting.png,1,3,Priya,"arms folded, asymmetric elbows",False,Visually plausible review candidate; not approved or production-validated.,False
+R004,sheets/R01-cast-waiting.png,1,4,Tomás,"hands at sides, forward lean",False,Visually plausible review candidate; not approved or production-validated.,False
+R005,sheets/R01-cast-waiting.png,1,5,Mrs Leung,"hands clasped behind, square stance",False,"Very close to R010; compare as a small stance variation, not a new silhouette family.",False
+R006,sheets/R01-cast-waiting.png,2,1,Yan,"notebook tucked, inclined head",False,Visually plausible review candidate; not approved or production-validated.,False
+R007,sheets/R01-cast-waiting.png,2,2,Kit,"narrow stance, inward shoulders",True,Visually plausible review candidate; not approved or production-validated.,False
+R008,sheets/R01-cast-waiting.png,2,3,Priya,one palm open at waist,True,Visually plausible review candidate; not approved or production-validated.,False
+R009,sheets/R01-cast-waiting.png,2,4,Tomás,touching scarf at nape,True,Visually plausible review candidate; not approved or production-validated.,False
+R010,sheets/R01-cast-waiting.png,2,5,Mrs Leung,wrist held behind back,False,"Very close to R005; compare as a small stance variation, not a new silhouette family.",False
+R011,sheets/R01-cast-waiting.png,3,1,Yan,"half-step forward, notebook close",False,Visually plausible review candidate; not approved or production-validated.,False
+R012,sheets/R01-cast-waiting.png,3,2,Kit,one heel raised,False,Visually plausible review candidate; not approved or production-validated.,False
+R013,sheets/R01-cast-waiting.png,3,3,Priya,one hand on hip,False,Visually plausible review candidate; not approved or production-validated.,False
+R014,sheets/R01-cast-waiting.png,3,4,Tomás,long-legged contrapposto,False,Visually plausible review candidate; not approved or production-validated.,False
+R015,sheets/R01-cast-waiting.png,3,5,Mrs Leung,square planted stance,False,Visually plausible review candidate; not approved or production-validated.,False
+R016,sheets/R01-cast-waiting.png,4,1,Yan,"chair, notebook by lap",False,Visually plausible review candidate; not approved or production-validated.,False
+R017,sheets/R01-cast-waiting.png,4,2,Kit,"chair, perched small",True,Visually plausible review candidate; not approved or production-validated.,False
+R018,sheets/R01-cast-waiting.png,4,3,Priya,"chair, upright elbow out",False,Visually plausible review candidate; not approved or production-validated.,False
+R019,sheets/R01-cast-waiting.png,4,4,Tomás,"chair, long-legged forward attention",False,Visually plausible review candidate; not approved or production-validated.,False
+R020,sheets/R01-cast-waiting.png,4,5,Mrs Leung,"chair, very upright",False,Visually plausible review candidate; not approved or production-validated.,False
+R021,sheets/R02-cast-working.png,1,1,Yan,"standing, writing in notebook",False,Warm pencil mark and prop hand should be checked against the graphite-only pencil rule.,False
+R022,sheets/R02-cast-working.png,1,2,Kit,holding cable loop,False,Visually plausible review candidate; not approved or production-validated.,False
+R023,sheets/R02-cast-working.png,1,3,Priya,cashbox under arm,False,Visually plausible review candidate; not approved or production-validated.,False
+R024,sheets/R02-cast-working.png,1,4,Tomás,one arm holding rope above,False,Visually plausible review candidate; not approved or production-validated.,False
+R025,sheets/R02-cast-working.png,1,5,Mrs Leung,arm extended toward doorway,False,Visually plausible review candidate; not approved or production-validated.,False
+R026,sheets/R02-cast-working.png,2,1,Yan,"kneeling, notebook on knee",True,Visually plausible review candidate; not approved or production-validated.,False
+R027,sheets/R02-cast-working.png,2,2,Kit,kneeling with projector,False,Projector lens faces viewer. Pose study only; equipment must face screen in a production version.,False
+R028,sheets/R02-cast-working.png,2,3,Priya,crouching to put down cashbox,True,Visually plausible review candidate; not approved or production-validated.,False
+R029,sheets/R02-cast-working.png,2,4,Tomás,squatting with rope coil,False,Visually plausible review candidate; not approved or production-validated.,False
+R030,sheets/R02-cast-working.png,2,5,Mrs Leung,stooping for folded umbrella,False,Visually plausible review candidate; not approved or production-validated.,False
+R031,sheets/R02-cast-working.png,3,1,Yan,carrying one folded chair,True,Visually plausible review candidate; not approved or production-validated.,False
+R032,sheets/R02-cast-working.png,3,2,Kit,"carrying chair, long step",False,Visually plausible review candidate; not approved or production-validated.,False
+R033,sheets/R02-cast-working.png,3,3,Priya,carrying multiple folded chairs,True,Visually plausible review candidate; not approved or production-validated.,False
+R034,sheets/R02-cast-working.png,3,4,Tomás,carrying rolled grey tarp,False,Rolled tarp reads more like a mat. Pose study only; reconcile prop silhouette with accepted tarp.,False
+R035,sheets/R02-cast-working.png,3,5,Mrs Leung,holding narrow door edge with foot,True,Visually plausible review candidate; not approved or production-validated.,False
+R036,sheets/R02-cast-working.png,4,1,Yan,hand at back of neck,False,Visually plausible review candidate; not approved or production-validated.,False
+R037,sheets/R02-cast-working.png,4,2,Kit,bent over projector on stool,False,Projector lens faces viewer. Pose study only; equipment must face screen in a production version.,False
+R038,sheets/R02-cast-working.png,4,3,Priya,cashbox placed on stool,False,Visually plausible review candidate; not approved or production-validated.,False
+R039,sheets/R02-cast-working.png,4,4,Tomás,"hands on hips, feet wide",False,Visually plausible review candidate; not approved or production-validated.,False
+R040,sheets/R02-cast-working.png,4,5,Mrs Leung,seated upright after work,False,Visually plausible review candidate; not approved or production-validated.,False
+R041,sheets/R03-cast-screenlight.png,1,1,Yan,standing with notebook low,True,Visually plausible review candidate; not approved or production-validated.,False
+R042,sheets/R03-cast-screenlight.png,1,2,Kit,"hood up, pockets, tilted shoulder",False,Visually plausible review candidate; not approved or production-validated.,False
+R043,sheets/R03-cast-screenlight.png,1,3,Priya,standing with cashbox handle,False,Visually plausible review candidate; not approved or production-validated.,False
+R044,sheets/R03-cast-screenlight.png,1,4,Tomás,"hands clasped behind, slight lean",True,Visually plausible review candidate; not approved or production-validated.,False
+R045,sheets/R03-cast-screenlight.png,1,5,Mrs Leung,"folded arms, square stance",False,Visually plausible review candidate; not approved or production-validated.,False
+R046,sheets/R03-cast-screenlight.png,2,1,Yan,"chair, forward lean",False,Visually plausible review candidate; not approved or production-validated.,False
+R047,sheets/R03-cast-screenlight.png,2,2,Kit,"chair, compact and hooded",False,Visually plausible review candidate; not approved or production-validated.,False
+R048,sheets/R03-cast-screenlight.png,2,3,Priya,"chair, leaned back elbow out",True,Visually plausible review candidate; not approved or production-validated.,False
+R049,sheets/R03-cast-screenlight.png,2,4,Tomás,"chair, forward perch, long legs",False,Visually plausible review candidate; not approved or production-validated.,False
+R050,sheets/R03-cast-screenlight.png,2,5,Mrs Leung,"chair, upright feet close",False,Visually plausible review candidate; not approved or production-validated.,False
+R051,sheets/R03-cast-screenlight.png,3,1,Yan,"floor, notebook across crossed legs",True,Visually plausible review candidate; not approved or production-validated.,False
+R052,sheets/R03-cast-screenlight.png,3,2,Kit,"floor, hooded and cross-legged",True,Visually plausible review candidate; not approved or production-validated.,False
+R053,sheets/R03-cast-screenlight.png,3,3,Priya,"floor, one supporting palm",False,Visually plausible review candidate; not approved or production-validated.,False
+R054,sheets/R03-cast-screenlight.png,3,4,Tomás,"floor, relaxed crossed legs",False,Visually plausible review candidate; not approved or production-validated.,False
+R055,sheets/R03-cast-screenlight.png,3,5,Mrs Leung,"floor, legs folded to side",True,Visually plausible review candidate; not approved or production-validated.,False
+R056,sheets/R03-cast-screenlight.png,4,1,Yan,quiet departure with notebook,False,Visually plausible review candidate; not approved or production-validated.,False
+R057,sheets/R03-cast-screenlight.png,4,2,Kit,"quiet departure, hands pocketed",False,Visually plausible review candidate; not approved or production-validated.,False
+R058,sheets/R03-cast-screenlight.png,4,3,Priya,quiet departure with cashbox,False,Visually plausible review candidate; not approved or production-validated.,False
+R059,sheets/R03-cast-screenlight.png,4,4,Tomás,"walking away, scarf down back",False,Visually plausible review candidate; not approved or production-validated.,False
+R060,sheets/R03-cast-screenlight.png,4,5,Mrs Leung,standing with hand on chair,True,Visually plausible review candidate; not approved or production-validated.,False
+A001,sheets/A01-folding-chair-audience.png,1,1,anonymous adult audience,"bob, narrow upright",False,Visually plausible review candidate; not approved or production-validated.,False
+A002,sheets/A01-folding-chair-audience.png,1,2,anonymous adult audience,"ponytail, leaning forward",True,Visually plausible review candidate; not approved or production-validated.,False
+A003,sheets/A01-folding-chair-audience.png,1,3,anonymous adult audience,"older grey waves, square upright",False,Visually plausible review candidate; not approved or production-validated.,False
+A004,sheets/A01-folding-chair-audience.png,1,4,anonymous adult audience,"short curls, slouch left",False,Visually plausible review candidate; not approved or production-validated.,False
+A005,sheets/A01-folding-chair-audience.png,1,5,anonymous adult audience,"low bun, crossed ankles",False,Visually plausible review candidate; not approved or production-validated.,False
+A006,sheets/A01-folding-chair-audience.png,1,6,anonymous adult audience,"hood down, front-edge seat",False,Visually plausible review candidate; not approved or production-validated.,False
+A007,sheets/A01-folding-chair-audience.png,2,1,anonymous adult audience,"long hair, head tipped back",False,Upturned head reveals face edge. Do not select for strict-rear production without correction.,False
+A008,sheets/A01-folding-chair-audience.png,2,2,anonymous adult audience,"short curls, elbow over chair",True,Visually plausible review candidate; not approved or production-validated.,False
+A009,sheets/A01-folding-chair-audience.png,2,3,anonymous adult audience,"beanie, tilted head",False,Visually plausible review candidate; not approved or production-validated.,False
+A010,sheets/A01-folding-chair-audience.png,2,4,anonymous adult audience,"broad older adult, hand on chair",True,Visually plausible review candidate; not approved or production-validated.,False
+A011,sheets/A01-folding-chair-audience.png,2,5,anonymous adult audience,"two braids, leaning forward",False,Visually plausible review candidate; not approved or production-validated.,False
+A012,sheets/A01-folding-chair-audience.png,2,6,anonymous adult audience,"bob, folded umbrella across lap",True,Visually plausible review candidate; not approved or production-validated.,False
+A013,sheets/A01-folding-chair-audience.png,3,1,anonymous adult audience,"short hair, tucked foot",True,Visually plausible review candidate; not approved or production-validated.,False
+A014,sheets/A01-folding-chair-audience.png,3,2,anonymous adult audience,"long braid, one leg crossed",False,Visually plausible review candidate; not approved or production-validated.,False
+A015,sheets/A01-folding-chair-audience.png,3,3,anonymous adult audience,"broad curls, feet apart",False,Visually plausible review candidate; not approved or production-validated.,False
+A016,sheets/A01-folding-chair-audience.png,3,4,anonymous adult audience,"grey ponytail, inclined shoulder",False,Head turn risks a facial profile. Do not select for strict-rear production without correction.,False
+A017,sheets/A01-folding-chair-audience.png,3,5,anonymous adult audience,"buzzcut, gripping seat edge",True,Visually plausible review candidate; not approved or production-validated.,False
+A018,sheets/A01-folding-chair-audience.png,3,6,anonymous adult audience,"ear-length waves, offset feet",False,Visually plausible review candidate; not approved or production-validated.,False
+A019,sheets/A01-folding-chair-audience.png,4,1,anonymous adult audience,"topknot, shoulder stretch",False,Visually plausible review candidate; not approved or production-validated.,False
+A020,sheets/A01-folding-chair-audience.png,4,2,anonymous adult audience,"cropped hair, high collar hunch",True,Visually plausible review candidate; not approved or production-validated.,False
+A021,sheets/A01-folding-chair-audience.png,4,3,anonymous adult audience,"gathered hair, elbows out",False,Visually plausible review candidate; not approved or production-validated.,False
+A022,sheets/A01-folding-chair-audience.png,4,4,anonymous adult audience,"older curls, upright feet close",False,Visually plausible review candidate; not approved or production-validated.,False
+A023,sheets/A01-folding-chair-audience.png,4,5,anonymous adult audience,"wool cap, lean left",False,Visually plausible review candidate; not approved or production-validated.,False
+A024,sheets/A01-folding-chair-audience.png,4,6,anonymous adult audience,"half-up hair, raised heel",True,Visually plausible review candidate; not approved or production-validated.,False
+A025,sheets/A02-floor-audience.png,1,1,anonymous adult audience,"bob, cross-legged hands on knees",True,Visually plausible review candidate; not approved or production-validated.,False
+A026,sheets/A02-floor-audience.png,1,2,anonymous adult audience,"ponytail, cross-legged leaning forward",False,Visually plausible review candidate; not approved or production-validated.,False
+A027,sheets/A02-floor-audience.png,1,3,anonymous adult audience,"older grey perm, side-folded legs",True,Visually plausible review candidate; not approved or production-validated.,False
+A028,sheets/A02-floor-audience.png,1,4,anonymous adult audience,"short curls, hugging knees",False,Visually plausible review candidate; not approved or production-validated.,False
+A029,sheets/A02-floor-audience.png,1,5,anonymous adult audience,"low bun, legs extended crossed ankles",False,Head angle and extended-leg anatomy merit close inspection before production.,False
+A030,sheets/A02-floor-audience.png,1,6,anonymous adult audience,"buzzcut, one knee raised",True,Visually plausible review candidate; not approved or production-validated.,False
+A031,sheets/A02-floor-audience.png,2,1,anonymous adult audience,"loose hair, back on hands",False,Visually plausible review candidate; not approved or production-validated.,False
+A032,sheets/A02-floor-audience.png,2,2,anonymous adult audience,"tight curls, wide cross-legged",False,Visually plausible review candidate; not approved or production-validated.,False
+A033,sheets/A02-floor-audience.png,2,3,anonymous adult audience,"beanie, one ankle tucked",False,Visually plausible review candidate; not approved or production-validated.,False
+A034,sheets/A02-floor-audience.png,2,4,anonymous adult audience,"broad older adult, hand at neck",True,Visually plausible review candidate; not approved or production-validated.,False
+A035,sheets/A02-floor-audience.png,2,5,anonymous adult audience,"braids, seated on heels",True,Visually plausible review candidate; not approved or production-validated.,False
+A036,sheets/A02-floor-audience.png,2,6,anonymous adult audience,"bob, half-kneeling side seat",False,Visually plausible review candidate; not approved or production-validated.,False
+A037,sheets/A02-floor-audience.png,3,1,anonymous adult audience,"short hair, knees hugged compact",True,Visually plausible review candidate; not approved or production-validated.,False
+A038,sheets/A02-floor-audience.png,3,2,anonymous adult audience,"long braid, legs folded right",True,Visually plausible review candidate; not approved or production-validated.,False
+A039,sheets/A02-floor-audience.png,3,3,anonymous adult audience,"broad waves, elbow on knee",False,Visually plausible review candidate; not approved or production-validated.,False
+A040,sheets/A02-floor-audience.png,3,4,anonymous adult audience,"grey ponytail, side-folded feet",False,Visually plausible review candidate; not approved or production-validated.,False
+A041,sheets/A02-floor-audience.png,3,5,anonymous adult audience,"buzzcut, long legs, hands behind",False,Visually plausible review candidate; not approved or production-validated.,False
+A042,sheets/A02-floor-audience.png,3,6,anonymous adult audience,"ear-length waves, one knee lifted",False,Visually plausible review candidate; not approved or production-validated.,False
+A043,sheets/A02-floor-audience.png,4,1,anonymous adult audience,"topknot, head tipped left",False,Visually plausible review candidate; not approved or production-validated.,False
+A044,sheets/A02-floor-audience.png,4,2,anonymous adult audience,"cropped hair, crouched on heels",True,Visually plausible review candidate; not approved or production-validated.,False
+A045,sheets/A02-floor-audience.png,4,3,anonymous adult audience,"gathered hair, loose cross-legged",False,Visually plausible review candidate; not approved or production-validated.,False
+A046,sheets/A02-floor-audience.png,4,4,anonymous adult audience,"older curls, side-folded legs",False,Visually plausible review candidate; not approved or production-validated.,False
+A047,sheets/A02-floor-audience.png,4,5,anonymous adult audience,"wool cap, one knee hugged",False,Visually plausible review candidate; not approved or production-validated.,False
+A048,sheets/A02-floor-audience.png,4,6,anonymous adult audience,"half-up hair, wide cross-legged",True,Visually plausible review candidate; not approved or production-validated.,False
+S001,sheets/S01-contact-shadow-studies.png,1,1,contact shadow,"standing, close feet",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S002,sheets/S01-contact-shadow-studies.png,1,2,contact shadow,"standing, wide feet",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S003,sheets/S01-contact-shadow-studies.png,1,3,contact shadow,"standing, narrow offset",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S004,sheets/S01-contact-shadow-studies.png,1,4,contact shadow,"standing, angled offset",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S005,sheets/S01-contact-shadow-studies.png,1,5,contact shadow,"standing, wide soft",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S006,sheets/S01-contact-shadow-studies.png,1,6,contact shadow,"standing, short compact",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S007,sheets/S01-contact-shadow-studies.png,2,1,contact shadow,"chair, square four contacts",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S008,sheets/S01-contact-shadow-studies.png,2,2,contact shadow,"chair, left perspective",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S009,sheets/S01-contact-shadow-studies.png,2,3,contact shadow,"chair, compact square",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S010,sheets/S01-contact-shadow-studies.png,2,4,contact shadow,"chair, right perspective",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S011,sheets/S01-contact-shadow-studies.png,2,5,contact shadow,"chair, wide soft",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S012,sheets/S01-contact-shadow-studies.png,2,6,contact shadow,"chair, angled perspective",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S013,sheets/S01-contact-shadow-studies.png,3,1,contact shadow,"floor-seat, broad center",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S014,sheets/S01-contact-shadow-studies.png,3,2,contact shadow,"floor-seat, right lobe",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S015,sheets/S01-contact-shadow-studies.png,3,3,contact shadow,"floor-seat, low narrow",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S016,sheets/S01-contact-shadow-studies.png,3,4,contact shadow,"floor-seat, left lobe",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S017,sheets/S01-contact-shadow-studies.png,3,5,contact shadow,"floor-seat, shallow spread",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S018,sheets/S01-contact-shadow-studies.png,3,6,contact shadow,"floor-seat, soft centered",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S019,sheets/S01-contact-shadow-studies.png,4,1,contact shadow,"kneeling, three contacts",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S020,sheets/S01-contact-shadow-studies.png,4,2,contact shadow,"kneeling, compact spread",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S021,sheets/S01-contact-shadow-studies.png,4,3,contact shadow,"kneeling, offset cluster",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S022,sheets/S01-contact-shadow-studies.png,4,4,contact shadow,"kneeling, long right anchor",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S023,sheets/S01-contact-shadow-studies.png,4,5,contact shadow,"kneeling, broad shallow",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False
+S024,sheets/S01-contact-shadow-studies.png,4,6,contact shadow,"kneeling, asymmetric four anchors",False,Exploratory shape only; actual alpha verified but grey pigment fails black-only requirement. Must be regenerated/cleaned and individually delivered before production.,False

@@ -1,0 +1,98 @@
+[
+  {
+    "source_png": "sheets/E01-E12-after-rain.png",
+    "review_webp": "sheets/E01-E12-after-rain.webp",
+    "size": 478016,
+    "size_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "2c981aaf42dff1aa864debf9437542ce8dfacb77e1b162f8d1677e522aa32866",
+    "sha256": "31daf923c1da8b3df088a371ce437ab6438f2a6b10a33c92b108414a7d7b135f",
+    "git_sha": "14a4676f5e81ab9422ab489df743958af6d361df"
+  },
+  {
+    "source_png": "sheets/E13-E24-storm.png",
+    "review_webp": "sheets/E13-E24-storm.webp",
+    "size": 458418,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "774eeb0af1df288ec5c4981df95af7ad58d705a853bc9348d2c6a81958fe1d42",
+    "sha256": "f00137799d301682244996ebb85e37564dbd041ea11786a0a10c49f78a8cb88c",
+    "git_sha": "2af8912a04a8fc856689a3bb6a6d3f55af00d233"
+  },
+  {
+    "source_png": "sheets/E25-E36-dusk-daybreak.png",
+    "review_webp": "sheets/E25-E36-dusk-daybreak.webp",
+    "size": 451314,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "f0c2a71afa62c692071728388b57d1577753b81c57db2a5c2bfa30e2ccfc5bab",
+    "sha256": "f27b13df983bee7bdf226e31df03f2aad28fa4a3fe12e07911b22bd965a38756",
+    "git_sha": "19f7089318dfb7c24303b27f5b03406086b0fd80"
+  },
+  {
+    "source_png": "sheets/E37-E48-common-room.png",
+    "review_webp": "sheets/E37-E48-common-room.webp",
+    "size": 516144,
+    "size_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "449d263a2e7472c5d1f692cfefaf4ab519b39781a6f826519289092d9129d902",
+    "sha256": "7381fd211f619265146bb5dbb51eef48acfee3460034609770a322d1c8f58af2",
+    "git_sha": "aabc9473ce77248e45c9c847c713570c1079c110"
+  },
+  {
+    "source_png": "sheets/E49-E60-corridor-door.png",
+    "review_webp": "sheets/E49-E60-corridor-door.webp",
+    "size": 540634,
+    "size_px": [
+      1024,
+      1536
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "f915221ea419760d84d657d2748c4a78f82e249fa1bca65c577cdf4ff9a66c29",
+    "sha256": "2d01b98dff58b79e99defa099a1e65f9cda531be59514963cb697abe4db84d24",
+    "git_sha": "f52274f4b1bcb39cb0d03328ae172111c451f94b"
+  },
+  {
+    "source_png": "sheets/E61-E72-between-scenes.png",
+    "review_webp": "sheets/E61-E72-between-scenes.webp",
+    "size": 478854,
+    "size_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "703d3d6efcfda160d3dd8bd4380d4be56d53b5b465a977e8272802c2656160cb",
+    "sha256": "5fe219c53dba06065afda81fba839535292162b6d1bb2cc9914e15d7660807f2",
+    "git_sha": "2b972298e1557c51d8e50c6f6c60a66cf05e821c"
+  }
+]

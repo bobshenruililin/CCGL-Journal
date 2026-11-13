@@ -1,0 +1,122 @@
+[
+  {
+    "file": "sheets/P01-projector-tools.png",
+    "mode": "RGBA",
+    "width": 1254,
+    "height": 1254,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "transparent_pct": 42.796,
+    "alpha_gt16_pct": 44.246,
+    "border_mean_alpha": 0.045,
+    "visible_rgb_max": 255,
+    "visible_nonblack_pct": 100.0
+  },
+  {
+    "file": "sheets/P02-furniture-screen.png",
+    "mode": "RGBA",
+    "width": 1254,
+    "height": 1254,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "transparent_pct": 0.285,
+    "alpha_gt16_pct": 34.952,
+    "border_mean_alpha": 3.251,
+    "visible_rgb_max": 255,
+    "visible_nonblack_pct": 100.0
+  },
+  {
+    "file": "sheets/P03-pocket-objects.png",
+    "mode": "RGBA",
+    "width": 1254,
+    "height": 1254,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "transparent_pct": 46.108,
+    "alpha_gt16_pct": 38.186,
+    "border_mean_alpha": 0.034,
+    "visible_rgb_max": 255,
+    "visible_nonblack_pct": 100.0
+  },
+  {
+    "file": "sheets/P04-ephemera.png",
+    "mode": "RGBA",
+    "width": 1261,
+    "height": 1247,
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "transparent_pct": 32.106,
+    "alpha_gt16_pct": 56.522,
+    "border_mean_alpha": 0.068,
+    "visible_rgb_max": 255,
+    "visible_nonblack_pct": 100.0
+  },
+  {
+    "file": "sheets/P05-material-swatches.png",
+    "mode": "RGB",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "file": "sheets/P06-contact-shadows.png",
+    "mode": "RGBA",
+    "width": 1254,
+    "height": 1254,
+    "alpha_min": 0,
+    "alpha_max": 247,
+    "transparent_pct": 57.507,
+    "alpha_gt16_pct": 9.56,
+    "border_mean_alpha": 0.178,
+    "visible_rgb_max": 63,
+    "visible_nonblack_pct": 100.0
+  },
+  {
+    "file": "surfaces/P07-paper-cream.png",
+    "mode": "RGB",
+    "width": 1254,
+    "height": 1254,
+    "tile_checks": {
+      "horizontal_edge_mean_absolute_difference": 2.485,
+      "vertical_edge_mean_absolute_difference": 2.718,
+      "interior_horizontal_adjacent_mean_absolute_difference": 1.711,
+      "interior_vertical_adjacent_mean_absolute_difference": 2.409
+    }
+  },
+  {
+    "file": "surfaces/P08-cloth-navy.png",
+    "mode": "RGB",
+    "width": 1254,
+    "height": 1254,
+    "tile_checks": {
+      "horizontal_edge_mean_absolute_difference": 6.572,
+      "vertical_edge_mean_absolute_difference": 7.969,
+      "interior_horizontal_adjacent_mean_absolute_difference": 6.005,
+      "interior_vertical_adjacent_mean_absolute_difference": 7.832
+    }
+  },
+  {
+    "file": "surfaces/P09-kraft-paper.png",
+    "mode": "RGB",
+    "width": 1254,
+    "height": 1254,
+    "tile_checks": {
+      "horizontal_edge_mean_absolute_difference": 4.83,
+      "vertical_edge_mean_absolute_difference": 4.936,
+      "interior_horizontal_adjacent_mean_absolute_difference": 3.028,
+      "interior_vertical_adjacent_mean_absolute_difference": 4.146
+    }
+  },
+  {
+    "file": "surfaces/P10-masking-tape-strip.png",
+    "mode": "RGBA",
+    "width": 1536,
+    "height": 1024,
+    "alpha_min": 0,
+    "alpha_max": 254,
+    "transparent_pct": 82.384,
+    "alpha_gt16_pct": 16.23,
+    "border_mean_alpha": 0.0,
+    "visible_rgb_max": 255,
+    "visible_nonblack_pct": 100.0
+  }
+]

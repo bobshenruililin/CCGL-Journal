@@ -1,0 +1,517 @@
+{
+  "title": "Six Flights environment and lighting candidate library",
+  "created_date": "2026-11-13",
+  "tool": "Built-in OpenAI image generation",
+  "model_version": null,
+  "seed": null,
+  "status": "visual_development_not_production_ready",
+  "unique_panel_candidates": 72,
+  "native_sheet_files": 6,
+  "isolated_production_assets": 0,
+  "count_rule": "Each labeled painted panel is one atmosphere, composition or narrative-state candidate. References, prompts, formats and archive not counted.",
+  "sources": [
+    "https://github.com/bobshenruililin/CCGL-Journal/blob/main/coordination/requests/08-art-direction-after-exploration.md",
+    "https://github.com/bobshenruililin/CCGL-Journal/blob/main/coordination/requests/09-people-objects-and-details.md",
+    "https://github.com/bobshenruililin/CCGL-Journal/blob/main/coordination/requests/11-final-pass-missing-files.md"
+  ],
+  "sheets": [
+    {
+      "file": "sheets/E01-E12-after-rain.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "bytes": 2635704,
+      "sha256": "2c981aaf42dff1aa864debf9437542ce8dfacb77e1b162f8d1677e522aa32866",
+      "candidate_count": 12,
+      "prompt_file": "prompts/E01-E12.txt"
+    },
+    {
+      "file": "sheets/E13-E24-storm.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "bytes": 2595315,
+      "sha256": "774eeb0af1df288ec5c4981df95af7ad58d705a853bc9348d2c6a81958fe1d42",
+      "candidate_count": 12,
+      "prompt_file": "prompts/E13-E24.txt"
+    },
+    {
+      "file": "sheets/E25-E36-dusk-daybreak.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "bytes": 2540785,
+      "sha256": "f0c2a71afa62c692071728388b57d1577753b81c57db2a5c2bfa30e2ccfc5bab",
+      "candidate_count": 12,
+      "prompt_file": "prompts/E25-E36.txt"
+    },
+    {
+      "file": "sheets/E37-E48-common-room.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "bytes": 2725150,
+      "sha256": "449d263a2e7472c5d1f692cfefaf4ab519b39781a6f826519289092d9129d902",
+      "candidate_count": 12,
+      "prompt_file": "prompts/E37-E48.txt"
+    },
+    {
+      "file": "sheets/E49-E60-corridor-door.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "bytes": 2785418,
+      "sha256": "f915221ea419760d84d657d2748c4a78f82e249fa1bca65c577cdf4ff9a66c29",
+      "candidate_count": 12,
+      "prompt_file": "prompts/E49-E60.txt"
+    },
+    {
+      "file": "sheets/E61-E72-between-scenes.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "bytes": 2652490,
+      "sha256": "703d3d6efcfda160d3dd8bd4380d4be56d53b5b465a977e8272802c2656160cb",
+      "candidate_count": 12,
+      "prompt_file": "prompts/E61-E72.txt"
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "E01",
+      "family": "after_rain",
+      "description": "Low silver cloud breaks left",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E02",
+      "family": "after_rain",
+      "description": "Cloud seam opening above screen",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E03",
+      "family": "after_rain",
+      "description": "Late dark cloud lid, city diminished",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E04",
+      "family": "after_rain",
+      "description": "Clearing from right, harbour haze",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E05",
+      "family": "after_rain",
+      "description": "Moon behind high cloud, diffuse sky",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E06",
+      "family": "after_rain",
+      "description": "Receding indigo storm masses",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E07",
+      "family": "after_rain",
+      "description": "Low fog between towers",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E08",
+      "family": "after_rain",
+      "description": "Clear sparse stars, near-dry concrete",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E09",
+      "family": "after_rain",
+      "description": "Thin pre-dawn horizon",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E10",
+      "family": "after_rain",
+      "description": "Horizontal night clouds",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E11",
+      "family": "after_rain",
+      "description": "Calm slate overcast, windows quiet",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E12",
+      "family": "after_rain",
+      "description": "Luminous cloud rim behind screen",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E13",
+      "family": "storm",
+      "description": "Low descending cloud shelf",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E14",
+      "family": "storm",
+      "description": "Dark bulge upper-left, silver opening right",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E15",
+      "family": "storm",
+      "description": "Mountain haze swallows city",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E16",
+      "family": "storm",
+      "description": "Diagonal advancing storm front",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E17",
+      "family": "storm",
+      "description": "Cloud ceiling with left opening",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E18",
+      "family": "storm",
+      "description": "Horizontal layered slate bands",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E19",
+      "family": "storm",
+      "description": "High cloud glow above screen",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E20",
+      "family": "storm",
+      "description": "Graphite overcast, dark city",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E21",
+      "family": "storm",
+      "description": "Pale cloud wall behind right skyline",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E22",
+      "family": "storm",
+      "description": "Broken wind-torn cloud shapes",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E23",
+      "family": "storm",
+      "description": "Thinning sky right, dark cloud left",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E24",
+      "family": "storm",
+      "description": "Nightfall and massive navy clouds",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E25",
+      "family": "dusk_daybreak",
+      "description": "Soft violet-apricot early dusk",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E26",
+      "family": "dusk_daybreak",
+      "description": "Low last sun, apricot horizon",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E27",
+      "family": "dusk_daybreak",
+      "description": "Plain slate sky with right clouds",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E28",
+      "family": "dusk_daybreak",
+      "description": "Rosy-grey after-sunset strip",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E29",
+      "family": "dusk_daybreak",
+      "description": "Late warmth receding right",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E30",
+      "family": "dusk_daybreak",
+      "description": "First windows, mauve-grey clouds",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E31",
+      "family": "dusk_daybreak",
+      "description": "Indigo pre-dawn",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E32",
+      "family": "dusk_daybreak",
+      "description": "Misty Saturday with long shadows",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E33",
+      "family": "dusk_daybreak",
+      "description": "Clear ivory-sky dawn",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E34",
+      "family": "dusk_daybreak",
+      "description": "Soft overcast dry morning",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E35",
+      "family": "dusk_daybreak",
+      "description": "Sunrise behind cloud",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E36",
+      "family": "dusk_daybreak",
+      "description": "Later morning, dried puddles",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E37",
+      "family": "common_room",
+      "description": "Shallow wide room, taut sheet",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E38",
+      "family": "common_room",
+      "description": "Tall room, narrow left window",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E39",
+      "family": "common_room",
+      "description": "Structural beam, wide sheet",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E40",
+      "family": "common_room",
+      "description": "Patched plaster, pinched sheet corners",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E41",
+      "family": "common_room",
+      "description": "Long room, low eye level",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E42",
+      "family": "common_room",
+      "description": "Wider left wall, dark window",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E43",
+      "family": "common_room",
+      "description": "Paired tall panes, raised sheet",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E44",
+      "family": "common_room",
+      "description": "Deep right doorway recess",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E45",
+      "family": "common_room",
+      "description": "Elevated deep-room view",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E46",
+      "family": "common_room",
+      "description": "Small room and stout window sill",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E47",
+      "family": "common_room",
+      "description": "Five sheet pins and wall skirting",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E48",
+      "family": "common_room",
+      "description": "Deep late-night tonal quiet",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E49",
+      "family": "corridor_door",
+      "description": "Front close shut door",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E50",
+      "family": "corridor_door",
+      "description": "Front close open empty door",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E51",
+      "family": "corridor_door",
+      "description": "Oblique right-wall shut door",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E52",
+      "family": "corridor_door",
+      "description": "Oblique right-wall open door",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E53",
+      "family": "corridor_door",
+      "description": "Low view shut door with transom",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E54",
+      "family": "corridor_door",
+      "description": "Low view open door with transom",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E55",
+      "family": "corridor_door",
+      "description": "Corner landing shut door",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E56",
+      "family": "corridor_door",
+      "description": "Corner landing open door",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E57",
+      "family": "corridor_door",
+      "description": "Long corridor left shut door",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E58",
+      "family": "corridor_door",
+      "description": "Long corridor left open door",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E59",
+      "family": "corridor_door",
+      "description": "Frontal shallow-alcove shut door",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E60",
+      "family": "corridor_door",
+      "description": "Frontal shallow-alcove open door",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E61",
+      "family": "between_scenes",
+      "description": "Frontal tall-window landing",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E62",
+      "family": "between_scenes",
+      "description": "Three-quarter landing, upper flight",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E63",
+      "family": "between_scenes",
+      "description": "Narrow landing from steps",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E64",
+      "family": "between_scenes",
+      "description": "Upper-stair view down to landing",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E65",
+      "family": "between_scenes",
+      "description": "Long rail to tall end window",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E66",
+      "family": "between_scenes",
+      "description": "Side window with open landing",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E67",
+      "family": "between_scenes",
+      "description": "1:40 am room, far-left table",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E68",
+      "family": "between_scenes",
+      "description": "Low side view, table right",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E69",
+      "family": "between_scenes",
+      "description": "Doorway view into empty testing room",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E70",
+      "family": "between_scenes",
+      "description": "Near-left table crop, large blank wall",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E71",
+      "family": "between_scenes",
+      "description": "Higher corner view, table side",
+      "status": "concept_not_production_ready"
+    },
+    {
+      "candidate_id": "E72",
+      "family": "between_scenes",
+      "description": "Symmetrical room and central table",
+      "status": "concept_not_production_ready"
+    }
+  ],
+  "production_rectangle_measurements": null,
+  "integration_changes": false,
+  "github_changes": false,
+  "deployment_changes": false
+}

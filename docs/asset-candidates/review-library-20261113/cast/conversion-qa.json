@@ -1,0 +1,101 @@
+[
+  {
+    "source_png": "sheets/A01-folding-chair-audience.png",
+    "review_webp": "sheets/A01-folding-chair-audience.webp",
+    "size": 243514,
+    "size_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "34aaabe6a21be21bf26f23f1a640481b6de4939865c2b8a0e2f2d42c9070418f",
+    "sha256": "e156a36a5d79fd86d64b1f497d4ad3f100aa793f40aed5daacdf2e0efc34a506",
+    "git_sha": "8336205aff01c9366b2fa4fcbff61f557143b704"
+  },
+  {
+    "source_png": "sheets/A02-floor-audience.png",
+    "review_webp": "sheets/A02-floor-audience.webp",
+    "size": 259322,
+    "size_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "490487284b59ef15fd2841a6fac1f0f84d73cad610d033f3ed6bdd4d84d7f8bb",
+    "sha256": "620e61ab48ad6bd20b50ba6cfdebb24cde48c01d0af24524b26bd85d4895076d",
+    "git_sha": "bbdf882980f0a2897aca4eec97ccc2c6ba9a544f"
+  },
+  {
+    "source_png": "sheets/R01-cast-waiting.png",
+    "review_webp": "sheets/R01-cast-waiting.webp",
+    "size": 178658,
+    "size_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "1249684e4e7893862a18b7ea3a9aff43559f102f92561e652171fb799ab4c230",
+    "sha256": "1cce0a59ac5491c5ca7317ec2c2e3103bd7c1c427e10d4eb6a9c7f7378c13fb3",
+    "git_sha": "0a0add8661375eaf5864f12d3853f2635f2426fc"
+  },
+  {
+    "source_png": "sheets/R02-cast-working.png",
+    "review_webp": "sheets/R02-cast-working.webp",
+    "size": 201302,
+    "size_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "aa2c81f227a1754657f68aa8d75a4f12b2de47862ed5ea422b68dc18d07d5d5c",
+    "sha256": "e340ccd06e2a890e8026b415f341b303c1b7399ebf768f8512695300c41cca6a",
+    "git_sha": "2b74db1f47f7caee025e23bb43ada3f40d635b27"
+  },
+  {
+    "source_png": "sheets/R03-cast-screenlight.png",
+    "review_webp": "sheets/R03-cast-screenlight.webp",
+    "size": 160264,
+    "size_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "a99eabaf445db647a0ba3940171ba6702e3f5ec6d9fdf11c833f3b7d0fb4a5ba",
+    "sha256": "71e08ec16bb2a3d733e8b53ec2687755fbaccd2c15ea04d23f884d5261e1225a",
+    "git_sha": "b70d236d36515a2bb5e4411986e2d0e28c969b9e"
+  },
+  {
+    "source_png": "sheets/S01-contact-shadow-studies.png",
+    "review_webp": "sheets/S01-contact-shadow-studies.webp",
+    "size": 273238,
+    "size_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "quality": 95,
+    "alpha": [
+      0,
+      253
+    ],
+    "exact_alpha_verified": true,
+    "source_sha256": "8739fa2e2fc671146b4daadb8c79af7fbf8c018ef8c3a5121c32a1aa69ed0ba5",
+    "sha256": "22b21445b7309a1c7cdabf65c2b106c60d2e62098a59830d6f87824beaacf558",
+    "git_sha": "15befa02a43f77b33b77609807be62ba2f0cbe85"
+  }
+]

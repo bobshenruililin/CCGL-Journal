@@ -1,0 +1,20 @@
+Use case: stylized-concept.
+Create an art-director's visual-development contact sheet for SIX FLIGHTS, twelve genuinely distinct rooftop AFTER-RAIN and NIGHT-ENDING environment studies. This is exploratory art, NOT production-ready.
+Layout: 3 columns × 4 rows, twelve separate equal 3:2 landscape panels, thin cream gutters and a small cream caption under every panel. Large native canvas, enough painted detail to judge every thumbnail. Title outside paintings: "SIX FLIGHTS / ENVIRONMENT STUDIES 01 / AFTER RAIN". Labels only: E01 through E12.
+Reference image: A3 gouache roof, use as the STRICT style-and-geography reference. Same front-facing blank dark screen at x33–66%, y20–48%; same cylindrical water tank left, small stair-head door right, low parapet and dense Hong Kong harbour-city skyline behind. Preserve identifiable same roof across every panel. Remove tarp, tarp poles and ropes in all twelve. Lower 45% in every panel remains evenly dark, empty concrete for live figures and handwriting. A few long DARK puddles only, no specular reflections or light pools.
+Style: tactile gouache and a little ink on warm cream notebook paper, beautifully observed but unpretentious student sketchbook, soft uneven edges, visible pooled washes, chalky brushwork, underdrawing, ragged painted boundaries. Matte illustrative, never glossy, never cinematic 3D render. Limited deep indigo, slate, muted olive-grey, paper cream. No areas of cobalt, vermilion, marigold, plum, umber or teal. Distant tiny ivory windows may exist.
+Twelve different compositions of ATMOSPHERE, not camera or geography:
+E01 rain just stopped, low silver cloud breaks on far left.
+E02 cloud seam opening above screen with quiet lighter slate strip.
+E03 very late night, thick cloud lid, city almost extinguished.
+E04 clearing from right, pale distant harbour haze under darker sky.
+E05 high moon hidden behind cloud left, diffuse sky only, no floor glow.
+E06 heavy indigo clouds recede to distant mountains.
+E07 low fog between towers, rooftops visible above it.
+E08 clear velvet night with sparse tiny stars, almost dry concrete.
+E09 dawn approaching as very thin grey horizon, overhead still dark.
+E10 deep night with soft horizontal clouds and strong skyline silhouette.
+E11 slate overcast calm, most windows off, narrow dark puddles.
+E12 luminous cloud rim far behind the screen, all foreground uniform dark.
+Do not use color-tinted duplicates: cloud masses and atmospheric depth must be clearly different in all twelve.
+Hard constraints inside all plates: NO people, characters, faces, chairs, projectors, cords, bulbs, string lights, rain streaks, film, text, lettering, numbers, light beams or bright floor reflections. Blank unlit DARK screen only. Do not add props or live layers. No dramatic orange or blue cinematic grading. Caption lettering lives ONLY in gutters.

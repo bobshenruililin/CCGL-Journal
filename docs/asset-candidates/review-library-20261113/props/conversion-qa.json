@@ -1,0 +1,180 @@
+[
+  {
+    "source_png": "sheets/P01-projector-tools.png",
+    "review_webp": "sheets/P01-projector-tools.webp",
+    "size": 608326,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "quality": 95,
+    "alpha": [
+      0,
+      255
+    ],
+    "exact_alpha_verified": true,
+    "source_sha256": "0969a64c3fa408d59894e41f859a693cbc05982097680a25b4072dcd32c5d1c0",
+    "sha256": "6025e52d0bd7426edb49090d9029422f7a8ef4e641d33beaef9b72e4a5a039e3",
+    "git_sha": "2a2b2b2a1bdb9fa4fb098d010961ff1032399f41"
+  },
+  {
+    "source_png": "sheets/P02-furniture-screen.png",
+    "review_webp": "sheets/P02-furniture-screen.webp",
+    "size": 991268,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "quality": 95,
+    "alpha": [
+      0,
+      255
+    ],
+    "exact_alpha_verified": true,
+    "source_sha256": "2b7192f148497b47338bfac947075689f79fc7bc336d1a7c083245e335487ffb",
+    "sha256": "05d4046497b1a49df881584e5404725428246649a2e56672eed68cbfa110f4e4",
+    "git_sha": "7551b4afb0e5472af79e5d3714d89f1b86237ca4"
+  },
+  {
+    "source_png": "sheets/P03-pocket-objects.png",
+    "review_webp": "sheets/P03-pocket-objects.webp",
+    "size": 575942,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "quality": 95,
+    "alpha": [
+      0,
+      255
+    ],
+    "exact_alpha_verified": true,
+    "source_sha256": "c83af06f91fe61f0923904a94d88af85182a474016650b8319b86665c5b2eccf",
+    "sha256": "805af1e6206432e6af0683ab33fafa5ac13f9bb18cdefc56e15c860ea3849f10",
+    "git_sha": "abaf9fbc0705efe8e4855c8879582604259f1abf"
+  },
+  {
+    "source_png": "sheets/P04-ephemera.png",
+    "review_webp": "sheets/P04-ephemera.webp",
+    "size": 565950,
+    "size_px": [
+      1261,
+      1247
+    ],
+    "mode": "RGBA",
+    "quality": 95,
+    "alpha": [
+      0,
+      255
+    ],
+    "exact_alpha_verified": true,
+    "source_sha256": "700127cc0861883f7ed7274180d34c0df4bb0b625715fa6e9f7b818cbaa25d30",
+    "sha256": "6678c21cdbb9360819ae26e38b1847531383d3862ab3e52b952c022925f0c6ea",
+    "git_sha": "4257380d4bf2b17d1523dff8993569d14c15d7ee"
+  },
+  {
+    "source_png": "sheets/P05-material-swatches.png",
+    "review_webp": "sheets/P05-material-swatches.webp",
+    "size": 644462,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "4a0a56d90a3d655926c3a6b11c8371beecd7800b6a3b23e8ba3a80a020f51dc1",
+    "sha256": "c9d88eeae4278f11b6850a895a8a946322b3248bdc7cc7bf421b5eda567c13e6",
+    "git_sha": "096cd3506e3391af0fdd59e866f9577a5d7ecea5"
+  },
+  {
+    "source_png": "sheets/P06-contact-shadows.png",
+    "review_webp": "sheets/P06-contact-shadows.webp",
+    "size": 294562,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "quality": 95,
+    "alpha": [
+      0,
+      247
+    ],
+    "exact_alpha_verified": true,
+    "source_sha256": "bb217c35ce97654dc4c9f7a95afbcea566930fd81a3dbcb7c2b77705f80062a3",
+    "sha256": "51a98161f8aab51d4dc5138d53821c97724b9ad61a23f003a7b983edaf1e7771",
+    "git_sha": "5b7881bd76f4548645771f750198199a0b260b86"
+  },
+  {
+    "source_png": "surfaces/P07-paper-cream.png",
+    "review_webp": "surfaces/P07-paper-cream.webp",
+    "size": 244336,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "c2ad4323e5407b8c083dc8f7359e6599b7df9b8c869ec23a9ac1bd5797195eea",
+    "sha256": "72889357b7d2243940d21f4210ef241a178b5411660e72dda0575991cc63df03",
+    "git_sha": "f831841aff50b8dd0c87c185002f9a9a256421c0"
+  },
+  {
+    "source_png": "surfaces/P08-cloth-navy.png",
+    "review_webp": "surfaces/P08-cloth-navy.webp",
+    "size": 596216,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "02afdc75da3451b5e97871fd4dfaa1f6f2dea1b57d6ad9c6829c795a9f7de550",
+    "sha256": "17a707ce53b26d82bb470bb3b6793925d5693d6d0d10c2b3bd82cf8e075b62ae",
+    "git_sha": "ba8964086f14709ff11821a14ac187ec21b0ab5a"
+  },
+  {
+    "source_png": "surfaces/P09-kraft-paper.png",
+    "review_webp": "surfaces/P09-kraft-paper.webp",
+    "size": 432812,
+    "size_px": [
+      1254,
+      1254
+    ],
+    "mode": "RGB",
+    "quality": 95,
+    "alpha": null,
+    "exact_alpha_verified": false,
+    "source_sha256": "110b2cdf06e6f68e2666a8303d7ec70875b6db52e55c8111d75f434a6417543a",
+    "sha256": "d3c67dd5ddf190e118686829fd4172193b206deea78ed93d3678e0753bb4a19c",
+    "git_sha": "761abc69952ea17899703889716f87a024e0b35c"
+  },
+  {
+    "source_png": "surfaces/P10-masking-tape-strip.png",
+    "review_webp": "surfaces/P10-masking-tape-strip.webp",
+    "size": 119146,
+    "size_px": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "quality": 95,
+    "alpha": [
+      0,
+      254
+    ],
+    "exact_alpha_verified": true,
+    "source_sha256": "edb94c5951f571473d8b42521d4c5d10537be79d7a9a3d64f2161628b3e1483b",
+    "sha256": "0b44f56901d4dc77861fe9c3f2a4d75cc3238fe6aa1ba2b4086f4f27a28a8667",
+    "git_sha": "31716276cee1e1cbf0c664d66b1752f2a448ea88"
+  }
+]

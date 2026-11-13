@@ -1,0 +1,400 @@
+{
+  "status": "Review derivatives only; no production approval",
+  "files": [
+    {
+      "path": "docs/asset-candidates/review-library-20261113/cast/sheets/A01-folding-chair-audience.webp",
+      "source_png": "sheets/A01-folding-chair-audience.png",
+      "review_webp": "sheets/A01-folding-chair-audience.webp",
+      "size": 243514,
+      "size_px": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "34aaabe6a21be21bf26f23f1a640481b6de4939865c2b8a0e2f2d42c9070418f",
+      "sha256": "e156a36a5d79fd86d64b1f497d4ad3f100aa793f40aed5daacdf2e0efc34a506",
+      "git_sha": "8336205aff01c9366b2fa4fcbff61f557143b704"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/cast/sheets/A02-floor-audience.webp",
+      "source_png": "sheets/A02-floor-audience.png",
+      "review_webp": "sheets/A02-floor-audience.webp",
+      "size": 259322,
+      "size_px": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "490487284b59ef15fd2841a6fac1f0f84d73cad610d033f3ed6bdd4d84d7f8bb",
+      "sha256": "620e61ab48ad6bd20b50ba6cfdebb24cde48c01d0af24524b26bd85d4895076d",
+      "git_sha": "bbdf882980f0a2897aca4eec97ccc2c6ba9a544f"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/cast/sheets/R01-cast-waiting.webp",
+      "source_png": "sheets/R01-cast-waiting.png",
+      "review_webp": "sheets/R01-cast-waiting.webp",
+      "size": 178658,
+      "size_px": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "1249684e4e7893862a18b7ea3a9aff43559f102f92561e652171fb799ab4c230",
+      "sha256": "1cce0a59ac5491c5ca7317ec2c2e3103bd7c1c427e10d4eb6a9c7f7378c13fb3",
+      "git_sha": "0a0add8661375eaf5864f12d3853f2635f2426fc"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/cast/sheets/R02-cast-working.webp",
+      "source_png": "sheets/R02-cast-working.png",
+      "review_webp": "sheets/R02-cast-working.webp",
+      "size": 201302,
+      "size_px": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "aa2c81f227a1754657f68aa8d75a4f12b2de47862ed5ea422b68dc18d07d5d5c",
+      "sha256": "e340ccd06e2a890e8026b415f341b303c1b7399ebf768f8512695300c41cca6a",
+      "git_sha": "2b74db1f47f7caee025e23bb43ada3f40d635b27"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/cast/sheets/R03-cast-screenlight.webp",
+      "source_png": "sheets/R03-cast-screenlight.png",
+      "review_webp": "sheets/R03-cast-screenlight.webp",
+      "size": 160264,
+      "size_px": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "a99eabaf445db647a0ba3940171ba6702e3f5ec6d9fdf11c833f3b7d0fb4a5ba",
+      "sha256": "71e08ec16bb2a3d733e8b53ec2687755fbaccd2c15ea04d23f884d5261e1225a",
+      "git_sha": "b70d236d36515a2bb5e4411986e2d0e28c969b9e"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/cast/sheets/S01-contact-shadow-studies.webp",
+      "source_png": "sheets/S01-contact-shadow-studies.png",
+      "review_webp": "sheets/S01-contact-shadow-studies.webp",
+      "size": 273238,
+      "size_px": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "quality": 95,
+      "alpha": [
+        0,
+        253
+      ],
+      "exact_alpha_verified": true,
+      "source_sha256": "8739fa2e2fc671146b4daadb8c79af7fbf8c018ef8c3a5121c32a1aa69ed0ba5",
+      "sha256": "22b21445b7309a1c7cdabf65c2b106c60d2e62098a59830d6f87824beaacf558",
+      "git_sha": "15befa02a43f77b33b77609807be62ba2f0cbe85"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/environment/sheets/E01-E12-after-rain.webp",
+      "source_png": "sheets/E01-E12-after-rain.png",
+      "review_webp": "sheets/E01-E12-after-rain.webp",
+      "size": 478016,
+      "size_px": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "2c981aaf42dff1aa864debf9437542ce8dfacb77e1b162f8d1677e522aa32866",
+      "sha256": "31daf923c1da8b3df088a371ce437ab6438f2a6b10a33c92b108414a7d7b135f",
+      "git_sha": "14a4676f5e81ab9422ab489df743958af6d361df"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/environment/sheets/E13-E24-storm.webp",
+      "source_png": "sheets/E13-E24-storm.png",
+      "review_webp": "sheets/E13-E24-storm.webp",
+      "size": 458418,
+      "size_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "774eeb0af1df288ec5c4981df95af7ad58d705a853bc9348d2c6a81958fe1d42",
+      "sha256": "f00137799d301682244996ebb85e37564dbd041ea11786a0a10c49f78a8cb88c",
+      "git_sha": "2af8912a04a8fc856689a3bb6a6d3f55af00d233"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/environment/sheets/E25-E36-dusk-daybreak.webp",
+      "source_png": "sheets/E25-E36-dusk-daybreak.png",
+      "review_webp": "sheets/E25-E36-dusk-daybreak.webp",
+      "size": 451314,
+      "size_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "f0c2a71afa62c692071728388b57d1577753b81c57db2a5c2bfa30e2ccfc5bab",
+      "sha256": "f27b13df983bee7bdf226e31df03f2aad28fa4a3fe12e07911b22bd965a38756",
+      "git_sha": "19f7089318dfb7c24303b27f5b03406086b0fd80"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/environment/sheets/E37-E48-common-room.webp",
+      "source_png": "sheets/E37-E48-common-room.png",
+      "review_webp": "sheets/E37-E48-common-room.webp",
+      "size": 516144,
+      "size_px": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "449d263a2e7472c5d1f692cfefaf4ab519b39781a6f826519289092d9129d902",
+      "sha256": "7381fd211f619265146bb5dbb51eef48acfee3460034609770a322d1c8f58af2",
+      "git_sha": "aabc9473ce77248e45c9c847c713570c1079c110"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/environment/sheets/E49-E60-corridor-door.webp",
+      "source_png": "sheets/E49-E60-corridor-door.png",
+      "review_webp": "sheets/E49-E60-corridor-door.webp",
+      "size": 540634,
+      "size_px": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "f915221ea419760d84d657d2748c4a78f82e249fa1bca65c577cdf4ff9a66c29",
+      "sha256": "2d01b98dff58b79e99defa099a1e65f9cda531be59514963cb697abe4db84d24",
+      "git_sha": "f52274f4b1bcb39cb0d03328ae172111c451f94b"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/environment/sheets/E61-E72-between-scenes.webp",
+      "source_png": "sheets/E61-E72-between-scenes.png",
+      "review_webp": "sheets/E61-E72-between-scenes.webp",
+      "size": 478854,
+      "size_px": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "703d3d6efcfda160d3dd8bd4380d4be56d53b5b465a977e8272802c2656160cb",
+      "sha256": "5fe219c53dba06065afda81fba839535292162b6d1bb2cc9914e15d7660807f2",
+      "git_sha": "2b972298e1557c51d8e50c6f6c60a66cf05e821c"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/props/sheets/P01-projector-tools.webp",
+      "source_png": "sheets/P01-projector-tools.png",
+      "review_webp": "sheets/P01-projector-tools.webp",
+      "size": 608326,
+      "size_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "quality": 95,
+      "alpha": [
+        0,
+        255
+      ],
+      "exact_alpha_verified": true,
+      "source_sha256": "0969a64c3fa408d59894e41f859a693cbc05982097680a25b4072dcd32c5d1c0",
+      "sha256": "6025e52d0bd7426edb49090d9029422f7a8ef4e641d33beaef9b72e4a5a039e3",
+      "git_sha": "2a2b2b2a1bdb9fa4fb098d010961ff1032399f41"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/props/sheets/P02-furniture-screen.webp",
+      "source_png": "sheets/P02-furniture-screen.png",
+      "review_webp": "sheets/P02-furniture-screen.webp",
+      "size": 991268,
+      "size_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "quality": 95,
+      "alpha": [
+        0,
+        255
+      ],
+      "exact_alpha_verified": true,
+      "source_sha256": "2b7192f148497b47338bfac947075689f79fc7bc336d1a7c083245e335487ffb",
+      "sha256": "05d4046497b1a49df881584e5404725428246649a2e56672eed68cbfa110f4e4",
+      "git_sha": "7551b4afb0e5472af79e5d3714d89f1b86237ca4"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/props/sheets/P03-pocket-objects.webp",
+      "source_png": "sheets/P03-pocket-objects.png",
+      "review_webp": "sheets/P03-pocket-objects.webp",
+      "size": 575942,
+      "size_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "quality": 95,
+      "alpha": [
+        0,
+        255
+      ],
+      "exact_alpha_verified": true,
+      "source_sha256": "c83af06f91fe61f0923904a94d88af85182a474016650b8319b86665c5b2eccf",
+      "sha256": "805af1e6206432e6af0683ab33fafa5ac13f9bb18cdefc56e15c860ea3849f10",
+      "git_sha": "abaf9fbc0705efe8e4855c8879582604259f1abf"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/props/sheets/P04-ephemera.webp",
+      "source_png": "sheets/P04-ephemera.png",
+      "review_webp": "sheets/P04-ephemera.webp",
+      "size": 565950,
+      "size_px": [
+        1261,
+        1247
+      ],
+      "mode": "RGBA",
+      "quality": 95,
+      "alpha": [
+        0,
+        255
+      ],
+      "exact_alpha_verified": true,
+      "source_sha256": "700127cc0861883f7ed7274180d34c0df4bb0b625715fa6e9f7b818cbaa25d30",
+      "sha256": "6678c21cdbb9360819ae26e38b1847531383d3862ab3e52b952c022925f0c6ea",
+      "git_sha": "4257380d4bf2b17d1523dff8993569d14c15d7ee"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/props/sheets/P05-material-swatches.webp",
+      "source_png": "sheets/P05-material-swatches.png",
+      "review_webp": "sheets/P05-material-swatches.webp",
+      "size": 644462,
+      "size_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "4a0a56d90a3d655926c3a6b11c8371beecd7800b6a3b23e8ba3a80a020f51dc1",
+      "sha256": "c9d88eeae4278f11b6850a895a8a946322b3248bdc7cc7bf421b5eda567c13e6",
+      "git_sha": "096cd3506e3391af0fdd59e866f9577a5d7ecea5"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/props/sheets/P06-contact-shadows.webp",
+      "source_png": "sheets/P06-contact-shadows.png",
+      "review_webp": "sheets/P06-contact-shadows.webp",
+      "size": 294562,
+      "size_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "quality": 95,
+      "alpha": [
+        0,
+        247
+      ],
+      "exact_alpha_verified": true,
+      "source_sha256": "bb217c35ce97654dc4c9f7a95afbcea566930fd81a3dbcb7c2b77705f80062a3",
+      "sha256": "51a98161f8aab51d4dc5138d53821c97724b9ad61a23f003a7b983edaf1e7771",
+      "git_sha": "5b7881bd76f4548645771f750198199a0b260b86"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/props/surfaces/P07-paper-cream.webp",
+      "source_png": "surfaces/P07-paper-cream.png",
+      "review_webp": "surfaces/P07-paper-cream.webp",
+      "size": 244336,
+      "size_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "c2ad4323e5407b8c083dc8f7359e6599b7df9b8c869ec23a9ac1bd5797195eea",
+      "sha256": "72889357b7d2243940d21f4210ef241a178b5411660e72dda0575991cc63df03",
+      "git_sha": "f831841aff50b8dd0c87c185002f9a9a256421c0"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/props/surfaces/P08-cloth-navy.webp",
+      "source_png": "surfaces/P08-cloth-navy.png",
+      "review_webp": "surfaces/P08-cloth-navy.webp",
+      "size": 596216,
+      "size_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "02afdc75da3451b5e97871fd4dfaa1f6f2dea1b57d6ad9c6829c795a9f7de550",
+      "sha256": "17a707ce53b26d82bb470bb3b6793925d5693d6d0d10c2b3bd82cf8e075b62ae",
+      "git_sha": "ba8964086f14709ff11821a14ac187ec21b0ab5a"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/props/surfaces/P09-kraft-paper.webp",
+      "source_png": "surfaces/P09-kraft-paper.png",
+      "review_webp": "surfaces/P09-kraft-paper.webp",
+      "size": 432812,
+      "size_px": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "quality": 95,
+      "alpha": null,
+      "exact_alpha_verified": false,
+      "source_sha256": "110b2cdf06e6f68e2666a8303d7ec70875b6db52e55c8111d75f434a6417543a",
+      "sha256": "d3c67dd5ddf190e118686829fd4172193b206deea78ed93d3678e0753bb4a19c",
+      "git_sha": "761abc69952ea17899703889716f87a024e0b35c"
+    },
+    {
+      "path": "docs/asset-candidates/review-library-20261113/props/surfaces/P10-masking-tape-strip.webp",
+      "source_png": "surfaces/P10-masking-tape-strip.png",
+      "review_webp": "surfaces/P10-masking-tape-strip.webp",
+      "size": 119146,
+      "size_px": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "quality": 95,
+      "alpha": [
+        0,
+        254
+      ],
+      "exact_alpha_verified": true,
+      "source_sha256": "edb94c5951f571473d8b42521d4c5d10537be79d7a9a3d64f2161628b3e1483b",
+      "sha256": "0b44f56901d4dc77861fe9c3f2a4d75cc3238fe6aa1ba2b4086f4f27a28a8667",
+      "git_sha": "31716276cee1e1cbf0c664d66b1752f2a448ea88"
+    }
+  ]
+}

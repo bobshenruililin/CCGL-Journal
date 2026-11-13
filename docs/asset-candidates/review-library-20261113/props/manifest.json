@@ -1,0 +1,1157 @@
+{
+  "title": "Six Flights: props, ephemera, surfaces and shadows",
+  "date": "2026-11-13",
+  "scope": "Private candidate library only; no repository, app or deployment changes.",
+  "generation": {
+    "method": "built-in OpenAI image generation",
+    "model": "not exposed by tool",
+    "seed": "not exposed by tool",
+    "source_images": "none; generated from authored prompts informed by Fable request documents",
+    "source_pixels": "native generated PNG files preserved unmodified"
+  },
+  "counts": {
+    "generated_source_files": 10,
+    "multi_panel_atlases": 6,
+    "atlas_panel_candidates": 96,
+    "standalone_candidates": 4,
+    "total_visual_candidates": 100,
+    "production_approved_assets": 0,
+    "claim": "100 visual candidates, not 100 standalone final-resolution assets or 100 independent generation calls. Closely related variants count as distinct candidates, not distinct object categories."
+  },
+  "sources": [
+    "https://github.com/bobshenruililin/CCGL-Journal/blob/main/coordination/requests/08-art-direction-after-exploration.md",
+    "https://github.com/bobshenruililin/CCGL-Journal/blob/main/coordination/requests/09-people-objects-and-details.md",
+    "https://github.com/bobshenruililin/CCGL-Journal/blob/main/coordination/requests/10-character-gate-decision.md",
+    "https://github.com/bobshenruililin/CCGL-Journal/blob/main/coordination/requests/11-final-pass-missing-files.md"
+  ],
+  "files": [
+    {
+      "id": "P01",
+      "file": "sheets/P01-projector-tools.png",
+      "prompt": "prompts/P01-projector-tools.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "candidate_count": 16,
+      "layout": "4 rows x 4 columns, row-major; conceptual cell index only, not exact crop geometry",
+      "sha256": "0969a64c3fa408d59894e41f859a693cbc05982097680a25b4072dcd32c5d1c0"
+    },
+    {
+      "id": "P02",
+      "file": "sheets/P02-furniture-screen.png",
+      "prompt": "prompts/P02-furniture-screen.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "candidate_count": 16,
+      "layout": "4 rows x 4 columns, row-major; conceptual cell index only, not exact crop geometry",
+      "sha256": "2b7192f148497b47338bfac947075689f79fc7bc336d1a7c083245e335487ffb"
+    },
+    {
+      "id": "P03",
+      "file": "sheets/P03-pocket-objects.png",
+      "prompt": "prompts/P03-pocket-objects.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "candidate_count": 16,
+      "layout": "4 rows x 4 columns, row-major; conceptual cell index only, not exact crop geometry",
+      "sha256": "c83af06f91fe61f0923904a94d88af85182a474016650b8319b86665c5b2eccf"
+    },
+    {
+      "id": "P04",
+      "file": "sheets/P04-ephemera.png",
+      "prompt": "prompts/P04-ephemera.txt",
+      "dimensions": [
+        1261,
+        1247
+      ],
+      "mode": "RGBA",
+      "candidate_count": 16,
+      "layout": "4 rows x 4 columns, row-major; conceptual cell index only, not exact crop geometry",
+      "sha256": "700127cc0861883f7ed7274180d34c0df4bb0b625715fa6e9f7b818cbaa25d30"
+    },
+    {
+      "id": "P05",
+      "file": "sheets/P05-material-swatches.png",
+      "prompt": "prompts/P05-material-swatches.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "candidate_count": 16,
+      "layout": "4 rows x 4 columns, row-major; conceptual cell index only, not exact crop geometry",
+      "sha256": "4a0a56d90a3d655926c3a6b11c8371beecd7800b6a3b23e8ba3a80a020f51dc1"
+    },
+    {
+      "id": "P06",
+      "file": "sheets/P06-contact-shadows.png",
+      "prompt": "prompts/P06-contact-shadows.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "candidate_count": 16,
+      "layout": "4 rows x 4 columns, row-major; conceptual cell index only, not exact crop geometry",
+      "sha256": "bb217c35ce97654dc4c9f7a95afbcea566930fd81a3dbcb7c2b77705f80062a3"
+    },
+    {
+      "id": "P07",
+      "file": "surfaces/P07-paper-cream.png",
+      "prompt": "prompts/P07-paper-cream.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "candidate_count": 1,
+      "sha256": "c2ad4323e5407b8c083dc8f7359e6599b7df9b8c869ec23a9ac1bd5797195eea"
+    },
+    {
+      "id": "P08",
+      "file": "surfaces/P08-cloth-navy.png",
+      "prompt": "prompts/P08-cloth-navy.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "candidate_count": 1,
+      "sha256": "02afdc75da3451b5e97871fd4dfaa1f6f2dea1b57d6ad9c6829c795a9f7de550"
+    },
+    {
+      "id": "P09",
+      "file": "surfaces/P09-kraft-paper.png",
+      "prompt": "prompts/P09-kraft-paper.txt",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "candidate_count": 1,
+      "sha256": "110b2cdf06e6f68e2666a8303d7ec70875b6db52e55c8111d75f434a6417543a"
+    },
+    {
+      "id": "P10",
+      "file": "surfaces/P10-masking-tape-strip.png",
+      "prompt": "prompts/P10-masking-tape-strip.txt",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "candidate_count": 1,
+      "sha256": "edb94c5951f571473d8b42521d4c5d10537be79d7a9a3d64f2161628b3e1483b"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "P01-01",
+      "name": "Projector on folding table, rear",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 1,
+      "column": 1,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-02",
+      "name": "Projector three-quarter, open lid and blank card",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 1,
+      "column": 2,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-03",
+      "name": "Projector side with chopstick vent prop",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 1,
+      "column": 3,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-04",
+      "name": "Projector rear with cable",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 1,
+      "column": 4,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-05",
+      "name": "Closed dented cashbox",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 2,
+      "column": 1,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-06",
+      "name": "Open empty cashbox",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 2,
+      "column": 2,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-07",
+      "name": "Hat, coins, blank notes and one button",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 2,
+      "column": 3,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-08",
+      "name": "Tarp bundle tied crosswise",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 2,
+      "column": 4,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-09",
+      "name": "Neatly coiled extension lead",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 3,
+      "column": 1,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-10",
+      "name": "Loose extension lead with sockets",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 3,
+      "column": 2,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-11",
+      "name": "Single bamboo chopstick",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 3,
+      "column": 3,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-12",
+      "name": "Graphite pencil and tape repair kit",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 3,
+      "column": 4,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-13",
+      "name": "Ivory power strip and cord",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 4,
+      "column": 1,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-14",
+      "name": "Cream masking-tape roll",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 4,
+      "column": 2,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-15",
+      "name": "Folded grey dust cloth",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 4,
+      "column": 3,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P01-16",
+      "name": "Spare bulb in blank tissue wrapper",
+      "file": "sheets/P01-projector-tools.png",
+      "row": 4,
+      "column": 4,
+      "purpose": "Rooftop screening, repair and money beat",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P02-01",
+      "name": "Folding chair, back square",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 1,
+      "column": 1,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-02",
+      "name": "Folding chair, back three-quarter left",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 1,
+      "column": 2,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-03",
+      "name": "Folding chair, back three-quarter right",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 1,
+      "column": 3,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-04",
+      "name": "Folding chair, side",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 1,
+      "column": 4,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-05",
+      "name": "Folding chair, front three-quarter",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 2,
+      "column": 1,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-06",
+      "name": "Single chair folded upright",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 2,
+      "column": 2,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-07",
+      "name": "Four folded chairs, leaning stack",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 2,
+      "column": 3,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-08",
+      "name": "Four folded chairs, horizontal stack",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 2,
+      "column": 4,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-09",
+      "name": "Chair with folded olive umbrella",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 3,
+      "column": 1,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-10",
+      "name": "Chair with navy notebook",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 3,
+      "column": 2,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-11",
+      "name": "Empty projector table, rear",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 3,
+      "column": 3,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-12",
+      "name": "Empty projector table, three-quarter",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 3,
+      "column": 4,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-13",
+      "name": "Bedsheet on line, sock upper right",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 4,
+      "column": 1,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-14",
+      "name": "Bedsheet on line, sock upper left",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 4,
+      "column": 2,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-15",
+      "name": "Tarp bundle with rope loop",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 4,
+      "column": 3,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P02-16",
+      "name": "Doorstep and metal doorstop",
+      "file": "sheets/P02-furniture-screen.png",
+      "row": 4,
+      "column": 4,
+      "purpose": "Last night, chair-carrying and screen layers",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Faint low-opacity surrounding wash remains; inspect against final roof before integration."
+    },
+    {
+      "id": "P03-01",
+      "name": "Closed navy notebook, elastic and ribbon",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 1,
+      "column": 1,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-02",
+      "name": "Worn navy notebook, slipped elastic",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 1,
+      "column": 2,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-03",
+      "name": "Navy notebook, low side view",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 1,
+      "column": 3,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-04",
+      "name": "Open navy notebook, blank cream spread",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 1,
+      "column": 4,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-05",
+      "name": "Three-key ring and blank tag",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 2,
+      "column": 1,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "hold: line-art direction drift",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Keys are more painted than the requested line-drawn book doodle. Do not replace existing drawn keys without revision."
+    },
+    {
+      "id": "P03-06",
+      "name": "Two-key ring and blank tag",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 2,
+      "column": 2,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "hold: line-art direction drift",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Keys are more painted than the requested line-drawn book doodle. Do not replace existing drawn keys without revision."
+    },
+    {
+      "id": "P03-07",
+      "name": "Two blank brass token faces",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 2,
+      "column": 3,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-08",
+      "name": "Blank brass token, tilted",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 2,
+      "column": 4,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-09",
+      "name": "Folded straw-yellow ticket",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 3,
+      "column": 1,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-10",
+      "name": "Short pale-yellow ticket",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 3,
+      "column": 2,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-11",
+      "name": "Long smoky-mustard ticket",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 3,
+      "column": 3,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-12",
+      "name": "Square faded-lemon ticket",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 3,
+      "column": 4,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-13",
+      "name": "Plain wood graphite pencil",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 4,
+      "column": 1,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-14",
+      "name": "Rolled blank programme",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 4,
+      "column": 2,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-15",
+      "name": "Tied olive umbrella",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 4,
+      "column": 3,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P03-16",
+      "name": "Dark tin and single pale button",
+      "file": "sheets/P03-pocket-objects.png",
+      "row": 4,
+      "column": 4,
+      "purpose": "Notebook, memory and small story evidence",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration."
+    },
+    {
+      "id": "P04-01",
+      "name": "Long softly crumpled ruled receipt",
+      "file": "sheets/P04-ephemera.png",
+      "row": 1,
+      "column": 1,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-02",
+      "name": "Short torn ruled receipt",
+      "file": "sheets/P04-ephemera.png",
+      "row": 1,
+      "column": 2,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-03",
+      "name": "Blank string tag",
+      "file": "sheets/P04-ephemera.png",
+      "row": 1,
+      "column": 3,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-04",
+      "name": "Broad torn masking-tape label",
+      "file": "sheets/P04-ephemera.png",
+      "row": 1,
+      "column": 4,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-05",
+      "name": "Torn note with two graphite rules",
+      "file": "sheets/P04-ephemera.png",
+      "row": 2,
+      "column": 1,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-06",
+      "name": "Blank kraft envelope",
+      "file": "sheets/P04-ephemera.png",
+      "row": 2,
+      "column": 2,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-07",
+      "name": "Open kraft corner pocket",
+      "file": "sheets/P04-ephemera.png",
+      "row": 2,
+      "column": 3,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-08",
+      "name": "Blank folded programme",
+      "file": "sheets/P04-ephemera.png",
+      "row": 2,
+      "column": 4,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-09",
+      "name": "Indigo rooftop flyer, tank at left",
+      "file": "sheets/P04-ephemera.png",
+      "row": 3,
+      "column": 1,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-10",
+      "name": "Indigo rooftop flyer, cropped tank",
+      "file": "sheets/P04-ephemera.png",
+      "row": 3,
+      "column": 2,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-11",
+      "name": "Indigo rooftop flyer, stair door",
+      "file": "sheets/P04-ephemera.png",
+      "row": 3,
+      "column": 3,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-12",
+      "name": "Indigo rooftop flyer, laundry",
+      "file": "sheets/P04-ephemera.png",
+      "row": 3,
+      "column": 4,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-13",
+      "name": "Curved translucent tape strip",
+      "file": "sheets/P04-ephemera.png",
+      "row": 4,
+      "column": 1,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-14",
+      "name": "Straight translucent tape with folded corner",
+      "file": "sheets/P04-ephemera.png",
+      "row": 4,
+      "column": 2,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-15",
+      "name": "Folded cream corner tab",
+      "file": "sheets/P04-ephemera.png",
+      "row": 4,
+      "column": 3,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P04-16",
+      "name": "Indigo photo mount, blank centre",
+      "file": "sheets/P04-ephemera.png",
+      "row": 4,
+      "column": 4,
+      "purpose": "Authored-overlay writing grounds and inside-cover prints",
+      "status": "review candidate",
+      "note": "Sheet-sized candidate; re-generate selected item individually for final-size integration. Blank authoring areas; exact automatic grid crops unsafe because row heights vary."
+    },
+    {
+      "id": "P05-01",
+      "name": "Warm ivory tooth paper",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 1,
+      "column": 1,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-02",
+      "name": "Oatmeal rag paper",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 1,
+      "column": 2,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-03",
+      "name": "Smooth warm cream paper",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 1,
+      "column": 3,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-04",
+      "name": "Warm aged cream paper",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 1,
+      "column": 4,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-05",
+      "name": "Tight navy linen",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 2,
+      "column": 1,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-06",
+      "name": "Washed navy cotton",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 2,
+      "column": 2,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-07",
+      "name": "Dark indigo crosshatch cloth",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 2,
+      "column": 3,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-08",
+      "name": "Blue-black vertical weave cloth",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 2,
+      "column": 4,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-09",
+      "name": "Mid-tan kraft",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 3,
+      "column": 1,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-10",
+      "name": "Pale warm kraft",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 3,
+      "column": 2,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-11",
+      "name": "Cool muted cardboard brown",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 3,
+      "column": 3,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-12",
+      "name": "Dark honey kraft",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 3,
+      "column": 4,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-13",
+      "name": "Warm grey uncoated paper",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 4,
+      "column": 1,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-14",
+      "name": "Pale slate recycled paper",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 4,
+      "column": 2,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-15",
+      "name": "Cream tape-material scan",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 4,
+      "column": 3,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P05-16",
+      "name": "Desaturated olive cloth",
+      "file": "sheets/P05-material-swatches.png",
+      "row": 4,
+      "column": 4,
+      "purpose": "Material research, not full-resolution seamless tiles",
+      "status": "review candidate",
+      "note": "Material swatch only, roughly 313 px square. Not individually generated 1024 px seamless textures."
+    },
+    {
+      "id": "P06-01",
+      "name": "Standing short soft oval",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 1,
+      "column": 1,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-02",
+      "name": "Standing paired foot contacts",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 1,
+      "column": 2,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-03",
+      "name": "Standing weight-left",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 1,
+      "column": 3,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-04",
+      "name": "Standing weight-right",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 1,
+      "column": 4,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-05",
+      "name": "Cross-legged broad oval",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 2,
+      "column": 1,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-06",
+      "name": "Cross-legged lean-left",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 2,
+      "column": 2,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-07",
+      "name": "Kneeling knee-shin cluster",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 2,
+      "column": 3,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-08",
+      "name": "Kneeling paired knees",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 2,
+      "column": 4,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-09",
+      "name": "Chair four-foot trapezoid",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 3,
+      "column": 1,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-10",
+      "name": "Chair three-quarter left",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 3,
+      "column": 2,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-11",
+      "name": "Chair three-quarter right",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 3,
+      "column": 3,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-12",
+      "name": "Table four-foot rectangle",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 3,
+      "column": 4,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-13",
+      "name": "Tarp bundle shallow shadow",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 4,
+      "column": 1,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-14",
+      "name": "Cashbox thin oval",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 4,
+      "column": 2,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-15",
+      "name": "Cable-coil ring shadow",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 4,
+      "column": 3,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P06-16",
+      "name": "Stacked chairs long shadow",
+      "file": "sheets/P06-contact-shadows.png",
+      "row": 4,
+      "column": 4,
+      "purpose": "Live contact-shadow alternatives, use as alpha masks",
+      "status": "candidate, alpha-mask use required",
+      "note": "Source RGB is dark grey rather than pure black. Use its alpha as a black CSS mask, or request a corrected production raster. Do not use source as a black-only layer."
+    },
+    {
+      "id": "P07",
+      "name": "Cream paper full-size candidate",
+      "file": "surfaces/P07-paper-cream.png",
+      "row": null,
+      "column": null,
+      "purpose": "Notebook pages",
+      "status": "full-size review candidate",
+      "note": "Original native PNG. 2x2 repeat visually checked at practical scale; no exact edge-equality guarantee."
+    },
+    {
+      "id": "P08",
+      "name": "Navy book-cloth full-size candidate",
+      "file": "surfaces/P08-cloth-navy.png",
+      "row": null,
+      "column": null,
+      "purpose": "Notebook cover",
+      "status": "full-size review candidate",
+      "note": "Original native PNG. 2x2 repeat visually checked at practical scale; no exact edge-equality guarantee."
+    },
+    {
+      "id": "P09",
+      "name": "Kraft paper full-size candidate",
+      "file": "surfaces/P09-kraft-paper.png",
+      "row": null,
+      "column": null,
+      "purpose": "Back pocket",
+      "status": "full-size review candidate",
+      "note": "Original native PNG. 2x2 repeat visually checked at practical scale; no exact edge-equality guarantee."
+    },
+    {
+      "id": "P10",
+      "name": "Translucent tape full-size candidate",
+      "file": "surfaces/P10-masking-tape-strip.png",
+      "row": null,
+      "column": null,
+      "purpose": "Blank live-handwriting label",
+      "status": "full-size review candidate",
+      "note": "Original native PNG. Alpha composited on cream and dark grounds; no large glow in actual composite."
+    }
+  ]
+}
