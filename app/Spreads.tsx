@@ -7,7 +7,8 @@ import {
 } from './story.ts';
 import { type Save, OWN_MAX } from './state.ts';
 import type { Reading } from './interpret.ts';
-import { Portrait, RoofPlan, Phone, Keys, ProjectorAlone, Door, VentDrawing, RoofDusk, Silence, Stairwell, Building, Storm, Jobs, Night, Morning } from './art';
+import { RoofPlan, Phone, Keys, VentDrawing, Silence, Building, Jobs, Morning } from './art';
+import { Night, StormScene, DuskScene, DoorScene, LandingScene, OneAmScene } from './painted';
 
 type V = CSSProperties & Record<`--${string}`, string | number>;
 export type Acts = {
@@ -127,7 +128,7 @@ function Inside() {
         <div className="castgrid">
           {(['kit', 'priya', 'tomas', 'leung'] as const).map(w => (
             <figure key={w} className={'castcard fade ' + w} style={q.d(0.45)}>
-              <Portrait who={w} />
+              <img className="portrait" src={`/cast/portrait-${w}.webp`} alt="" />
               <figcaption><b>{cast[w].name}</b>{cast[w].note}</figcaption>
             </figure>
           ))}
@@ -168,7 +169,7 @@ function MonAfter({ s, a }: SpreadProps) {
         <div className="pg l">
           <h2 className="hd" tabIndex={-1}>{m.heading}</h2>
           {m.before.map(t => q.p(t))}
-          <div className="artfig"><ProjectorAlone on={done} /></div>
+          <div className="artfig"><OneAmScene on={done} /></div>
         </div>
         <div className="pg r">
           <div className="card checklist fade" style={q.d(0.3)}>
@@ -228,7 +229,7 @@ function MonAfter({ s, a }: SpreadProps) {
         <h2 className="hd" tabIndex={-1}>{m.heading}</h2>
         {m.before.map(t => q.p(t))}
         <div className="artfig doorfig">
-          <Door knocks={k} />
+          <DoorScene knocks={k} />
           {!open && <button type="button" className="knockbtn fade" style={q.d()} onClick={() => a.beat('knock')} aria-label={`Knock on Kit’s door. ${k} of 3 knocks.`}><span className="chalkhint">{['knock', 'again', 'once more'][k]}</span></button>}
           {open && <span className="sr" role="status">The door opens. Kit is standing there with a textbook.</span>}
         </div>
@@ -258,7 +259,7 @@ function Wed_({ s, a, inked }: SpreadProps) {
   return (
     <section className="spread s-wed">
       <div className="bleed pano">
-        <RoofDusk kit={s.route.mon === 'find'} />
+        <DuskScene kit={s.route.mon === 'find'} />
         {shout}
         <p className="mutter thand"><span className="sr">Tomás: </span>{w.tomas.map((t, i) => <span key={t} className="fade" style={{ '--d': (2.6 + i * 1.3).toFixed(1) + 's' } as V}>{t} </span>)}</p>
       </div>
@@ -293,7 +294,7 @@ function WedAfter({ s, a }: SpreadProps) {
     <section className="spread s-wedafter aside">
       <div className="pg l">
         <h2 className="hd" tabIndex={-1}>{w.heading}</h2>
-        <div className="artfig tall"><Stairwell /></div>
+        <div className="artfig tall"><LandingScene /></div>
       </div>
       <div className="pg r">
         {w.before.map(t => q.p(t))}
@@ -373,7 +374,7 @@ function Fri_({ s, a, inked }: SpreadProps) {
   return (
     <section className="spread s-fri">
       <div className="pg l platepg dark">
-        <Storm kit={mon === 'find' ? 'kneel' : mon === 'self' ? 'guest' : 'absent'} priyaStare={wed === 'cut'} />
+        <StormScene kit={mon === 'find' ? 'near' : mon === 'self' ? 'far' : 'absent'} tomasAtProjector={mon === 'post'} />
         <div className="onplate">{head}{first}</div>
         <After s={s} day="fri" />
       </div>
@@ -454,6 +455,7 @@ function Sat({ s, a }: SpreadProps) {
         {d.opening.map(t => q.p(t))}
         <div className="artfig small"><Morning /></div>
         <div aria-live="polite">{shown(0)}{shown(1)}</div>
+        {r.wed === 'round' && n >= 1 && <img className="hatfig fade" style={{ '--d': '1.8s' } as V} src="/plates/hat-coins.webp" alt="The hat: a few coins, two folded notes and one button." />}
         {n < 2 && pass}
       </div>
       <div className="pg r">

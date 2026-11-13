@@ -5,7 +5,6 @@
  */
 import type { CSSProperties, ReactNode } from 'react';
 import type { Light, Who } from './story.ts';
-import { plates, filmStill, type PlateId } from './plates.ts';
 
 type V = CSSProperties & Record<`--${string}`, string | number>;
 const dl = (n: number, more: V = {}): V => ({ '--d': n.toFixed(2) + 's', ...more });
@@ -58,12 +57,6 @@ export function InkDefs() {
       </defs>
     </svg>
   );
-}
-
-/** A registered painting covers the drawn background of its scene; everything that moves stays on top. */
-function Painted({ id, w, h }: { id: PlateId; w: number; h: number }) {
-  const src = plates[id]?.src;
-  return src ? <image className="painted fade" href={src} x="0" y="0" width={w} height={h} preserveAspectRatio="xMidYMid slice" /> : null;
 }
 
 /** A sequencer for lines that draw themselves in order. */
@@ -328,7 +321,6 @@ export function RoofDusk({ kit }: { kit: boolean }) {
         <Racks x={1120} y={300} />
         <path className="pcl" d="M250 270q160 60 310-30M830 240q150 70 290 62" />
       </g>
-      <Painted id="P01-roof-dusk" w={1400} h={520} />
       <g className="fade" style={dl(1.2)}>
         <Fig who="leung" x={118} y={468} s={1.100} pose="fold" />
         <Fig who="priya" x={668} y={486} s={1.250} pose="point" />
@@ -422,7 +414,6 @@ export function Storm({ kit, priyaStare }: { kit: 'kneel' | 'guest' | 'absent'; 
       <g opacity=".8"><path d="M52 500h70v84H52z" fill="#23264a" stroke="#6b7198" strokeWidth="1.500" /><path d="M60 584v48M114 584v48" stroke="#6b7198" strokeWidth="1.500" /></g>
       <path d="M196 330v310M520 330v310" stroke="#8d93b6" strokeWidth="3" />
       <g className="deadscreen"><path d="M196 336l324-8 4 208-326 6z" fill="#e9e7df" /><path d="M196 336l324-8 4 208-326 6z" fill="#fff" opacity=".5" filter="url(#glow-s)" /></g>
-      <Painted id="P02-roof-storm" w={700} h={933} />
       <g className="dim">
         <Fig who="priya" x={150} y={706} s={1.200} pose="hold" className={priyaStare ? 'stare' : ''} />
         <Fig who="tomas" x={kit === 'absent' ? 300 : 580} y={kit === 'absent' ? 770 : 712} s={1.200} flip={kit !== 'absent'} />
@@ -470,119 +461,6 @@ export function Jobs({ jobs, names }: { jobs: { who: Who; job: string }[]; names
           return <text key={i} className="fade lbl jlabel" style={dl(0.7 + i * 0.3, { fill: hue[j.who] })} x={x} y={y} textAnchor="middle"><tspan className="jn">{alone ? 'me' : names(j.who)}</tspan><tspan x={x} dy="1.05em">{j.job}</tspan></text>;
         })}
       </g>}
-    </svg>
-  );
-}
-
-/* ───────────── The night ───────────── */
-
-function Film() {
-  return (
-    <g className="film">
-      <path d="M0 0h460v280H0z" fill="#fdf6dc" />
-      {filmStill && <g className="still"><image href={filmStill} x="0" y="-32" width="460" height="345" preserveAspectRatio="xMidYMid slice" clipPath="inset(32px 0 33px 0)" /><path d="M0 0h460v280H0z" fill="#f6e3b0" opacity=".16" /></g>}
-      {!filmStill && <><g className="frameA"><path d="M226 30v250" stroke="#2a2833" strokeWidth="7" /><path d="M150 280v-96q0-30 26-30t26 30l18-22M176 150a22 22 0 100-44 22 22 0 000 44z" fill="#3a3745" stroke="#3a3745" strokeWidth="6" strokeLinejoin="round" /><path d="M306 280v-90q0-30-26-30t-24 26l-20-16M282 156a22 22 0 100-44 22 22 0 000 44z" fill="#57525f" stroke="#57525f" strokeWidth="6" strokeLinejoin="round" /></g>
-      <g className="frameB"><path d="M226 30v250" stroke="#2a2833" strokeWidth="7" /><path d="M140 280v-96q0-30 26-30t30 24l22-34M168 150a22 22 0 100-44 22 22 0 000 44z" fill="#3a3745" stroke="#3a3745" strokeWidth="6" strokeLinejoin="round" /><path d="M316 280v-90q0-30-26-30t-28 20l-24-30M290 156a22 22 0 100-44 22 22 0 000 44z" fill="#57525f" stroke="#57525f" strokeWidth="6" strokeLinejoin="round" /></g>
-</>}
-      <path className="scratch" d="M90 0v280M380 0v280" stroke="#fff" strokeWidth="1.500" opacity=".5" />
-    </g>
-  );
-}
-
-type NightProps = { ending: 'tarp' | 'sheet' | 'leung' | 'half'; lights: Record<Exclude<Who, 'yan'>, Light>; on: boolean; label: string; carried?: Partial<Record<Who, string>> };
-/** A pool of pigment, not a spotlight: an uneven wash that has bled into the dark paper around one person. */
-const halo = (who: Who, x: number, y: number, l: Light, r = 150, note?: string) => l === 'lit' ? (
-  <g key={who} className="halo" style={{ color: hue[who] }}>
-    <path filter="url(#pool)" fill="currentColor" d={`M${x - r} ${y}q${r * 0.1}-${r * 0.75} ${r * 0.9}-${r * 0.8}t${r * 1.15} ${r * 0.55}q${r * 0.1} ${r * 0.8}-${r * 0.85} ${r * 0.95}t-${r * 1.2}-${r * 0.7}z`} />
-    <path filter="url(#pool)" fill="currentColor" opacity=".55" d={`M${x - r * 0.5} ${y - r * 0.1}q${r * 0.3}-${r * 0.5} ${r * 0.7}-${r * 0.3}t${r * 0.3} ${r * 0.6}q-${r * 0.4} ${r * 0.5}-${r * 0.8} ${r * 0.2}t-${r * 0.2}-${r * 0.5}z`} />
-  </g>
-) : null;
-
-export function Night({ ending, lights, on, label, carried = {} }: NightProps) {
-  const roof = ending === 'tarp' || ending === 'half';
-  const rows: ReactNode[] = [];
-  if (roof) {
-    const filled = (r: number, c: number) => ending === 'tarp' ? true : (r === 0 ? c % 4 !== 3 : r === 1 ? c % 3 === 0 : c === 5);
-    [[600, 0.82, 11, 150], [690, 1, 9, 130], [792, 1.22, 7, 110]].forEach(([y, s, n, x0], r) => { for (let c = 0; c < n; c++) { const x = x0 + c * ((1400 - 2 * x0) / (n - 1)); if (Math.abs(x - 700) < 90 && r === 2) continue; rows.push(<Seat key={r + '-' + c} x={x} y={y} s={s} empty={!filled(r, c)} />); } });
-  } else {
-    [[640, 0.9, 12, 140], [730, 1.1, 10, 120], [826, 1.3, 8, 100]].forEach(([y, s, n, x0], r) => { for (let c = 0; c < n; c++) { const x = x0 + c * ((1400 - 2 * x0) / (n - 1)) + (r % 2) * 22; if (Math.abs(x - 700) < 100 && r === 2) continue; rows.push(<Seat key={r + '-' + c} x={x} y={y} s={s} floor />); } });
-  }
-  const plate = plates[ending === 'tarp' ? 'P03-roof-night-tarp' : ending === 'half' ? 'P04-roof-night-after-rain' : 'P05-common-room-night'];
-  const [sx, sy, sw, sh] = plate?.screen ?? [470, roof ? 190 : 170, 460, 280];
-  return (
-    <svg className={'plate night ' + (on ? 'on ' : 'off ') + ending} viewBox="0 0 1400 933" preserveAspectRatio="xMidYMid slice" role="img" aria-label={label}>
-      {plate ? null : roof ? <>
-        <path filter="url(#wash)" d="M12 14q690-14 1376 0l-4 906q-690 12-1370-4z" fill="url(#g-night)" />
-        <g transform="translate(0 90)"><Skyline base={372} lit={0.62} fill="#0f1128" opacity={0.95} /></g>
-        <path filter="url(#wash)" d="M12 470h1376v450H12z" fill="#15173a" opacity=".9" />
-        <path d="M0 470h1400" stroke="#6f76a3" strokeWidth="2" opacity=".6" />
-        <g opacity=".85"><path d="M88 300h110v110H88z" fill="#1b1e42" stroke="#6f76a3" strokeWidth="2" /><path d="M100 410v60M186 410v60" stroke="#6f76a3" strokeWidth="2" /></g>
-        <path d="M1318 300v170h70V300z" fill="#1b1e42" stroke="#6f76a3" strokeWidth="2" opacity=".9" />
-        <path d="M470 180v300M930 180v300" stroke="#8d93b6" strokeWidth="4" />
-        {ending === 'half' && <path className="wet" d="M420 500h560l80 400H340z" fill="#fdf6dc" opacity=".1" filter="url(#glow)" />}
-      </> : <>
-        <path filter="url(#wash)" d="M12 14q690-14 1376 0l-4 906q-690 12-1370-4z" fill="url(#g-room)" />
-        <path filter="url(#wash)" d="M12 560h1376v360H12z" fill="#241a26" opacity=".85" />
-        <g><path d="M90 150h230v290H90z" fill="#141737" stroke="#8c7a70" strokeWidth="4" /><path d="M205 150v290M90 295h230" stroke="#8c7a70" strokeWidth="3" /><g className="rain in">{Array.from({ length: 14 }, (_, i) => <path key={i} style={{ '--i': i % 7 } as V} d={`M${104 + i * 15} ${170 + (i * 67) % 220}l-4 22`} />)}</g></g>
-        
-        <path d="M1070 170h120v390h-120z" fill={ending === 'leung' ? '#f0d9a0' : '#1c1524'} stroke="#8c7a70" strokeWidth="4" />
-        <path d="M440 150l-10-16M962 148l10-16" stroke="#cbb" strokeWidth="2" />
-      </>}
-
-      <Painted id={ending === 'tarp' ? 'P03-roof-night-tarp' : ending === 'half' ? 'P04-roof-night-after-rain' : 'P05-common-room-night'} w={1400} h={933} />
-
-      {/* the screen */}
-      <g transform={`translate(${sx} ${sy}) scale(${sw / 460} ${sh / 280})` + (roof ? '' : ' skewY(-.6)')}>
-        {!plate && <path className="screen-off" d={roof ? 'M0 0h460v280H0z' : 'M-30-20q260 26 520 0l-10 350q-250-14-500 0z'} />}
-        {!roof && <><path className="pegs" d="M-24-26v14M484-26v14M228-10v12" /><path className="sock" d="M470-10l14-1v30l12 9-7 7-19-12z" /></>}
-        {on && <g className="screen-on"><g transform={roof ? undefined : 'translate(-8 14) scale(1.035 1.05)'}><Film /></g></g>}
-      </g>
-
-      {/* colour: one bloom for each person who had something to carry */}
-      {on && <g className="halos">
-        {roof ? <>
-          {halo('kit', 800, 800, lights.kit, 150, carried.kit)}{halo('priya', 250, 640, lights.priya, 150, carried.priya)}{halo('tomas', 1150, 640, lights.tomas, 150, carried.tomas)}{halo('leung', 560, 560, lights.leung, 120, carried.leung)}
-        </> : <>
-          {halo('kit', 800, 810, lights.kit, 150, carried.kit)}{halo('priya', 330, 620, lights.priya, 150, carried.priya)}{halo('tomas', 1000, 640, lights.tomas, 150, carried.tomas)}{halo('leung', ending === 'leung' ? 1130 : 1150, ending === 'leung' ? 400 : 700, lights.leung, ending === 'leung' ? 190 : 120, carried.leung)}
-        </>}
-        <g className="halo self" style={{ color: 'var(--yan)' }}><path filter="url(#pool)" fill="currentColor" d="M560 830q10-90 130-95t140 80q0 95-130 100t-140-85z" /></g>
-      </g>}
-      {on && <path className="beam" d={`M700 ${roof ? 838 : 826}L${sx} ${sy + sh}V${sy}h${sw}v${sh}z`} fill="#fff3c4" />}
-
-      <g className="audience">{rows}</g>
-
-      {/* the people we know */}
-      <g className="known">
-        {roof ? <>
-          {ending === 'tarp' ? <Seat x={560} y={596} s={0.960} who="leung" light={lights.leung} /> : <Fig who="leung" x={1040} y={540} s={1.200} pose="fold" light={lights.leung} flip />}
-          <Fig who="priya" x={250} y={690} s={1.500} pose={lights.priya === 'lit' ? 'hold' : 'fold'} light={lights.priya} />
-          <Fig who="tomas" x={1150} y={690} s={1.500} pose={lights.tomas === 'lit' ? 'point' : 'stand'} light={lights.tomas} flip />
-          {lights.kit === 'lit' && <Fig who="kit" x={770} y={880} s={1.700} pose="kneel" flip />}
-          {lights.kit === 'pale' && <Fig who="kit" x={160} y={470} s={1} light="pale" />}
-        </> : <>
-          {ending === 'leung' ? <Fig who="leung" x={1130} y={560} s={2.100} pose="fold" light="lit" flip /> : <Seat x={1150} y={716} s={1.150} who="leung" light={lights.leung} />}
-          <Fig who="priya" x={330} y={650} s={1.500} pose={lights.priya === 'lit' ? 'hold' : 'fold'} light={lights.priya} />
-          <Fig who="tomas" x={1000} y={668} s={1.500} pose={lights.tomas === 'lit' ? 'point' : 'stand'} light={lights.tomas} flip />
-          {lights.kit === 'lit' && <Fig who="kit" x={780} y={890} s={1.700} pose="kneel" flip />}
-          {lights.kit === 'pale' && <Seat x={1150} y={850} s={1.200} who="kit" light="pale" floor />}
-        </>}
-        <Fig who="yan" x={626} y={890} s={1.700} pose={ending === 'half' ? 'kneel' : 'hold'} />
-        <g className="machine"><path d="M660 838h84v40h-84z" /><path d="M650 878h104M664 878v40M740 878v40" /><circle cx="702" cy="840" r="10" /></g>
-      </g>
-
-      {on && <g className="captions">
-        {(roof
-          ? [['priya', 250, 520], ['tomas', 1150, 520], ['leung', 560, 478], ['kit', 900, 742], ['yan', 560, 742]]
-          : [['priya', 330, 500], ['tomas', 1000, 520], ['leung', ending === 'leung' ? 1130 : 1150, ending === 'leung' ? 250 : 612], ['kit', 910, 752], ['yan', 560, 752]]
-        ).map(([w, x, y], i) => carried[w as Who] ? <text key={w} className="carried" style={{ '--i': i } as V} x={x} y={y} textAnchor="middle">{carried[w as Who]}</text> : null)}
-      </g>}
-      {ending === 'tarp' && !plate && <g className="canopy">
-        <path filter="url(#wash)" d="M-10-10h1420v118q-118 62-236 18-116 58-236 12-120 60-238 14-118 58-236 12-120 60-238 16Q120 172-10 112z" />
-        <path className="ropes" d="M228 130l-40 180M464 124v60M938 126v56M1174 126l150 180" />
-        <g className="drips">{[228, 464, 700, 938, 1174].map((x, i) => <path key={x} style={{ '--i': i } as V} d={`M${x} ${150 + (i % 2) * 6}v18`} />)}</g>
-      </g>}
-      {roof && <g className={'rain ' + (ending === 'tarp' ? 'beyond' : 'gone')}>{Array.from({ length: 40 }, (_, i) => <path key={i} style={{ '--i': i % 9 } as V} d={`M${(i * 173) % 1380 + 10} ${200 + (i * 89) % 260}l-6 28`} />)}</g>}
-      {roof && !plate && <g className="bulbs"><path d="M198 300q270 110 272-110M930 190q200 200 388 112" />{[250, 310, 372, 430, 990, 1060, 1140, 1220, 1290].map((x, i) => <circle key={x} style={{ '--i': i } as V} cx={x} cy={x < 500 ? 318 + (x - 198) * 0.06 - Math.abs(x - 340) * 0.05 : 250 + Math.abs(x - 930) * 0.16} r="5" />)}</g>}
     </svg>
   );
 }
