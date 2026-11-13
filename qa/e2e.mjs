@@ -10,7 +10,7 @@ const runs = [
   { route: { mon: 'post', wed: 'round', fri: 'ask' }, view: 'desktop', keys: true, want: 'sheet' },
   { route: { mon: 'self', wed: 'cut', fri: 'ask' }, view: 'phone', want: 'leung' },
   { route: { mon: 'post', wed: 'aside', fri: 'self' }, view: 'phone', still: true, keys: true, want: 'half' },
-  { route: { mon: 'self', wed: 'aside', fri: 'name' }, view: 'laptop', still: true, want: 'tarp' },
+  { route: { mon: 'find', wed: 'aside', fri: 'name' }, view: 'laptop', still: true, want: 'tarp' },
 ];
 const browser = await chromium.launch();
 for (const r of runs) {

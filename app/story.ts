@@ -375,6 +375,15 @@ export function lights(r: FullRoute): Record<Exclude<Who, 'yan'>, Light> {
   };
 }
 
+/** A few words beside each person in colour: the thing that was theirs that night. Nobody uncoloured gets one. */
+export function carried(r: FullRoute): Partial<Record<Who, string>> {
+  const l = lights(r), e = ending(r), out: Partial<Record<Who, string>> = {};
+  for (const j of fridayAfter(r).jobs) if (j.who !== 'yan' && j.who !== 'leung' && l[j.who] === 'lit') out[j.who] ??= j.job;
+  if (l.leung === 'lit') out.leung = { tarp: 'a chair, kept for her', sheet: 'at the back, not watching', leung: '“Downstairs. Now.”', half: '' }[e];
+  out.yan = e === 'half' ? 'all of it' : fridayAfter(r).jobs.find(j => j.who === 'yan')?.job ?? 'the keys';
+  return out;
+}
+
 export function night(r: FullRoute) {
   const id = ending(r);
   return {
@@ -382,6 +391,7 @@ export function night(r: FullRoute) {
     venue: id === 'tarp' || id === 'half' ? 'roof' as const : 'room' as const,
     lights: lights(r),
     aside: r.wed === 'round' ? 'The left speaker hummed all night. We never did test the sound.' : null,
+    carried: carried(r),
   };
 }
 

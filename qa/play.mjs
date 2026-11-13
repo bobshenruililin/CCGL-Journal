@@ -4,7 +4,7 @@ import { createRequire } from 'node:module';
 const { chromium } = createRequire(import.meta.url)('playwright');
 import { mkdirSync } from 'node:fs';
 
-export const views = { desktop: { width: 1440, height: 900 }, phone: { width: 390, height: 844 }, laptop: { width: 1280, height: 720 } };
+export const views = { desktop: { width: 1440, height: 900 }, phone: { width: 390, height: 844 }, laptop: { width: 1366, height: 800 } };
 const order = { mon: ['self', 'post', 'find'], wed: ['cut', 'aside', 'round'], fri: ['self', 'ask', 'name'] };
 const beatButtons = '.knockbtn, .tick.next, .typing, .unfold, .carry:not(.busy), .lampbtn, .passbtn';
 

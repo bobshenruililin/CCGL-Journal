@@ -55,6 +55,9 @@ for (const r of routes) {
   if (r.fri === 'name') for (const [who, l] of Object.entries(n.lights)) assert(l === 'lit' || (who === 'kit' && r.mon === 'post'), who + ' unlit under name ' + id);
   if (e === 'half') assert(Object.values(n.lights).every(l => l !== 'lit'));
   if (e === 'leung') assert.deepEqual([n.lights.priya, n.lights.tomas, n.lights.leung], ['pale', 'pale', 'lit']);
+  // A few words sit beside each person in colour, and beside nobody else.
+  for (const who of ['kit', 'priya', 'tomas', 'leung']) assert.equal(!!n.carried[who], n.lights[who] === 'lit', who + ' caption ' + id);
+  assert(n.carried.yan);
   // Everyone lit in the painting was given, or took, a job in the text.
   for (const who of ['kit', 'priya', 'tomas']) if (n.lights[who] === 'lit') assert(fa.jobs.some(j => j.who === who), who + ' lit without a job ' + id);
 

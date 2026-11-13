@@ -19,15 +19,15 @@ export type SpreadProps = { s: Save; a: Acts; inked: string | null; resume?: boo
 const hand: Record<Who, string> = { yan: 'yhand', kit: 'khand', priya: 'phand', tomas: 'thand', leung: 'lhand' };
 
 /** Words arrive in the order a hand would write them. */
-function makeQ(start = 0.3) {
+function makeQ(start = 0.15) {
   let t = start;
   return {
     d(after = 0, more: V = {}): V { const v = { '--d': t.toFixed(2) + 's', ...more } as V; t += after; return v; },
     w(text: string): ReactNode[] {
       const words = text.split(' ');
       const out: ReactNode[] = [];
-      words.forEach((word, i) => { if (i) out.push(' '); out.push(<span key={i} className="w" style={{ '--d': (t + i * 0.038).toFixed(2) + 's' } as V}>{word}</span>); });
-      t += words.length * 0.038 + 0.28;
+      words.forEach((word, i) => { if (i) out.push(' '); out.push(<span key={i} className="w" style={{ '--d': (t + i * 0.026).toFixed(2) + 's' } as V}>{word}</span>); });
+      t += words.length * 0.026 + 0.18;
       return out;
     },
     p(text: string, cls?: string, key?: string | number) { return <p key={key ?? text.slice(0, 24)} className={cls}>{this.w(text)}</p>; },
@@ -57,9 +57,10 @@ function Thoughts<K extends string>({ night, lead, options, order, chosen, own, 
     <div className={'thoughts' + (chosen ? ' decided' : '') + (unsure ? ' unsure' : '')} role="group" aria-label={chosen ? 'What you wrote' : 'Three thoughts. Choose one to write down, or write your own.'}>
       <p className="lead fade" style={q.d(0.4)}>{lead}<span className="dots" aria-hidden="true"> . . .</span></p>
       {said && <p className="ownwords" key={said}><span className="sr">In your own words: </span>“{said}”</p>}
-      {unsure && <p className="pc whichone" role="status">I can read that two ways. Which did I mean?</p>}
+      {unsure && <p className="pc whichone" role="status">I can’t tell which of these that is. Which did I mean?</p>}
+      {!unsure && own && chosen && <p className="pc whichone">which, written down, comes to:</p>}
       {order.map((k, i) => (
-        <button key={k} type="button" className={'thought fade' + (chosen === k && !unsure ? ' inked' : '') + (inked === k ? ' fresh' : '') + (unsure ? (unsure.near.includes(k) ? ' near' : ' far') : '')} aria-pressed={chosen === k} onClick={() => pick(k)} style={q.d(0.35, { '--i': i })}>
+        <button key={k} type="button" className={'thought fade' + (chosen === k ? ' inked' : '') + (inked === k ? ' fresh' : '') + (unsure ? (unsure.near.includes(k) ? ' near' : ' far') : '')} aria-pressed={chosen === k} onClick={() => pick(k)} style={q.d(0.35, { '--i': i })}>
           <span className="pencil">{options[k]}</span>
           <span className="inkover" aria-hidden="true">{options[k]}</span>
         </button>
@@ -290,7 +291,7 @@ function WedAfter({ s, a }: SpreadProps) {
         {w.before.map(t => q.p(t))}
         <div className="card todo fade" style={q.d(0.3)}>
           <p className="cardtitle">{w.listTitle}</p>
-          <ul>{w.list.map(item => <li key={item}><span className="ring" aria-hidden="true" />{q.w(item)}</li>)}</ul>
+          <ul>{w.list.map(item => <li key={item}><span className="ring" aria-hidden="true" /><span>{q.w(item)}</span></li>)}</ul>
         </div>
         {w.after.map(t => q.p(t))}
       </div>
@@ -401,7 +402,7 @@ function Night_({ s, a }: SpreadProps) {
     : 'The screen is dark.');
   return (
     <section className={'spread s-night ' + (on ? 'on' : 'off')}>
-      <div className="bleed full"><Night ending={n.id} lights={n.lights} on={on} label={label} /></div>
+      <div className="bleed full"><Night ending={n.id} lights={n.lights} on={on} label={label + (on ? ' ' + Object.entries(n.carried).filter(([, v]) => v).map(([w, v]) => whoName(w as Who) + ': ' + v).join('. ') + '.' : '')} carried={n.carried} /></div>
       <h2 className="hd when" tabIndex={-1}>{n.when}</h2>
       {!on && <button type="button" className="lampbtn" onClick={() => a.beat('lamp')}><span className="pulse" aria-hidden="true" />switch it on</button>}
       {on && <div className="nightwords">{q.p(n.line, 'nightline')}{n.aside && q.p(n.aside, 'nightaside')}</div>}
@@ -468,7 +469,7 @@ function Last({ s, a }: SpreadProps) {
         {l.paragraphs.map(t => q.p(t))}
         <label className="yours fade" style={q.d(0.4)}>
           <span className="pc">{l.prompt}</span>
-          <textarea value={s.notes} onChange={e => a.note(e.target.value)} rows={3} maxLength={600} spellCheck={false} />
+          <textarea value={s.notes} onChange={e => a.note(e.target.value)} rows={3} maxLength={600} spellCheck={false} placeholder="write here" />
         </label>
       </div>
       <div className="pg r">
@@ -489,7 +490,7 @@ function Last({ s, a }: SpreadProps) {
         </div>
         <div className="tokenrow fade" style={q.d()}>
           <span className="token" aria-hidden="true"><i>ASTERWIND</i><b>1</b><i>after hours</i></span>
-          <p className="pc">Marcus left this in the pocket as well. On the back, in his writing: “good for one drink from the machine at the end of the studio corridor. Ask it about Friday.”</p>
+          <p className="pc">Marcus left this in the pocket as well. On the back, in his writing: “good for one drink from the machine at the end of the studio corridor. Ask it about Friday.” I haven’t found the machine yet.</p>
         </div>
       </div>
     </section>

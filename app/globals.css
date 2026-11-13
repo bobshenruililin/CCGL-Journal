@@ -62,7 +62,7 @@ p { margin: 0 0 .62em; }
 .khand { font-family: 'Reenie Beanie', 'Caveat', cursive; font-size: 1.16em; color: var(--kit); line-height: 1; }
 .phand { font-family: 'Covered By Your Grace', 'Caveat', cursive; color: var(--priya); letter-spacing: .01em; }
 .thand { font-family: 'Patrick Hand', 'Caveat', cursive; font-size: .84em; color: var(--tomas-ink); }
-.lhand { font-family: 'La Belle Aurore', 'Caveat', cursive; font-size: .8em; line-height: 1.45; color: var(--leung); }
+.lhand { font-family: 'La Belle Aurore', 'Caveat', cursive; font-size: .86em; line-height: 1.45; color: var(--leung); }
 .typed { font-family: 'Special Elite', 'Courier New', monospace; font-size: .6em; line-height: 1.4; color: #3a3640; }
 
 /* words, lines and washes arrive */
@@ -228,7 +228,9 @@ svg .jlabel .jn { font-weight: 700; font-size: 26px; }
 .knockbtn { position: absolute; left: 39%; top: 17%; width: 22%; height: 70%; background: none; border: 0; display: grid; place-items: center; }
 .chalkhint { color: #f1ecd6; font-size: 1.15em; opacity: .85; animation: pulse 1.8s ease-in-out infinite; }
 @keyframes pulse { 50% { opacity: .35; } }
-.ventfig { margin: .2em 0 .4em; width: 80%; }
+.ventfig { margin: 0 0 .2em; width: 58%; }
+.s-monafter.find .paste.note { margin: .5em 0 .5em auto; width: 70%; padding: .5em .8em; }
+.s-monafter.find p { margin-bottom: .5em; }
 .ventfig figcaption { margin-top: -.2em; font-size: 1.2em; }
 
 /* Wednesday */
@@ -237,7 +239,7 @@ svg .jlabel .jn { font-weight: 700; font-size: 26px; }
 .s-wed .thoughts { margin-top: .3em; }
 .s-wed .thought { margin: .1em 0; }
 .shout { position: absolute; left: 5.5%; top: 6%; width: 52%; margin: 0; font-size: 2.55cqw; line-height: .98; rotate: -2.2deg; text-shadow: 0 0 .5cqw rgba(255, 244, 222, .55); z-index: 2; }
-.mutter { position: absolute; left: 44.5%; top: 52%; width: 14%; margin: 0; font-size: 1.12cqw; line-height: 1.55; color: var(--tomas-ink); z-index: 1; display: grid; }
+.mutter { position: absolute; left: 43.5%; top: 51%; width: 15%; margin: 0; font-size: 1.3cqw; line-height: 1.55; color: var(--tomas-ink); z-index: 1; display: grid; }
 .mutter span:nth-child(3) { translate: 2cqw 0; } .mutter span:nth-child(4) { translate: .8cqw 0; }
 .shout.stopped { position: static; width: auto; font-size: 1.5em; margin: 0 0 .6em; text-shadow: none; }
 .slash { display: inline-block; width: 1.2em; height: .12em; margin-left: .1em; background: var(--ink); rotate: -24deg; translate: 0 -.3em; }
@@ -280,7 +282,7 @@ svg .jlabel .jn { font-weight: 700; font-size: 26px; }
 .carry.busy { opacity: .55; cursor: progress; }
 
 /* Friday */
-.onplate { position: absolute; left: 9%; right: 9%; bottom: 6%; z-index: 2; color: #f3eedf; text-shadow: 0 0 .5cqw #0d0f22; }
+.onplate { position: absolute; left: 9%; right: 9%; top: 5%; z-index: 2; color: #f3eedf; text-shadow: 0 0 .5cqw #0d0f22; }
 .onplate .hd { color: #f3eedf; background-image: linear-gradient(#aeb3d6, #aeb3d6); }
 .onplate p { margin: 0; }
 .storm .fig .ln, .night .fig .ln { stroke: #c9cde6; }
@@ -537,7 +539,7 @@ svg .jlabel .jn { font-weight: 700; font-size: 26px; }
 .marginnote.khand { font-size: 1.02em !important; }
 .marginnote.priya { color: var(--priya); } .marginnote.tomas { color: var(--tomas-ink); } .marginnote.kit { color: var(--kit); }
 .marginnote::before { content: '↳ '; opacity: .6; }
-.postscript { margin: 1.1em 0 0 30%; font-size: .68em; rotate: 1.4deg; border-top: .06em solid rgba(125, 60, 110, .4); padding-top: .4em; }
+.postscript { margin: 1.1em 0 0 26%; font-size: .78em; rotate: 1.4deg; border-top: .06em solid rgba(125, 60, 110, .4); padding-top: .4em; }
 
 /* On a painted night the people are gouache silhouettes: dark limbs, rough edges, a coat of their own colour. */
 .night .audience, .night .known { filter: url(#rough); }
@@ -558,3 +560,14 @@ svg .jlabel .jn { font-weight: 700; font-size: 26px; }
 .tapefig figcaption { position: absolute; inset: 0; display: grid; place-items: center; font-size: 1.5em; color: #1d2a4a; letter-spacing: .06em; }
 .receipt { position: absolute; right: 3.4cqw; bottom: 5cqw; width: 19%; rotate: 7deg; mix-blend-mode: multiply; }
 [data-layout='tall'] .receipt { position: static; display: block; width: 34%; margin: 1em 0 0 auto; }
+
+/* what each person in colour was carrying */
+.night .carried { font-family: 'Caveat', cursive; font-size: 31px; fill: #fff8e4; paint-order: stroke; stroke: rgba(8, 9, 24, .6); stroke-width: 6px; opacity: 0; animation: fadeIn 1.2s ease calc(1.6s + var(--i) * .45s) forwards; }
+.seen .night .carried, [data-still] .night .carried { opacity: 1; animation: none; }
+.yours textarea::placeholder { color: rgba(138, 131, 119, .7); }
+[data-layout='tall'] .hd { max-width: 78%; }
+[data-layout='tall'] .mutter { font-size: 2.6cqw; left: 40%; top: 50%; width: 22%; line-height: 1.3; }
+[data-layout='tall'] .mutter span { translate: 0 0 !important; }
+[data-layout='tall'] .shout { width: 72%; }
+[data-layout='tall'] .onplate { position: relative; top: auto; }
+.desk[data-mood='dark'] .corner.next em { right: 5.4cqw; }

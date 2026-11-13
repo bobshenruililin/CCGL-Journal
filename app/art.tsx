@@ -489,16 +489,16 @@ function Film() {
   );
 }
 
-type NightProps = { ending: 'tarp' | 'sheet' | 'leung' | 'half'; lights: Record<Exclude<Who, 'yan'>, Light>; on: boolean; label: string };
+type NightProps = { ending: 'tarp' | 'sheet' | 'leung' | 'half'; lights: Record<Exclude<Who, 'yan'>, Light>; on: boolean; label: string; carried?: Partial<Record<Who, string>> };
 /** A pool of pigment, not a spotlight: an uneven wash that has bled into the dark paper around one person. */
-const halo = (who: Who, x: number, y: number, l: Light, r = 150) => l === 'lit' ? (
+const halo = (who: Who, x: number, y: number, l: Light, r = 150, note?: string) => l === 'lit' ? (
   <g key={who} className="halo" style={{ color: hue[who] }}>
     <path filter="url(#pool)" fill="currentColor" d={`M${x - r} ${y}q${r * 0.1}-${r * 0.75} ${r * 0.9}-${r * 0.8}t${r * 1.15} ${r * 0.55}q${r * 0.1} ${r * 0.8}-${r * 0.85} ${r * 0.95}t-${r * 1.2}-${r * 0.7}z`} />
     <path filter="url(#pool)" fill="currentColor" opacity=".55" d={`M${x - r * 0.5} ${y - r * 0.1}q${r * 0.3}-${r * 0.5} ${r * 0.7}-${r * 0.3}t${r * 0.3} ${r * 0.6}q-${r * 0.4} ${r * 0.5}-${r * 0.8} ${r * 0.2}t-${r * 0.2}-${r * 0.5}z`} />
   </g>
 ) : null;
 
-export function Night({ ending, lights, on, label }: NightProps) {
+export function Night({ ending, lights, on, label, carried = {} }: NightProps) {
   const roof = ending === 'tarp' || ending === 'half';
   const rows: ReactNode[] = [];
   if (roof) {
@@ -541,9 +541,9 @@ export function Night({ ending, lights, on, label }: NightProps) {
       {/* colour: one bloom for each person who had something to carry */}
       {on && <g className="halos">
         {roof ? <>
-          {halo('kit', 760, 800, lights.kit)}{halo('priya', 250, 640, lights.priya)}{halo('tomas', 1150, 640, lights.tomas)}{halo('leung', 560, 560, lights.leung, 120)}
+          {halo('kit', 800, 800, lights.kit, 150, carried.kit)}{halo('priya', 250, 640, lights.priya, 150, carried.priya)}{halo('tomas', 1150, 640, lights.tomas, 150, carried.tomas)}{halo('leung', 560, 560, lights.leung, 120, carried.leung)}
         </> : <>
-          {halo('kit', 770, 810, lights.kit)}{halo('priya', 330, 620, lights.priya)}{halo('tomas', 1000, 640, lights.tomas)}{halo('leung', ending === 'leung' ? 1130 : 1150, ending === 'leung' ? 400 : 700, lights.leung, ending === 'leung' ? 190 : 120)}
+          {halo('kit', 800, 810, lights.kit, 150, carried.kit)}{halo('priya', 330, 620, lights.priya, 150, carried.priya)}{halo('tomas', 1000, 640, lights.tomas, 150, carried.tomas)}{halo('leung', ending === 'leung' ? 1130 : 1150, ending === 'leung' ? 400 : 700, lights.leung, ending === 'leung' ? 190 : 120, carried.leung)}
         </>}
         <g className="halo self" style={{ color: 'var(--yan)' }}><path filter="url(#pool)" fill="currentColor" d="M560 830q10-90 130-95t140 80q0 95-130 100t-140-85z" /></g>
       </g>}
@@ -570,6 +570,12 @@ export function Night({ ending, lights, on, label }: NightProps) {
         <g className="machine"><path d="M660 838h84v40h-84z" /><path d="M650 878h104M664 878v40M740 878v40" /><circle cx="702" cy="840" r="10" /></g>
       </g>
 
+      {on && <g className="captions">
+        {(roof
+          ? [['priya', 250, 520], ['tomas', 1150, 520], ['leung', 560, 478], ['kit', 900, 742], ['yan', 560, 742]]
+          : [['priya', 330, 500], ['tomas', 1000, 520], ['leung', ending === 'leung' ? 1130 : 1150, ending === 'leung' ? 250 : 612], ['kit', 910, 752], ['yan', 560, 752]]
+        ).map(([w, x, y], i) => carried[w as Who] ? <text key={w} className="carried" style={{ '--i': i } as V} x={x} y={y} textAnchor="middle">{carried[w as Who]}</text> : null)}
+      </g>}
       {ending === 'tarp' && !plate && <g className="canopy">
         <path filter="url(#wash)" d="M-10-10h1420v118q-118 62-236 18-116 58-236 12-120 60-238 14-118 58-236 12-120 60-238 16Q120 172-10 112z" />
         <path className="ropes" d="M228 130l-40 180M464 124v60M938 126v56M1174 126l150 180" />

@@ -36,6 +36,8 @@ export default function Journal() {
   const [inked, setInked] = useState<string | null>(null);
   const [pending, setPending] = useState<{ key: keyof Route; value: string; words?: string } | null>(null);
   const [menu, setMenu] = useState(false);
+  const [backAsk, setBackAsk] = useState(false);
+  const backDialog = useRef<HTMLDialogElement>(null);
   const [say, setSay] = useState('');
   const [nudge, setNudge] = useState(0);
   const wide = useMedia(WIDE);
@@ -59,6 +61,7 @@ export default function Journal() {
     if (!wide) window.scrollTo({ top: 0 });
   }, [at, wide]);
   useEffect(() => { const d = tearDialog.current; if (pending && d && !d.open) d.showModal(); if (!pending && d?.open) d.close(); }, [pending]);
+  useEffect(() => { const d = backDialog.current; if (backAsk && d && !d.open) d.showModal(); if (!backAsk && d?.open) d.close(); }, [backAsk]);
   useEffect(() => { const d = menuDialog.current; if (menu && d && !d.open) d.showModal(); if (!menu && d?.open) d.close(); }, [menu]);
 
   const startTurn = useCallback((from: Save, fromAt: number, toAt: number) => {
@@ -90,7 +93,7 @@ export default function Journal() {
     startTurn(cur, 0, Math.max(1, cur.at));
   };
   const next = () => {
-    if (pending || menu) return;
+    if (pending || menu || backAsk) return;
     if (at === 0) { openBook(); return; }
     if (go(advance)) return;
     if (s.at >= LAST) return;
@@ -128,7 +131,7 @@ export default function Journal() {
       if (beatDone(spreads[after.at], after) && (b === 'knock' || b === 'lamp' || b === 'ticks')) setTimeout(() => sfx.bloom(b === 'lamp' ? [261.63, 392, 523.25, 659.25, 783.99] : undefined), 250);
     },
     note(text) { store.update(x => writeNote(x, text)); },
-    turnBack() { go(turnBack); },
+    turnBack() { setBackAsk(true); },
     print() { window.print(); },
     download() {
       const url = URL.createObjectURL(new Blob([journalText(s.route, s.notes, s.own)], { type: 'text/plain;charset=utf-8' }));
@@ -188,6 +191,15 @@ export default function Journal() {
       </div>
       <p className="sr" role="status" aria-live="polite">{say}</p>
       {!saveOK && at > 0 && <p className="nosave">This browser won’t keep your place. Print or save the notebook before you leave.</p>}
+
+      <dialog ref={backDialog} className="slipdialog" onCancel={() => setBackAsk(false)} aria-labelledby="back-title">
+        <p id="back-title">Turning back to Monday night starts the week again on clean pages.</p>
+        <p className="pc">The ticket stubs stay in the pocket. This week’s pages, and the line you wrote, go.</p>
+        <div className="acts">
+          <button type="button" onClick={() => { setBackAsk(false); sfx.tear(); go(turnBack); }}>Turn back</button>
+          <button type="button" autoFocus onClick={() => setBackAsk(false)}>Stay here</button>
+        </div>
+      </dialog>
 
       <dialog ref={tearDialog} className="slipdialog" onCancel={() => setPending(null)} aria-labelledby="tear-title">
         <p id="tear-title">Writing this instead means tearing out every page after tonight.</p>
