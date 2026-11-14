@@ -8,7 +8,7 @@ import type { Light, Who } from './story.ts';
 import { hue } from './art';
 
 type V = CSSProperties & Record<`--${string}`, string | number>;
-type CastId = Who | 'tomasRope';
+type CastId = Who | 'tomasRope' | 'leungStand' | 'kitKneel';
 /** Source cut-outs: width/height in px, and where the body's centre line and feet sit inside the image. */
 const CAST: Record<CastId, { src: string; w: number; h: number; ax: number; body: number }> = {
   yan: { src: '/cast/yan.webp', w: 195, h: 640, ax: 0.5, body: 1 },
@@ -17,20 +17,24 @@ const CAST: Record<CastId, { src: string; w: number; h: number; ax: number; body
   tomas: { src: '/cast/tomas.webp', w: 222, h: 640, ax: 0.5, body: 1 },
   tomasRope: { src: '/cast/tomas-rope.webp', w: 394, h: 760, ax: 0.2, body: 0.86 },
   leung: { src: '/cast/leung.webp', w: 255, h: 640, ax: 0.5, body: 1 },
+  leungStand: { src: '/cast/leung-standing.webp', w: 229, h: 666, ax: 0.5, body: 1 },
+  kitKneel: { src: '/cast/kit-kneeling.webp', w: 415, h: 526, ax: 0.3, body: 1 },
 };
 
 /** One person, feet at (x, y), `h` tall in scene units. Shadow, paint and the light that catches them are separate layers. */
-export function Person({ id, x, y, h, light = 'lit', who, d = 0 }: { id: CastId; x: number; y: number; h: number; light?: Light; who?: Who; d?: number }) {
+export function Person({ id, x, y, h, light = 'lit', who, d = 0, flip = false }: { id: CastId; x: number; y: number; h: number; light?: Light; who?: Who; d?: number; flip?: boolean }) {
   if (light === 'absent') return null;
   const a = CAST[id];
-  const H = h / a.body, W = H * a.w / a.h, left = x - W * a.ax, top = y - H;
+  const H = h / a.body, W = H * a.w / a.h, left = x - W * (flip ? 1 - a.ax : a.ax), top = y - H;
+  const mirror = flip ? `translate(${2 * left + W} 0) scale(-1 1)` : undefined;
+  const owner: Who = who ?? (id === 'tomasRope' ? 'tomas' : id === 'leungStand' ? 'leung' : id === 'kitKneel' ? 'kit' : id);
   const bodyW = h * 0.34;
   return (
-    <g className={'person ' + light} style={{ '--d': d + 's', color: hue[who ?? (id === 'tomasRope' ? 'tomas' : id)] } as V}>
+    <g className={'person ' + light} style={{ '--d': d + 's', color: hue[owner] } as V}>
       <ellipse className="cast-shadow" cx={x} cy={y + h * 0.05} rx={bodyW * 0.95} ry={h * 0.085} />
       <ellipse className="contact" cx={x} cy={y - h * 0.004} rx={bodyW * 0.5} ry={h * 0.022} />
-      <image className="paint" href={a.src} x={left} y={top} width={W} height={H} />
-      <image className="rim" href={a.src} x={left} y={top} width={W} height={H} />
+      <image className="paint" href={a.src} x={left} y={top} width={W} height={H} transform={mirror} />
+      <image className="rim" href={a.src} x={left} y={top} width={W} height={H} transform={mirror} />
     </g>
   );
 }
@@ -64,7 +68,10 @@ function Film({ on }: { on: boolean }) {
   );
 }
 
-/** Dark, anonymous audience. Seated on chairs (roof) or on the floor (common room). */
+/** Painted sitters, measured in source pixels. They are kept dark and nearly colourless: colour in this painting belongs to people who carried something. */
+const SITTERS = [[289, 547], [251, 598], [300, 576], [293, 603], [284, 584], [388, 856]] as const;
+
+/** Anonymous audience. Painted people on folding chairs (roof) or dark shapes on the floor (common room). */
 function Crowd({ rows, floor, filled }: { rows: number[][]; floor: boolean; filled: (r: number, c: number) => boolean }) {
   const out: ReactNode[] = [];
   rows.forEach(([y, s, n, x0], r) => {
@@ -74,13 +81,17 @@ function Crowd({ rows, floor, filled }: { rows: number[][]; floor: boolean; fill
       const here = filled(r, c);
       out.push(
         <g key={r + '-' + c} transform={`translate(${x} ${y}) scale(${s})`} className={'sitter' + (here ? '' : ' empty')}>
-          {!floor && <path className="chairback" d="M-17-30h34v34h-34zM-17-10h34M-14 4v22M14 4v22" />}
-          {here && <><ellipse className="contact" cx="0" cy={floor ? 24 : 27} rx="24" ry="5" /><path className="body" d={floor ? 'M-22 22q-2-40 22-42 24 2 22 42z' : 'M-19 4q-2-32 19-34 21 2 19 34z'} /><circle className="head" cx="0" cy={floor ? -30 : -40} r="11.5" /></>}
+          {!floor && (() => {
+            if (!here) return <image className="chairpaint" href="/cast/chair-empty.webp" x={-23} y={-40} width={46} height={67.5} />;
+            const k = (r * 5 + c * 3) % SITTERS.length, [w, h] = SITTERS[k], H = k === 5 ? 96 : 90, W = H * w / h;
+            return <><ellipse className="contact" cx="0" cy="27" rx="24" ry="5" /><image className="sitterpaint" href={`/cast/audience-0${k + 1}.webp`} x={-W / 2} y={28 - H} width={W} height={H} /></>;
+          })()}
+          {floor && here && <><ellipse className="contact" cx="0" cy={24} rx="24" ry="5" /><path className="body" d="M-22 22q-2-40 22-42 24 2 22 42z" /><circle className="head" cx="0" cy={-30} r="11.5" /></>}
         </g>,
       );
     }
   });
-  return <g className="audience" filter="url(#rough)">{out}</g>;
+  return <g className="audience" filter={floor ? 'url(#rough)' : undefined}>{out}</g>;
 }
 
 type Ending = 'tarp' | 'sheet' | 'leung' | 'half';
@@ -110,17 +121,17 @@ export function Night({ ending, lights, on, label, carried = {} }: NightProps) {
   } : {
     priya: [318, 760, 214], tomas: [1016, 760, 226], yan: [612, 918, 262],
     kit: lights.kit === 'lit' ? [806, 918, 246] : [176, 668, 170],
-    leung: ending === 'leung' ? [1112, 690, 176] : [1168, 716, 156],
+    leung: ending === 'leung' ? [1275, 540, 196] : [1168, 716, 156],
   };
   const people: [Who, CastId, Light][] = [
-    ['leung', 'leung', lights.leung], ['priya', 'priya', lights.priya],
+    ['leung', ending === 'leung' ? 'leungStand' : 'leung', lights.leung], ['priya', 'priya', lights.priya],
     ['tomas', ending === 'tarp' && lights.tomas === 'lit' ? 'tomasRope' : 'tomas', lights.tomas],
     ['kit', 'kit', lights.kit], ['yan', 'yan', 'lit'],
   ];
   const crowdRows = roof ? [[606, 0.82, 11, 150], [694, 1, 9, 130], [796, 1.22, 7, 110]] : [[650, 0.9, 12, 140], [738, 1.1, 10, 120], [832, 1.3, 8, 100]];
   const filled = (r: number, c: number) => ending !== 'half' || (r === 0 ? c % 4 !== 3 : r === 1 ? c % 3 === 0 : c === 5);
   return (
-    <svg className={'plate night painted-scene ' + (on ? 'on ' : 'off ') + ending} viewBox="0 0 1400 933" preserveAspectRatio="xMidYMid slice" role="img" aria-label={label}>
+    <svg className={'plate night painted-scene ' + (on ? 'on ' : 'off ') + ending} viewBox="0 0 1400 933" preserveAspectRatio={ending === 'leung' ? 'xMaxYMid slice' : 'xMidYMid slice'} role="img" aria-label={label}>
       <PaintDefs />
       <image className="room" href={sc.plate} x="0" y="0" width="1400" height="933" preserveAspectRatio="xMidYMid slice" />
       {ending === 'leung' && <path className="doorglow" d="M1236 262h78v266h-78z" />}
@@ -157,7 +168,7 @@ export function StormScene({ kit, tomasAtProjector }: { kit: 'near' | 'far' | 'a
         <Person id="priya" x={150} y={786} h={178} />
         <Person id="tomas" x={tomasAtProjector ? 486 : 588} y={tomasAtProjector ? 892 : 792} h={tomasAtProjector ? 232 : 186} />
         <Person id="yan" x={266} y={898} h={236} />
-        {kit === 'near' && <Person id="kit" x={492} y={896} h={222} />}
+        {kit === 'near' && <Person id="kitKneel" x={470} y={902} h={150} flip />}
         <g className="machine-painted"><ellipse className="contact" cx="378" cy="905" rx="52" ry="8" /><image href="/plates/projector-open.webp" x="328" y="812" width="100" height="96" /><path className="sigh" d="M380 808q-10-16 2-28t-2-30" /></g>
       </g>
       <g className="rain">{Array.from({ length: 46 }, (_, i) => { const x = (i * 97) % 690 + 6, y = (i * 211) % 880 + 10; return <path key={i} style={{ '--i': i % 9 } as V} d={`M${x} ${y}l-7 30`} />; })}</g>
@@ -193,7 +204,7 @@ export function DoorScene({ knocks }: { knocks: number }) {
       <image className="room" href="/plates/S01-door.webp" x="0" y="0" width="640" height="400" preserveAspectRatio="xMidYMid slice" />
       <image className="room opened" href="/plates/S01-door-open.webp" x="0" y="0" width="640" height="400" preserveAspectRatio="xMidYMid slice" />
       {open && <g className="halos"><g className="halo" style={{ color: hue.kit }}><ellipse cx="330" cy="200" rx="250" ry="170" fill="currentColor" filter="url(#softer)" /></g></g>}
-      {open && <g className="kitdoor"><ellipse className="contact" cx="336" cy="300" rx="26" ry="5" /><image href="/cast/kit-front.webp" x="296" y="126" width="84" height="176" /></g>}
+      {open && <g className="kitdoor"><ellipse className="contact" cx="336" cy="300" rx="24" ry="3.5" opacity=".4" /><image href="/cast/kit-textbook.webp" x="307" y="124" width="57" height="176" /></g>}
       {!open && [0, 1, 2].slice(0, knocks).map(i => <g key={i} className="knock" style={{ '--i': i } as V}><circle cx="320" cy="170" r="18" /><circle cx="320" cy="170" r="34" /></g>)}
       <Grain w={640} h={400} />
     </svg>

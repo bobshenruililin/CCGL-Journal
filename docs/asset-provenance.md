@@ -6,6 +6,7 @@ All images were made by Robert with built-in OpenAI image generation; the model,
 
 - `assets/robert-fullsize-alts-20261113` (`docs/asset-candidates/wave2/`, `production-alts-20261113/`)
 - `assets/robert-review-library-20261113` (304 studies; consulted, none used directly)
+- draft PR #6 (`docs/asset-candidates/figure-pass-20261114/`: twenty figure cut-outs, 14 November; eighteen used)
 
 | In the build | Source on the asset branch | Processing | Where it appears |
 | --- | --- | --- | --- |
@@ -21,7 +22,12 @@ All images were made by Robert with built-in OpenAI image generation; the model,
 | `cast/yan.webp`, `kit.webp`, `priya.webp`, `leung.webp` | `wave2/figures-back/*-back.png` | Cropped to alpha, 640 px tall, WebP with alpha | Last night (all endings), Friday, Wednesday, the landing, 1:40 am |
 | `cast/tomas-rope.webp` | `wave2/figures-back/tomas-back.png` | as above | Under the Tarp, when Tomás has the tarp |
 | `cast/tomas.webp` | `production-alts-20261113/tomas/T02-neutral-hands-pockets.png` (T02 chosen over T01) | as above | Everywhere else Tomás stands |
-| `cast/portrait-*.webp`, `cast/kit-front.webp` | Crops of the front row of `wave2/character-gate/C01-five-people-revised.webp` | 2x upscale of the crop | Inside cover; Kit in his doorway |
+| `cast/portrait-kit.webp`, `portrait-priya.webp`, `portrait-tomas.webp`, `portrait-leung.webp` | `figure-pass-20261114/webp/portrait-*.webp` (PR #6). Replaces the earlier crops of the character sheet | Re-encoded WebP q86 | Inside cover |
+| `cast/kit-textbook.webp` | `figure-pass-20261114/webp/kit-textbook.webp`. Replaces `kit-front.webp`, which had no textbook | as delivered | Kit in his doorway, Monday |
+| `cast/kit-kneeling.webp` | `figure-pass-20261114/webp/kit-kneeling-back.webp` | Mirrored in the scene so he faces the machine | Friday 6:50, when Yan knocked on Monday |
+| `cast/leung-standing.webp` | `figure-pass-20261114/webp/leung-standing-front.webp` | as delivered | Mrs Leung in the doorway, Mrs Leung's Orders; the roof door on Thursday |
+| `cast/stairs-yan.webp`, `stairs-kit.webp`, `stairs-priya.webp`, `stairs-tomas.webp` | `figure-pass-20261114/webp/stairs-*.webp` | 360 px tall | Thursday: the carriers on the stairs and on the roof |
+| `cast/audience-01.webp` … `06`, `cast/chair-empty.webp` | `figure-pass-20261114/webp/audience-*.webp`, `chair-empty.webp` | 340 px tall (chair 260). Darkened and desaturated in CSS: colour in the last painting belongs to people who carried something | The roof audience, Under the Tarp and Half a Queue |
 | `plates/projector-open.webp` | `wave2/objects/projector-two-views.png` (open-lid view; the side view was not used) | Cropped, 520 px | The machine, wherever it appears |
 | `plates/hat-coins.webp` | `wave2/objects/hat-coins.png` | 360 px tall | Saturday, when the $340 was said aloud |
 | `plates/eph-receipt.webp`, `eph-tape.webp` | `exploration-complete/eph-receipt1.webp`, `eph-tape2.webp` | Resized; white ground removed by blend | Wednesday slips; Saturday when Kit left |
@@ -32,3 +38,5 @@ Notes
 - The film stills are an invented scene with fictional actors; no real film or person was supplied as reference.
 - The portraits and the Kit in the doorway are crops of a review sheet, not production cut-outs. Front-facing production poses have not been made.
 - No third-party image was imported. Confirm the generating platform's terms before public release.
+
+From the 14 November figure pass, not used: `leung-door-foot` (the raised leg reads as a kick at any size the page allows; the standing figure is at the roof door instead) and `leung-standing-back`. The common-room audience is still drawn, because the delivered sitters are on chairs and that room sits on the floor.

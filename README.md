@@ -25,10 +25,18 @@ The notebook now uses Robert's gouache artwork throughout the playable scenes.
 - People who were given nothing to carry are still painted people; they are simply not in colour.
 - The film on every screen is three frames of an invented tenement comedy, in sequence.
 - Friday's storm, Wednesday's dusk, the door on the fifth floor, the stair landing and the common room at 1:40 am are painted, with the same figures and the same treatment.
-- The inside cover introduces the four others with painted portraits from the revised character sheet.
+- The inside cover introduces the four others with painted portraits.
+- The 14 November figure pass closed the gaps: Kit holds his textbook in the doorway and kneels at the projector on Friday, Mrs Leung stands in the common-room door, painted carriers climb Thursday's stairs, and the roof audience is painted people on folding chairs, kept dark so that colour still means what it meant.
 - Yan's and Kit's own drawings stay drawn: the roof plan, the phone, the keys, the vent, the building with its stairs, the "who took what" diagrams, the figure lying beside the chairs.
 
 What was chosen, from which candidate, and what was reviewed and left out: `docs/asset-provenance.md`. Full-size sources stay on the asset branches and are not in `main`.
+
+## The making of, and the course video
+
+- **Notes on the making.** Behind the ribbon, "Notes on the making" pins a yellow flag to ten pages. Each note says why that page is built the way it is and which week of the course it answers. Off by default; `?making=1` switches it on.
+- **Open at a page.** `/?show=find,cut,name&at=sat&done=1` opens one week at one page, for filming and review. It is held in memory and never touches a visitor's saved notebook. Values are listed in `docs/video/plan.md`.
+- **The video.** `docs/video/plan.md` is the plan for the group's 3–4 minute course video: structure, the four spoken entries with prompts, clip list, references, schedule. `docs/video/clips/` holds seventeen silent clips recorded from this build (`node qa/clips.mjs` re-records them).
+- Turning back to Monday for another Friday now quotes the line you wrote on the last page before it lets you tear the week out.
 
 ## Run it
 
@@ -46,7 +54,7 @@ Then open http://127.0.0.1:5173/.
 
 | Check | Command |
 | --- | --- |
-| Story, state and own-words logic (no browser) | `npm test` |
+| Story, state, own-words and making-of logic (no browser) | `npm test` |
 | Real browser playthroughs; needs `npm run dev` running and Playwright available | `npm run test:e2e` |
 | Photograph a route | `node qa/play.mjs find,cut,name desktop qa/shots` (`phone`, `--keys`, `--still`, `--2x`) |
 | Types, lint, build | `npx tsc --noEmit`, `npm run lint`, `npm run build` |
@@ -65,13 +73,14 @@ Then open http://127.0.0.1:5173/.
 | `app/art.tsx` | Yan's and Kit's own ink-and-wash drawings in SVG. |
 | `public/plates/`, `public/cast/` | The web-sized gouache plates, objects and figure cut-outs used by the build. |
 | `app/Journal.tsx` | The book: page turns, keyboard, focus, dialogs, print. |
+| `app/making.ts` | Notes on the making, one per course week, and the `?show=` links. |
 | `app/sound.ts` | Synthesised paper, pencil, knock and rain. No audio files. |
 | `qa/` | `story-check`, `state-check`, `interpret-check` (Node) and `e2e` + `play` (Playwright). |
 | `docs/creative-thesis.md` | What this is about, how the insight is derived, and what is deliberately absent. |
 | `docs/asset-manifest.md` | The original brief for the painted artwork: language, geometry, prompts, review steps. |
 | `docs/asset-provenance.md` | What Robert's artwork is used where, which alternative was chosen, and what was left out. |
 | `docs/playtest-2026-11-12-model-reviewer.md` | Notes from an uncoached playthrough by a model reviewer (not a person). |
-| `coordination/requests/` | Twelve notes for Robert and Astra. 01–06 are the original briefs (plates, live reader, Friday by voice, sound, a fresh-eyes playtest, the Asterwind machine); 07–12 are the art handoff and decisions, ending with what a further pass would need. |
+| `coordination/requests/` | Fourteen notes for Robert and Astra. 01–06 are the original briefs (plates, live reader, Friday by voice, sound, a fresh-eyes playtest, the Asterwind machine); 07–14 are the art handoff and decisions. |
 | `docs/screenshots/`, `docs/recordings/` | Stills from the current build, and a silent 110-second playthrough of one route recorded before the painted pass. |
 | `docs/jamie-design-backbone.md`, `docs/creative-reference-manifest.md`, `docs/fable-setup.md` | The design backbone and reference guide this was built against. |
 | `docs/history/` | Notes on the earlier three-scene prototype this replaced. |
@@ -81,7 +90,7 @@ Then open http://127.0.0.1:5173/.
 
 ## Known limits
 
-- Front-facing figures are crops of a review sheet (the portraits, Kit in his doorway). Production front poses have not been made, so Thursday's stairs still use drawn figures.
+- The common-room audience is still drawn shapes; the painted sitters are on chairs and that room sits on the floor.
 - Sound was written without being listened to. Treat it as a draft (request 04).
 - No person has played this cold. The automated playthroughs prove it works, not that it lands (request 05).
 - Own-words reading is a keyword reading. Oblique phrasings get "I can read that two ways" and a choice of two lines until a live reader is added (request 02).
