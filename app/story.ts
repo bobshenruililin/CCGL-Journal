@@ -22,7 +22,7 @@ export const FRI: readonly Fri[] = ['self', 'ask', 'name'];
 export const title = 'Six Flights';
 
 export const cast: Record<Exclude<Who, 'yan'>, { name: string; note: string }> = {
-  kit: { name: 'Kit', note: 'First-year. The projector is his. Knows it like a pet. Hasn’t answered a message in five days.' },
+  kit: { name: 'Kit', note: 'First-year. The projector is his. Hasn’t answered a message in five days.' },
   priya: { name: 'Priya', note: 'Final year. Money, posters, opinions. Usually right. Always first.' },
   tomas: { name: 'Tomás', note: 'On exchange from Valparaíso. Says yes before you’ve finished asking.' },
   leung: { name: 'Mrs Leung', note: 'Has the roof key. Has had it since 1998.' },
@@ -32,7 +32,7 @@ export const inside = {
   programme: ['ROOFTOP CINEMA', 'Hillside Hall', 'LAST SCREENING OF TERM', 'Friday · 7 pm · the roof', 'six flights up — the lift is out, sorry', 'bring a jumper'],
   plate: 'If found: Yan, room 614',
   note: [
-    'Marcus ran the roof screenings for two years. Three weeks ago he left for Toronto, and I got a ring of keys and this notebook.',
+    'Marcus ran the roof screenings for two years. Then he left for Toronto, and I got his keys and this notebook.',
     'I draw things. I have never been in charge of anything.',
   ],
   plan: 'the roof, as inherited',
@@ -43,7 +43,7 @@ export const inside = {
 export const monday = {
   heading: 'Monday, 11:10 pm',
   paragraphs: [
-    'Four days to the last screening. Kit has the projector, the cables and the only checklist, and Kit has not answered a message since Wednesday.',
+    'Four days to the last screening. Kit has the projector and the only checklist, and he hasn’t answered a message since Wednesday.',
     'Twenty-three messages. Two blue ticks. Nothing. His room is one floor below mine.',
     'The machine is in the store cupboard on the second floor. I have the key.',
   ],
@@ -89,7 +89,7 @@ export function mondayAfter(mon: Mon) {
   return {
     kind: 'find' as const,
     heading: 'Monday, 11:40 pm · fifth floor, room 509',
-    before: ['The corridor light is on a timer, and it gave up before I reached his door. There is a line of yellow under it.'],
+    before: ['The corridor light gave up before I reached his door. There is a line of yellow under it.'],
     after: [
       'He opened on the third knock, holding a chemistry textbook like a tray.',
       'He failed the midterm. His scholarship has a number attached to it. He said every message he didn’t open made the next one heavier.',
@@ -109,11 +109,11 @@ export function wednesday(mon: Mon) {
   return {
     heading: 'Wednesday, 6:15 pm · the roof',
     paragraphs: [
-      'Walk-through. Mrs Leung let us up and stayed by the door with the key in her fist, which is how she tells the time.',
+      'Walk-through. Mrs Leung let us up and stayed by the door with the key in her fist.',
       {
         self: 'Kit sent a thumbs-up to the time and didn’t come.',
         post: 'Tomás has brought the projector manual, printed, with tabs.',
-        find: 'Kit came, which nobody mentions in case it stops being true. He’s by the stairwell socket, measuring a cable against his arm.',
+        find: 'Kit came, which nobody mentions in case it stops being true. He’s measuring a cable against his arm.',
       }[mon],
     ],
     priya: '—doors at half six, intro at seven SHARP, I’ve cut the interval, nobody needs an interval, speakers go HERE, and the screen faces the harbour because of the light, and—',
@@ -138,7 +138,7 @@ export function wednesdayAfter(mon: Mon, wed: Wed) {
     before: ['It came out louder than I meant. For a second the only sound was the drying racks.'],
     tomas: forecast + ' Sorry. I checked three apps.',
     after: [
-      'So now everyone knows. We booked the second-floor common room as a fallback before we left the roof. It took four minutes.',
+      'So now everyone knows. We booked the common room as a fallback before we left the roof. It took four minutes.',
       'Priya didn’t say another word up there. Her running order arrived at eleven.',
     ],
     paste: { who: 'priya' as Who, label: 'Priya · 11:02 pm', text: 'Running order attached. As instructed. — P' },
@@ -236,9 +236,9 @@ export function friday(mon: Mon, wed: Wed) {
   return {
     heading: 'Friday, 6:50 pm · the roof',
     paragraphs: [
-      'The picture just went. On the screen a man had his ear pressed to a wall, listening for his neighbour. Then the fan made a sound like a sigh, and now there’s a white sheet and a dark roof.',
+      'The picture just went. A man on the screen had his ear to a wall, listening for his neighbour. Then the fan sighed, and now there’s a white sheet and a dark roof.',
       'A drop on my hand. Another on this page.',
-      'Forty people are queuing down six flights and I can hear every one of them.',
+      'Forty people are queuing down the stairs and I can hear every one of them.',
       {
         find: 'Kit is kneeling by the projector with his hands off it, waiting.',
         self: 'Kit did come. He’s at the back by the water tank with his hood up, like a guest.',
