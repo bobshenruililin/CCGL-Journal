@@ -1,0 +1,348 @@
+{
+  "base_commit": "14deb1e1bc69375f3cc8456b70d835c2ae4692cd",
+  "generator": "OpenAI built-in image generation; model/version/seed not exposed",
+  "reference": "C01-five-people-revised.webp from assets/robert-fullsize-alts-20261113",
+  "processing": "sips rectangular extraction; cwebp q86 alpha_q100. Native resolution; no upscaling, repainting, or chroma key. Bounds use alpha >=16 plus 4px margin.",
+  "assets": [
+    {
+      "id": "kit-textbook",
+      "source": "sources/portraits.png",
+      "crop": [
+        91,
+        22,
+        226,
+        698
+      ],
+      "width": 226,
+      "height": 698,
+      "png": "png/kit-textbook.png",
+      "webp": "webp/kit-textbook.webp",
+      "webp_bytes": 47186,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "ecf68ce5832d67325f8aa51037c5344d13603f56c3d80f699f19444d8e9cd44a"
+    },
+    {
+      "id": "portrait-kit",
+      "source": "sources/portraits.png",
+      "crop": [
+        408,
+        151,
+        393,
+        485
+      ],
+      "width": 393,
+      "height": 485,
+      "png": "png/portrait-kit.png",
+      "webp": "webp/portrait-kit.webp",
+      "webp_bytes": 53144,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "651abfae75465b67a99b924bbe9a5ca8b59e0a803c72054adc3fcb4c7d578d83"
+    },
+    {
+      "id": "portrait-priya",
+      "source": "sources/portraits.png",
+      "crop": [
+        855,
+        138,
+        374,
+        499
+      ],
+      "width": 374,
+      "height": 499,
+      "png": "png/portrait-priya.png",
+      "webp": "webp/portrait-priya.webp",
+      "webp_bytes": 49306,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "1738b8c914b15e8efcd4feb44b9f075c0f7bb5ac88a40109c43fb1a109d4b2ad"
+    },
+    {
+      "id": "portrait-tomas",
+      "source": "sources/portraits.png",
+      "crop": [
+        1265,
+        133,
+        420,
+        504
+      ],
+      "width": 420,
+      "height": 504,
+      "png": "png/portrait-tomas.png",
+      "webp": "webp/portrait-tomas.webp",
+      "webp_bytes": 50112,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "6e644fd4b2b73bfb1beb5a5d75db3be7ed6417e1cfaeef00d99c7649a5869344"
+    },
+    {
+      "id": "portrait-leung",
+      "source": "sources/portraits.png",
+      "crop": [
+        1738,
+        162,
+        407,
+        480
+      ],
+      "width": 407,
+      "height": 480,
+      "png": "png/portrait-leung.png",
+      "webp": "webp/portrait-leung.webp",
+      "webp_bytes": 51642,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "e6cda5458e4d608a8e2a42d57bf6a2a566abdc9dba4d2a30a50c95bc8061aaeb"
+    },
+    {
+      "id": "stairs-yan",
+      "source": "sources/stairs.png",
+      "crop": [
+        22,
+        94,
+        331,
+        623
+      ],
+      "width": 331,
+      "height": 623,
+      "png": "png/stairs-yan.png",
+      "webp": "webp/stairs-yan.webp",
+      "webp_bytes": 49118,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "748c206ea24abddd066830e0aeba98cae52911fb9e876ad5c8730694e1f6c229"
+    },
+    {
+      "id": "stairs-kit",
+      "source": "sources/stairs.png",
+      "crop": [
+        442,
+        119,
+        363,
+        596
+      ],
+      "width": 363,
+      "height": 596,
+      "png": "png/stairs-kit.png",
+      "webp": "webp/stairs-kit.webp",
+      "webp_bytes": 43382,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "39466424b12ba3d3e94715a601f0b5b1393c9ad6bfbaaa9f93e3f51443484a4b"
+    },
+    {
+      "id": "stairs-priya",
+      "source": "sources/stairs.png",
+      "crop": [
+        891,
+        44,
+        323,
+        672
+      ],
+      "width": 323,
+      "height": 672,
+      "png": "png/stairs-priya.png",
+      "webp": "webp/stairs-priya.webp",
+      "webp_bytes": 52986,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "79cd025e0a64e0758512c9bb12691ea26937c6cdf6c4316b3e953067649be6ec"
+    },
+    {
+      "id": "stairs-tomas",
+      "source": "sources/stairs.png",
+      "crop": [
+        1310,
+        15,
+        341,
+        701
+      ],
+      "width": 341,
+      "height": 701,
+      "png": "png/stairs-tomas.png",
+      "webp": "webp/stairs-tomas.webp",
+      "webp_bytes": 52940,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "bad3bd16e371a8cc349a0b2e613b1b0790520369f72e61b886c969d0788c80c2"
+    },
+    {
+      "id": "leung-door-foot",
+      "source": "sources/stairs.png",
+      "crop": [
+        1776,
+        145,
+        375,
+        572
+      ],
+      "width": 375,
+      "height": 572,
+      "png": "png/leung-door-foot.png",
+      "webp": "webp/leung-door-foot.webp",
+      "webp_bytes": 37992,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "b6b4a6a473736907b4ec93474c140baec2f99286b3097ebacfe5878335fbd0b0"
+    },
+    {
+      "id": "kit-kneeling-back",
+      "source": "sources/projector-door.png",
+      "crop": [
+        169,
+        178,
+        415,
+        526
+      ],
+      "width": 415,
+      "height": 526,
+      "png": "png/kit-kneeling-back.png",
+      "webp": "webp/kit-kneeling-back.webp",
+      "webp_bytes": 42536,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "442519d811e9715d6272132a1afeee1185ecaff6731596826d1031505ecb90a6"
+    },
+    {
+      "id": "leung-standing-back",
+      "source": "sources/projector-door.png",
+      "crop": [
+        982,
+        53,
+        206,
+        651
+      ],
+      "width": 206,
+      "height": 651,
+      "png": "png/leung-standing-back.png",
+      "webp": "webp/leung-standing-back.webp",
+      "webp_bytes": 37714,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "97c523582e15e7587dfa7b57ce27cb01cec1419db106170ff112416949df2a48"
+    },
+    {
+      "id": "leung-standing-front",
+      "source": "sources/projector-door.png",
+      "crop": [
+        1662,
+        39,
+        229,
+        666
+      ],
+      "width": 229,
+      "height": 666,
+      "png": "png/leung-standing-front.png",
+      "webp": "webp/leung-standing-front.webp",
+      "webp_bytes": 42382,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "baf02b61a80a412854b639fe5c2ae4c2a1c5b8fac43ffe178cf9cc08bd0573f6"
+    },
+    {
+      "id": "audience-01",
+      "source": "sources/audience.png",
+      "crop": [
+        29,
+        134,
+        289,
+        547
+      ],
+      "width": 289,
+      "height": 547,
+      "png": "png/audience-01.png",
+      "webp": "webp/audience-01.webp",
+      "webp_bytes": 42068,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "74d200205542075287307438d55782c7899acd9c624754080ac994793c439402"
+    },
+    {
+      "id": "audience-02",
+      "source": "sources/audience.png",
+      "crop": [
+        350,
+        82,
+        251,
+        598
+      ],
+      "width": 251,
+      "height": 598,
+      "png": "png/audience-02.png",
+      "webp": "webp/audience-02.webp",
+      "webp_bytes": 47212,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "c3f4bebb1c883e5e66e49b98d4a47ca65d136cf1147e8c3dbff394cb71170f4b"
+    },
+    {
+      "id": "audience-03",
+      "source": "sources/audience.png",
+      "crop": [
+        615,
+        104,
+        300,
+        576
+      ],
+      "width": 300,
+      "height": 576,
+      "png": "png/audience-03.png",
+      "webp": "webp/audience-03.webp",
+      "webp_bytes": 46362,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "70f4e167dbfc9912d51b9200ee47578cf6cbea1d281b5e709ea897785cb6f2a2"
+    },
+    {
+      "id": "audience-04",
+      "source": "sources/audience.png",
+      "crop": [
+        947,
+        75,
+        293,
+        603
+      ],
+      "width": 293,
+      "height": 603,
+      "png": "png/audience-04.png",
+      "webp": "webp/audience-04.webp",
+      "webp_bytes": 50098,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "cc9a98f23a1b026a745fb6712eb0a9085a95d72e4aa88f0d5474b3efeadf4f44"
+    },
+    {
+      "id": "audience-05",
+      "source": "sources/audience.png",
+      "crop": [
+        1240,
+        94,
+        284,
+        584
+      ],
+      "width": 284,
+      "height": 584,
+      "png": "png/audience-05.png",
+      "webp": "webp/audience-05.webp",
+      "webp_bytes": 48862,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "a47c6cc867296e7ca78b35e995102297bc4cf5b3b4b1056909a0395b3e21f274"
+    },
+    {
+      "id": "audience-06",
+      "source": "sources/audience-detail.png",
+      "crop": [
+        221,
+        17,
+        388,
+        856
+      ],
+      "width": 388,
+      "height": 856,
+      "png": "png/audience-06.png",
+      "webp": "webp/audience-06.webp",
+      "webp_bytes": 85332,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "625d103237bce64d59d4eabfac15f9f4161ca19fa30bb7f6b01ed5b784e1ba80"
+    },
+    {
+      "id": "chair-empty",
+      "source": "sources/audience-detail.png",
+      "crop": [
+        1168,
+        331,
+        368,
+        540
+      ],
+      "width": 368,
+      "height": 540,
+      "png": "png/chair-empty.png",
+      "webp": "webp/chair-empty.webp",
+      "webp_bytes": 53754,
+      "alpha": "verified: transparent, opaque and fractional pixels",
+      "sha256": "e4d69b39f6f31deb7ba1aa279b0e0c351c3b940fd16a397f5a5f1cd98f678ff1"
+    }
+  ]
+}
