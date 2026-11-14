@@ -394,9 +394,9 @@ export function Building({ done, tripsTotal, helpers, moving, perTrip }: { done:
       </g>
       <g className="roofchairs">{Array.from({ length: delivered }, (_, i) => <path key={i} className="minichair" style={{ '--i': i % perTrip } as V} d={`M${200 + (i % 12) * 14.500} ${i < 12 ? 122 : 100}v-16h9v16M${200 + (i % 12) * 14.500} ${i < 12 ? 114 : 92}h9`} />)}</g>
       {!atTop && <g key={done} className={'climb' + (moving ? ' go' : '')}>
-        {crew.map((w, i) => <Fig key={w} who={w} x={212 - i * 30} y={730} s={0.620} pose="carry" />)}
+        {crew.map((w, i) => { const x = 318 - i * 36, y = 736 - (x - 212) * 0.6375; return <image key={w} className="carrier" href={`/cast/stairs-${w}.webp`} x={x - 22} y={y - 78} width={44} height={80} preserveAspectRatio="xMidYMax meet" />; })}
       </g>}
-      {atTop && <g className="fade" style={dl(0.3)}>{crew.map((w, i) => <Fig key={w} who={w} x={468 - i * 21} y={122} s={0.520} />)}<Fig who="leung" x={140} y={122} s={0.540} pose="fold" /></g>}
+      {atTop && <g className="fade" style={dl(0.3)}>{crew.map((w, i) => <image key={w} className="carrier" href={`/cast/stairs-${w}.webp`} x={440 - i * 30} y={56} width={38} height={68} preserveAspectRatio="xMidYMax meet" />)}<image className="carrier" href="/cast/leung-standing.webp" x={128} y={62} width={22} height={62} /></g>}
     </svg>
   );
 }
