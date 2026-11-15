@@ -105,28 +105,11 @@
  ],
  "sfx": [
   {
-   "file": "video/media/sfx/pop.mp3",
-   "t": 53.8,
-   "gain": -20,
-   "dur": 0.5
-  },
-  {
-   "file": "video/media/sfx/pop.mp3",
-   "t": 56.0,
-   "gain": -20,
-   "dur": 0.5
-  },
-  {
-   "file": "video/media/sfx/pop.mp3",
-   "t": 58.5,
-   "gain": -20,
-   "dur": 0.5
-  },
-  {
    "file": "video/media/sfx/lesson.mp3",
    "t": 66.1,
    "gain": -16,
    "dur": 1.4
   }
- ]
+ ],
+ "frame": "full"
 }

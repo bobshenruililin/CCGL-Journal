@@ -4,111 +4,110 @@
  "words": "video/sections/s1-monday/words.json",
  "figure": "video/media/figures/bob.png",
  "base": "video/work/s1-monday/base.mp4",
- "audio": "video/media/voice/bob-knock-v2.wav",
- "duration": 48.5,
+ "audio": "video/media/voice/bob-knock-nohi.wav",
+ "duration": 48.35,
  "lines": [
   [
    0,
+   9,
+   "Our game is called Six Flights, and you play Yan,"
+  ],
+  [
    10,
-   "The one at the heart of it is called Six Flights."
+   23
   ],
   [
-   11,
-   27
+   24,
+   31
   ],
   [
-   28,
-   35,
-   "and over one week she makes three decisions."
+   32,
+   41
   ],
   [
-   36,
-   45,
-   "The one I wanted to talk about is the first."
+   42,
+   50
   ],
   [
-   46,
-   54
+   51,
+   64
   ],
   [
-   55,
-   68
+   65,
+   71
   ],
   [
-   69,
-   75
-  ],
-  [
-   76,
-   88,
+   72,
+   84,
    "because I've had friends go quiet and everyone assumed that they'd stopped caring,"
   ],
   [
-   89,
-   103
+   85,
+   99
   ],
   [
-   104,
-   116
+   100,
+   112,
+   "So I wanted that to be the first thing a player runs into,"
   ],
   [
-   117,
-   133,
+   113,
+   129,
    "because if you knock, you find out what's actually going on, and it changes the whole week."
   ],
   [
-   134,
-   143,
+   130,
+   139,
    "What I hope people take from it is to just"
   ]
  ],
  "big": [
   {
-   "t0": 43.0,
+   "t0": 42.75,
    "text": "Ask before you assume.",
    "kicker": "LESSON ONE"
   }
  ],
  "addLessons": [
   {
-   "t": 45.5,
+   "t": 45.35,
    "text": "Ask before you assume."
   }
  ],
  "sfx": [
   {
    "file": "video/media/sfx/page-turn.mp3",
-   "t": 2.6,
+   "t": 2.35,
    "gain": -16,
    "dur": 0.5
   },
   {
    "file": "video/media/sfx/pencil.mp3",
-   "t": 19.2,
+   "t": 19.05,
    "gain": -18,
    "dur": 1.4
   },
   {
    "file": "video/media/sfx/knock.mp3",
-   "t": 25.4,
+   "t": 25.25,
    "gain": -8,
    "dur": 0.6
   },
   {
    "file": "video/media/sfx/knock.mp3",
-   "t": 27.0,
+   "t": 26.85,
    "gain": -8,
    "dur": 0.6
   },
   {
    "file": "video/media/sfx/knock.mp3",
-   "t": 28.6,
+   "t": 28.45,
    "gain": -8,
    "dur": 0.6
   },
   {
    "file": "video/media/sfx/lesson.mp3",
-   "t": 42.9,
+   "t": 42.75,
    "gain": -18,
    "dur": 1.4
   }

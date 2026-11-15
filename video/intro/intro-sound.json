@@ -1,6 +1,6 @@
 {
- "voice": "video/media/voice/bob-intro.wav",
- "voice_t": 0.5,
+ "voice": "video/media/voice/bob-intro-v2.m4a",
+ "voice_t": 0.4,
  "sfx": [
   {
    "file": "video/media/sfx/pencil.mp3",
