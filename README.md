@@ -35,7 +35,8 @@ What was chosen, from which candidate, and what was reviewed and left out: `docs
 
 - **Notes on the making.** Behind the ribbon, "Notes on the making" pins a yellow flag to ten pages. Each note says why that page is built the way it is and which week of the course it answers. Off by default; `?making=1` switches it on.
 - **Open at a page.** `/?show=find,cut,name&at=sat&done=1` opens one week at one page, for filming and review. It is held in memory and never touches a visitor's saved notebook. Values are listed in `docs/video/plan.md`.
-- **The video.** `docs/video/plan.md` is the plan for the group's 3–4 minute course video: structure, the four spoken entries with prompts, clip list, references, schedule. `docs/video/clips/` holds seventeen silent clips recorded from this build (`node qa/clips.mjs` re-records them).
+- **Video handoff.** `video/HANDOFF.md` is the current plan, status and build instructions for the group video; `video/tools/` holds the editing scripts.
+- **Earlier plan.** `docs/video/plan.md` is the plan for the group's 3–4 minute course video: structure, the four spoken entries with prompts, clip list, references, schedule. `docs/video/clips/` holds seventeen silent clips recorded from this build (`node qa/clips.mjs` re-records them).
 - Turning back to Monday for another Friday now quotes the line you wrote on the last page before it lets you tear the week out.
 
 ## Run it
