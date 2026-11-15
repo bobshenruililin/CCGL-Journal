@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- End of part one: the five lessons and a QR code to play Six Flights. Recorded by video/intro/record.mjs. -->
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:Caveat;src:url(../../public/fonts/caveat-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Caveat;src:url(../../public/fonts/caveat-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:Elite;src:url(../../public/fonts/special-elite-latin-400-normal.woff2)}
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:radial-gradient(ellipse at 40% 40%,#2a2c4a 0,#17182e 55%,#0d0e1d 100%);color:#f1e9d2}
+.k{position:absolute;left:180px;top:150px;font:20px Elite;letter-spacing:.3em;color:#cfc6a8;opacity:0;animation:in .6s .2s forwards}
+ol{position:absolute;left:170px;top:210px;margin:0;padding:0;list-style:none}
+li{display:flex;gap:26px;align-items:center;font:700 74px/1 Caveat;margin-bottom:34px;opacity:0;translate:-30px 0;animation:in .7s forwards}
+li span{flex:none;width:62px;height:62px;border:3px solid #ffe9a8;border-radius:50%;font:700 44px/58px Caveat;text-align:center;color:#ffe9a8}
+li:nth-child(1){animation-delay:.6s}li:nth-child(2){animation-delay:1.3s}li:nth-child(3){animation-delay:2s}li:nth-child(4){animation-delay:2.7s}li:nth-child(5){animation-delay:3.4s}
+@keyframes in{to{opacity:1;translate:0 0}}
+.qr{position:absolute;right:190px;top:300px;width:400px;background:#f3ecd9;padding:22px 22px 18px;rotate:3deg;box-shadow:0 26px 50px rgba(0,0,0,.55);text-align:center;opacity:0;animation:in .8s 4.2s forwards}
+.qr img{width:100%;display:block}
+.qr b{display:block;font:700 46px/1 Caveat;color:#2b2a35;margin-top:10px}
+.qr i{display:block;font:400 28px/1 Caveat;color:#6a6358;margin-top:4px}
+.out{position:absolute;inset:0;background:#0d0e1d;opacity:0;animation:in .5s 9.5s forwards}
+</style></head><body>
+<div class="k">WHAT THE GAME TAUGHT US</div>
+<ol>
+<li><span>1</span>Ask before you assume.</li>
+<li><span>2</span>Let people carry it with you.</li>
+<li><span>3</span>No style is right every time.</li>
+<li><span>4</span>Give everyone a part that's theirs.</li>
+<li><span>5</span>Hear it from the people you led.</li>
+</ol>
+<div class="qr"><img src="../work/intro/qr-sixflights.png"><b>Play Six Flights</b><i>six-flights.vercel.app</i></div>
+<div class="out"></div>
+</body></html>

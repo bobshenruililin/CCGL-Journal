@@ -1,0 +1,115 @@
+{
+ "day": "Thursday",
+ "title": "the chairs",
+ "words": "video/sections/s2-chairs/words.json",
+ "figure": "video/media/figures/kate.png",
+ "figureHeight": 300,
+ "base": "video/work/s2-chairs/base.mp4",
+ "audio": "video/media/voice/kate-chairs.ogg",
+ "duration": 42.6,
+ "lessonsBefore": [
+  "Ask before you assume."
+ ],
+ "lines": [
+  [
+   0,
+   3
+  ],
+  [
+   4,
+   10
+  ],
+  [
+   11,
+   20,
+   "You just carry twenty-four chairs up six flights of stairs,"
+  ],
+  [
+   21,
+   35
+  ],
+  [
+   36,
+   46
+  ],
+  [
+   47,
+   58
+  ],
+  [
+   59,
+   66
+  ],
+  [
+   67,
+   80
+  ],
+  [
+   81,
+   86
+  ],
+  [
+   87,
+   99
+  ],
+  [
+   100,
+   107,
+   "“You could have asked. I'd have carried chairs.”"
+  ],
+  [
+   108,
+   116
+  ],
+  [
+   117,
+   121,
+   "but being kind also means"
+  ]
+ ],
+ "big": [
+  {
+   "t0": 39.2,
+   "text": "Let people carry it<br>with you.",
+   "kicker": "LESSON TWO",
+   "size": 124,
+   "rule": 600
+  }
+ ],
+ "addLessons": [
+  {
+   "t": 40.5,
+   "text": "Let people carry it with you."
+  }
+ ],
+ "sfx": [
+  {
+   "file": "video/media/sfx/footsteps.mp3",
+   "t": 3.0,
+   "gain": -26,
+   "dur": 8,
+   "loop": true,
+   "fade": 0.6
+  },
+  {
+   "file": "video/media/sfx/footsteps.mp3",
+   "t": 12.0,
+   "gain": -28,
+   "dur": 17,
+   "loop": true,
+   "fade": 0.8
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 31.0,
+   "gain": -15,
+   "dur": 2.0
+  },
+  {
+   "file": "video/media/sfx/lesson.mp3",
+   "t": 39.2,
+   "gain": -16,
+   "dur": 1.5
+  }
+ ]
+}
