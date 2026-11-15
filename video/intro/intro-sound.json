@@ -1,46 +1,46 @@
 {
  "voice": "video/media/voice/bob-intro-v2.m4a",
- "voice_t": 0.4,
+ "voice_t": 0.3,
  "sfx": [
   {
+   "file": "video/media/sfx/pop.mp3",
+   "t": 0.6,
+   "gain": -18,
+   "dur": 0.6
+  },
+  {
    "file": "video/media/sfx/pencil.mp3",
-   "t": 0.4,
+   "t": 9.2,
+   "gain": -18,
+   "dur": 2.4
+  },
+  {
+   "file": "video/media/sfx/pop.mp3",
+   "t": 12.5,
    "gain": -16,
-   "dur": 1.9
-  },
-  {
-   "file": "video/media/sfx/swoosh.mp3",
-   "t": 3.0,
-   "gain": -20,
-   "dur": 0.9
-  },
-  {
-   "file": "video/media/sfx/pop.mp3",
-   "t": 4.1,
-   "gain": -14,
    "dur": 0.6
   },
   {
    "file": "video/media/sfx/pop.mp3",
-   "t": 4.7,
-   "gain": -14,
+   "t": 12.9,
+   "gain": -16,
    "dur": 0.6
   },
   {
    "file": "video/media/sfx/pop.mp3",
-   "t": 5.3,
-   "gain": -14,
+   "t": 13.3,
+   "gain": -16,
    "dur": 0.6
   },
   {
    "file": "video/media/sfx/swoosh.mp3",
-   "t": 11.0,
+   "t": 14.5,
    "gain": -20,
    "dur": 0.9
   },
   {
    "file": "video/media/sfx/lesson.mp3",
-   "t": 12.4,
+   "t": 15.1,
    "gain": -14,
    "dur": 1.4
   }

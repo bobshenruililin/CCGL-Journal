@@ -94,31 +94,31 @@
  "sfx": [
   {
    "file": "video/media/sfx/paper-slide.mp3",
-   "t": 4.3,
+   "t": 3.4,
    "gain": -20,
    "dur": 1.2
   },
   {
    "file": "video/media/sfx/paper-slide.mp3",
-   "t": 8.8,
+   "t": 7.9,
    "gain": -22,
    "dur": 1.2
   },
   {
    "file": "video/media/sfx/paper-slide.mp3",
-   "t": 13.3,
+   "t": 12.4,
    "gain": -22,
    "dur": 1.2
   },
   {
    "file": "video/media/sfx/paper-slide.mp3",
-   "t": 17.8,
+   "t": 16.9,
    "gain": -22,
    "dur": 1.2
   },
   {
    "file": "video/media/sfx/pencil.mp3",
-   "t": 32.3,
+   "t": 31.4,
    "gain": -18,
    "dur": 2.4
   },

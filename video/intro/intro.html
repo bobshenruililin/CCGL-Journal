@@ -1,45 +1,30 @@
 <!doctype html>
-<!-- Opening frame for the group video. Recorded by video/intro/record.mjs at 1920x1080. About 15 seconds.
-     Beats: a question is written on a dark desk (0-3 s); three project "photos" drop onto it (3-7 s);
-     the four makers circle in a slow carousel under them (6-12 s); the title settles (11-15 s). -->
+<!-- Opening frame, timed to Bob's voiceover (video/media/voice/bob-intro-v2.m4a, placed at 0.3 s). 18 seconds.
+     0.4 s  "Hi, we're four students..."      the four makers rise and circle
+     8.9 s  "How do you let someone practise leading...?"   the question writes itself
+     12.1 s "Our answer was to build a game." three project cards drop in
+     14.6 s                                   cards lift away; the title lands
+     Recorded by: node video/intro/record.mjs video/intro/intro.html 18 video/out/s0-intro-silent.mp4 -->
 <html><head><meta charset="utf-8"><style>
 @font-face{font-family:Caveat;src:url(../../public/fonts/caveat-latin-700-normal.woff2);font-weight:700}
 @font-face{font-family:Caveat;src:url(../../public/fonts/caveat-latin-400-normal.woff2);font-weight:400}
 @font-face{font-family:Newsreader;src:url(../../public/fonts/newsreader-latin-400-normal.woff2)}
 @font-face{font-family:Elite;src:url(../../public/fonts/special-elite-latin-400-normal.woff2)}
 *{box-sizing:border-box}
-html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#15162b}
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden}
 body{background:radial-gradient(ellipse at 50% 38%,#2a2c4a 0,#17182e 55%,#0d0e1d 100%);font-family:Newsreader,serif;color:#f1e9d2}
 .grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E")}
-.lamp{position:absolute;left:50%;top:-300px;width:1500px;height:1100px;translate:-50% 0;background:radial-gradient(ellipse at 50% 30%,rgba(255,226,160,.22),transparent 62%);animation:lamp 15s ease-in-out both}
-@keyframes lamp{0%{opacity:0}12%{opacity:1}100%{opacity:1}}
+.lamp{position:absolute;left:50%;top:-300px;width:1500px;height:1100px;translate:-50% 0;background:radial-gradient(ellipse at 50% 30%,rgba(255,226,160,.22),transparent 62%);opacity:0;animation:fade 1.2s .1s forwards}
+@keyframes fade{to{opacity:1}}
 
-/* 1. the question, written */
-.q{position:absolute;left:0;right:0;top:420px;text-align:center;font:700 92px/1 Caveat;color:#ffe9a8;animation:q 15s ease both}
-.q span{display:inline-block;clip-path:inset(0 100% 0 0);animation:write 1.9s .4s steps(48) forwards}
-@keyframes write{to{clip-path:inset(0 0 0 0)}}
-@keyframes q{0%,18%{top:420px;opacity:1;scale:1}26%{top:40px;opacity:1;scale:.6}72%{top:40px;opacity:1;scale:.6}80%,100%{top:40px;opacity:0;scale:.6}}
-
-/* 2. three photos of three builds */
-.cards{position:absolute;left:0;right:0;top:150px;display:flex;justify-content:center;gap:56px}
-.card{width:470px;background:#f3ecd9;padding:16px 16px 18px;box-shadow:0 26px 50px rgba(0,0,0,.55);opacity:0;animation:drop 15s cubic-bezier(.2,.9,.25,1.15) both}
-.card img{display:block;width:100%;height:264px;object-fit:cover;object-position:center top}
-.card b{display:block;font:700 40px/1 Caveat;color:#2b2a35;margin-top:12px}
-.card i{display:block;font:400 28px/1 Caveat;color:#6a6358;margin-top:4px}
-.card:nth-child(1){--r:-5deg;animation-name:drop1}
-.card:nth-child(2){--r:2deg;animation-name:drop2}
-.card:nth-child(3){--r:5deg;animation-name:drop3}
-@keyframes drop1{0%,21%{opacity:0;translate:0 -900px;rotate:-25deg}29%{opacity:1;translate:0 0;rotate:-5deg}74%{opacity:1;translate:0 0;rotate:-5deg;scale:1}82%,100%{opacity:0;translate:-200px -40px;rotate:-12deg;scale:.9}}
-@keyframes drop2{0%,25%{opacity:0;translate:0 -900px;rotate:20deg}33%{opacity:1;translate:0 0;rotate:2deg}74%{opacity:1;translate:0 0;rotate:2deg;scale:1}82%,100%{opacity:0;translate:0 -60px;scale:.9}}
-@keyframes drop3{0%,29%{opacity:0;translate:0 -900px;rotate:-15deg}37%{opacity:1;translate:0 0;rotate:5deg}74%{opacity:1;translate:0 0;rotate:5deg;scale:1}82%,100%{opacity:0;translate:200px -40px;rotate:12deg;scale:.9}}
-
-/* 3. the four makers, circling */
-.ring{position:absolute;left:960px;top:905px;width:0;height:0;animation:ringIn 15s ease both}
-@keyframes ringIn{0%,38%{opacity:0}44%,100%{opacity:1}}
+/* 1. the four makers: big and central while Bob introduces them, then they settle low */
+.ring{position:absolute;left:960px;top:640px;width:0;height:0;opacity:0;scale:1.5;
+  animation:ringIn .9s .4s cubic-bezier(.2,.9,.25,1.2) forwards, ringSettle 1.4s 7.6s ease-in-out forwards}
+@keyframes ringIn{from{opacity:0;translate:0 120px}to{opacity:1;translate:0 0}}
+@keyframes ringSettle{to{top:905px;scale:1}}
 .who{position:absolute;width:280px;height:280px;margin:-230px 0 0 -140px;animation:orbit 9s linear infinite;animation-delay:calc(var(--k) * -2.25s)}
 .who img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(3px 0 0 #f3ecd9) drop-shadow(-3px 0 0 #f3ecd9) drop-shadow(0 3px 0 #f3ecd9) drop-shadow(0 -3px 0 #f3ecd9) drop-shadow(0 14px 16px rgba(0,0,0,.5));animation:bob 1.8s ease-in-out infinite alternate;animation-delay:calc(var(--k) * -.45s)}
 @keyframes bob{from{translate:0 0;rotate:-2deg}to{translate:0 -10px;rotate:2deg}}
-/* an ellipse in perspective: x = 520 sin, depth from cos sets size and stacking */
 @keyframes orbit{
  0%{transform:translate(0px,30px) scale(1.12);z-index:4;filter:brightness(1)}
  12.5%{transform:translate(368px,10px) scale(.98);z-index:3}
@@ -50,25 +35,40 @@ body{background:radial-gradient(ellipse at 50% 38%,#2a2c4a 0,#17182e 55%,#0d0e1d
  75%{transform:translate(-520px,-30px) scale(.82);z-index:2;filter:brightness(.82)}
  87.5%{transform:translate(-368px,10px) scale(.98);z-index:3}
  100%{transform:translate(0px,30px) scale(1.12);z-index:4;filter:brightness(1)}}
-.floor{position:absolute;left:960px;top:930px;width:1180px;height:150px;margin-left:-590px;border-radius:50%;background:radial-gradient(ellipse,rgba(255,226,160,.16),transparent 70%);animation:ringIn 15s ease both}
+.floor{position:absolute;left:960px;top:930px;width:1180px;height:150px;margin-left:-590px;border-radius:50%;background:radial-gradient(ellipse,rgba(255,226,160,.16),transparent 70%);opacity:0;animation:fade 1s 7.8s forwards}
+.course{position:absolute;left:0;right:0;top:150px;text-align:center;font:22px Elite;letter-spacing:.32em;color:#cfc6a8;opacity:0;animation:fade .8s 2.2s forwards, gone .6s 7.4s forwards}
+@keyframes gone{to{opacity:0}}
+
+/* 2. the question, written as Bob asks it */
+.q{position:absolute;left:0;right:0;top:300px;text-align:center;font:700 96px/1 Caveat;color:#ffe9a8;opacity:0;
+  animation:fade .2s 8.8s forwards, qUp .9s 11.9s ease-in-out forwards, gone .6s 14.6s forwards}
+.q span{display:inline-block;clip-path:inset(0 100% 0 0);animation:write 2.4s 8.9s steps(48) forwards}
+@keyframes write{to{clip-path:inset(0 0 0 0)}}
+@keyframes qUp{to{top:40px;scale:.6}}
+
+/* 3. three builds drop in on "build a game" */
+.cards{position:absolute;left:0;right:0;top:150px;display:flex;justify-content:center;gap:56px}
+.card{width:470px;background:#f3ecd9;padding:16px 16px 18px;box-shadow:0 26px 50px rgba(0,0,0,.55);opacity:0;translate:0 -900px}
+.card img{display:block;width:100%;height:264px;object-fit:cover;object-position:center top}
+.card b{display:block;font:700 40px/1 Caveat;color:#2b2a35;margin-top:12px}
+.card i{display:block;font:400 28px/1 Caveat;color:#6a6358;margin-top:4px}
+.card:nth-child(1){rotate:-5deg;animation:drop .6s 12.1s cubic-bezier(.2,.9,.25,1.15) forwards, lift .7s 14.6s ease-in forwards}
+.card:nth-child(2){rotate:2deg;animation:drop .6s 12.5s cubic-bezier(.2,.9,.25,1.15) forwards, lift .7s 14.7s ease-in forwards}
+.card:nth-child(3){rotate:5deg;animation:drop .6s 12.9s cubic-bezier(.2,.9,.25,1.15) forwards, lift .7s 14.8s ease-in forwards}
+@keyframes drop{to{opacity:1;translate:0 0}}
+@keyframes lift{from{opacity:1;translate:0 0}to{opacity:0;translate:0 -60px;scale:.92}}
 
 /* 4. title */
-.title{position:absolute;left:0;right:0;top:200px;text-align:center;opacity:0;animation:title 15s ease both}
+.title{position:absolute;left:0;right:0;top:200px;text-align:center;opacity:0;translate:0 24px;animation:titleIn .9s 15.0s ease forwards}
+@keyframes titleIn{to{opacity:1;translate:0 0}}
 .title .k{font:22px Elite;letter-spacing:.32em;color:#cfc6a8}
 .title h1{margin:14px 0 0;font:700 168px/1 Caveat;color:#ffe9a8;rotate:-2deg;text-shadow:0 8px 34px rgba(0,0,0,.6)}
 .title .s{font:400 46px/1.1 Caveat;color:#f1e9d2;margin-top:6px}
 .title svg{display:block;margin:6px auto 0;rotate:-2deg}
-@keyframes title{0%,76%{opacity:0;translate:0 24px}84%,100%{opacity:1;translate:0 0}}
-.out{position:absolute;inset:0;background:#0d0e1d;opacity:0;animation:out 15s linear both}
-@keyframes out{0%,96%{opacity:0}100%{opacity:1}}
+.blackout{position:absolute;inset:0;background:#0d0e1d;opacity:0;animation:fade .5s 17.5s forwards}
 </style></head><body>
 <div class="lamp"></div>
-<div class="q"><span>How do you let someone practise leading?</span></div>
-<div class="cards">
- <div class="card"><img src="../media/clips/still-teamquest.png"><b>Team Quest</b><i>it scored you</i></div>
- <div class="card"><img src="../../docs/screenshots/09-night-under-the-tarp.jpg"><b>Six Flights</b><i>it took the score away</i></div>
- <div class="card"><img src="../media/clips/still-asterwind-corridor.png"><b>Asterwind</b><i>it puts you in the room</i></div>
-</div>
+<div class="course">CCGL9079 · LEADERSHIP AND INFLUENCE</div>
 <div class="floor"></div>
 <div class="ring">
  <div class="who" style="--k:0"><img src="../work/intro/bust-bob.png"></div>
@@ -76,8 +76,14 @@ body{background:radial-gradient(ellipse at 50% 38%,#2a2c4a 0,#17182e 55%,#0d0e1d
  <div class="who" style="--k:2"><img src="../work/intro/bust-hannah.png"></div>
  <div class="who" style="--k:3"><img src="../work/intro/bust-amanda.png"></div>
 </div>
-<div class="title"><div class="k">A GAME-DESIGN INTERVIEW · CCGL9079</div><h1>Six Flights</h1><div class="s">four of us, three builds, one question</div>
+<div class="q"><span>How do you let someone practise leading?</span></div>
+<div class="cards">
+ <div class="card"><img src="../media/clips/still-teamquest.png"><b>Team Quest</b><i>it scored you</i></div>
+ <div class="card"><img src="../../docs/screenshots/09-night-under-the-tarp.jpg"><b>Six Flights</b><i>it took the score away</i></div>
+ <div class="card"><img src="../media/clips/still-asterwind-corridor.png"><b>Asterwind</b><i>it puts you in the room</i></div>
+</div>
+<div class="title"><div class="k">A GAME-DESIGN INTERVIEW</div><h1>Six Flights</h1><div class="s">four of us, three builds, one question</div>
  <svg width="560" height="30"><path d="M6 16 Q 140 2 280 14 T 552 12" fill="none" stroke="#d9472b" stroke-width="7" stroke-linecap="round"/></svg></div>
 <div class="grain"></div>
-<div class="out"></div>
+<div class="blackout"></div>
 </body></html>

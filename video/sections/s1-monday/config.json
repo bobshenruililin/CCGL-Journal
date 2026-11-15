@@ -77,31 +77,31 @@
  "sfx": [
   {
    "file": "video/media/sfx/page-turn.mp3",
-   "t": 2.35,
+   "t": 1.45,
    "gain": -16,
    "dur": 0.5
   },
   {
    "file": "video/media/sfx/pencil.mp3",
-   "t": 19.05,
+   "t": 18.15,
    "gain": -18,
    "dur": 1.4
   },
   {
    "file": "video/media/sfx/knock.mp3",
-   "t": 25.25,
+   "t": 24.35,
    "gain": -8,
    "dur": 0.6
   },
   {
    "file": "video/media/sfx/knock.mp3",
-   "t": 26.85,
+   "t": 25.95,
    "gain": -8,
    "dur": 0.6
   },
   {
    "file": "video/media/sfx/knock.mp3",
-   "t": 28.45,
+   "t": 27.55,
    "gain": -8,
    "dur": 0.6
   },
