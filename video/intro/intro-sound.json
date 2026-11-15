@@ -1,0 +1,48 @@
+{
+ "voice": "video/media/voice/bob-intro.m4a",
+ "voice_t": 0.6,
+ "sfx": [
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 0.4,
+   "gain": -16,
+   "dur": 1.9
+  },
+  {
+   "file": "video/media/sfx/swoosh.mp3",
+   "t": 3.0,
+   "gain": -20,
+   "dur": 0.9
+  },
+  {
+   "file": "video/media/sfx/pop.mp3",
+   "t": 4.1,
+   "gain": -14,
+   "dur": 0.6
+  },
+  {
+   "file": "video/media/sfx/pop.mp3",
+   "t": 4.7,
+   "gain": -14,
+   "dur": 0.6
+  },
+  {
+   "file": "video/media/sfx/pop.mp3",
+   "t": 5.3,
+   "gain": -14,
+   "dur": 0.6
+  },
+  {
+   "file": "video/media/sfx/swoosh.mp3",
+   "t": 11.0,
+   "gain": -20,
+   "dur": 0.9
+  },
+  {
+   "file": "video/media/sfx/lesson.mp3",
+   "t": 12.4,
+   "gain": -14,
+   "dur": 1.4
+  }
+ ]
+}
