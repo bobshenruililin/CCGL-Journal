@@ -7,7 +7,7 @@ still() { # still <image> <seconds> <zoom expr> <x 0..1> <y 0..1> <out>
   ffmpeg -y -loglevel error -loop 1 -i "$1" -t "$2" -r 30 -vf "scale=3840:2160,zoompan=z='$3':x='(iw-iw/zoom)*$4':y='(ih-ih/zoom)*$5':d=1:s=1920x1080:fps=30" -c:v libx264 -crf 16 -pix_fmt yuv420p "$6"; }
 join() { local out=$1; shift; local l; l=$(dirname "$out")/list.txt; : > "$l"; for f in "$@"; do echo "file $(basename "$f")" >> "$l"; done; ffmpeg -y -loglevel error -f concat -i "$l" -c copy "$out"; }
 s1() { local W=video/work/s1-monday; mkdir -p $W
-  ffmpeg -y -loglevel error -i $C/01-cover-and-committee.mp4 -vf "setpts=PTS*1.1364" -t 13.0 $E $W/a.mp4
+  ffmpeg -y -loglevel error -i $C/01-cover-and-committee.mp4 -vf "setpts=PTS*1.040" -t 11.9 $E $W/a.mp4
   ffmpeg -y -loglevel error -i $C/02-monday-pencil-to-ink.mp4 -t 10.2 $E $W/b.mp4
   ffmpeg -y -loglevel error -i $C/03-monday-knock.mp4 $E $W/c.mp4
   ffmpeg -y -loglevel error -sseof -0.2 -i $C/03-monday-knock.mp4 -frames:v 1 $W/last.png

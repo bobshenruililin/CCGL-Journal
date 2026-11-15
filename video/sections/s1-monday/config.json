@@ -4,71 +4,74 @@
  "words": "video/sections/s1-monday/words.json",
  "figure": "video/media/figures/bob.png",
  "base": "video/work/s1-monday/base.mp4",
- "audio": "video/media/voice/bob-knock.m4a",
- "duration": 49.6,
+ "audio": "video/media/voice/bob-knock-v2.wav",
+ "duration": 48.5,
  "lines": [
   [
    0,
-   10
+   10,
+   "The one at the heart of it is called Six Flights."
   ],
   [
    11,
-   24
+   27
   ],
   [
-   25,
-   32
+   28,
+   35,
+   "and over one week she makes three decisions."
   ],
   [
-   33,
-   42
+   36,
+   45,
+   "The one I wanted to talk about is the first."
   ],
   [
-   43,
-   51
+   46,
+   54
   ],
   [
-   52,
-   65
+   55,
+   68
   ],
   [
-   66,
-   72
+   69,
+   75
   ],
   [
-   73,
-   85,
+   76,
+   88,
    "because I've had friends go quiet and everyone assumed that they'd stopped caring,"
   ],
   [
-   86,
-   100
+   89,
+   103
   ],
   [
-   101,
-   113
+   104,
+   116
   ],
   [
-   114,
-   130,
+   117,
+   133,
    "because if you knock, you find out what's actually going on, and it changes the whole week."
   ],
   [
-   131,
-   140,
+   134,
+   143,
    "What I hope people take from it is to just"
   ]
  ],
  "big": [
   {
-   "t0": 44.0,
+   "t0": 43.0,
    "text": "Ask before you assume.",
    "kicker": "LESSON ONE"
   }
  ],
  "addLessons": [
   {
-   "t": 46.6,
+   "t": 45.5,
    "text": "Ask before you assume."
   }
  ],
@@ -81,31 +84,31 @@
   },
   {
    "file": "video/media/sfx/pencil.mp3",
-   "t": 20.3,
+   "t": 19.2,
    "gain": -18,
    "dur": 1.4
   },
   {
    "file": "video/media/sfx/knock.mp3",
-   "t": 26.5,
+   "t": 25.4,
    "gain": -8,
    "dur": 0.6
   },
   {
    "file": "video/media/sfx/knock.mp3",
-   "t": 28.1,
+   "t": 27.0,
    "gain": -8,
    "dur": 0.6
   },
   {
    "file": "video/media/sfx/knock.mp3",
-   "t": 29.7,
+   "t": 28.6,
    "gain": -8,
    "dur": 0.6
   },
   {
    "file": "video/media/sfx/lesson.mp3",
-   "t": 44.0,
+   "t": 42.9,
    "gain": -18,
    "dur": 1.4
   }
