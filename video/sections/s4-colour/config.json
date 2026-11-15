@@ -92,5 +92,37 @@
    "t": 48.0,
    "text": "Give everyone a part that's theirs."
   }
+ ],
+ "sfx": [
+  {
+   "file": "video/media/sfx/projector.mp3",
+   "t": 3.5,
+   "gain": -18,
+   "dur": 46,
+   "loop": true,
+   "fade": 0.6
+  },
+  {
+   "file": "video/media/sfx/rain.mp3",
+   "t": 0,
+   "gain": -28,
+   "dur": 34.6,
+   "loop": true,
+   "fade": 1.0
+  },
+  {
+   "file": "video/media/sfx/rain.mp3",
+   "t": 40.0,
+   "gain": -30,
+   "dur": 9.6,
+   "loop": true,
+   "fade": 1.0
+  },
+  {
+   "file": "video/media/sfx/lesson.mp3",
+   "t": 46.7,
+   "gain": -16,
+   "dur": 1.5
+  }
  ]
 }

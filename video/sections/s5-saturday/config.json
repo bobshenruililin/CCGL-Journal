@@ -90,5 +90,49 @@
    "text": "Hear it from the people you led."
   }
  ],
- "figureHeight": 440
+ "figureHeight": 440,
+ "sfx": [
+  {
+   "file": "video/media/sfx/paper-slide.mp3",
+   "t": 4.3,
+   "gain": -14,
+   "dur": 1.2
+  },
+  {
+   "file": "video/media/sfx/paper-slide.mp3",
+   "t": 8.8,
+   "gain": -14,
+   "dur": 1.2
+  },
+  {
+   "file": "video/media/sfx/paper-slide.mp3",
+   "t": 13.3,
+   "gain": -14,
+   "dur": 1.2
+  },
+  {
+   "file": "video/media/sfx/paper-slide.mp3",
+   "t": 17.8,
+   "gain": -14,
+   "dur": 1.2
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 32.3,
+   "gain": -15,
+   "dur": 2.4
+  },
+  {
+   "file": "video/media/sfx/book-close.mp3",
+   "t": 44.9,
+   "gain": -13,
+   "dur": 1.4
+  },
+  {
+   "file": "video/media/sfx/lesson.mp3",
+   "t": 46.6,
+   "gain": -16,
+   "dur": 1.5
+  }
+ ]
 }
