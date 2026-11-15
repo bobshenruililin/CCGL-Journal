@@ -1,0 +1,96 @@
+{
+ "day": "Friday night",
+ "title": "who is in colour",
+ "words": "video/sections/s4-colour/words.json",
+ "figure": "video/media/figures/amanda.png",
+ "figureHeight": 450,
+ "base": "video/work/s4-colour/base.mp4",
+ "audio": "video/media/voice/amanda-colour.mp4",
+ "duration": 49.6,
+ "lessonsBefore": [
+  "Ask before you assume.",
+  "Let people carry it with you.",
+  "No style is right every time."
+ ],
+ "lines": [
+  [
+   0,
+   10
+  ],
+  [
+   11,
+   28,
+   "where the film is finally playing and some of the characters are in colour and some are grey."
+  ],
+  [
+   29,
+   40
+  ],
+  [
+   41,
+   50
+  ],
+  [
+   51,
+   62
+  ],
+  [
+   63,
+   73
+  ],
+  [
+   74,
+   85
+  ],
+  [
+   86,
+   100
+  ],
+  [
+   101,
+   107,
+   "In the game, you're only in colour"
+  ],
+  [
+   108,
+   118
+  ],
+  [
+   119,
+   129
+  ],
+  [
+   130,
+   138,
+   "And there's one ending where Yan does everything herself"
+  ],
+  [
+   139,
+   151,
+   "and she's the only one in colour and half the audience has left."
+  ],
+  [
+   152,
+   166
+  ],
+  [
+   167,
+   173
+  ]
+ ],
+ "big": [
+  {
+   "t0": 46.7,
+   "text": "Give everyone a part<br>that's theirs.",
+   "kicker": "LESSON FOUR",
+   "size": 120,
+   "rule": 560
+  }
+ ],
+ "addLessons": [
+  {
+   "t": 48.0,
+   "text": "Give everyone a part that's theirs."
+  }
+ ]
+}

@@ -1,3 +1,5 @@
+> **Superseded.** The current plan and status are in `video/HANDOFF.md`. This file is kept for its reference list and lecture-by-lecture notes.
+
 # The notebook goes round: plan for the CCGL9079 group video
 
 Written by Fable, 14 November 2026, for the four group members and for whoever (person or model) picks up the edit. Everything here can be changed. The parts marked **decide** need a human answer.

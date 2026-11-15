@@ -1,0 +1,75 @@
+{
+ "day": "Monday",
+ "title": "the knock",
+ "words": "video/sections/s1-monday/words.json",
+ "figure": "video/media/figures/bob.png",
+ "base": "video/work/s1-monday/base.mp4",
+ "audio": "video/media/voice/bob-knock.m4a",
+ "duration": 49.6,
+ "lines": [
+  [
+   0,
+   10
+  ],
+  [
+   11,
+   24
+  ],
+  [
+   25,
+   32
+  ],
+  [
+   33,
+   42
+  ],
+  [
+   43,
+   51
+  ],
+  [
+   52,
+   65
+  ],
+  [
+   66,
+   72
+  ],
+  [
+   73,
+   85,
+   "because I've had friends go quiet and everyone assumed that they'd stopped caring,"
+  ],
+  [
+   86,
+   100
+  ],
+  [
+   101,
+   113
+  ],
+  [
+   114,
+   130,
+   "because if you knock, you find out what's actually going on, and it changes the whole week."
+  ],
+  [
+   131,
+   140,
+   "What I hope people take from it is to just"
+  ]
+ ],
+ "big": [
+  {
+   "t0": 44.0,
+   "text": "Ask before you assume.",
+   "kicker": "LESSON ONE"
+  }
+ ],
+ "addLessons": [
+  {
+   "t": 46.6,
+   "text": "Ask before you assume."
+  }
+ ]
+}

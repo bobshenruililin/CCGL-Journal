@@ -1,0 +1,94 @@
+{
+ "day": "Saturday",
+ "title": "other people's handwriting",
+ "words": "video/sections/s5-saturday/words.json",
+ "figure": "video/media/figures/bob.png",
+ "base": "video/work/s5-saturday/base.mp4",
+ "audio": "video/media/voice/bob-saturday.m4a",
+ "duration": 52.5,
+ "lessonsBefore": [
+  "Ask before you assume.",
+  "Let people carry it with you.",
+  "No style is right every time.",
+  "Give everyone a part that's theirs."
+ ],
+ "lines": [
+  [
+   0,
+   14
+  ],
+  [
+   15,
+   20
+  ],
+  [
+   21,
+   32,
+   "Instead, your teammates take the notebook and write in it themselves,"
+  ],
+  [
+   33,
+   46
+  ],
+  [
+   47,
+   58
+  ],
+  [
+   59,
+   67
+  ],
+  [
+   68,
+   76
+  ],
+  [
+   77,
+   86
+  ],
+  [
+   87,
+   95
+  ],
+  [
+   96,
+   108
+  ],
+  [
+   109,
+   112
+  ],
+  [
+   113,
+   122
+  ],
+  [
+   123,
+   129
+  ],
+  [
+   130,
+   136
+  ],
+  [
+   137,
+   146
+  ]
+ ],
+ "big": [
+  {
+   "t0": 46.6,
+   "text": "Who do I want to be?<br>Do my actions match that?",
+   "kicker": "THE QUESTION IT LEAVES YOU WITH",
+   "size": 104,
+   "rule": 760
+  }
+ ],
+ "addLessons": [
+  {
+   "t": 15.4,
+   "text": "Hear it from the people you led."
+  }
+ ],
+ "figureHeight": 440
+}
