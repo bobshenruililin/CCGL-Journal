@@ -1,0 +1,132 @@
+{
+ "day": "After Six Flights",
+ "title": "three builds,<br>one question",
+ "words": "video/sections/s7-projects/words.json",
+ "figure": "video/media/figures/bob.png",
+ "figureHeight": 300,
+ "base": "video/work/s7-projects/base.mp4",
+ "audio": "video/media/voice/bob-projects.m4a",
+ "duration": 69.7,
+ "lessonsBefore": [
+  "Ask before you assume.",
+  "Let people carry it with you.",
+  "No style is right every time.",
+  "Give everyone a part that's theirs.",
+  "Hear it from the people you led."
+ ],
+ "lines": [
+  [
+   0,
+   11,
+   "Before Six Flights, Kate built the MVP of our game, Team Quest."
+  ],
+  [
+   12,
+   28,
+   "It tracked just two meters, rapport and energy, and gave you a leadership chart at the end."
+  ],
+  [
+   29,
+   43
+  ],
+  [
+   44,
+   57
+  ],
+  [
+   58,
+   66,
+   "That's the question we built Six Flights around."
+  ],
+  [
+   67,
+   78,
+   "We wanted to push that idea even further, which led to Asterwind."
+  ],
+  [
+   79,
+   97
+  ],
+  [
+   98,
+   102,
+   "You're actually in the room."
+  ],
+  [
+   103,
+   115,
+   "In one story, you decide to stay up until 3 a.m. fixing something together."
+  ],
+  [
+   116,
+   123
+  ],
+  [
+   124,
+   139,
+   "You then have to break the news to the person it affects, building the sentence yourself,"
+  ],
+  [
+   140,
+   144
+  ],
+  [
+   145,
+   151
+  ],
+  [
+   152,
+   166
+  ],
+  [
+   167,
+   178,
+   "Team Quest made you budget, and Six Flights showed who carried what,"
+  ],
+  [
+   179,
+   192,
+   "and Asterwind puts you right in front of the person living with your choice."
+  ],
+  [
+   193,
+   201,
+   "Underneath all three, we ask the same exact question:"
+  ]
+ ],
+ "big": [
+  {
+   "t0": 66.1,
+   "text": "What is it like<br>to be led by you?",
+   "kicker": "UNDERNEATH ALL THREE",
+   "size": 124,
+   "rule": 620
+  }
+ ],
+ "sfx": [
+  {
+   "file": "video/media/sfx/pop.mp3",
+   "t": 53.8,
+   "gain": -20,
+   "dur": 0.5
+  },
+  {
+   "file": "video/media/sfx/pop.mp3",
+   "t": 56.0,
+   "gain": -20,
+   "dur": 0.5
+  },
+  {
+   "file": "video/media/sfx/pop.mp3",
+   "t": 58.5,
+   "gain": -20,
+   "dur": 0.5
+  },
+  {
+   "file": "video/media/sfx/lesson.mp3",
+   "t": 66.1,
+   "gain": -16,
+   "dur": 1.4
+  }
+ ]
+}

@@ -45,4 +45,16 @@ s3() { local W=video/work/s3-friday; mkdir -p $W
   ffmpeg -y -loglevel error -ss 8 -i $C/15-saturday-goes-round.mp4 -frames:v 1 $W/sat.png
   still $W/sat.png 5.5 "1+0.25*on/165" 0.2 0.6 $W/f.mp4
   join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/b2.mp4 $W/c.mp4 $W/d.mp4 $W/e.mp4 $W/f.mp4; }
-for s in "${@:-s1 s2 s3 s4 s5}"; do for x in $s; do $x; echo "base built: $x"; done; done
+s7() { local W=video/work/s7-projects; mkdir -p $W; local M=video/media/clips
+  # Stand-in stills until the trimmed Asterwind and Team Quest clips arrive; swap each still() for a clip cut when they do.
+  still $M/still-teamquest.png 10.5 "1+0.08*on/315" 0.5 0.3 $W/a.mp4
+  still $M/still-teamquest-enrol.png 9.6 "1+0.1*on/288" 0.5 0.4 $W/b.mp4
+  ffmpeg -y -loglevel error -ss 3 -i $C/11-night-under-the-tarp.mp4 -t 2.6 $E $W/c.mp4
+  still $M/still-asterwind-title.png 4.0 "1+0.06*on/120" 0.4 0.5 $W/d.mp4
+  still $M/still-asterwind-corridor.png 8.0 "1+0.12*on/240" 0.55 0.45 $W/e.mp4
+  still $M/still-asterwind-corridor-2.png 9.0 "1+0.18*on/270" 0.6 0.35 $W/f.mp4
+  still $M/still-asterwind-corridor-4.png 9.6 "1.18-0.12*on/288" 0.6 0.4 $W/g.mp4
+  still $M/still-three-builds.png 9.4 "1+0.05*on/282" 0.5 0.5 $W/h.mp4
+  still $M/still-three-builds.png 7.0 "1.05" 0.5 0.5 $W/i.mp4
+  join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/c.mp4 $W/d.mp4 $W/e.mp4 $W/f.mp4 $W/g.mp4 $W/h.mp4 $W/i.mp4; }
+for s in "${@:-s1 s2 s3 s4 s5 s7}"; do for x in $s; do $x; echo "base built: $x"; done; done
