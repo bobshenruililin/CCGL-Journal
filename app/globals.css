@@ -674,3 +674,20 @@ img.portrait { -webkit-mask-image: radial-gradient(ellipse 60% 62% at 50% 52%, #
 .painted-scene .chairpaint { filter: brightness(.42) saturate(.3); opacity: .9; }
 .painted-scene.on .chairpaint { filter: brightness(.62) saturate(.4); }
 .building .carrier { filter: saturate(.9); }
+
+/* ───────────── Behind the scenes: the group's film ───────────── */
+.filmcard { position: fixed; left: max(2vw, 16px); bottom: max(3vh, 16px); z-index: 20; display: grid; gap: .15rem; text-align: left; border: 0; padding: .7rem 1.1rem .8rem 1.3rem; background: #f3ecd9; color: #2b2a35; rotate: -3deg; box-shadow: 0 .8rem 1.8rem rgba(0, 0, 0, .5); cursor: pointer; transition: rotate .25s ease, translate .25s ease; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, .45rem 85%, 0 70%, .45rem 55%, 0 40%, .45rem 25%, 0 10%); }
+.filmcard:is(:hover, :focus-visible) { rotate: -1deg; translate: 0 -.3rem; }
+.filmcard .k { font: .72rem 'Special Elite', monospace; letter-spacing: .18em; text-transform: uppercase; color: #8a6a2a; }
+.filmcard .t { font: 700 1.9rem/1 'Caveat', cursive; }
+.filmcard .m { font: .85rem 'Newsreader', Georgia, serif; color: #6a6358; }
+.filmcard::after { content: '▶'; position: absolute; right: .9rem; top: 50%; translate: 0 -50%; font-size: 1.1rem; color: var(--priya); }
+.filmcard { padding-right: 2.6rem; }
+[data-layout='tall'] .filmcard { left: 12px; bottom: 12px; padding: .5rem 2.2rem .55rem 1rem; }
+[data-layout='tall'] .filmcard .t { font-size: 1.4rem; }
+.filmdialog { border: 0; padding: 0 0 .8rem; width: min(1100px, 94vw); background: #0d0e1d; color: #f1e9d2; box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .7); }
+.filmdialog::backdrop { background: rgba(8, 8, 20, .82); }
+.filmdialog video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.filmdialog .acts { display: flex; justify-content: flex-end; padding: .6rem 1rem 0; }
+.filmdialog .acts button { background: none; border: 0; color: #f1e9d2; font: 1.3rem 'Caveat', cursive; text-decoration: underline dotted; cursor: pointer; }
+@media print { .filmcard, .filmdialog { display: none; } }
