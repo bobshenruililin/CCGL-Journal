@@ -1,6 +1,6 @@
 # Video handoff: what we are making, where it stands, and how to finish it
 
-Written 15 November 2026 for the next session (Opus) and for the group. Read this file first. It replaces `docs/video/plan.md`, which describes an earlier structure and is kept only for its reference list.
+Written 15 November 2026 for the next session and for the group, and updated the same day after Astra's review of Asterwind. Read this file first. It replaces `docs/video/plan.md`, which describes an earlier structure and is kept only for its reference list.
 
 ## 1. The finished video, in one paragraph
 
@@ -16,17 +16,17 @@ A group video for CCGL9079 (Leadership), due **Sunday 22 November 2026, 11:59 pm
 | --- | --- | --- | --- | --- |
 | 1 | Opening frame | none | 0:15 | **To build.** Spec in section 6. |
 | 2 | Monday: the knock | Bob | 0:50 | **Built** (`s1-monday`). |
-| 3 | Thursday: the chairs | Kate | 0:40 | **Waiting** for recording and photo. Script in section 5. |
+| 3 | Thursday: the chairs | Kate | 0:50 | **Waiting** for recording and photo. Script in section 5. |
 | 4 | Friday: the same words | Hannah | 0:48 | Recording received and timed. **Waiting for photo.** Then build. |
 | 5 | Friday night: who is in colour | Amanda | 0:50 | **Built** (`s4-colour`). |
 | 6 | Saturday: other people's handwriting | Bob | 0:52 | **Built** (`s5-saturday`). Lesson wording for 2–4 in its list must be updated (section 4). |
 | 7 | End of part one: five lessons, Six Flights QR, references | none | 0:12 | **To build.** |
 | 8 | Title card: "Two more things we built" | none | 0:04 | **To build.** |
-| 9 | Team Quest | Kate | 0:15 | **Waiting** for recording. Clips exist in Drive. |
-| 10 | Asterwind | Bob | 0:48 | **Waiting** for recording. Clips exist in Drive. |
+| 9 | Team Quest | Kate | 0:25 | **Waiting** for recording. Clips exist in Drive. |
+| 10 | Asterwind | Bob | 1:05 | **Waiting** for recording. Clips exist in Drive. |
 | 11 | Both QR codes, UIDs | none | 0:10 | **To build.** |
 
-Target total about 5:45; the group accepts up to 6–7 minutes but wants it tight. Part one must still make sense if a viewer stops at the end of row 7.
+Target total about 6:00; the group accepts up to 6–7 minutes but wants it tight. Part one must still make sense if a viewer stops at the end of row 7.
 
 ## 3. What each section looks like (the design, already working)
 
@@ -55,25 +55,36 @@ Each section's `lessonsBefore` must use exactly these. `s5-saturday/config.json`
 
 Speakers may reword; **the recording is the truth**. Subtitles follow what was said, corrected only where the speech model clearly misheard.
 
-**Kate, the chairs (not yet recorded).** Lesson card: "Let people carry it with you."
+**Scripts for today's recordings are in `video/scripts/record-today.md`**: Kate's chairs (lesson card "Let people carry it with you."), Kate's Team Quest lines, and Bob's Asterwind part. The recording, not the script, is what the edit follows.
 
-> I picked the chairs. On Thursday there's no decision to make. You just carry twenty-four chairs up six flights of stairs, and how many people help depends on how you treated them earlier in the week. That one got me, because when I led a group project, people were busy and missing meetings, and I wanted to be kind, so I quietly took their work on myself. Eventually a teammate noticed and told me, really gently, to stop carrying it all. The game has the same moment. Do everything yourself, and you're alone on the stairs, and later someone writes, "You could have asked. I'd have carried chairs." So I still think kindness comes back to you. But being kind also means letting people carry it with you.
-
-Footage: `07-thursday-chairs-together` (two trips), then `08-thursday-chairs-alone` (six trips), then Kit's line on the Thursday page. That line only appears after Saturday on a route with Monday = `self` and Wednesday ≠ `cut`: play `self,aside,name` to the end, pass the notebook four times, then go back to the Thursday tab. Record that as a new clip (see section 8).
+Kate's chairs footage: `07-thursday-chairs-together` (two trips), then `08-thursday-chairs-alone` (six trips), then Kit's line on the Thursday page. That line only appears after Saturday on a route with Monday = `self` and Wednesday ≠ `cut`: play `self,aside,name` to the end, pass the notebook four times, then go back to the Thursday tab. Record that as a new clip (see section 8).
 
 **Hannah, Friday (recorded, 48 s).** Lesson card: "No style is right every time." Place it at about 35.3 s, where she says "the game never tells you which style is right". Transcript with timings: `video/sections/hannah.words.json`. Footage: `05-wednesday-whose-sky`, `09-friday-650`, `10-friday-same-words-priya`, and Priya's Saturday entry from `15-saturday-goes-round` ("Work out the difference. I'm still working on it.").
 
-**Kate, Team Quest (not yet recorded, about 15 s).** Kate should make this true to what happened.
+**Kate, Team Quest.** Footage: `tq-01-title`, `tq-03-choice` (the meters move: rapport 76→86%, energy 64→59%), `tq-x-crisis-command`, `tq-04-radar`. The point to land: the meters were useful (they made you budget trust and stamina), but a score cannot show who paid for a choice.
 
-> Before any of this, I built our first version, Team Quest. It tracked your rapport and energy and gave you a chart of your leadership style at the end. It worked, but it made us wonder what would happen if we took the score away.
+**Bob, Asterwind.** Astra watched the recordings and corrected the first draft; the script in `video/scripts/record-today.md` already includes these. Do not undo them:
 
-Footage: `tq-01-title`, `tq-03-choice` (meters move), `tq-04-radar`.
+- Asterwind still has two-option choices (the player chose "Repair together" before building the sentence). Never say "you don't pick A or B". Say: "Making the decision is only the beginning. Then you have to say it to the person it costs."
+- Her response comes through the painted scenes, dialogue and the notes afterwards. Say "see how she responds", not "watch her face".
+- The recordings don't establish who built what, in what order, or what the token was originally meant for. Use "Asterwind takes this further"; don't claim it came next or was planned from the token.
+- The strongest moment: thoughtful leadership still costs something. The player acknowledged Mara's deadline and explained the risk, her footage still suffered, and her response recognised she had been part of the decision. Show it.
+- Team Quest's meters did useful work. The distinction is that Asterwind puts the attention on the particular person bearing the consequence, not just "taking the score away".
+- Keep "What is it like to be led by you?" as the closing question.
 
-**Bob, Asterwind (not yet recorded, about 48 s).** Bob was asked three questions and has not yet answered: whether it is "I built" or "we built"; whether anything here is wrong about how Asterwind plays (the script was written from a shot list, not from watching); and whether the token in Six Flights was always meant to lead to Asterwind.
+Footage, in order (all in Drive folder 03, names prefixed `bob-`):
 
-> On the last page of the notebook there's a token for a drinks machine at the end of a corridor. This is that corridor. This is Asterwind, the next thing I built. Every drink is one story, and this time you're not reading about the meeting, you're sitting in it. You even decide who to look at while they're talking. And when you have to say something hard, you don't pick option A or B. You build the sentence yourself, piece by piece, and then you watch her face when it lands. In the morning there's still a notebook, and it still only tells you what your choices did to other people. That's the part I never wanted to change. Team Quest gave you a score. Six Flights gave you other people's handwriting. Asterwind puts you in the room. It's the same question every time: what is it like to be led by you?
-
-Footage in order: the token on the last page of Six Flights (`16-last-page-and-pocket`, the coin at lower right) → `aw-02-corridor` → `aw-03-choose` → `aw-04-scene` / `aw-x-listening-to-nia` → `aw-x-saying-the-hard-thing` → `aw-06-morning` → `aw-x-morning-notebook` → three screens side by side. Final full-screen card: "What is it like to be led by you?"
+| Line | Clip |
+| --- | --- |
+| token on the last page | `16-last-page-and-pocket` (Six Flights; the coin, lower right) |
+| "Asterwind takes this further. It starts right there." | `aw-02-corridor` |
+| "Every drink holds one story… You're in the room." | `aw-03-choose`, then `aw-04-scene` or `aw-x-listening-to-nia` |
+| "something breaks at three in the morning, Mara needs it on camera by noon" | `aw-x-seam-scene` |
+| "You decide to repair it together." | `aw-x-repair-together` (show the two options, then the choice) |
+| "say it to the person it costs… see how she responds" | `aw-x-saying-the-hard-thing` |
+| "It still costs her… part of the decision." | `aw-x-seam-aftermath` |
+| "Team Quest… Six Flights… Asterwind…" | three screens side by side: `tq-04-radar`, Saturday handwriting, `aw-06-morning` / `aw-x-morning-notebook` |
+| "What is it like to be led by you?" | full-screen lesson card, then the QR codes |
 
 This section does not use the notebook crop. Asterwind is full-frame painted footage: show it full width with the speaker cut-out smaller in a corner, or drop the left column for this section. Try both and show Bob.
 
@@ -89,7 +100,9 @@ This section does not use the notebook crop. Asterwind is full-frame painted foo
 
 **Final card (0:10).** Two QR codes, labelled "Six Flights" and "Asterwind", held at least eight seconds, with UIDs. Generate with `pip install qrcode` or any QR tool; test both with a phone before export.
 
-**Joining.** Concatenate the section files in running order. Hard cuts between sections are fine; a 0.3 s dip is optional. Loudness is already normalised per section to about −16 LUFS.
+**Joining.** Concatenate the section files in running order. Hard cuts between sections are fine; a 0.3 s dip is optional. Loudness is already normalised per section to about −16 to −17 LUFS.
+
+**Sound effects.** Sections can carry effects (page turns, pencil, knocks, rain, projector, a soft chime when a lesson lands). The list of sounds, suggested CC0 sources and file names is in `video/sfx/cues.md`. The three built sections already have cues set; they are skipped until the files exist in `video/media/sfx/`. Effects dip automatically under speech. Openverse search works from a cloud session (`video/tools/sfx_search.py`), but downloading from Freesound is refused there, so a person downloads the files and drops them in. Keep effects quiet; the voices carry the video.
 
 ## 7. Where the files are
 
@@ -113,6 +126,7 @@ video/media/voice/amanda-colour.mp4      video/media/figures/hannah.png   (to ma
 video/media/voice/hannah-friday.mp4      video/media/figures/kate.png     (to make)
 video/media/voice/kate-chairs.*   kate-teamquest.*   bob-asterwind.*      (to come)
 video/media/clips/aw-*.mp4   tq-*.mp4                                     (from Drive)
+video/media/sfx/<name>.mp3        see video/sfx/cues.md                   (downloaded by hand)
 ```
 
 `bob.png` and `amanda.png` are finished cut-outs and are in Drive folder "05 drafts from Claude" if the upload at the end of the previous session succeeded; otherwise remake them from the original photos (section 8).
@@ -128,7 +142,7 @@ python3 -m venv /tmp/venv && /tmp/venv/bin/pip install faster-whisper numpy "rem
 
 Playwright and Chromium are pre-installed in the cloud environment; ffmpeg must be on the path.
 
-Rebuild an existing section:
+Rebuild an existing section (add `--audio` to the last command to rebuild only the sound, in about two seconds):
 
 ```bash
 bash video/tools/bases.sh s4
@@ -154,6 +168,7 @@ To record a new Six Flights clip: start `npm run dev`, add a line to `qa/clips.m
 - Two spots already flagged for a listen: Bob's Monday at 0:36 (subtitle says "if you knock"; the model heard "if you're not") and Amanda at 0:36 ("Yan does everything herself").
 - Confirm the lesson wording in section 4 with each speaker.
 - Scan both QR codes on the final export.
+- Download the sound effects listed in `video/sfx/cues.md` and listen to how they sit under the voices.
 
 ## 10. Decisions already made by the group (do not reopen)
 

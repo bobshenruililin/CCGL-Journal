@@ -71,5 +71,57 @@
    "t": 46.6,
    "text": "Ask before you assume."
   }
+ ],
+ "sfx": [
+  {
+   "file": "video/media/sfx/book-open.mp3",
+   "t": 2.6,
+   "gain": -12,
+   "dur": 1.6
+  },
+  {
+   "file": "video/media/sfx/room-tone.mp3",
+   "t": 0,
+   "gain": -34,
+   "dur": 49.6,
+   "loop": true,
+   "fade": 1.0
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 20.3,
+   "gain": -14,
+   "dur": 1.4
+  },
+  {
+   "file": "video/media/sfx/page-turn.mp3",
+   "t": 23.2,
+   "gain": -14,
+   "dur": 1.2
+  },
+  {
+   "file": "video/media/sfx/knock.mp3",
+   "t": 26.5,
+   "gain": -10,
+   "dur": 0.6
+  },
+  {
+   "file": "video/media/sfx/knock.mp3",
+   "t": 28.1,
+   "gain": -10,
+   "dur": 0.6
+  },
+  {
+   "file": "video/media/sfx/knock.mp3",
+   "t": 29.7,
+   "gain": -10,
+   "dur": 0.6
+  },
+  {
+   "file": "video/media/sfx/lesson.mp3",
+   "t": 44.0,
+   "gain": -16,
+   "dur": 1.5
+  }
  ]
 }
