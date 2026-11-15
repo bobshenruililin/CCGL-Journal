@@ -27,4 +27,22 @@ s5() { local W=video/work/s5-saturday; mkdir -p $W
   ffmpeg -y -loglevel error -ss 1.5 -i $C/01-cover-and-committee.mp4 -frames:v 1 $W/cover.png
   still $W/cover.png 7.6 "1+0.08*on/228" 0.5 0.5 $W/c.mp4
   join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/c.mp4; }
-for s in "${@:-s1 s4 s5}"; do for x in $s; do $x; echo "base built: $x"; done; done
+s2() { local W=video/work/s2-chairs; mkdir -p $W
+  ffmpeg -y -loglevel error -i $C/07-thursday-chairs-together.mp4 -t 11.6 $E $W/a.mp4
+  ffmpeg -y -loglevel error -ss 2 -i $C/08-thursday-chairs-alone.mp4 -t 17.8 $E $W/b.mp4
+  ffmpeg -y -loglevel error -ss 4.4 -i $C/18-thursday-kit-afterwards.mp4 -t 5.8 $E $W/c.mp4
+  ffmpeg -y -loglevel error -sseof -0.3 -i $C/18-thursday-kit-afterwards.mp4 -frames:v 1 $W/kit.png
+  still $W/kit.png 7.4 "1+0.28*on/222" 0.62 0.56 $W/d.mp4
+  join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/c.mp4 $W/d.mp4; }
+s3() { local W=video/work/s3-friday; mkdir -p $W
+  ffmpeg -y -loglevel error -i $C/09-friday-650.mp4 -t 11.6 $E $W/a.mp4
+  ffmpeg -y -loglevel error -i $C/05-wednesday-whose-sky.mp4 $E $W/b.mp4
+  ffmpeg -y -loglevel error -sseof -0.2 -i $C/05-wednesday-whose-sky.mp4 -frames:v 1 $W/wed.png
+  still $W/wed.png 0.52 "1" 0.5 0.5 $W/b2.mp4
+  ffmpeg -y -loglevel error -i $C/09-friday-650.mp4 -t 4.5 $E $W/c.mp4
+  ffmpeg -y -loglevel error -i $C/10-friday-same-words-priya.mp4 -t 4.3 $E $W/d.mp4
+  ffmpeg -y -loglevel error -i $C/15-saturday-goes-round.mp4 -t 8.3 $E $W/e.mp4
+  ffmpeg -y -loglevel error -ss 8 -i $C/15-saturday-goes-round.mp4 -frames:v 1 $W/sat.png
+  still $W/sat.png 5.5 "1+0.25*on/165" 0.2 0.6 $W/f.mp4
+  join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/b2.mp4 $W/c.mp4 $W/d.mp4 $W/e.mp4 $W/f.mp4; }
+for s in "${@:-s1 s2 s3 s4 s5}"; do for x in $s; do $x; echo "base built: $x"; done; done

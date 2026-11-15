@@ -12,21 +12,21 @@ A group video for CCGL9079 (Leadership), due **Sunday 22 November 2026, 11:59 pm
 
 ## 2. Running order
 
+Updated 15 November, evening. Part one is assembled as a draft: `python3 video/tools/join.py video/out/part-one.mp4 video/out/s0-intro.mp4 video/out/s1-monday.mp4 video/out/s2-chairs.mp4 video/out/s3-friday.mp4 video/out/s4-colour.mp4 video/out/s5-saturday.mp4 video/out/s6-end-part-one.mp4` (4:28).
+
 | # | Part | Speaker | Length | Status |
 | --- | --- | --- | --- | --- |
-| 1 | Opening frame | none | 0:15 | **To build.** Spec in section 6. |
-| 2 | Monday: the knock | Bob | 0:50 | **Built** (`s1-monday`). |
-| 3 | Thursday: the chairs | Kate | 0:50 | **Waiting** for recording and photo. Script in section 5. |
-| 4 | Friday: the same words | Hannah | 0:48 | Recording received and timed. **Waiting for photo.** Then build. |
-| 5 | Friday night: who is in colour | Amanda | 0:50 | **Built** (`s4-colour`). |
-| 6 | Saturday: other people's handwriting | Bob | 0:52 | **Built** (`s5-saturday`). Lesson wording for 2–4 in its list must be updated (section 4). |
-| 7 | End of part one: five lessons, Six Flights QR, references | none | 0:12 | **To build.** |
-| 8 | Title card: "Two more things we built" | none | 0:04 | **To build.** |
-| 9 | Team Quest | Kate | 0:25 | **Waiting** for recording. Clips exist in Drive. |
-| 10 | Asterwind | Bob | 1:05 | **Waiting** for recording. Clips exist in Drive. |
-| 11 | Both QR codes, UIDs | none | 0:10 | **To build.** |
+| 0 | Opening: question, three project cards, the four makers circling, title | none | 0:15 | **Built, v1** (`video/intro/intro.html`, recorded by `video/intro/record.mjs`). Uses stills; swap in moving footage when the Asterwind and Team Quest clips are on disk. |
+| 1 | Monday: the knock | Bob | 0:50 | **Built** (`s1-monday`). Swap Bob's figure for his headshot (requested; file not yet on disk). |
+| 2 | Thursday: the chairs | Kate | 0:43 | **Built** (`s2-chairs`), with Kit's line on the Thursday page (new clip `18-thursday-kit-afterwards`). |
+| 3 | Friday: the same words | Hannah | 0:49 | **Built** (`s3-friday`). |
+| 4 | Friday night: who is in colour | Amanda | 0:50 | **Built** (`s4-colour`). |
+| 5 | Saturday: other people's handwriting | Bob | 0:52 | **Built** (`s5-saturday`). Swap in the headshot. |
+| 6 | End of part one: the five lessons and a Six Flights QR code | none | 0:10 | **Built** (`video/intro/end-part-one.html`). |
+| 7 | Team Quest and Asterwind | Bob | about 1:10 | **Waiting** for Bob's recording (`video/scripts/record-today.md`) and the clips. Bob now covers both projects; Kate no longer records a Team Quest part. |
+| 8 | Both QR codes, references, UIDs | none | 0:12 | **To build.** QR images are generated in `video/work/intro/qr-*.png` (scan both before export). |
 
-Target total about 6:00; the group accepts up to 6–7 minutes but wants it tight. Part one must still make sense if a viewer stops at the end of row 7.
+Target total about 6:00.
 
 ## 3. What each section looks like (the design, already working)
 
@@ -61,7 +61,7 @@ Kate's chairs footage: `07-thursday-chairs-together` (two trips), then `08-thurs
 
 **Hannah, Friday (recorded, 48 s).** Lesson card: "No style is right every time." Place it at about 35.3 s, where she says "the game never tells you which style is right". Transcript with timings: `video/sections/hannah.words.json`. Footage: `05-wednesday-whose-sky`, `09-friday-650`, `10-friday-same-words-priya`, and Priya's Saturday entry from `15-saturday-goes-round` ("Work out the difference. I'm still working on it.").
 
-**Kate, Team Quest.** Footage: `tq-01-title`, `tq-03-choice` (the meters move: rapport 76→86%, energy 64→59%), `tq-x-crisis-command`, `tq-04-radar`. The point to land: the meters were useful (they made you budget trust and stamina), but a score cannot show who paid for a choice.
+**Team Quest (now in Bob's part).** Footage: `tq-01-title`, `tq-03-choice` (the meters move: rapport 76→86%, energy 64→59%), `tq-x-crisis-command`, `tq-04-radar`. The point to land: the meters were useful (they made you budget trust and stamina), but a score cannot show who paid for a choice.
 
 **Bob, Asterwind.** Astra watched the recordings and corrected the first draft; the script in `video/scripts/record-today.md` already includes these. Do not undo them:
 
@@ -90,7 +90,7 @@ This section does not use the notebook crop. Asterwind is full-frame painted foo
 
 ## 6. Parts still to design
 
-**Opening frame (0:15).** No voice, or one line.
+**Opening frame (0:15), built as v1.** Ideas still open: moving footage in the three cards, a pencil-scratch and page-drop sound under it.
 1. Black. One handwritten line appears: "How do you practise leading?"
 2. Three screens fade in side by side, each already moving: Team Quest's meters (`tq-03-choice`), the notebook opening (`01-cover-and-committee`), Asterwind's corridor (`aw-02-corridor`).
 3. The four cut-outs walk or pop in underneath and stand swaying.

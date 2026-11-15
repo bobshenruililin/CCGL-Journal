@@ -28,6 +28,7 @@ export const clips = [
   ['14-night-mrs-leung', '/?show=self,cut,ask&at=night', [3, ['.lampbtn', 1, 9]]],
   ['15-saturday-goes-round', '/?show=find,cut,name&at=sat', [4, ['.passbtn', 4, 4.5], 5]],
   ['16-last-page-and-pocket', '/?show=find,cut,name&at=last&done=1', [6, ['type', 'Next term I ask before I carry.'], 3, ['.pocket .acts button', 1, 6]]],
+  ['18-thursday-kit-afterwards', '/?show=self,aside,name&at=last&done=1', [2, ['.tab.thu', 1, 9]]],
   ['17-making-note', '/?show=find,cut,name&at=sat&done=1&making=1', [4, ['.makingflag', 1, 8]]],
 ];
 
