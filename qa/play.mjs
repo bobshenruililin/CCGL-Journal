@@ -32,6 +32,8 @@ export async function play({ route, said = null, view = 'desktop', out = null, k
   };
 
   await page.goto(url, { waitUntil: 'networkidle' });
+  // The behind-the-scenes film opens first on a fresh visit; a reader can skip it.
+  if (await page.locator('.filmdialog[open]').count()) { await page.locator('.filmdialog .acts button').click(); await page.waitForTimeout(150); }
   await page.waitForSelector('.coverface');
   await page.evaluate(() => document.fonts.ready);
   await shot('cover');

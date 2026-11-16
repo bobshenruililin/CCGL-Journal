@@ -76,23 +76,15 @@
  ],
  "sfx": [
   {
-   "file": "video/media/sfx/rain.mp3",
-   "t": 0,
-   "gain": -30,
-   "dur": 11.6,
-   "loop": true,
-   "fade": 0.8
-  },
-  {
    "file": "video/media/sfx/pencil.mp3",
-   "t": 19.9,
-   "gain": -15,
+   "t": 19.0,
+   "gain": -18,
    "dur": 1.4
   },
   {
    "file": "video/media/sfx/rain.mp3",
    "t": 26.4,
-   "gain": -26,
+   "gain": -28,
    "dur": 8.8,
    "loop": true,
    "fade": 0.8
@@ -100,8 +92,8 @@
   {
    "file": "video/media/sfx/lesson.mp3",
    "t": 44.4,
-   "gain": -16,
-   "dur": 1.5
+   "gain": -18,
+   "dur": 1.4
   }
  ]
 }

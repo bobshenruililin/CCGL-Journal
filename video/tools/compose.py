@@ -10,7 +10,9 @@ def still(path):
     global n; inp.extend(['-loop', '1', '-t', str(dur), '-i', path]); n += 1; return n - 1
 f = ["[0:v]split=2[b0][b1]",
      "[b0]scale=2200:-2,crop=1920:1080,boxblur=40:5,eq=brightness=-0.42:saturation=0.7:contrast=0.8[bg]",
-     "[b1]crop=1600:1060:180:10,scale=1340:888[book]", "[bg][book]overlay=560:24[v]"]
+     ("[b1]scale=1340:754[book]" if cfg.get('frame') == 'full' else "[b1]crop=1600:1060:180:10,scale=1340:888[book]"),
+     ("[bg][book]overlay=560:91[v]" if cfg.get('frame') == 'full' else "[bg][book]overlay=560:24[v]")]
+# "frame": "full" shows the whole 16:9 picture (for footage that is not the notebook, such as Asterwind).
 last = 'v'; k = 0
 def lay(src, x, y, enable=None):
     global last, k
