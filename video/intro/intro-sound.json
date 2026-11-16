@@ -3,10 +3,16 @@
  "voice_t": 2.2,
  "sfx": [
   {
+   "file": "video/media/sfx/impact.mp3",
+   "t": 0.4,
+   "gain": -3,
+   "dur": 1.4
+  },
+  {
    "file": "video/media/sfx/choose-your-fighter.mp3",
    "t": 0.42,
-   "gain": -4,
-   "dur": 1.6
+   "gain": 3,
+   "dur": 1.7
   },
   {
    "file": "video/media/sfx/pop.mp3",

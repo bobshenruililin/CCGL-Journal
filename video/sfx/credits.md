@@ -15,3 +15,4 @@ List every effect actually used, with its source page and licence. CC0 needs no 
 | swoosh.mp3 | https://www.myinstants.com/media/sounds/transition-sound-effects-presented-by-mrsnooze-unknown-album-00-005-simple-swoosh.mp3 | Myinstants upload, licence not stated |
 | shutter.mp3 | https://www.myinstants.com/media/sounds/camera-shutter-dslrr.mp3 | Myinstants upload, licence not stated |
 | choose-your-fighter.mp3 | https://www.myinstants.com/media/sounds/vc_menu_narration_choosechara.mp3 | Myinstants upload, licence not stated |
+| impact.mp3 | https://www.myinstants.com/media/sounds/bass-impact.mp3 | Myinstants upload, licence not stated |
