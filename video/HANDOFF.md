@@ -2,6 +2,10 @@
 
 Written 15 November 2026 for the next session and for the group, and updated the same day after Astra's review of Asterwind. Read this file first. It replaces `docs/video/plan.md`, which describes an earlier structure and is kept only for its reference list.
 
+## 0. Status, 16 November 2026: finished
+
+The final film is `video/out/final.mp4` (5:46), built by `video/tools/join.py` from the parts in `video/out/` in this order: s0-intro, s1-monday, s2-chairs, s3-friday, s4-colour, s5-saturday, s7-projects, s9-try-our-games. A 720p web copy plays on the site (`public/film/`), opening first once per visit with a skip button. The opening is rendered frame by frame (`video/intro/record.mjs`) with a choose-your-fighter entrance. Voice recordings, photos, clips and sounds stay out of git under `video/media/`. Sections below describe how it was planned and built.
+
 ## 1. The finished video, in one paragraph
 
 A group video for CCGL9079 (Leadership), due **Sunday 22 November 2026, 11:59 pm**. It is a game-design interview: four group members each explain one part of a game they made, what in their own life it comes from, and what a player can learn from it. While each person speaks, the game plays on screen, the speaker stands beside it as a paper cut-out, and their lesson is written large and then added to a list that grows through the video. Part one covers the main game, **Six Flights**, and is complete on its own at about 4:30. Part two (about 1:15) shows the two other things the group built: **Team Quest**, the first version, and **Asterwind**, the next one. It ends on two QR codes. The spine of the whole thing is one question asked three ways: *how do you let someone practise leading?* Team Quest scores you. Six Flights takes the score away. Asterwind puts you in the room.

@@ -13,7 +13,7 @@ import { parseShow, wantsMaking, notesFor, makers } from './making.ts';
 
 const MAKING_KEY = 'six-flights-making';
 /** The group's behind-the-scenes film, served from public/film/. */
-const FILM = { src: '/film/behind-the-scenes.mp4', poster: '/film/poster.jpg', length: '5:44' };
+const FILM = { src: '/film/behind-the-scenes.mp4', poster: '/film/poster.jpg', length: '5:46' };
 /** The film opens first, once per visit, before the notebook. Links that open a page (?show=) skip it. */
 const FILM_SEEN = 'six-flights-film-seen';
 function filmFirst(show: boolean): boolean { if (show) return false; try { return window.sessionStorage.getItem(FILM_SEEN) !== '1'; } catch { return true; } }
