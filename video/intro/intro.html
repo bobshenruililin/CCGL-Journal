@@ -1,10 +1,11 @@
 <!doctype html>
-<!-- Opening frame, timed to Bob's voiceover (video/media/voice/bob-intro-v2.m4a, placed at 0.3 s). 18 seconds.
+<!-- Opening frame. "Choose your fighter!" plays at 0.45 s as the four makers slam in; Bob's voiceover (bob-intro-v2.m4a) starts at 2.2 s.
+     All later beats are 1.9 s after the times listed below. 20 seconds.
      0.4 s  "Hi, we're four students..."      the four makers rise and circle
      8.9 s  "How do you let someone practise leading...?"   the question writes itself
      12.1 s "Our answer was to build a game." three project cards drop in
      14.6 s                                   cards lift away; the title lands
-     Recorded by: node video/intro/record.mjs video/intro/intro.html 18 video/out/s0-intro-silent.mp4 -->
+     Recorded by: node video/intro/record.mjs video/intro/intro.html 20 video/out/s0-intro-silent.mp4 -->
 <html><head><meta charset="utf-8"><style>
 @font-face{font-family:Caveat;src:url(../../public/fonts/caveat-latin-700-normal.woff2);font-weight:700}
 @font-face{font-family:Caveat;src:url(../../public/fonts/caveat-latin-400-normal.woff2);font-weight:400}
@@ -13,17 +14,20 @@
 *{box-sizing:border-box}
 html,body{margin:0;width:1920px;height:1080px;overflow:hidden}
 body{background:radial-gradient(ellipse at 50% 38%,#2a2c4a 0,#17182e 55%,#0d0e1d 100%);font-family:Newsreader,serif;color:#f1e9d2}
+.flash{position:absolute;inset:0;background:#fff6dc;opacity:0;animation:flash .5s .42s ease-out}
+@keyframes flash{0%{opacity:0}15%{opacity:.55}100%{opacity:0}}
 .grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E")}
 .lamp{position:absolute;left:50%;top:-300px;width:1500px;height:1100px;translate:-50% 0;background:radial-gradient(ellipse at 50% 30%,rgba(255,226,160,.22),transparent 62%);opacity:0;animation:fade 1.2s .1s forwards}
 @keyframes fade{to{opacity:1}}
 
 /* 1. the four makers: big and central while Bob introduces them, then they settle low */
 .ring{position:absolute;left:960px;top:640px;width:0;height:0;opacity:0;scale:1.5;
-  animation:ringIn .9s .4s cubic-bezier(.2,.9,.25,1.2) forwards, ringSettle 1.4s 7.6s ease-in-out forwards}
+  animation:ringIn .3s .45s ease-out forwards, ringSettle 1.4s 9.5s ease-in-out forwards}
 @keyframes ringIn{from{opacity:0;translate:0 120px}to{opacity:1;translate:0 0}}
 @keyframes ringSettle{to{top:905px;scale:1}}
 .who{position:absolute;width:280px;height:280px;margin:-230px 0 0 -140px;animation:orbit 9s linear infinite;animation-delay:calc(var(--k) * -2.25s)}
-.who img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(3px 0 0 #f3ecd9) drop-shadow(-3px 0 0 #f3ecd9) drop-shadow(0 3px 0 #f3ecd9) drop-shadow(0 -3px 0 #f3ecd9) drop-shadow(0 14px 16px rgba(0,0,0,.5));animation:bob 1.8s ease-in-out infinite alternate;animation-delay:calc(var(--k) * -.45s)}
+.who img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(3px 0 0 #f3ecd9) drop-shadow(-3px 0 0 #f3ecd9) drop-shadow(0 3px 0 #f3ecd9) drop-shadow(0 -3px 0 #f3ecd9) drop-shadow(0 14px 16px rgba(0,0,0,.5));animation:slam .42s cubic-bezier(.2,1.4,.3,1) both, bob 1.8s ease-in-out infinite alternate;animation-delay:calc(.5s + var(--k) * .17s), calc(var(--k) * -.45s)}
+@keyframes slam{from{scale:2.4;opacity:0}to{scale:1;opacity:1}}
 @keyframes bob{from{translate:0 0;rotate:-2deg}to{translate:0 -10px;rotate:2deg}}
 @keyframes orbit{
  0%{transform:translate(0px,30px) scale(1.12);z-index:4;filter:brightness(1)}
@@ -35,14 +39,14 @@ body{background:radial-gradient(ellipse at 50% 38%,#2a2c4a 0,#17182e 55%,#0d0e1d
  75%{transform:translate(-520px,-30px) scale(.82);z-index:2;filter:brightness(.82)}
  87.5%{transform:translate(-368px,10px) scale(.98);z-index:3}
  100%{transform:translate(0px,30px) scale(1.12);z-index:4;filter:brightness(1)}}
-.floor{position:absolute;left:960px;top:930px;width:1180px;height:150px;margin-left:-590px;border-radius:50%;background:radial-gradient(ellipse,rgba(255,226,160,.16),transparent 70%);opacity:0;animation:fade 1s 7.8s forwards}
-.course{position:absolute;left:0;right:0;top:150px;text-align:center;font:22px Elite;letter-spacing:.32em;color:#cfc6a8;opacity:0;animation:fade .8s 2.2s forwards, gone .6s 7.4s forwards}
+.floor{position:absolute;left:960px;top:930px;width:1180px;height:150px;margin-left:-590px;border-radius:50%;background:radial-gradient(ellipse,rgba(255,226,160,.16),transparent 70%);opacity:0;animation:fade 1s 9.7s forwards}
+.course{position:absolute;left:0;right:0;top:150px;text-align:center;font:22px Elite;letter-spacing:.32em;color:#cfc6a8;opacity:0;animation:fade .8s 4.1s forwards, gone .6s 9.3s forwards}
 @keyframes gone{to{opacity:0}}
 
 /* 2. the question, written as Bob asks it */
 .q{position:absolute;left:0;right:0;top:300px;text-align:center;font:700 96px/1 Caveat;color:#ffe9a8;opacity:0;
-  animation:fade .2s 8.8s forwards, qUp .9s 11.9s ease-in-out forwards, gone .6s 14.6s forwards}
-.q span{display:inline-block;clip-path:inset(0 100% 0 0);animation:write 2.4s 8.9s steps(48) forwards}
+  animation:fade .2s 10.7s forwards, qUp .9s 13.8s ease-in-out forwards, gone .6s 16.5s forwards}
+.q span{display:inline-block;clip-path:inset(0 100% 0 0);animation:write 2.4s 10.8s steps(48) forwards}
 @keyframes write{to{clip-path:inset(0 0 0 0)}}
 @keyframes qUp{to{top:40px;scale:.6}}
 
@@ -52,22 +56,23 @@ body{background:radial-gradient(ellipse at 50% 38%,#2a2c4a 0,#17182e 55%,#0d0e1d
 .card img{display:block;width:100%;height:264px;object-fit:cover;object-position:center top}
 .card b{display:block;font:700 40px/1 Caveat;color:#2b2a35;margin-top:12px}
 .card i{display:block;font:400 28px/1 Caveat;color:#6a6358;margin-top:4px}
-.card:nth-child(1){rotate:-5deg;animation:drop .6s 12.1s cubic-bezier(.2,.9,.25,1.15) forwards, lift .7s 14.6s ease-in forwards}
-.card:nth-child(2){rotate:2deg;animation:drop .6s 12.5s cubic-bezier(.2,.9,.25,1.15) forwards, lift .7s 14.7s ease-in forwards}
-.card:nth-child(3){rotate:5deg;animation:drop .6s 12.9s cubic-bezier(.2,.9,.25,1.15) forwards, lift .7s 14.8s ease-in forwards}
+.card:nth-child(1){rotate:-5deg;animation:drop .6s 14.0s cubic-bezier(.2,.9,.25,1.15) forwards, lift .7s 16.5s ease-in forwards}
+.card:nth-child(2){rotate:2deg;animation:drop .6s 14.4s cubic-bezier(.2,.9,.25,1.15) forwards, lift .7s 16.6s ease-in forwards}
+.card:nth-child(3){rotate:5deg;animation:drop .6s 14.8s cubic-bezier(.2,.9,.25,1.15) forwards, lift .7s 16.7s ease-in forwards}
 @keyframes drop{to{opacity:1;translate:0 0}}
 @keyframes lift{from{opacity:1;translate:0 0}to{opacity:0;translate:0 -60px;scale:.92}}
 
 /* 4. title */
-.title{position:absolute;left:0;right:0;top:200px;text-align:center;opacity:0;translate:0 24px;animation:titleIn .9s 15.0s ease forwards}
+.title{position:absolute;left:0;right:0;top:200px;text-align:center;opacity:0;translate:0 24px;animation:titleIn .9s 16.9s ease forwards}
 @keyframes titleIn{to{opacity:1;translate:0 0}}
 .title .k{font:22px Elite;letter-spacing:.32em;color:#cfc6a8}
 .title h1{margin:14px 0 0;font:700 168px/1 Caveat;color:#ffe9a8;rotate:-2deg;text-shadow:0 8px 34px rgba(0,0,0,.6)}
 .title .s{font:400 46px/1.1 Caveat;color:#f1e9d2;margin-top:6px}
 .title svg{display:block;margin:6px auto 0;rotate:-2deg}
-.blackout{position:absolute;inset:0;background:#0d0e1d;opacity:0;animation:fade .5s 17.5s forwards}
+.blackout{position:absolute;inset:0;background:#0d0e1d;opacity:0;animation:fade .5s 19.4s forwards}
 </style></head><body>
 <div class="lamp"></div>
+<div class="flash"></div>
 <div class="course">CCGL9079 · LEADERSHIP AND INFLUENCE</div>
 <div class="floor"></div>
 <div class="ring">

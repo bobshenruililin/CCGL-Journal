@@ -14,6 +14,9 @@ import { parseShow, wantsMaking, notesFor, makers } from './making.ts';
 const MAKING_KEY = 'six-flights-making';
 /** The group's behind-the-scenes film, served from public/film/. */
 const FILM = { src: '/film/behind-the-scenes.mp4', poster: '/film/poster.jpg', length: '5:44' };
+/** The film opens first, once per visit, before the notebook. Links that open a page (?show=) skip it. */
+const FILM_SEEN = 'six-flights-film-seen';
+function filmFirst(show: boolean): boolean { if (show) return false; try { return window.sessionStorage.getItem(FILM_SEEN) !== '1'; } catch { return true; } }
 /** A page opened from a ?show= link lives in memory, so it can never overwrite the reader's own notebook. */
 function memory(seed: string): Pick<Storage, 'getItem' | 'setItem'> { let v: string | null = seed; return { getItem: () => v, setItem: (_k, x) => { v = x; } }; }
 
@@ -42,7 +45,9 @@ export default function Journal() {
   const [resume] = useState(() => !show && hasSaved && s.furthest > 1);
   const [making, setMaking] = useState(() => { if (wantsMaking(window.location.search)) return true; if (show) return false; try { return window.localStorage.getItem(MAKING_KEY) === '1'; } catch { return false; } });
   const [slip, setSlip] = useState(false);
-  const [film, setFilm] = useState(false);
+  const [film, setFilm] = useState(() => filmFirst(!!show));
+  const [filmIntro, setFilmIntro] = useState(() => filmFirst(!!show));
+  const closeFilm = () => { setFilm(false); setFilmIntro(false); try { window.sessionStorage.setItem(FILM_SEEN, '1'); } catch { /* not kept */ } };
   const filmDialog = useRef<HTMLDialogElement>(null);
   const filmVideo = useRef<HTMLVideoElement>(null);
   const slipDialog = useRef<HTMLDialogElement>(null);
@@ -253,10 +258,14 @@ export default function Journal() {
         <p className="colophon">Six Flights is original fiction; the people and the roof are invented. Its situations draw on a leadership workbook by Amanda, refined by Hannah. It is a story, not an assessment.</p>
       </dialog>
 
-      <dialog ref={filmDialog} className="filmdialog" onCancel={() => setFilm(false)} aria-labelledby="film-title">
-        <p id="film-title" className="sr">How we made Six Flights: a {FILM.length} behind-the-scenes film</p>
-        <video ref={filmVideo} src={FILM.src} poster={FILM.poster} controls preload="none" playsInline />
-        <div className="acts"><button type="button" autoFocus onClick={() => setFilm(false)}>Back to the notebook</button></div>
+      <dialog ref={filmDialog} className={'filmdialog' + (filmIntro ? ' first' : '')} onCancel={closeFilm} aria-labelledby="film-title">
+        <div className="filmhead">
+          <p className="k">behind the scenes · {FILM.length}</p>
+          <p id="film-title" className="t">{filmIntro ? 'Before you open the notebook' : 'How we made it'}</p>
+          <p className="s">Four of us made this game for a leadership course. This is how, and what it taught us.</p>
+        </div>
+        <video ref={filmVideo} src={FILM.src} poster={FILM.poster} controls preload="metadata" playsInline />
+        <div className="acts"><button type="button" autoFocus onClick={closeFilm}>{filmIntro ? 'Skip to the game →' : 'Back to the notebook'}</button></div>
       </dialog>
 
       <dialog ref={slipDialog} className="slipdialog makingslip" onCancel={() => setSlip(false)} aria-labelledby="making-title">
