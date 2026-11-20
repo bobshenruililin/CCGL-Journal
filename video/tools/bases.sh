@@ -18,7 +18,8 @@ s1() { local W=video/work/s1-monday; mkdir -p $W
 s4() { local W=video/work/s4-colour; mkdir -p $W
   ffmpeg -y -loglevel error -ss $L -i $C/11-night-under-the-tarp.mp4 -vf $PAD -t 15.1 $E $W/a.mp4
   ffmpeg -y -loglevel error -sseof -0.2 -i $C/11-night-under-the-tarp.mp4 -frames:v 1 $W/tarp.png
-  still $W/tarp.png 13.5 "1+0.14*on/405" 0.5 0.62 $W/b.mp4
+  # the Blender flight through the rooftop audience (12 s rendered, slowed to fit 13.5 s); falls back to a still zoom if not rendered
+  if [ -f /home/user/reel/out/roofwide/0360.png ]; then ffmpeg -y -loglevel error -framerate 30 -i /home/user/reel/out/roofwide/%04d.png -vf "setpts=PTS*1.125" -t 13.5 $E $W/b.mp4; else still $W/tarp.png 13.5 "1+0.14*on/405" 0.5 0.62 $W/b.mp4; fi
   still $W/tarp.png 7.4 "min(1.9,1.25+0.65*on/120)" 0.57 0.86 $W/c.mp4
   ffmpeg -y -loglevel error -ss 5 -i $C/12-night-half-a-queue.mp4 -t 5.4 $E $W/d.mp4
   still $W/tarp.png 8.3 "1.1-0.1*on/249" 0.5 0.6 $W/e.mp4
