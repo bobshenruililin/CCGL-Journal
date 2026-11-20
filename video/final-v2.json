@@ -1,0 +1,14 @@
+{"out": "video/out/draft-v2.mp4",
+ "parts": [
+  {"file": "/home/user/reel/coldopen/coldopen.mp4"},
+  {"file": "video/out/s0-intro.mp4"},
+  {"file": "video/out/s1-monday.mp4", "turn_after": true},
+  {"file": "video/out/s2-chairs.mp4", "turn_after": true},
+  {"file": "video/out/s3-friday.mp4", "turn_after": true},
+  {"file": "video/out/s4-colour.mp4", "turn_after": true},
+  {"file": "video/out/s5-saturday.mp4"},
+  {"file": "/home/user/reel/numbers/numbers.mp4"},
+  {"file": "video/out/s7-projects.mp4"},
+  {"file": "/home/user/reel/finale/finale.mov"},
+  {"file": "video/out/s9-try-our-games.mp4"}],
+ "bed": {"file": "/home/user/reel/audio/bed.wav", "start_part": 2, "end_part": 9, "gain_db": -17}}
