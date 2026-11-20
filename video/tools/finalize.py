@@ -54,7 +54,7 @@ if beds:
           "[0:a]asplit=2[film][key];"
           "[bed][key]sidechaincompress=threshold=0.02:ratio=6:attack=40:release=600:makeup=1[duck];"
           "[film][duck]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-16:TP=-1.5:LRA=11,alimiter=limit=0.8:level=0[a]")
-    vmap = ['-map', '0:v', '-c:v', 'copy'] if not fin else ['-filter_complex', fc + f';[0:v]{fin}[v]', '-map', '[v]', '-c:v', 'libx264', '-crf', '18', '-preset', 'slow', '-pix_fmt', 'yuv420p']
+    vmap = ['-map', '0:v', '-c:v', 'copy'] if not fin else ['-filter_complex', fc + f';[0:v]{fin}[v]', '-map', '[v]', '-c:v', 'libx264', '-crf', '18', '-preset', 'medium', '-pix_fmt', 'yuv420p']
     args = ['-filter_complex', fc, '-map', '0:v', '-c:v', 'copy'] if not fin else vmap
     subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', *ins, *args, '-map', '[a]', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', out], check=True)
     for b in beds: print(f"  bed {os.path.basename(b['file'])}: {at(b['from']):.1f}-{at(b['to']):.1f} s")
