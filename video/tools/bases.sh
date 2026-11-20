@@ -9,12 +9,12 @@ still() { # still <image> <seconds> <zoom expr> <x 0..1> <y 0..1> <out>
   ffmpeg -y -loglevel error -loop 1 -i "$1" -t "$2" -r 30 -vf "scale=3840:2160,zoompan=z='$3':x='(iw-iw/zoom)*$4':y='(ih-ih/zoom)*$5':d=1:s=1920x1080:fps=30" -c:v libx264 -crf 16 -pix_fmt yuv420p "$6"; }
 join() { local out=$1; shift; local l; l=$(dirname "$out")/list.txt; : > "$l"; for f in "$@"; do echo "file $(basename "$f")" >> "$l"; done; ffmpeg -y -loglevel error -f concat -i "$l" -c copy "$out"; }
 s1() { local W=video/work/s1-monday; mkdir -p $W
-  ffmpeg -y -loglevel error -ss $L -i $C/01-cover-and-committee.mp4 -vf "setpts=PTS*1.027,$PAD" -t 11.75 $E $W/a.mp4
-  ffmpeg -y -loglevel error -ss $L -i $C/02-monday-pencil-to-ink.mp4 -vf $PAD -t 10.2 $E $W/b.mp4
-  ffmpeg -y -loglevel error -ss $L -i $C/03-monday-knock.mp4 -vf $PAD -t 17.04 $E $W/c.mp4
+  # v3, timed to bob-monday-v2: cover and committee (Kit's card), then the knock; the two-Mondays split is laid over at 27.9 s by compose.py
+  ffmpeg -y -loglevel error -ss $L -i $C/01-cover-and-committee.mp4 -vf "setpts=PTS*1.027,$PAD" -t 14.4 $E $W/a.mp4
+  ffmpeg -y -loglevel error -ss $L -i $C/03-monday-knock.mp4 -vf $PAD -t 13.5 $E $W/c.mp4
   ffmpeg -y -loglevel error -sseof -0.2 -i $C/03-monday-knock.mp4 -frames:v 1 $W/last.png
   still $W/last.png 9.4 "1+0.1*on/282" 0.3 0.45 $W/d.mp4
-  join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/c.mp4 $W/d.mp4; }
+  join $W/base.mp4 $W/a.mp4 $W/c.mp4 $W/d.mp4; }
 s4() { local W=video/work/s4-colour; mkdir -p $W
   ffmpeg -y -loglevel error -ss $L -i $C/11-night-under-the-tarp.mp4 -vf $PAD -t 15.1 $E $W/a.mp4
   ffmpeg -y -loglevel error -sseof -0.2 -i $C/11-night-under-the-tarp.mp4 -frames:v 1 $W/tarp.png
@@ -25,10 +25,11 @@ s4() { local W=video/work/s4-colour; mkdir -p $W
   still $W/tarp.png 8.3 "1.1-0.1*on/249" 0.5 0.6 $W/e.mp4
   join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/c.mp4 $W/d.mp4 $W/e.mp4; }
 s5() { local W=video/work/s5-saturday; mkdir -p $W
-  ffmpeg -y -loglevel error -ss $L -i $C/15-saturday-goes-round.mp4 -vf $PAD -t 26 $E $W/a.mp4
-  ffmpeg -y -loglevel error -ss $L -i $C/16-last-page-and-pocket.mp4 -vf $PAD -t 19 $E $W/b.mp4
+  # v3, timed to bob-saturday-v2
+  ffmpeg -y -loglevel error -ss $L -i $C/15-saturday-goes-round.mp4 -vf $PAD -t 12.6 $E $W/a.mp4
+  ffmpeg -y -loglevel error -ss $L -i $C/16-last-page-and-pocket.mp4 -vf $PAD -t 10.7 $E $W/b.mp4
   ffmpeg -y -loglevel error -ss 1.5 -i $C/01-cover-and-committee.mp4 -frames:v 1 $W/cover.png
-  still $W/cover.png 7.6 "1+0.08*on/228" 0.5 0.5 $W/c.mp4
+  still $W/cover.png 5.6 "1+0.05*on/168" 0.5 0.5 $W/c.mp4
   join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/c.mp4; }
 s2() { local W=video/work/s2-chairs; mkdir -p $W
   ffmpeg -y -loglevel error -ss $L -i $C/07-thursday-chairs-together.mp4 -vf $PAD -t 11.6 $E $W/a.mp4
@@ -49,23 +50,17 @@ s3() { local W=video/work/s3-friday; mkdir -p $W
   still $W/sat.png 5.5 "1+0.25*on/165" 0.2 0.6 $W/f.mp4
   join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/b2.mp4 $W/c.mp4 $W/d.mp4 $W/e.mp4 $W/f.mp4; }
 s7() { local W=video/work/s7-projects; mkdir -p $W; local M=video/media/clips
-  # Trimmed Asterwind and Team Quest clips (t1-t11, made by GPT from its recordings), cut to Bob's words.
-  clip() { ffmpeg -y -loglevel error -i "$1" -vf "setpts=PTS*$2" -t "$3" $E "$4"; }
-  last() { ffmpeg -y -loglevel error -sseof -0.1 -i "$1" -frames:v 1 "$2"; }
-  clip $M/t1-teamquest-title.mp4 1.25 5.0 $W/a.mp4
-  clip $M/t2-teamquest-meters.mp4 1 6.0 $W/b.mp4
-  last $M/t2-teamquest-meters.mp4 $W/meters.png; still $W/meters.png 5.0 "1+0.15*on/150" 0.3 0.4 $W/c.mp4
-  clip $M/t3-teamquest-radar.mp4 1.025 4.1 $W/d.mp4
-  ffmpeg -y -loglevel error -ss 3 -i $C/11-night-under-the-tarp.mp4 -t 2.7 $E $W/e.mp4
-  clip $M/t4-asterwind-title.mp4 1 3.5 $W/f.mp4
-  clip $M/t5-asterwind-corridor.mp4 1 4.0 $W/g.mp4
-  clip $M/t6-asterwind-open.mp4 1 4.0 $W/h.mp4
-  clip $M/t7-seam-3am.mp4 1 4.5 $W/i.mp4
-  clip $M/t8-two-options.mp4 1 2.5 $W/j.mp4
-  clip $M/t9-the-sentence.mp4 1 6.0 $W/k.mp4
-  clip $M/t10-aftermath.mp4 1.12 5.6 $W/l.mp4
-  still $M/still-three-builds.png 8.7 "1+0.05*on/261" 0.5 0.5 $W/m.mp4
-  clip $M/t11-morning.mp4 1 4.0 $W/n.mp4
-  last $M/t11-morning.mp4 $W/morning.png; still $W/morning.png 4.1 "1+0.06*on/123" 0.5 0.5 $W/o.mp4
-  join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/c.mp4 $W/d.mp4 $W/e.mp4 $W/f.mp4 $W/g.mp4 $W/h.mp4 $W/i.mp4 $W/j.mp4 $W/k.mp4 $W/l.mp4 $W/m.mp4 $W/n.mp4 $W/o.mp4; }
+  # v3, timed to bob-projects-v2 (27.9 s). Trimmed Asterwind and Team Quest clips (t1-t11), cut to Bob's words.
+  clip() { ffmpeg -y -loglevel error -i "$1" -vf "setpts=PTS*$2,$PAD" -t "$3" $E "$4"; }
+  still $M/still-three-builds.png 2.4 "1+0.03*on/72" 0.5 0.5 $W/a.mp4
+  clip $M/t1-teamquest-title.mp4 1 2.4 $W/b.mp4
+  clip $M/t2-teamquest-meters.mp4 1 4.2 $W/c.mp4
+  clip $M/t3-teamquest-radar.mp4 1 3.0 $W/d.mp4
+  ffmpeg -y -loglevel error -ss 3 -i $C/11-night-under-the-tarp.mp4 -t 2.0 $E $W/e.mp4
+  clip $M/t4-asterwind-title.mp4 1 2.4 $W/f.mp4
+  clip $M/t5-asterwind-corridor.mp4 1 1.6 $W/g.mp4
+  clip $M/t8-two-options.mp4 1 1.8 $W/h.mp4
+  clip $M/t9-the-sentence.mp4 1 4.2 $W/i.mp4
+  clip $M/t10-aftermath.mp4 1 4.6 $W/j.mp4
+  join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/c.mp4 $W/d.mp4 $W/e.mp4 $W/f.mp4 $W/g.mp4 $W/h.mp4 $W/i.mp4 $W/j.mp4; }
 for s in "${@:-s1 s2 s3 s4 s5 s7}"; do for x in $s; do $x; echo "base built: $x"; done; done

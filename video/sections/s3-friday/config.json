@@ -103,5 +103,21 @@
   "situation",
   "wrong time",
   "relationship"
+ ],
+ "layout": "cinema",
+ "chapter": {
+  "who": "hannah",
+  "name": "Hannah",
+  "day": "Friday",
+  "title": "The same words",
+  "stamp": "Leadership Styles · 9 Sep, and our Tutorial 2 debate",
+  "t0": 0.3,
+  "t1": 4.6
+ },
+ "inserts": [
+  {
+   "file": "/home/user/reel/split/same-words.mp4",
+   "t": 35.2
+  }
  ]
 }

@@ -1,0 +1,18 @@
+{"out": "video/out/final-v3.mp4",
+ "parts": [
+  {"file": "video/out/s0-opening.mp4", "turn_after": true},
+  {"file": "video/out/s1-monday.mp4", "turn_after": true},
+  {"file": "video/out/s2-chairs.mp4", "turn_after": true},
+  {"file": "video/out/s3-friday.mp4", "turn_after": true},
+  {"file": "video/out/s4-colour.mp4", "turn_after": true},
+  {"file": "video/out/s5-saturday.mp4"},
+  {"file": "/home/user/reel/numbers/numbers.mp4"},
+  {"file": "video/out/s7-projects.mp4"},
+  {"file": "video/out/s8-finale.mp4"},
+  {"file": "video/out/s8b-bookend.mp4"},
+  {"file": "video/out/s9-try-our-games.mp4"},
+  {"file": "video/out/s10-credits.mp4"}],
+ "beds": [
+  {"file": "video/media/music/Dream-Culture.mp3", "from": [0, 28.6], "to": [5, 1.5], "src": 0, "gain_db": -17, "fade_in": 2.0, "fade_out": 2.5},
+  {"file": "video/media/music/Autumn-Day.mp3", "from": [5, 0], "to": [11, "end"], "align_end": true, "gain_db": -18, "fade_in": 2.5, "fade_out": 3.5}],
+ "finish": "eq=saturation=1.04:gamma=0.985,vignette=angle=PI/6,noise=alls=3:allf=t+u,format=yuv420p"}

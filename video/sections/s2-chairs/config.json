@@ -110,5 +110,15 @@
   "carry",
   "carrying",
   "alone"
- ]
+ ],
+ "layout": "cinema",
+ "chapter": {
+  "who": "kate",
+  "name": "Kate",
+  "day": "Thursday",
+  "title": "The chairs",
+  "stamp": "Case · Leading the Marriott Way · 23 Sep",
+  "t0": 0.3,
+  "t1": 4.6
+ }
 }

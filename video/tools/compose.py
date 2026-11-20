@@ -8,10 +8,23 @@ dur = cfg['duration']; adds = cfg.get('addLessons', []); big = cfg.get('big', []
 inp = ['-i', cfg['base']]; n = 1
 def still(path):
     global n; inp.extend(['-loop', '1', '-t', str(dur), '-i', path]); n += 1; return n - 1
-f = ["[0:v]split=2[b0][b1]",
+cine = cfg.get('layout') == 'cinema'
+# Cinema layout: the footage fills a 1651x929 frame (with a slow push-in) over a blurred copy of itself; subtitles sit in the band below.
+FX, FY = 134, 18
+f = ["[0:v]null[base0]"]
+# "inserts": full-frame clips laid over the base at a time, e.g. a split screen: [{"file": "...mp4", "t": 27.9}]
+for j, ins in enumerate(cfg.get('inserts', [])):
+    inp.extend(['-i', ins['file']]); n += 1
+    f.append(f"[{n - 1}:v]setpts=PTS-STARTPTS+{ins['t']}/TB[ins{j}]")
+    f.append(f"[base{j}][ins{j}]overlay=0:0:eof_action=pass[base{j + 1}]")
+f += [f"[base{len(cfg.get('inserts', []))}]split=2[b0][b1]",
      "[b0]scale=2200:-2,crop=1920:1080,boxblur=40:5,eq=brightness=-0.42:saturation=0.7:contrast=0.8[bg]",
      ("[b1]scale=1340:754[book]" if cfg.get('frame') == 'full' else "[b1]crop=1600:1060:180:10,scale=1340:888[book]"),
      ("[bg][book]overlay=560:91[v]" if cfg.get('frame') == 'full' else "[bg][book]overlay=560:24[v]")]
+if cine:
+    nfr = int(dur * 30)
+    f[-2] = f"[b1]zoompan=z='1+0.045*on/{nfr}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=1:s=1651x929:fps=30[book]"
+    f[-1] = f"[bg][book]overlay={FX}:{FY}[v]"
 # "frame": "full" shows the whole 16:9 picture (for footage that is not the notebook, such as Asterwind).
 last = 'v'; k = 0
 def lay(src, x, y, enable=None):
@@ -20,18 +33,23 @@ def lay(src, x, y, enable=None):
 for i, g in enumerate(big):
     s = still(f'{d}/big-{i}.png'); t0, t1 = g['t0'], g.get('t1', dur + 1)
     fx = f"[{s}:v]format=rgba,fade=t=in:st={t0}:d=0.45:alpha=1" + (f",fade=t=out:st={t1 - 0.45}:d=0.45:alpha=1" if t1 < dur else '') + f"[bg{i}]"
-    f.append(fx); lay(f'bg{i}', 560, 24, f'between(t,{t0},{t1})')
-s = still(f'{d}/panel-0.png'); lay(f'{s}:v', 0, 0)
-for i, a in enumerate(adds):
+    f.append(fx); lay(f'bg{i}', FX if cine else 560, FY if cine else 24, f'between(t,{t0},{t1})')
+if cine and cfg.get('chapter'):
+    c0, c1 = cfg['chapter'].get('t0', 0.4), cfg['chapter'].get('t1', 4.2)
+    s = still(f'{d}/chapter.png'); f.append(f"[{s}:v]format=rgba,fade=t=in:st={c0}:d=0.5:alpha=1,fade=t=out:st={c1 - 0.5}:d=0.5:alpha=1[ch]"); lay('ch', 0, 0, f'between(t,{c0},{c1})')
+if not cine:
+  s = still(f'{d}/panel-0.png'); lay(f'{s}:v', 0, 0)
+for i, a in enumerate([] if cine else adds):
     s = still(f'{d}/panel-{i + 1}.png'); f.append(f"[{s}:v]format=rgba,fade=t=in:st={a['t']}:d=0.7:alpha=1[pn{i}]"); lay(f'pn{i}', 0, 0, f"gte(t,{a['t']})")
 # The speaker sways a little all the time and gives a small shake when a lesson lands.
 pops = [g['t0'] for g in big] + [a['t'] for a in adds]
 ang = "0.024*sin(2*PI*t/3.4)+0.011*sin(2*PI*t/1.27)" + ''.join(f"+0.085*sin(21*(t-{T}))*exp(-3.6*(t-{T}))*gte(t,{T})" for T in pops)
-s = still(f'{d}/figure.png')
-f.append(f"[{s}:v]format=rgba,rotate=a='{ang}':c=none:ow=iw:oh=ih[fig]")
-f.append(f"[{last}][fig]overlay=x=-40:y='540-6*abs(sin(2*PI*t/1.9))'[o{k}]"); last = f'o{k}'; k += 1
+if not cine:
+    s = still(f'{d}/figure.png')
+    f.append(f"[{s}:v]format=rgba,rotate=a='{ang}':c=none:ow=iw:oh=ih[fig]")
+    f.append(f"[{last}][fig]overlay=x=-40:y='540-6*abs(sin(2*PI*t/1.9))'[o{k}]"); last = f'o{k}'; k += 1
 for i, (a, z, _) in enumerate(subs):
-    s = still(f'{d}/sub-{i:02d}.png'); lay(f'{s}:v', 550, 918, f'between(t,{a:.2f},{z:.2f})')
+    s = still(f'{d}/sub-{i:02d}.png'); lay(f'{s}:v', 210 if cine else 550, 954 if cine else 918, f'between(t,{a:.2f},{z:.2f})')
 # ---- Sound: mixed on its own into video/work/<id>/mix.wav, then attached to the picture. ----
 # `python3 video/tools/compose.py <section> <out> --audio` builds only the mix, which takes seconds; use it while placing effects.
 import os

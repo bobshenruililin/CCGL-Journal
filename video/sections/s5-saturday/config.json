@@ -1,130 +1,83 @@
 {
+ "layout": "cinema",
  "day": "Saturday",
  "title": "other people's handwriting",
- "words": "video/sections/s5-saturday/words.json",
+ "chapter": {
+  "who": "bob",
+  "name": "Bob",
+  "day": "Saturday",
+  "title": "Other people's handwriting",
+  "stamp": "Course Journal, Q1b · “Do you fit your definition?”",
+  "t0": 0.3,
+  "t1": 4.6
+ },
+ "words": "video/media/voice/bob-saturday-v2.words.json",
  "figure": "video/media/figures/bob.png",
  "base": "video/work/s5-saturday/base.mp4",
- "audio": "video/media/voice/bob-saturday.m4a",
- "duration": 52.5,
- "lessonsBefore": [
-  "Ask before you assume.",
-  "Let people carry it with you.",
-  "No style is right every time.",
-  "Give everyone a part that's theirs."
- ],
+ "audio": "video/media/voice/bob-saturday-v2.wav",
+ "duration": 28.6,
  "lines": [
   [
    0,
-   14
+   6,
+   "Six Flights never gives you a score."
   ],
   [
-   15,
-   20
+   7,
+   18,
+   "On Saturday, your teammates take the notebook and write in it themselves,"
   ],
   [
-   21,
-   32,
-   "Instead, your teammates take the notebook and write in it themselves,"
+   19,
+   30,
+   "and that's your only feedback: what your choices were like for them."
   ],
   [
-   33,
-   46
+   31,
+   43,
+   "There are twenty-seven different weeks, and I hope you play more than one."
   ],
   [
-   47,
-   58
+   44,
+   52,
+   "Someone once told me to increase my surface area:"
   ],
   [
-   59,
-   67
+   53,
+   62,
+   "try more things, because that's how you find what fits."
   ],
   [
-   68,
-   76
-  ],
-  [
-   77,
-   86
-  ],
-  [
-   87,
-   95
-  ],
-  [
-   96,
-   108
-  ],
-  [
-   109,
-   112
-  ],
-  [
-   113,
-   122
-  ],
-  [
-   123,
-   129
-  ],
-  [
-   130,
-   136
-  ],
-  [
-   137,
-   146
+   63,
+   73,
+   "There's no right answer here, but every choice lands on somebody."
   ]
+ ],
+ "highlight": [
+  "score",
+  "themselves",
+  "like for them",
+  "surface area",
+  "somebody"
  ],
  "big": [
   {
-   "t0": 46.6,
-   "text": "Who do I want to be?<br>Do my actions match that?",
-   "kicker": "THE QUESTION IT LEAVES YOU WITH",
-   "size": 104,
-   "rule": 760
+   "t0": 9.5,
+   "t1": 12.8,
+   "text": "Hear it from<br>the people you led.",
+   "kicker": "LESSON FIVE"
   }
  ],
- "addLessons": [
-  {
-   "t": 15.4,
-   "text": "Hear it from the people you led."
-  }
- ],
- "figureHeight": 300,
  "sfx": [
   {
-   "file": "video/media/sfx/paper-slide.mp3",
-   "t": 3.4,
-   "gain": -20,
-   "dur": 1.2
-  },
-  {
-   "file": "video/media/sfx/paper-slide.mp3",
-   "t": 7.9,
-   "gain": -22,
-   "dur": 1.2
-  },
-  {
-   "file": "video/media/sfx/paper-slide.mp3",
-   "t": 12.4,
-   "gain": -22,
-   "dur": 1.2
-  },
-  {
-   "file": "video/media/sfx/paper-slide.mp3",
-   "t": 16.9,
-   "gain": -22,
-   "dur": 1.2
-  },
-  {
-   "file": "video/media/sfx/pencil.mp3",
-   "t": 31.4,
+   "file": "video/media/sfx/page-turn.mp3",
+   "t": 3.0,
    "gain": -18,
-   "dur": 2.4
+   "dur": 1.2
   },
   {
    "file": "video/media/sfx/lesson.mp3",
-   "t": 46.6,
+   "t": 9.5,
    "gain": -18,
    "dur": 1.4
   }

@@ -29,21 +29,35 @@ for f in seq:
 joined = f'{work}/joined.mp4'
 subprocess.run(['python3', 'video/tools/join.py', joined, *seq], check=True)
 
-# 3. the bed: from the start of one part to the end of another, ducked under the film's own sound
-bed = cfg.get('bed')
+# 3. music beds, ducked under the film's own sound. Each bed: {"file", "from": [part, seconds into it], "to": [part, "end" or seconds],
+#    "src": seconds into the file to start (or "align_end": true so the track's own ending lands on "to"), "gain_db", "fade_in", "fade_out"}
+#    The legacy single "bed" (start_part, end_part) still works.
 out = cfg['out']
-if bed:
-    part_starts = [starts[seq.index(p['file'])] for p in cfg['parts']]
-    b0 = part_starts[bed['start_part']]
-    b1 = part_starts[bed['end_part']] + dur(cfg['parts'][bed['end_part']]['file'])
-    g = bed.get('gain_db', -20)
-    fc = (f"[1:a]atrim=0:{b1 - b0:.2f},afade=t=in:d=2.5,afade=t=out:st={max(0, b1 - b0 - 3):.2f}:d=3,volume={g}dB,"
-          f"adelay={int(b0 * 1000)}|{int(b0 * 1000)},apad[bed];"
+beds = cfg.get('beds') or ([{"file": cfg['bed']['file'], "from": [cfg['bed']['start_part'], 0], "to": [cfg['bed']['end_part'], "end"],
+                             "gain_db": cfg['bed'].get('gain_db', -20)}] if cfg.get('bed') else [])
+part_starts = [starts[seq.index(p['file'])] for p in cfg['parts']]
+def at(ref):
+    i, x = ref
+    return part_starts[i] + (dur(cfg['parts'][i]['file']) if x == 'end' else x)
+fin = cfg.get('finish', '')   # one picture pass over the whole film (grade, grain, vignette)
+if beds:
+    ins, chains = ['-i', joined], []
+    for j, b in enumerate(beds):
+        b0, b1 = at(b['from']), at(b['to']); L = b1 - b0
+        ss = max(0, dur(b['file']) - L) if b.get('align_end') else b.get('src', 0)
+        ins += ['-ss', f'{ss:.2f}', '-i', b['file']]
+        fi, fo = b.get('fade_in', 2.5), b.get('fade_out', 3)
+        chains.append(f"[{j + 1}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:{L:.2f},asetpts=PTS-STARTPTS,"
+                      f"equalizer=f=2500:width_type=o:width=1.6:g=-4,afade=t=in:d={fi},afade=t=out:st={max(0, L - fo):.2f}:d={fo},"
+                      f"volume={b.get('gain_db', -20)}dB,adelay={int(b0 * 1000)}|{int(b0 * 1000)},apad[bd{j}]")
+    fc = ';'.join(chains) + ';' + ''.join(f'[bd{j}]' for j in range(len(beds))) + f"amix=inputs={len(beds)}:normalize=0[bed];" + (
           "[0:a]asplit=2[film][key];"
           "[bed][key]sidechaincompress=threshold=0.02:ratio=6:attack=40:release=600:makeup=1[duck];"
           "[film][duck]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-16:TP=-1.5:LRA=11,alimiter=limit=0.8:level=0[a]")
-    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', joined, '-i', bed['file'], '-filter_complex', fc,
-                    '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', out], check=True)
+    vmap = ['-map', '0:v', '-c:v', 'copy'] if not fin else ['-filter_complex', fc + f';[0:v]{fin}[v]', '-map', '[v]', '-c:v', 'libx264', '-crf', '18', '-preset', 'slow', '-pix_fmt', 'yuv420p']
+    args = ['-filter_complex', fc, '-map', '0:v', '-c:v', 'copy'] if not fin else vmap
+    subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', *ins, *args, '-map', '[a]', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', out], check=True)
+    for b in beds: print(f"  bed {os.path.basename(b['file'])}: {at(b['from']):.1f}-{at(b['to']):.1f} s")
 else:
     os.replace(joined, out)
 print(f'{out}: {dur(out):.1f} s')

@@ -1,0 +1,24 @@
+<!doctype html>
+<!-- Credits (1920x1080, 7 s). The group, the course, the music credit, and a dedication. -->
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:News;src:url(../fonts/newsreader-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:News;src:url(../fonts/newsreader-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:News;src:url(../fonts/newsreader-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:News;src:url(../fonts/newsreader-latin-400-italic.woff2);font-weight:400;font-style:italic}
+*{margin:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:#0d0e17;color:#f3ead2;text-align:center}
+.b{position:absolute;left:0;right:0;opacity:0}
+.k{font:500 20px/1 News;letter-spacing:.34em;color:#e7c86a}
+.n{font:600 64px/1.1 News;letter-spacing:-.01em}
+.s{font:italic 400 30px/1.4 News;color:#cfc6ae}
+.m{font:400 22px/1.4 News;color:#8f8a7c}
+</style></head><body>
+<div class="b" id="a" style="top:290px"><div class="k">MADE BY</div><div class="n" style="margin-top:22px">Bob · Kate · Hannah · Amanda</div>
+  <div class="s" style="margin-top:18px">CCGL9079 Leadership and Influence in a Dynamic World · HKU · 2026</div></div>
+<div class="b" id="c" style="top:560px"><div class="s" style="font-size:40px;color:#f3ead2">Made with love: for the people we will lead,<br>and to the glory of God.</div></div>
+<div class="b" id="m" style="bottom:70px"><div class="m">Music: “Dream Culture” and “Autumn Day” by Kevin MacLeod (incompetech.com), licensed under CC BY 4.0</div></div>
+<script>
+const $ = s => document.querySelector(s), clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const eo = x => 1 - Math.pow(1 - clamp(x), 3);
+window.render = t => { [['#a', 0.3], ['#c', 1.8], ['#m', 0.8]].forEach(([s, t0]) => { const p = eo((t - t0) / 0.9); $(s).style.opacity = p * clamp((7 - t) / 0.6); $(s).style.transform = `translateY(${(1 - p) * 12}px)`; }); };
+window.ready = true;
+</script></body></html>

@@ -47,19 +47,20 @@ We also learned leadership by doing it. Four of us, plus a lot of tools, had to 
 
 ## Reference List
 
-Confirm the course items against the Moodle reading list and complete them in the citation style you prefer. Items marked [confirm] are ones I could not check.
+Course items are checked against the course's Moodle page (case schedule and Course Journal questions). Add full case citations in the citation style you prefer; items marked [confirm] are ones I could not check.
 
 **Course materials**
-- [confirm] CCGL9079 Leadership and Influence in a Dynamic World, lecture: Introduction: Defining Leadership, 2 September 2026.
-- [confirm] Lecture: Leadership Styles, 9 September 2026.
-- [confirm] Case: Martin Luther King Jr., discussed 16 September 2026. [Full case citation]
-- [confirm] Case: *Leading the Marriott Way*, discussed 23 September 2026. [Full case citation]
-- [confirm] Case: *Two Tough Calls*, discussed 30 September 2026. [Full case citation]
-- [confirm] Assigned Leader Group Exercise, 7 October 2026.
-- [confirm] Guest speaker: Jennifer Stanzl. [Title and date]
-- [confirm] Case: *Making the Right Hire to Lead Asia*, discussed 28 October 2026. [Full case citation]
+- CCGL9079 Leadership and Influence in a Dynamic World (Section 1A, 2026), Moodle course page: case reading schedule and Course Journal questions (Q1 "Defining Leadership", Q2 "Decade of Decisions").
+- Leadership Styles, 9 September 2026.
+- Case: *Martin Luther King, Jr.: A Young Minister Confronts the Challenges of Montgomery*, 16 September 2026. [Full case citation]
+- Case: *Leading the Marriott Way*, 23 September 2026. [Full case citation]
+- Case: *Two Tough Calls*, 30 September 2026. [Full case citation]
+- Assigned Leader Group Exercise, 7 October 2026.
+- Guest Speaker #1: Jennifer Stanzl, Chief of Diversity & Engagement, United Nations (session 13 October 2026).
+- Case: *Diversity in a Global Context: Making the Right Hire to Lead Asia*, 28 October 2026. [Full case citation]
 - Tolstoy, L. (1886). *How much land does a man need?* (discussed 4 November 2026).
-- [confirm] Guest speaker: Veronika Leng, 11 November 2026.
+- Guest Speaker #2: Veronika Leng, Champion Professional Ultra-Distance Trail Runner, 11 November 2026.
+- Tutorial 2, Debate Preparation, and Tutorial 3, Active Listening. [confirm dates]
 
 **Leadership concepts used in the game**
 - Goleman, D. (2000). Leadership that gets results. *Harvard Business Review, 78*(2), 78–90. (The six leadership styles behind the game's choices.)
@@ -77,9 +78,10 @@ Confirm the course items against the Moodle reading list and complete them in th
 - Claude (Anthropic), AI model: wrote the game's story and code and directed the art, under our direction and review.
 - An OpenAI image model, used by a group member to generate the gouache paintings; final images were chosen by hand from over 300 studies.
 - ChatGPT (OpenAI): used to record and trim gameplay footage of Asterwind and Team Quest.
-- Blender 4.2 (Blender Foundation), for the 3D camera shot in the trailer.
+- Blender 4.2 (Blender Foundation), for the 3D desk and rooftop shots in the video.
 - Fonts: Caveat, Reenie Beanie, Covered By Your Grace, Patrick Hand, La Belle Aurore, Newsreader, Anton, Inter (SIL Open Font License); Special Elite (Apache 2.0).
-- Sound effects: Myinstants (user-uploaded sounds); other sounds and music generated in code.
+- Music: MacLeod, K. *Dream Culture* and *Autumn Day* [Music]. incompetech.com. Licensed under Creative Commons: By Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/).
+- Sound effects: Myinstants (user-uploaded sounds); other sounds generated in code.
 
 ## Supplementary Information
 

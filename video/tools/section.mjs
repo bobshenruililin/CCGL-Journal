@@ -17,6 +17,8 @@ const css = `@font-face{font-family:Caveat;src:url(${b64('caveat-latin-700-norma
 @font-face{font-family:Newsreader;src:url(${b64('newsreader-latin-400-normal.woff2')})}
 @font-face{font-family:Elite;src:url(${b64('special-elite-latin-400-normal.woff2')})}
 html,body{margin:0;background:transparent}`;
+const cine = cfg.layout === 'cinema';                     // v3 look: full-frame footage, a chapter card, subtitles in the band below
+const SW = cine ? 1500 : 1360, SH = cine ? 118 : 150, BW = cine ? 1651 : 1340, BH = cine ? 929 : 888;
 const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
 const shot = async (html, name, w, h) => {
   await p.setContent(`<style>${css}</style>${html}`);
@@ -51,14 +53,29 @@ for (const [i, [a, z, text]] of cfg.lines.entries()) {
   const shown = keys.length ? t.replace(new RegExp(`\\b(${keys.join('|')})\\b`, 'gi'), '<span style="color:#ffe14d">$1</span>') : t;
   const next = cfg.lines[i + 1];
   subs.push([words[a][0], Math.min(words[z][1] + 0.35, next ? words[next[0]][0] : 1e9), t]);
-  await shot(`<div style="position:absolute;left:0;top:0;width:1360px;height:150px;display:flex;align-items:center;justify-content:center;text-align:center;font:44px/1.25 Newsreader;color:#f4eedd;text-shadow:0 2px 10px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.9)"><div>${shown}</div></div>`, `sub-${String(i).padStart(2, '0')}.png`, 1360, 150);
+  await shot(`<div style="position:absolute;left:0;top:0;width:${SW}px;height:${SH}px;display:flex;align-items:center;justify-content:center;text-align:center;font:${cine ? 40 : 44}px/1.25 Newsreader;color:#f4eedd;text-shadow:0 2px 10px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.9)"><div>${shown}</div></div>`, `sub-${String(i).padStart(2, '0')}.png`, SW, SH);
 }
 // The lesson, written large across the notebook.
-for (const [i, g] of (cfg.big ?? []).entries()) await shot(`<div style="position:absolute;left:0;top:0;width:1340px;height:888px;background:radial-gradient(ellipse at center,rgba(10,10,22,.72) 0,rgba(10,10,22,.55) 55%,rgba(10,10,22,.25) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
-  <div style="font:15px Elite;letter-spacing:.3em;color:#cfc6a8;margin-bottom:26px">${g.kicker ?? ''}</div>
+for (const [i, g] of (cfg.big ?? []).entries()) await shot(`<div style="position:absolute;left:0;top:0;width:${BW}px;height:${BH}px;background:${cine ? 'radial-gradient(ellipse at center,rgba(10,10,22,.88) 0,rgba(10,10,22,.78) 55%,rgba(10,10,22,.6) 100%)' : 'radial-gradient(ellipse at center,rgba(10,10,22,.72) 0,rgba(10,10,22,.55) 55%,rgba(10,10,22,.25) 100%)'};display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+  <div style="font:${cine ? 21 : 15}px Elite;letter-spacing:.3em;color:#cfc6a8;margin-bottom:26px">${g.kicker ?? ''}</div>
   <div style="font:700 ${g.size ?? 132}px/1.02 Caveat;color:#ffe9a8;rotate:-2deg;max-width:1120px;text-shadow:0 6px 30px rgba(0,0,0,.7)">${g.text}</div>
   <svg width="${g.rule ?? 620}" height="30" style="margin-top:18px;rotate:-2deg"><path d="M6 16 Q ${(g.rule ?? 620) / 4} 2 ${(g.rule ?? 620) / 2} 14 T ${(g.rule ?? 620) - 8} 12" fill="none" stroke="#d9472b" stroke-width="7" stroke-linecap="round"/></svg>
-</div>`, `big-${i}.png`, 1340, 888);
+</div>`, `big-${i}.png`, BW, BH);
+// Chapter card (cinema layout): who is speaking, which day, and the course session the lesson comes from.
+if (cine && cfg.chapter) {
+  const c = cfg.chapter, pol = 'data:image/jpeg;base64,' + readFileSync(`video/media/figures/pol-${c.who}.jpg`).toString('base64');
+  const nf = (f, w, st = 'normal') => `@font-face{font-family:News2;src:url(data:font/woff2;base64,${readFileSync('/home/user/reel/fonts/' + f).toString('base64')});font-weight:${w};font-style:${st}}`;
+  await shot(`<style>${nf('newsreader-latin-500-normal.woff2', 500)}${nf('newsreader-latin-600-normal.woff2', 600)}${nf('newsreader-latin-400-italic.woff2', 400, 'italic')}</style>
+  <div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:linear-gradient(20deg,rgba(8,8,14,.88) 0,rgba(8,8,14,.6) 30%,rgba(8,8,14,0) 58%)">
+    <div style="position:absolute;left:150px;bottom:190px;width:210px;padding:12px 12px 0;background:#f4eedf;rotate:-4deg;box-shadow:0 18px 40px rgba(0,0,0,.55)">
+      <div style="height:200px;background:#cfc6b2 url(${pol}) center top/cover no-repeat"></div>
+      <div style="font:700 36px/1 Caveat;color:#2b2a35;text-align:center;padding:9px 0 12px">${c.name}</div></div>
+    <div style="position:absolute;left:420px;bottom:206px;width:1100px;color:#f4eedd">
+      <div style="font:500 19px/1 News2;letter-spacing:.34em;color:#e7c86a">${c.day.toUpperCase()}</div>
+      <div style="font:600 84px/1.02 News2;letter-spacing:-.015em;margin-top:14px;text-shadow:0 4px 30px rgba(0,0,0,.6)">${c.title}</div>
+      <div style="font:italic 400 30px/1.3 News2;color:#d8cfb6;margin-top:16px"><span style="display:inline-block;width:34px;height:2px;background:#d9472b;vertical-align:9px;margin-right:14px"></span>${c.pre ?? 'From the course:'} ${c.stamp}</div>
+    </div></div>`, 'chapter.png', 1920, 1080);
+}
 writeFileSync(dir + '/layers.json', JSON.stringify({ subs }));
 console.log(subs.length, 'subtitles;', adds.length, 'lesson(s) added;', (cfg.big ?? []).length, 'big card(s)');
 await b.close();

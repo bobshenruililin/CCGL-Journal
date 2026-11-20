@@ -114,5 +114,15 @@
   "colour",
   "theirs",
   "good at"
- ]
+ ],
+ "layout": "cinema",
+ "chapter": {
+  "who": "amanda",
+  "name": "Amanda",
+  "day": "Friday night",
+  "title": "Who is in colour",
+  "stamp": "Case · Making the Right Hire to Lead Asia · 28 Oct",
+  "t0": 0.3,
+  "t1": 4.6
+ }
 }

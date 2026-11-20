@@ -1,116 +1,115 @@
 {
+ "layout": "cinema",
  "day": "Monday",
  "title": "the knock",
- "words": "video/sections/s1-monday/words.json",
+ "chapter": {
+  "who": "bob",
+  "name": "Bob",
+  "day": "Monday",
+  "title": "The knock",
+  "stamp": "Tutorial 3 · Active Listening",
+  "t0": 0.3,
+  "t1": 4.8
+ },
+ "words": "video/media/voice/bob-monday-v2.words.json",
  "figure": "video/media/figures/bob.png",
  "base": "video/work/s1-monday/base.mp4",
- "audio": "video/media/voice/bob-knock-nohi.wav",
- "duration": 48.35,
+ "audio": "video/media/voice/bob-monday-v2.wav",
+ "duration": 37.0,
+ "inserts": [
+  {
+   "file": "/home/user/reel/split/two-mondays.mp4",
+   "t": 27.9
+  }
+ ],
  "lines": [
   [
    0,
-   9,
-   "Our game is called Six Flights, and you play Yan,"
+   6,
+   "It's called Six Flights. You're Yan,"
   ],
   [
-   10,
-   23
+   7,
+   14,
+   "and you've just inherited a rooftop film night."
   ],
   [
-   24,
-   31
+   15,
+   18,
+   "One week. Three decisions."
   ],
   [
-   32,
-   41
+   19,
+   29,
+   "The first one is about Kit. He runs the projector,"
   ],
   [
-   42,
-   50
+   30,
+   37,
+   "and he's ignored every message for five days."
   ],
   [
-   51,
-   64
+   38,
+   47,
+   "You can work around him, or go downstairs and knock."
   ],
   [
-   65,
-   71
+   48,
+   57,
+   "I put that first because I've had friends go quiet,"
   ],
   [
-   72,
+   58,
+   63,
+   "and everyone assumed they'd stopped caring."
+  ],
+  [
+   64,
+   74,
+   "It was family. A breakup. Things none of us could see."
+  ],
+  [
+   75,
+   83,
+   "Knock, and you'll find out what's really going on,"
+  ],
+  [
    84,
-   "because I've had friends go quiet and everyone assumed that they'd stopped caring,"
+   89,
+   "and it changes the whole week."
   ],
   [
-   85,
-   99
-  ],
-  [
-   100,
-   112,
-   "So I wanted that to be the first thing a player runs into,"
-  ],
-  [
-   113,
-   129,
-   "because if you knock, you find out what's actually going on, and it changes the whole week."
-  ],
-  [
-   130,
-   139,
-   "What I hope people take from it is to just"
+   90,
+   94,
+   "So: ask before you assume."
   ]
+ ],
+ "highlight": [
+  "Kit",
+  "knock",
+  "stopped caring",
+  "none of us could see",
+  "ask before you assume"
  ],
  "big": [
   {
-   "t0": 42.75,
+   "t0": 33.35,
    "text": "Ask before you assume.",
    "kicker": "LESSON ONE"
   }
  ],
- "addLessons": [
-  {
-   "t": 45.35,
-   "text": "Ask before you assume."
-  }
- ],
  "sfx": [
   {
-   "file": "video/media/sfx/page-turn.mp3",
-   "t": 1.45,
+   "file": "video/media/sfx/knock.mp3",
+   "t": 17.3,
    "gain": -16,
-   "dur": 0.5
-  },
-  {
-   "file": "video/media/sfx/pencil.mp3",
-   "t": 18.15,
-   "gain": -18,
-   "dur": 1.4
-  },
-  {
-   "file": "video/media/sfx/knock.mp3",
-   "t": 24.35,
-   "gain": -8,
-   "dur": 0.6
-  },
-  {
-   "file": "video/media/sfx/knock.mp3",
-   "t": 25.95,
-   "gain": -8,
-   "dur": 0.6
-  },
-  {
-   "file": "video/media/sfx/knock.mp3",
-   "t": 27.55,
-   "gain": -8,
-   "dur": 0.6
+   "dur": 1.2
   },
   {
    "file": "video/media/sfx/lesson.mp3",
-   "t": 42.75,
+   "t": 33.35,
    "gain": -18,
    "dur": 1.4
   }
- ],
- "figureHeight": 300
+ ]
 }
