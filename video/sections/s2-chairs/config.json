@@ -103,5 +103,12 @@
    "gain": -18,
    "dur": 1.4
   }
+ ],
+ "highlight": [
+  "kind",
+  "kindness",
+  "carry",
+  "carrying",
+  "alone"
  ]
 }

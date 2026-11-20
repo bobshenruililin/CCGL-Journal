@@ -46,9 +46,12 @@ await shot(`<div style="position:absolute;left:0;top:0;width:600px;height:1000px
 const subs = [];
 for (const [i, [a, z, text]] of cfg.lines.entries()) {
   const t = text ?? words.slice(a, z + 1).map(w => w[2]).join(' ');
+  // Key concepts from the course turn yellow in the subtitles (config "highlight": a list of words or short phrases).
+  const keys = (cfg.highlight ?? []).map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).sort((x, y) => y.length - x.length);
+  const shown = keys.length ? t.replace(new RegExp(`\\b(${keys.join('|')})\\b`, 'gi'), '<span style="color:#ffe14d">$1</span>') : t;
   const next = cfg.lines[i + 1];
   subs.push([words[a][0], Math.min(words[z][1] + 0.35, next ? words[next[0]][0] : 1e9), t]);
-  await shot(`<div style="position:absolute;left:0;top:0;width:1360px;height:150px;display:flex;align-items:center;justify-content:center;text-align:center;font:44px/1.25 Newsreader;color:#f4eedd;text-shadow:0 2px 10px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.9)">${t}</div>`, `sub-${String(i).padStart(2, '0')}.png`, 1360, 150);
+  await shot(`<div style="position:absolute;left:0;top:0;width:1360px;height:150px;display:flex;align-items:center;justify-content:center;text-align:center;font:44px/1.25 Newsreader;color:#f4eedd;text-shadow:0 2px 10px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.9)"><div>${shown}</div></div>`, `sub-${String(i).padStart(2, '0')}.png`, 1360, 150);
 }
 // The lesson, written large across the notebook.
 for (const [i, g] of (cfg.big ?? []).entries()) await shot(`<div style="position:absolute;left:0;top:0;width:1340px;height:888px;background:radial-gradient(ellipse at center,rgba(10,10,22,.72) 0,rgba(10,10,22,.55) 55%,rgba(10,10,22,.25) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
