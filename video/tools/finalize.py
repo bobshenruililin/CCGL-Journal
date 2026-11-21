@@ -50,7 +50,9 @@ if beds:
         chains.append(f"[{j + 1}:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:{L:.2f},asetpts=PTS-STARTPTS,"
                       f"equalizer=f=2500:width_type=o:width=1.6:g=-4,afade=t=in:d={fi},afade=t=out:st={max(0, L - fo):.2f}:d={fo},"
                       f"volume={b.get('gain_db', -20)}dB,adelay={int(b0 * 1000)}|{int(b0 * 1000)},apad[bd{j}]")
-    fc = ';'.join(chains) + ';' + ''.join(f'[bd{j}]' for j in range(len(beds))) + f"amix=inputs={len(beds)}:normalize=0[bed];" + (
+    # "music_out": [[t0, t1], ...] film times where the music drops away (fades over ~0.7 s), so a line can land in silence
+    mo = ''.join(f"*(1-0.98*clip(min((t-{a})/0.7,({b}-t)/0.9),0,1))" for a, b in cfg.get('music_out', []))
+    fc = ';'.join(chains) + ';' + ''.join(f'[bd{j}]' for j in range(len(beds))) + f"amix=inputs={len(beds)}:normalize=0" + (f",volume='1{mo}':eval=frame" if mo else '') + "[bed];" + (
           "[0:a]asplit=2[film][key];"
           "[bed][key]sidechaincompress=threshold=0.02:ratio=6:attack=40:release=600:makeup=1[duck];"
           "[film][duck]amix=inputs=2:normalize=0:duration=first,loudnorm=I=-16:TP=-1.5:LRA=11,alimiter=limit=0.8:level=0[a]")

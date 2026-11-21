@@ -63,14 +63,15 @@ for (const [i, g] of (cfg.big ?? []).entries()) await shot(`<div style="position
 </div>`, `big-${i}.png`, BW, BH);
 // Chapter card (cinema layout): who is speaking, which day, and the course session the lesson comes from.
 if (cine && cfg.chapter) {
-  const c = cfg.chapter, pol = 'data:image/jpeg;base64,' + readFileSync(`video/media/figures/pol-${c.who}.jpg`).toString('base64');
+  const c = cfg.chapter, bust = 'data:image/png;base64,' + readFileSync(`video/work/intro/bust-${c.who}.png`).toString('base64');
   const nf = (f, w, st = 'normal') => `@font-face{font-family:News2;src:url(data:font/woff2;base64,${readFileSync('/home/user/reel/fonts/' + f).toString('base64')});font-weight:${w};font-style:${st}}`;
+  // the speaker as a paper cut-out (cream edge, soft shadow), the same treatment as the earlier cut, with their name pencilled under it
+  const edge = 'drop-shadow(5px 0 0 #f3ecd9) drop-shadow(-5px 0 0 #f3ecd9) drop-shadow(0 5px 0 #f3ecd9) drop-shadow(0 -5px 0 #f3ecd9) drop-shadow(0 16px 22px rgba(0,0,0,.55))';
   await shot(`<style>${nf('newsreader-latin-500-normal.woff2', 500)}${nf('newsreader-latin-600-normal.woff2', 600)}${nf('newsreader-latin-400-italic.woff2', 400, 'italic')}</style>
   <div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:linear-gradient(20deg,rgba(8,8,14,.88) 0,rgba(8,8,14,.6) 30%,rgba(8,8,14,0) 58%)">
-    <div style="position:absolute;left:150px;bottom:190px;width:210px;padding:12px 12px 0;background:#f4eedf;rotate:-4deg;box-shadow:0 18px 40px rgba(0,0,0,.55)">
-      <div style="height:200px;background:#cfc6b2 url(${pol}) center top/cover no-repeat"></div>
-      <div style="font:700 36px/1 Caveat;color:#2b2a35;text-align:center;padding:9px 0 12px">${c.name}</div></div>
-    <div style="position:absolute;left:420px;bottom:206px;width:1100px;color:#f4eedd">
+    <img src="${bust}" style="position:absolute;left:110px;bottom:170px;height:320px;rotate:-3deg;filter:${edge} saturate(1.08)">
+    <div style="position:absolute;left:110px;bottom:112px;width:320px;text-align:center;font:700 46px/1 Caveat;color:#ffe9a8;rotate:-3deg;text-shadow:0 2px 10px rgba(0,0,0,.8)">${c.name}</div>
+    <div style="position:absolute;left:480px;bottom:206px;width:1100px;color:#f4eedd">
       <div style="font:500 19px/1 News2;letter-spacing:.34em;color:#e7c86a">${c.day.toUpperCase()}</div>
       <div style="font:600 84px/1.02 News2;letter-spacing:-.015em;margin-top:14px;text-shadow:0 4px 30px rgba(0,0,0,.6)">${c.title}</div>
       <div style="font:italic 400 30px/1.3 News2;color:#d8cfb6;margin-top:16px"><span style="display:inline-block;width:34px;height:2px;background:#d9472b;vertical-align:9px;margin-right:14px"></span>${c.pre ?? 'From the course:'} ${c.stamp}</div>

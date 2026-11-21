@@ -17,9 +17,9 @@ while t < 15.2:
     t += rng.uniform(0.045, 0.11) if rng.random() > .12 else 0.16
 # rain on the window from the desk shot to the flash cuts
 rain = load('/home/user/CCGL-Journal/video/media/sfx/rain.mp3')
-seg = np.tile(rain, (int(np.ceil(8 * SR / len(rain))) + 1, 1))[:int(7.3 * SR)]
-env = np.minimum(1, np.minimum(np.linspace(0, 7.3, len(seg)) / 0.8, (7.3 - np.linspace(0, 7.3, len(seg))) / 0.4))[:, None]
-put(seg * env, 15.7, db(-20))
+seg = np.tile(rain, (int(np.ceil(8 * SR / len(rain))) + 1, 1))[:int(8.1 * SR)]
+env = np.minimum(1, np.minimum(np.linspace(0, 8.1, len(seg)) / 0.8, (8.1 - np.linspace(0, 8.1, len(seg))) / 0.4))[:, None]
+put(seg * env, 14.9, db(-20))   # J-cut: the rain starts under the journal page, just before we see the desk
 # phone buzz, twice (the desk shot lights the phone at about 0.75 s)
 for k in range(2):
     n = int(0.42 * SR); tt = np.arange(n) / SR
