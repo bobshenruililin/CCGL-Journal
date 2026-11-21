@@ -20,7 +20,7 @@ The course gave us the question. Every Course Journal starts with: *What is your
 
 Our project began as a leadership-style quiz based on situations university students meet. As it developed, we became less interested in giving players a leadership type and more interested in what happens after a choice is made. A quiz can tell you that you chose the coaching option. It can't show you who stayed late because of it.
 
-So we built a game where you make the call first and find out later who paid for it. In *Six Flights* you lead a student team for one week. There are three decisions, and the consequences arrive days later: in who helps carry the chairs, who stops talking to you, and who is still there when the film plays. On Saturday your teammates take your notebook and write in it themselves. There is no score. The only feedback is the people you led, in their own handwriting.
+So we built a game where you make the call first and find out later who paid for it. In *Six Flights* you lead a student team for one week. There are three decisions, and the consequences arrive days later: in who helps carry the chairs, who stops talking to you, and who is still there when the film plays. On Saturday your teammates take your notebook and write in it themselves. There is no score. The feedback is what your teammates write about you.
 
 Each of us then chose the part of the game that matched something we had lived through: a friend who went quiet, a group project carried alone, a course debate on democratic versus commanding leadership, and a dance team built on everyone's strengths. The film follows those four stories into the game.
 
@@ -65,7 +65,7 @@ Each of us then chose the part of the game that matched something we had lived t
 
 ### 1. How to watch it
 
-The core of the film is its first four minutes. Everything after that is there to help you go further.
+The core of the film is its first four minutes. After that: how the idea changed across three versions, and links to play.
 
 | Time | What you see |
 | --- | --- |
@@ -81,23 +81,25 @@ Then play *Six Flights* (about 10 minutes, no score). Play it a second time, cho
 
 ### 2. One situation, built three times
 
-The clearest evidence of how our thinking changed is one situation we kept rebuilding: **a teammate who stops showing up**.
+We kept rebuilding one situation: **a teammate who stops showing up**.
 
 | Version | How it worked | What it taught us |
 | --- | --- | --- |
 | Scenario drafts | "Your co-founder Alex has repeatedly missed deadlines." Four responses, one per leadership style. | The situations felt real, but picking from a list felt like a test. |
-| *Team Quest* (first playable version) | The same situation as Chapter 1. Your choice moves "rapport" and "energy" meters, and a style profile builds over nine chapters. | Leading spends trust and stamina. But a meter can't show *who* paid. |
+| *Team Quest* (first playable version) | The same situation as Chapter 1. Your choice moves "rapport" and "energy" meters, and a style profile builds over nine chapters. | Leading spends trust and stamina. But the meter couldn't show which teammate paid for it. |
 | Prototype, 20 October | Work moves to someone only if they actually agree to take it. | Consequences land harder when they come from people, not numbers. |
 | *Six Flights* | Kit, who runs the projector, hasn't answered in five days. Work around him, ask the group, or go downstairs and knock. | Knock, and you learn why, and the whole week changes. |
-| *Asterwind* | You decide, then have to say it, in a sentence you build, to the person it costs. | Good leadership still costs something. People accept a cost they were part of deciding. |
+| *Asterwind* | You decide, then have to say it, in a sentence you build, to the person it costs. | Even a careful decision cost her something, but she accepted it because she was part of it. |
 
 ### 3. How we worked as a team
 
-- **Scenarios:** one member wrote the first leadership scenario workbook, and a second refined it. ⚑ add UIDs
-- **First build:** one member built *Team Quest*, the first playable version, and with another member held the group together: meetings, deadlines, follow-ups. ⚑ add UIDs
-- **Main build and film:** one member (3036484434) led the build of *Six Flights* and *Asterwind* and assembled the film.
-- **The four stories:** each of us chose one part of the game, wrote our own section of the film and recorded it.
-- **A question that changed the project.** Early on, one of us wanted a 3D game. The others asked how long a player would actually spend on it. That question made us rethink what counted as a good idea for people who would give it ten minutes. It was our own small lesson in *ask before you assume*.
+UIDs and roles are in the Google Doc only; this repository is public.
+
+- Two members wrote and then refined the leadership scenario workbook.
+- One member built *Team Quest*, the first playable version, kept contributing code, and co-led the group: meetings, deadlines, follow-ups.
+- One member led the build of *Six Flights* and *Asterwind* and assembled the film.
+- Each of us chose one part of the game, wrote our own section of the film and recorded it.
+- Early on, one of us wanted a 3D game. The others asked how long a player would actually spend on it, and that question made us rethink what counted as a good idea for a ten-minute play.
 
 ### 4. What we'd do differently
 
@@ -111,9 +113,3 @@ The clearest evidence of how our thinking changed is one situation we kept rebui
 - **27** distinct weeks and **4** endings in *Six Flights*, with no score. An automated check plays every route.
 - About **6,000 words** of story, and **300+** painting studies reviewed by hand.
 - The game runs on any phone or laptop, with no sign-in. It has an accessible mode: plain type instead of handwriting, still pages, and sound off. The notebook can be printed.
-
-### 6. Links
-
-- Start here, the film and then the game: https://six-flights.vercel.app
-- *Team Quest*: https://team-quest-game.vercel.app
-- *Asterwind*: https://asterwind.vercel.app
