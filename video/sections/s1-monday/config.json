@@ -20,6 +20,10 @@
   {
    "file": "/home/user/reel/split/two-mondays.mp4",
    "t": 27.9
+  },
+  {
+   "file": "/home/user/CCGL-Journal/video/work/annot/s1-kit.mov",
+   "t": 12.25
   }
  ],
  "lines": [
@@ -110,6 +114,13 @@
    "t": 33.35,
    "gain": -18,
    "dur": 1.4
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 12.25,
+   "gain": -22,
+   "dur": 0.7,
+   "annot": true
   }
  ]
 }

@@ -80,6 +80,19 @@
    "t": 9.5,
    "gain": -18,
    "dur": 1.4
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 7.5,
+   "gain": -22,
+   "dur": 0.7,
+   "annot": true
+  }
+ ],
+ "inserts": [
+  {
+   "file": "/home/user/CCGL-Journal/video/work/annot/s5-note.mov",
+   "t": 7.5
   }
  ]
 }

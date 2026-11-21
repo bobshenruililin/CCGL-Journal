@@ -31,3 +31,21 @@ The guide is good. It's written for an **eight-minute design documentary about b
 3. **The guide's eight-minute structure** (first attempt, then the observation that challenged it, then the redesign). I'd **not** restructure now. The TA's limit is "five minutes and something", it's due tomorrow, and the marks are for leadership, not game development. The three-builds section already tells the attempt-and-revise story in thirty seconds.
 
 Both clips are optional. The film stands without them.
+
+## Round two: what else the guide asks for
+
+### Done in this pass
+
+| Principle | Change |
+| --- | --- |
+| **Teach the viewer where to look** (Every Frame a Painting, New Frame Plus, Game Maker's Toolkit) | Six red-pencil marks, drawn on as each speaker names the evidence, each with a soft pencil sound. Monday: Kit's note *"message in five days"* underlined as Bob says it. Thursday: *"You could have asked."* underlined the moment Kit's handwriting appears. Friday: the direct choice circled on "cut off a teammate". Friday night: Kit circled in the crowd on "like Kit". Saturday: an arrow to Priya's note on "your only feedback". Three builds: Team Quest's two meters circled on "rapport and energy". |
+| **Dedication** | *"Made with love, for the people we will lead."* |
+
+### Considered and dropped
+
+- **J-cuts at every page turn.** Starting each voice under the turn would put every subtitle and pencil mark half a second out of sync with the picture for the whole section. The rain J-cut into the desk stays.
+- **The game's own sound effects.** The game synthesises paper, pencil, knock and rain in code. The film already uses close equivalents at the same moments, so recording the real ones adds little.
+
+### Still the biggest gap: real people
+
+Every reference in the guide puts real people in the frame: Noclip's developers, Razbuten's newcomer, People Make Games' participants. **Ten seconds of the four of you reacting to the game, filmed on a phone, would still be the single biggest upgrade.** I can't make that, and I won't fake it.

@@ -107,6 +107,13 @@
    "t": 46.7,
    "gain": -18,
    "dur": 1.4
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 32.9,
+   "gain": -22,
+   "dur": 0.7,
+   "annot": true
   }
  ],
  "highlight": [
@@ -124,5 +131,11 @@
   "stamp": "Case · Making the Right Hire to Lead Asia · 28 Oct",
   "t0": 0.3,
   "t1": 4.6
- }
+ },
+ "inserts": [
+  {
+   "file": "/home/user/CCGL-Journal/video/work/annot/s4-kit.mov",
+   "t": 32.9
+  }
+ ]
 }

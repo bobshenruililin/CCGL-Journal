@@ -102,6 +102,13 @@
    "t": 39.2,
    "gain": -18,
    "dur": 1.4
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 32.55,
+   "gain": -22,
+   "dur": 0.7,
+   "annot": true
   }
  ],
  "highlight": [
@@ -120,5 +127,11 @@
   "stamp": "Case · Leading the Marriott Way · 23 Sep",
   "t0": 0.3,
   "t1": 4.6
- }
+ },
+ "inserts": [
+  {
+   "file": "/home/user/CCGL-Journal/video/work/annot/s2-kit.mov",
+   "t": 32.55
+  }
+ ]
 }

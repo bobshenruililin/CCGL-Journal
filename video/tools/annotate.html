@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- One hand-drawn red-pencil mark over game footage (1920x1080, transparent), drawn on like a pencil stroke, then held, then faded.
+     Query: shape=ellipse|underline|arrow, box=x0,y0,x1,y1 (underline: x0..x1 at height y0; arrow: from x0,y0 to x1,y1), dur (seconds on screen), draw (seconds to draw), seed, n (underline strokes, 1 or 2).
+     Rendered by /home/user/reel/gfx/render2.mjs and laid over a section's footage by compose.py ("inserts"), before the push-in. -->
+<html><head><meta charset="utf-8"><style>
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:transparent}
+svg{position:absolute;inset:0}
+path{fill:none;stroke:#d9472b;stroke-linecap:round;stroke-linejoin:round}
+</style></head><body>
+<svg width="1920" height="1080"><g id="g"></g></svg>
+<script>
+const q = new URLSearchParams(location.search), shape = q.get('shape') || 'ellipse';
+const [x0, y0, x1, y1] = q.get('box').split(',').map(Number), dur = +(q.get('dur') || 2.5), draw = +(q.get('draw') || 0.55);
+let s = +(q.get('seed') || 3); const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x)), eo = x => 1 - Math.pow(1 - clamp(x), 2.2);
+const g = document.getElementById('g'), paths = [];
+function add(d, w, o) { const p = document.createElementNS('http://www.w3.org/2000/svg', 'path'); p.setAttribute('d', d); p.style.strokeWidth = w; p.style.opacity = o; g.appendChild(p); paths.push(p); return p; }
+if (shape === 'ellipse') {
+  // a loose loop that overshoots its start, like a pencil circling something on a page; two passes for a graphite feel
+  const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2, rx = (x1 - x0) / 2, ry = (y1 - y0) / 2;
+  for (const [w, o, k] of [[7, 0.92, 0], [3, 0.55, 1]]) {
+    const ph = rnd() * 6.28, wob = [rnd(), rnd(), rnd()], a0 = -2.3 + k * 0.12, pts = [];
+    for (let i = 0; i <= 90; i++) { const t = i / 90, a = a0 + t * (Math.PI * 2 + 0.55);
+      const r = 1 + 0.035 * Math.sin(a * 2 + ph) + 0.02 * Math.sin(a * 3 + wob[0] * 6) + (t - 0.5) * 0.05 + k * 0.025;
+      pts.push([cx + Math.cos(a) * rx * r * (1.04 + wob[1] * 0.03), cy + Math.sin(a) * ry * r * (1.08 + wob[2] * 0.05) - k * 3]); }
+    add('M' + pts.map(p => p.map(v => v.toFixed(1)).join(' ')).join(' L'), w, o);
+  }
+} else if (shape === 'underline') {
+  // two quick pencil strokes under a phrase, the second a little shorter, like underlining twice for emphasis
+  for (const [w, o, k] of [[6, 0.92, 0], [5, 0.8, 1]].slice(0, +(q.get('n') || 2))) {
+    const pts = [], dy = k * 13, a = x0 + k * 18, b = x1 - k * 30;
+    for (let i = 0; i <= 30; i++) { const t = i / 30; pts.push([a + (b - a) * t, y0 + dy + Math.sin(t * 5 + rnd()) * 1.6 + (t - 0.5) * (k ? -4 : 5)]); }
+    add('M' + pts.map(p => p.map(v => v.toFixed(1)).join(' ')).join(' L'), w, o);
+  }
+} else {
+  // a curved arrow from (x0,y0) to (x1,y1) with a two-stroke head
+  const mx = (x0 + x1) / 2, my = Math.min(y0, y1) - Math.abs(x1 - x0) * 0.22;
+  add(`M${x0} ${y0} Q${mx} ${my} ${x1} ${y1}`, 7, 0.92);
+  const ang = Math.atan2(y1 - my, x1 - mx), L = 34;
+  add(`M${x1 - L * Math.cos(ang - 0.5)} ${y1 - L * Math.sin(ang - 0.5)} L${x1} ${y1} L${x1 - L * Math.cos(ang + 0.5)} ${y1 - L * Math.sin(ang + 0.5)}`, 7, 0.92);
+}
+const lens = paths.map(p => p.getTotalLength());
+paths.forEach((p, i) => { p.style.strokeDasharray = lens[i] + ' ' + lens[i]; });
+window.render = t => {
+  paths.forEach((p, i) => {
+    const head = shape === 'arrow' && i === 1, start = head ? draw * 0.85 : shape === 'underline' ? i * draw * 0.9 : i * 0.08, len = head ? draw * 0.3 : draw;
+    p.style.strokeDashoffset = lens[i] * (1 - eo((t - start) / len));
+  });
+  g.style.opacity = clamp((dur - t) / 0.3);
+};
+window.ready = true;
+</script></body></html>

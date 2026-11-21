@@ -56,17 +56,15 @@ So the film opens on the real Course Journal page in Moodle and ends on the game
 | 12 | Finale: the five lessons in your own voices, then "What is it like to be led by you?" | 0:24 |
 | 13 | **Bookend.** The game's last page: *"There is one line left on this page. It's yours."* A player types *"Next term I ask before I carry."* It mirrors the opening, where the Moodle answer types itself in one easy line. | 0:05 |
 | 14 | "Play them. They're free." The five lessons and three QR codes. | 0:14 |
-| 15 | Credits: names, course, the music credit, and a dedication (see below). | 0:07 |
+| 15 | Credits: names, course, the music credit, and the dedication. | 0:07 |
 
 ## The love letter
 
-You asked for a visual love letter: love for God, for leadership, for our work. Here's how each one shows up, without shouting:
+You asked for a visual love letter: love for leadership and for our work. Here's how each shows up, without shouting:
 
 - **Our work:** the craft itself. Real course pages, a 3D desk, painted art, page turns, the team's own voices, and every number checkable.
 - **Leadership:** the spine. The course's own question at the start; the people who paid for your choices at the end.
-- **God:** one quiet line on the last card: *"Made with love: for the people we will lead, and to the glory of God."*
-
-**Please check that last line with Kate, Hannah and Amanda before you submit.** It speaks for all four of you, and it's a group grade. If anyone would rather not, I'll change it to "Made with love, for the people we will lead." That's a one-line change.
+- **The dedication:** the last card reads *"Made with love, for the people we will lead."*
 
 ## Deliberately not doing
 

@@ -70,5 +70,19 @@
   "in the room",
   "part of the decision"
  ],
- "sfx": []
+ "sfx": [
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 4.95,
+   "gain": -22,
+   "dur": 0.7,
+   "annot": true
+  }
+ ],
+ "inserts": [
+  {
+   "file": "/home/user/CCGL-Journal/video/work/annot/s7-meters.mov",
+   "t": 4.95
+  }
+ ]
 }

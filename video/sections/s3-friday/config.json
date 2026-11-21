@@ -94,6 +94,13 @@
    "t": 44.4,
    "gain": -18,
    "dur": 1.4
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 20.15,
+   "gain": -22,
+   "dur": 0.7,
+   "annot": true
   }
  ],
  "highlight": [
@@ -118,6 +125,10 @@
   {
    "file": "/home/user/reel/split/same-words.mp4",
    "t": 35.2
+  },
+  {
+   "file": "/home/user/CCGL-Journal/video/work/annot/s3-cut.mov",
+   "t": 20.15
   }
  ]
 }
