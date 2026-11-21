@@ -1,0 +1,36 @@
+<!doctype html>
+<!-- "The honest part" (1920x1080, 21 s): what doesn't work yet, the echo chamber, and what's next. Sits between the three builds and
+     the closing question. Edit BEATS to change the words; each beat stays on screen about 6.5 s, long enough to read twice. -->
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:News;src:url(../../../reel/fonts/newsreader-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:News;src:url(../../../reel/fonts/newsreader-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:News;src:url(../../../reel/fonts/newsreader-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:News;src:url(../../../reel/fonts/newsreader-latin-400-italic.woff2);font-weight:400;font-style:italic}
+*{margin:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#23243a 0,#141522 60%,#0d0e17 100%);color:#f3ead2}
+#k{position:absolute;left:260px;top:150px;font:500 22px/1 News;letter-spacing:.36em;color:#e7c86a}
+.beat{position:absolute;left:260px;width:1400px;padding-left:44px;border-left:3px solid #d9472b}
+.beat .h{font:500 20px/1 News;letter-spacing:.3em;color:#cfc6ae}
+.beat .b{font:400 46px/1.32 News;margin-top:14px;color:#f3ead2}
+.beat .b i{color:#ffe9a8}
+</style></head><body>
+<div id="k">THE HONEST PART</div>
+<div id="beats"></div>
+<script>
+const BEATS = [
+  ['WHAT STILL DOESN’T WORK', 'It asks for ten minutes of reading. Skim it, and you can miss that <i>Friday happened because of Monday.</i>'],
+  ['THE ECHO CHAMBER', 'Every lesson came from our own lives, and so far we have mostly tested it on ourselves. We knew what each choice was meant to teach. <i>A first-time player doesn’t.</i>'],
+  ['WHAT’S NEXT', 'Watch first-time players and cut what they skip. Then a classroom mode: <i>everyone plays alone, then the team compares notebooks.</i>'],
+];
+const T0 = [1.0, 7.6, 14.2], D = 21;
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x)), eo = x => 1 - Math.pow(1 - clamp(x), 3);
+const els = BEATS.map(([h, b], i) => { const d = document.createElement('div'); d.className = 'beat'; d.style.top = [230, 450, 740][i] + 'px';
+  d.innerHTML = `<div class="h">${h}</div><div class="b">${b}</div>`; document.getElementById('beats').appendChild(d); return d; });
+window.render = t => {
+  document.getElementById('k').style.opacity = eo(t / 0.6);
+  els.forEach((e, i) => { const p = eo((t - T0[i]) / 0.7), next = T0[i + 1] ?? 99;
+    e.style.opacity = p * (t > next ? 0.45 : 1); e.style.transform = `translateY(${(1 - p) * 18}px)`; });
+  document.body.style.opacity = Math.min(clamp(t / 0.4), clamp((D - t) / 0.5));
+};
+window.ready = true;
+</script></body></html>

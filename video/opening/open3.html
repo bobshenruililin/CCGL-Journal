@@ -1,0 +1,64 @@
+<!doctype html>
+<!-- Graphics over the second half of the opening (1920x1080, 17.5 s, transparent). Times are from the start of the desk shot.
+     0-7 the 3D desk; "What would you do?" from 5.0 · 7-10 three flash cuts, each named · 10-13 the roof: "Every choice lands on somebody."
+     13-17.5 title: Six Flights, the one-line promise, the four of us -->
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:News;src:url(../fonts/newsreader-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:News;src:url(../fonts/newsreader-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:News;src:url(../fonts/newsreader-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:News;src:url(../fonts/newsreader-latin-400-italic.woff2);font-weight:400;font-style:italic}
+@font-face{font-family:Caveat;src:url(../../CCGL-Journal/public/fonts/caveat-latin-700-normal.woff2);font-weight:700}
+*{margin:0;box-sizing:border-box}html,body{width:1920px;height:1080px;overflow:hidden;background:transparent}
+.cap{position:absolute;left:0;right:0;text-align:center;color:#f6efdc;text-shadow:0 2px 24px rgba(0,0,0,.75),0 1px 3px rgba(0,0,0,.6)}
+.cap .w{display:inline-block;margin:0 .12em}
+#q{bottom:150px;font:italic 400 64px/1.1 News;color:#2b2a35;text-shadow:none}
+#every{top:430px;font:500 92px/1.1 News;letter-spacing:-.01em}
+.tag{position:absolute;left:0;right:0;text-align:center;bottom:22px;font:italic 400 46px/1 News;color:#f6efdc;z-index:2}
+.tag small{display:block;font:500 17px/1 News;font-style:normal;letter-spacing:.32em;color:#e7c86a;margin-bottom:10px}
+.bars{position:absolute;left:0;right:0;height:0;background:#000;z-index:1}
+#title{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,#23243a 0,#141522 60%,#0d0e17 100%);opacity:0}
+#title h1{position:absolute;top:250px;left:0;right:0;text-align:center;font:600 150px/1 News;color:#f3ead2;letter-spacing:-.02em}
+#title p{position:absolute;top:440px;left:0;right:0;text-align:center;font:italic 400 50px/1.2 News;color:#d8cfb6}
+#title .rule{position:absolute;top:418px;left:50%;width:120px;margin-left:-60px;height:2px;background:#d9472b}
+.pol{position:absolute;top:590px;width:260px;text-align:center}
+.pol img{height:230px;filter:drop-shadow(5px 0 0 #f3ecd9) drop-shadow(-5px 0 0 #f3ecd9) drop-shadow(0 5px 0 #f3ecd9) drop-shadow(0 -5px 0 #f3ecd9) drop-shadow(0 16px 22px rgba(0,0,0,.55)) saturate(1.08)}
+.pol .nm{font:700 44px/1 Caveat;color:#ffe9a8;padding-top:12px}
+#flash{position:absolute;inset:0;background:#fff;opacity:0}
+</style></head><body>
+<div class="cap" id="c0" style="left:120px;right:auto;bottom:110px;text-align:left;font:italic 400 50px/1.25 News">Monday, 11:40 pm.<br>Kit hasn’t answered in five days.</div>
+<div class="cap" id="q"><span class="w">What</span><span class="w">would</span><span class="w">you</span><span class="w">do?</span></div>
+<div class="tag" id="g0"><small>MONDAY · OPTION ONE</small>Do it yourself.</div>
+<div class="tag" id="g1"><small>MONDAY · OPTION TWO</small>Ask the group.</div>
+<div class="tag" id="g2"><small>MONDAY · OPTION THREE</small>Go downstairs and knock.</div>
+<div class="cap" id="every"><span class="w">Every</span><span class="w">choice</span><span class="w">lands</span><span class="w">on</span><span class="w" style="color:#ffe9a8">somebody.</span></div>
+<div class="bars" style="top:0" id="bt"></div><div class="bars" style="bottom:0" id="bb"></div>
+<div id="title"><h1>Six Flights</h1><div class="rule"></div><p>Lead for one week. See who carries it.</p>
+  <div class="pol" style="left:420px;rotate:-4deg" id="p0"><img src="../../CCGL-Journal/video/work/intro/bust-bob.png"></div>
+  <div class="pol" style="left:690px;rotate:2.5deg" id="p1"><img src="../../CCGL-Journal/video/work/intro/bust-kate.png"></div>
+  <div class="pol" style="left:960px;rotate:-1.5deg" id="p2"><img src="../../CCGL-Journal/video/work/intro/bust-hannah.png"></div>
+  <div class="pol" style="left:1230px;rotate:3.5deg" id="p3"><img src="../../CCGL-Journal/video/work/intro/bust-amanda.png"></div>
+</div>
+<div id="flash"></div>
+<script>
+const $ = s => document.querySelector(s);
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const eo = x => 1 - Math.pow(1 - clamp(x), 3);
+const words = (el, t0, gap, t1) => { [...el.querySelectorAll('.w')].forEach((w, i) => { const p = eo((t - t0 - i * gap) / 0.5);
+  w.style.opacity = p; w.style.transform = `translateY(${(1 - p) * 14}px)`; w.style.filter = `blur(${(1 - p) * 6}px)`; });
+  el.style.opacity = t1 ? clamp((t1 - t) / 0.3) : 1; };
+let t = 0;
+window.render = T => { t = T;
+  $('#c0').style.opacity = clamp((3.8 - t) / 0.4);   // v4: the dilemma is on screen from the first frame (it doubles as the thumbnail)
+  words($('#q'), 5.0, 0.16, 7.0);
+  [0, 1, 2].forEach(i => { const a = 7 + i, el = $('#g' + i), on = t >= a && t < a + 1; el.style.display = on ? 'block' : 'none';
+    const p = eo((t - a - 0.05) / 0.3); el.style.opacity = p * clamp((a + 1 - t) / 0.08); el.style.transform = `translateY(${(1 - p) * 8}px)`; });
+  const bar = t >= 7 && t < 10 ? 110 : 0; $('#bt').style.height = bar + 'px'; $('#bb').style.height = bar + 'px';
+  words($('#every'), 10.3, 0.22, 13.0);
+  $('#every').style.display = t >= 10 && t < 13 ? 'block' : 'none';
+  const ti = 0;   // v4: the title card is a separate segment after the course page $('#title').style.opacity = ti;
+  ['#title h1', '#title .rule', '#title p'].forEach((s, i) => { const p = eo((t - 13.1 - i * 0.35) / 0.7); $(s).style.opacity = p; $(s).style.transform = `translateY(${(1 - p) * 16}px)`; });
+  [0, 1, 2, 3].forEach(i => { const p = eo((t - 14.3 - i * 0.18) / 0.6), el = $('#p' + i); el.style.opacity = p; el.style.transform = `translateY(${(1 - p) * 60}px)`; });
+  let fl = 0; [7, 8, 9, 10].forEach(f => { if (t >= f && t < f + 0.12) fl = Math.max(fl, 0.55 * (1 - (t - f) / 0.12)); }); $('#flash').style.opacity = fl;
+};
+window.ready = true;
+</script></body></html>

@@ -40,7 +40,9 @@ const close = TL.find(o => o.name === 'bob-close');
 // each word of the question appears as Bob says it (seconds after "What", from the word timings of bob-closing)
 const WT = [0, 0.9, 1.06, 1.2, 1.46, 2.04, 2.22, 2.46, 2.96];
 $('.q').innerHTML = 'What is it like to be led by you?'.split(' ').map(w => `<span class="w">${w}</span>`).join(' ');
+const ONLY_Q = new URLSearchParams(location.search).get('only') === 'q';   // v4: just the closing question, without the lesson recap
 window.render = t => {
+  if (ONLY_Q) { $('.page').style.display = 'none'; $('.dark').style.opacity = 1; }
   $('.page').style.opacity = clamp(t / 0.5); $('.page').style.transform = `translateY(${(1 - ease(t / 0.7)) * 40}px) rotate(-.6deg)`;
   rows.forEach(([d, o]) => {
     const p = clamp((t - o.t) / Math.max(1.0, o.d * 0.85));            // the line writes itself while it's spoken
@@ -50,6 +52,7 @@ window.render = t => {
     d.querySelector('img').style.transform = `scale(${t > o.t - 0.3 && t < o.t + o.d ? 1.08 : 1})`;
     d.querySelector('.n').style.opacity = clamp((t - o.t + 0.3) / 0.3);
   });
+  if (ONLY_Q) { [...document.querySelectorAll('.q .w')].forEach((w, i) => { const p = ease((t - close.t - WT[i]) / 0.45); w.style.opacity = p; w.style.transform = `translateY(${(1 - p) * 12}px)`; w.style.filter = `blur(${(1 - p) * 5}px)`; }); $('.q2').style.opacity = clamp((t - close.t + 1.75) / 0.6); return; }
   // the page fades to its own dark screen on "Three games, one question"
   const c0 = close.t - 1.95;
   $('.dark').style.opacity = clamp((t - c0) / 0.6);
