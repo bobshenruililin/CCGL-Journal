@@ -64,7 +64,7 @@ function figure(x, y, h, t0, o = {}) {
 let D = 8, kick = '';
 const S = {
   'bob-mon'() { // "friends go quiet ... family. A breakup. Things none of us could see."  (9.6 s)
-    D = 9.6; kick = 'FROM BOB’S LIFE';
+    D = 9.6; kick = 'FROM REAL LIFE';
     P('M430 200 Q430 170 460 170 L700 170 Q730 170 730 200 L730 880 Q730 910 700 910 L460 910 Q430 910 430 880 Z', 0.15, 0.9);
     P('M540 195 L620 195', 0.9, 0.2);
     T('the group chat', 470, 220, 1.0, 0.5, { size: 34, light: 1, c: GREY });
@@ -83,7 +83,7 @@ const S = {
     T('…', 1415, 640, 8.0, 0.3, { size: 60, c: GREY });
   },
   kate() { // "busy, missing meetings ... I quietly took their work on myself ... a teammate told me to stop carrying it all" (13.4 s)
-    D = 13.4; kick = 'FROM KATE’S LIFE';
+    D = 13.4; kick = 'FROM REAL LIFE';
     P('M260 860 L1660 860', 0.1, 0.6, { c: GREY, w: 4 });
     figure(760, 860, 360, 0.3, { arms: [-60, 60] }); T('me', 735, 880, 0.9, 0.3, { size: 42 });
     T('a group project', 700, 170, 0.8, 0.6, { size: 50, c: GREY, light: 1 });
@@ -103,7 +103,7 @@ const S = {
     P('M610 640 Q650 610 690 625', 10.3, 0.3, { c: BLUE, w: 5 });
   },
   hannah() { // "democratic versus commanding leadership ... one of them had to be better" (7.6 s)
-    D = 7.6; kick = 'FROM HANNAH’S LIFE  ·  TUTORIAL 2 DEBATE';
+    D = 7.6; kick = 'FROM REAL LIFE  ·  TUTORIAL 2 DEBATE';
     P('M420 860 L700 860 L670 560 L450 560 Z', 0.05, 0.5); P('M1220 860 L1500 860 L1470 560 L1250 560 Z', 0.2, 0.5);
     T('DEMOCRATIC', 560, 470, 0.6, 0.5, { size: 52, center: 1 }); T('COMMANDING', 1360, 470, 2.0, 0.5, { size: 52, center: 1 });
     P('M960 860 L960 380 M900 860 L1020 860', 2.6, 0.4);
@@ -115,7 +115,7 @@ const S = {
     P('M760 272 Q960 262 1160 270', 6.6, 0.3, { c: RED, w: 6 });
   },
   amanda() { // "a dance team ... different training and styles ... highlighting each person's strengths ... even more unique" (11.5 s)
-    D = 11.5; kick = 'FROM AMANDA’S LIFE';
+    D = 11.5; kick = 'FROM REAL LIFE';
     T('our dance team', 960, 150, 0.2, 0.6, { size: 50, c: GREY, center: 1, light: 1 });
     P('M240 840 L1680 840', 0.3, 0.6, { c: GREY, w: 4 });
     const xs = [440, 700, 960, 1220, 1480], styles = ['ballet', 'hip-hop', 'jazz', 'K-pop', 'contemporary'];
@@ -129,7 +129,7 @@ const S = {
     T('each person’s strengths', 960, 230, 7.0, 1.0, { size: 46, c: RED, center: 1 });
   },
   'bob-sat'() { // "increase my surface area. Try more things, because that's how you find what fits." (6.4 s)
-    D = 6.4; kick = 'FROM BOB’S LIFE';
+    D = 6.4; kick = 'FROM REAL LIFE';
     P(circ(960, 560, 70), 0.15, 0.5); T('me', 960, 535, 0.5, 0.3, { size: 46, center: 1 });
     [150, 240, 330].forEach((r, i) => P(circ(960, 560, r), 1.3 + i * 0.3, 0.5, { c: GREY, w: 4 }));
     const tries = [['a debate', -130, 330], ['a dance team', -50, 330], ['a game', 25, 150], ['a new friend', 95, 330], ['a club', 160, 240], ['a new city', 215, 330]];

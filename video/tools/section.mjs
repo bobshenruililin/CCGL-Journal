@@ -70,7 +70,6 @@ if (cine && cfg.chapter) {
   await shot(`<style>${nf('newsreader-latin-500-normal.woff2', 500)}${nf('newsreader-latin-600-normal.woff2', 600)}${nf('newsreader-latin-400-italic.woff2', 400, 'italic')}</style>
   <div style="position:absolute;left:0;top:0;width:1920px;height:1080px;background:linear-gradient(20deg,rgba(8,8,14,.88) 0,rgba(8,8,14,.6) 30%,rgba(8,8,14,0) 58%)">
     <img src="${bust}" style="position:absolute;left:110px;bottom:170px;height:320px;rotate:-3deg;filter:${edge} saturate(1.08)">
-    <div style="position:absolute;left:110px;bottom:112px;width:320px;text-align:center;font:700 46px/1 Caveat;color:#ffe9a8;rotate:-3deg;text-shadow:0 2px 10px rgba(0,0,0,.8)">${c.name}</div>
     <div style="position:absolute;left:480px;bottom:206px;width:1100px;color:#f4eedd">
       <div style="font:500 19px/1 News2;letter-spacing:.34em;color:#e7c86a">${c.day.toUpperCase()}</div>
       <div style="font:600 84px/1.02 News2;letter-spacing:-.015em;margin-top:14px;text-shadow:0 4px 30px rgba(0,0,0,.6)">${c.title}</div>
