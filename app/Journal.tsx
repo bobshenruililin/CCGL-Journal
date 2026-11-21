@@ -12,8 +12,8 @@ import { read } from './interpret.ts';
 import { parseShow, wantsMaking, notesFor, makers } from './making.ts';
 
 const MAKING_KEY = 'six-flights-making';
-/** The group's behind-the-scenes film, served from public/film/. */
-const FILM = { src: '/film/behind-the-scenes.mp4', poster: '/film/poster.jpg', length: '5:46' };
+/** The group's reflection film on building the three games, served from public/film/. */
+const FILM = { src: '/film/six-flights-film.mp4', poster: '/film/poster.jpg', length: '5:25' };
 /** The film opens first, once per visit, before the notebook. Links that open a page (?show=) skip it. */
 const FILM_SEEN = 'six-flights-film-seen';
 function filmFirst(show: boolean): boolean { if (show) return false; try { return window.sessionStorage.getItem(FILM_SEEN) !== '1'; } catch { return true; } }
@@ -216,7 +216,7 @@ export default function Journal() {
       </div>
       {at === 0 && (
         <button type="button" className="filmcard" onClick={() => setFilm(true)}>
-          <span className="k">behind the scenes</span>
+          <span className="k">watch first</span>
           <span className="t">How we made it</span>
           <span className="m">a {FILM.length} film by the four of us</span>
         </button>
@@ -260,9 +260,9 @@ export default function Journal() {
 
       <dialog ref={filmDialog} className={'filmdialog' + (filmIntro ? ' first' : '')} onCancel={closeFilm} aria-labelledby="film-title">
         <div className="filmhead">
-          <p className="k">behind the scenes · {FILM.length}</p>
+          <p className="k">our reflection film · {FILM.length}</p>
           <p id="film-title" className="t">{filmIntro ? 'Before you open the notebook' : 'How we made it'}</p>
-          <p className="s">Four of us made this game for a leadership course. This is how, and what it taught us.</p>
+          <p className="s">Four of us built three games for a leadership course. This film is our reflection: the stories we each brought, and what building them taught us.</p>
         </div>
         <video ref={filmVideo} src={FILM.src} poster={FILM.poster} controls preload="metadata" playsInline />
         <div className="acts"><button type="button" autoFocus onClick={closeFilm}>{filmIntro ? 'Skip to the game →' : 'Back to the notebook'}</button></div>
