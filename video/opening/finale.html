@@ -1,0 +1,60 @@
+<!doctype html>
+<!-- The five lessons, in our own voices (1920x1080, 24.6 s). Each lesson writes itself into Yan's notebook as its speaker says it;
+     then the page darkens and the last question is written large. Timings come from timeline.json (the real clip lengths). -->
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:Caveat;src:url(../../CCGL-Journal/public/fonts/caveat-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Newsreader;src:url(../../CCGL-Journal/public/fonts/newsreader-latin-400-normal.woff2)}
+@font-face{font-family:NewsQ;src:url(../fonts/newsreader-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:NewsK;src:url(../fonts/newsreader-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:Elite;src:url(../../CCGL-Journal/public/fonts/special-elite-latin-400-normal.woff2)}
+*{box-sizing:border-box;margin:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#15162b}
+.desk{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,#3a3046,#15162b 75%)}
+.page{position:absolute;left:300px;top:70px;width:1320px;height:940px;background:#efe6d0;border-radius:6px;box-shadow:0 30px 70px rgba(0,0,0,.55);
+  background-image:repeating-linear-gradient(transparent 0 61px,rgba(80,110,160,.18) 61px 63px)}
+.page::before{content:'';position:absolute;left:150px;top:0;bottom:0;width:3px;background:rgba(217,71,43,.35)}
+.head{position:absolute;left:190px;top:40px;font:20px Elite;letter-spacing:.3em;color:#8a6a2a}
+.title{position:absolute;left:186px;top:72px;font:700 74px/1 Caveat;color:#2b2a35}
+.row{position:absolute;left:40px;right:60px;height:150px}
+.row img{position:absolute;left:0;top:6px;width:120px;height:120px;object-fit:contain;object-position:bottom;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 8px 10px rgba(0,0,0,.3))}
+.row .n{position:absolute;left:150px;top:20px;width:52px;height:52px;border:3px solid #d9472b;border-radius:50%;font:700 38px/46px Caveat;text-align:center;color:#d9472b}
+.row .l{position:absolute;left:226px;top:4px;font:700 76px/1 Caveat;color:#2b2a35;white-space:nowrap;clip-path:inset(0 100% 0 0)}
+.row .s{position:absolute;left:230px;top:92px;font:italic 400 28px/1.2 Newsreader;color:#6a6358;opacity:0;white-space:nowrap}
+.dark{position:absolute;inset:0;background:#0b0c14;opacity:0}
+.q{position:absolute;left:0;right:0;top:450px;text-align:center;font:600 100px/1.1 NewsQ;letter-spacing:-.015em;color:#f6f0e2}.q .w{display:inline-block;opacity:0;margin:0 .1em}
+.q2{position:absolute;left:0;right:0;top:370px;text-align:center;font:500 22px NewsK;letter-spacing:.36em;color:#e7c86a;opacity:0}
+</style></head><body>
+<div class="desk"></div>
+<div class="page"><div class="head">SATURDAY, LATER</div><div class="title">What we learned</div><div id="rows"></div></div>
+<div class="dark"></div>
+<div class="q">What is it like to be led by you?</div>
+<div class="q2">THREE GAMES · ONE QUESTION</div>
+<script src="data.js"></script>
+<script>
+const $ = s => document.querySelector(s); const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x)); const ease = x => 1 - Math.pow(1 - clamp(x), 3);
+const lessons = TL.filter(o => o.name !== 'bob-close');
+const rows = lessons.map((o, i) => { const d = document.createElement('div'); d.className = 'row'; d.style.top = (180 + i * 150) + 'px';
+  d.innerHTML = `<img src="../../CCGL-Journal/video/work/intro/bust-${o.who}.png"><div class="n">${i + 1}</div><div class="l">${o.line}</div><div class="s">${o.said}</div>`;
+  $('#rows').appendChild(d); return [d, o]; });
+const close = TL.find(o => o.name === 'bob-close');
+// each word of the question appears as Bob says it (seconds after "What", from the word timings of bob-closing)
+const WT = [0, 0.9, 1.06, 1.2, 1.46, 2.04, 2.22, 2.46, 2.96];
+$('.q').innerHTML = 'What is it like to be led by you?'.split(' ').map(w => `<span class="w">${w}</span>`).join(' ');
+window.render = t => {
+  $('.page').style.opacity = clamp(t / 0.5); $('.page').style.transform = `translateY(${(1 - ease(t / 0.7)) * 40}px) rotate(-.6deg)`;
+  rows.forEach(([d, o]) => {
+    const p = clamp((t - o.t) / Math.max(1.0, o.d * 0.85));            // the line writes itself while it's spoken
+    d.querySelector('.l').style.clipPath = `inset(0 ${100 - p * 100}% 0 0)`;
+    d.querySelector('.s').style.opacity = clamp((t - o.t - 0.2) / 0.3);
+    d.querySelector('img').style.opacity = clamp((t - o.t + 0.3) / 0.3);
+    d.querySelector('img').style.transform = `scale(${t > o.t - 0.3 && t < o.t + o.d ? 1.08 : 1})`;
+    d.querySelector('.n').style.opacity = clamp((t - o.t + 0.3) / 0.3);
+  });
+  // the page fades to its own dark screen on "Three games, one question"
+  const c0 = close.t - 1.95;
+  $('.dark').style.opacity = clamp((t - c0) / 0.6);
+  [...document.querySelectorAll('.q .w')].forEach((w, i) => { const p = ease((t - close.t - WT[i]) / 0.45); w.style.opacity = p; w.style.transform = `translateY(${(1 - p) * 12}px)`; w.style.filter = `blur(${(1 - p) * 5}px)`; });
+  $('.q2').style.opacity = clamp((t - c0 - 0.2) / 0.6);
+};
+window.ready = true;
+</script></body></html>

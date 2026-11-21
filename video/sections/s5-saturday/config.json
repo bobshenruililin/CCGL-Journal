@@ -87,12 +87,25 @@
    "gain": -22,
    "dur": 0.7,
    "annot": true
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 17.15,
+   "gain": -27,
+   "dur": 5.9,
+   "loop": true,
+   "fade": 0.4,
+   "sketch": true
   }
  ],
  "inserts": [
   {
    "file": "/home/user/CCGL-Journal/video/work/annot/s5-note.mov",
    "t": 7.5
+  },
+  {
+   "file": "/home/user/CCGL-Journal/video/work/annot/sketch-bob-sat.mov",
+   "t": 17.0
   }
  ]
 }

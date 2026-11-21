@@ -101,6 +101,15 @@
    "gain": -22,
    "dur": 0.7,
    "annot": true
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 4.45,
+   "gain": -27,
+   "dur": 7.1,
+   "loop": true,
+   "fade": 0.4,
+   "sketch": true
   }
  ],
  "highlight": [
@@ -119,7 +128,7 @@
   "title": "The same words",
   "stamp": "Leadership Styles · 9 Sep, and our Tutorial 2 debate",
   "t0": 0.3,
-  "t1": 4.6
+  "t1": 4.4
  },
  "inserts": [
   {
@@ -129,6 +138,10 @@
   {
    "file": "/home/user/CCGL-Journal/video/work/annot/s3-cut.mov",
    "t": 20.15
+  },
+  {
+   "file": "/home/user/CCGL-Journal/video/work/annot/sketch-hannah.mov",
+   "t": 4.3
   }
  ]
 }

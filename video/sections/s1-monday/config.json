@@ -24,6 +24,10 @@
   {
    "file": "/home/user/CCGL-Journal/video/work/annot/s1-kit.mov",
    "t": 12.25
+  },
+  {
+   "file": "/home/user/CCGL-Journal/video/work/annot/sketch-bob-mon.mov",
+   "t": 18.3
   }
  ],
  "lines": [
@@ -121,6 +125,15 @@
    "gain": -22,
    "dur": 0.7,
    "annot": true
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 18.45,
+   "gain": -27,
+   "dur": 9.1,
+   "loop": true,
+   "fade": 0.4,
+   "sketch": true
   }
  ]
 }

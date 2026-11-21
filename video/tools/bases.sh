@@ -23,7 +23,8 @@ s4() { local W=video/work/s4-colour; mkdir -p $W
   still $W/tarp.png 7.4 "min(1.9,1.25+0.65*on/120)" 0.57 0.86 $W/c.mp4
   ffmpeg -y -loglevel error -ss 5 -i $C/12-night-half-a-queue.mp4 -t 5.4 $E $W/d.mp4
   still $W/tarp.png 8.3 "1.1-0.1*on/249" 0.5 0.6 $W/e.mp4
-  join $W/base.mp4 $W/a.mp4 $W/b.mp4 $W/c.mp4 $W/d.mp4 $W/e.mp4; }
+  # v3: the flight comes first, under "the painting at the very end"; the pencil sketch of her dance team covers 17.2-28.7 s
+  join $W/base.mp4 $W/b.mp4 $W/a.mp4 $W/c.mp4 $W/d.mp4 $W/e.mp4; }
 s5() { local W=video/work/s5-saturday; mkdir -p $W
   # v3, timed to bob-saturday-v2
   ffmpeg -y -loglevel error -ss $L -i $C/15-saturday-goes-round.mp4 -vf $PAD -t 12.6 $E $W/a.mp4

@@ -1,0 +1,158 @@
+<!doctype html>
+<!-- "In my life": a speaker's own story drawn in pencil on notebook paper, line by line, timed to their words (1920x1080).
+     Query: scene=bob-mon|kate|hannah|amanda|bob-sat. Times inside each scene are seconds from the scene's start.
+     Rendered by /home/user/reel/gfx/render2.mjs and laid over the section's footage by compose.py ("inserts"). -->
+<html><head><meta charset="utf-8"><style>
+@font-face{font-family:Caveat;src:url(../../public/fonts/caveat-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:Caveat;src:url(../../public/fonts/caveat-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:News;src:url(../../../reel/fonts/newsreader-latin-500-normal.woff2);font-weight:500}
+*{margin:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:transparent}
+#page{position:absolute;inset:0;background:#efe6d0;background-image:repeating-linear-gradient(transparent 0 63px,rgba(80,110,160,.13) 63px 65px)}
+#page::before{content:'';position:absolute;left:150px;top:0;bottom:0;width:3px;background:rgba(217,71,43,.28)}
+#page::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(80,60,30,.22))}
+#kick{position:absolute;left:200px;top:70px;font:500 22px/1 News;letter-spacing:.34em;color:#8a6a2a}
+svg{position:absolute;inset:0}
+.ink{fill:none;stroke:#34333d;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.t{position:absolute;white-space:nowrap;font:700 48px/1 Caveat;color:#34333d;clip-path:inset(0 100% 0 0)}
+</style></head><body>
+<div id="page"><div id="kick"></div></div>
+<svg width="1920" height="1080"><defs>
+  <filter id="boil"><feTurbulence id="turb" type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="1"/><feDisplacementMap in="SourceGraphic" scale="3.2"/></filter>
+</defs><g id="fills"></g><g id="lines" filter="url(#boil)"></g></svg>
+<div id="texts"></div>
+<script>
+const q = new URLSearchParams(location.search), scene = q.get('scene');
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x)), eo = x => 1 - Math.pow(1 - clamp(x), 2.4), io = x => { x = clamp(x); return x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2; };
+const NS = 'http://www.w3.org/2000/svg', items = [];
+const INK = '#34333d', RED = '#d9472b', BLUE = '#3d5a9e', GREY = '#a59e8e';
+// a pencil line: drawn from t0 over dur; optional group transform function g(t)
+function P(d, t0, dur, o = {}) {
+  const p = document.createElementNS(NS, 'path'); p.setAttribute('d', d); p.setAttribute('class', 'ink');
+  if (o.c) p.style.stroke = o.c; if (o.w) p.style.strokeWidth = o.w; if (o.fill) { p.style.fill = o.fill; }
+  (o.parent || document.getElementById(o.layer === 'fills' ? 'fills' : 'lines')).appendChild(p);
+  const it = { el: p, t0, dur, kind: 'path', o }; items.push(it); return it;
+}
+// handwriting: revealed left to right
+function T(text, x, y, t0, dur, o = {}) {
+  const d = document.createElement('div'); d.className = 't'; d.textContent = text;
+  Object.assign(d.style, { left: x + 'px', top: y + 'px', fontSize: (o.size || 48) + 'px', color: o.c || INK, rotate: (o.rot || 0) + 'deg', fontWeight: o.light ? 400 : 700 });
+  if (o.center) d.style.translate = '-50% 0';
+  document.getElementById('texts').appendChild(d); const it = { el: d, t0, dur, kind: 'text', o }; items.push(it); return it;
+}
+// a soft watercolour wash that blooms in (the game's colour language)
+function W(cx, cy, rx, ry, color, t0, dur = 0.6) {
+  const e = document.createElementNS(NS, 'ellipse'); Object.entries({ cx, cy, rx, ry }).forEach(([k, v]) => e.setAttribute(k, v));
+  e.style.fill = color; e.style.opacity = 0; e.style.filter = 'blur(10px)'; document.getElementById('fills').appendChild(e);
+  const it = { el: e, t0, dur, kind: 'wash' }; items.push(it); return it;
+}
+function G(t0, fn) { const g = document.createElementNS(NS, 'g'); document.getElementById('lines').appendChild(g); const it = { el: g, t0, kind: 'group', fn }; items.push(it); return g; }
+const circ = (cx, cy, r) => `M${cx + r} ${cy} A${r} ${r} 0 1 1 ${cx - r} ${cy + 0.1} A${r} ${r} 0 1 1 ${cx + r} ${cy}`;
+const wob = (pts) => 'M' + pts.map(p => p.join(' ')).join(' L');
+// stick figure standing at (x, y = feet), height h; arms: [left angle, right angle] in degrees from down
+function figure(x, y, h, t0, o = {}) {
+  const head = h * 0.13, neck = y - h * 0.74, hip = y - h * 0.4, sh = neck + h * 0.05, al = h * 0.3, ll = h * 0.4;
+  const [aL, aR] = o.arms || [20, -20], [lL, lR] = o.legs || [10, -10], lean = o.lean || 0, c = o.c, w = o.w || 6, par = o.parent;
+  const rad = d => d * Math.PI / 180, hx = x + lean;
+  P(circ(hx, neck - head, head), t0, 0.35, { c, w, parent: par });
+  P(`M${hx} ${neck} L${x} ${hip}`, t0 + 0.25, 0.25, { c, w, parent: par });
+  P(`M${hx} ${sh} L${hx - Math.sin(rad(aL)) * al} ${sh + Math.cos(rad(aL)) * al}`, t0 + 0.4, 0.2, { c, w, parent: par });
+  P(`M${hx} ${sh} L${hx - Math.sin(rad(aR)) * al} ${sh + Math.cos(rad(aR)) * al}`, t0 + 0.45, 0.2, { c, w, parent: par });
+  P(`M${x} ${hip} L${x - Math.sin(rad(lL)) * ll} ${hip + Math.cos(rad(lL)) * ll}`, t0 + 0.55, 0.2, { c, w, parent: par });
+  P(`M${x} ${hip} L${x - Math.sin(rad(lR)) * ll} ${hip + Math.cos(rad(lR)) * ll}`, t0 + 0.6, 0.2, { c, w, parent: par });
+}
+let D = 8, kick = '';
+const S = {
+  'bob-mon'() { // "friends go quiet ... family. A breakup. Things none of us could see."  (9.6 s)
+    D = 9.6; kick = 'FROM BOB’S LIFE';
+    P('M430 200 Q430 170 460 170 L700 170 Q730 170 730 200 L730 880 Q730 910 700 910 L460 910 Q430 910 430 880 Z', 0.15, 0.9);
+    P('M540 195 L620 195', 0.9, 0.2);
+    T('the group chat', 470, 220, 1.0, 0.5, { size: 34, light: 1, c: GREY });
+    const bub = (y, w, t0, txt) => { P(`M${720 - 18 - w} ${y} L702 ${y} L702 ${y + 62} L${720 - 18 - w} ${y + 62} Z`, t0, 0.3, { w: 4 }); T(txt, 720 - 6 - w, y + 8, t0 + 0.15, 0.45, { size: 38 }); };
+    bub(300, 210, 1.5, 'you okay?'); bub(390, 250, 2.0, 'see you Friday?'); bub(480, 70, 2.5, '??');
+    T('read  ·  no reply', 500, 565, 3.0, 0.5, { size: 32, c: GREY });
+    T('“guess they stopped caring”', 860, 300, 3.3, 1.2, { size: 54, rot: -2 });
+    P('M850 335 Q1150 322 1460 330', 5.25, 0.35, { c: RED, w: 7 });
+    T('what none of us could see:', 880, 450, 5.2, 0.7, { size: 40, c: GREY, light: 1 });
+    P('M900 700 L900 600 L980 540 L1060 600 L1060 700 Z M960 700 L960 650 L1000 650 L1000 700', 5.6, 0.6);
+    T('family', 935, 720, 5.9, 0.4, { size: 46 });
+    P('M1250 600 C1250 560 1200 545 1185 580 C1170 545 1120 560 1120 600 C1120 640 1185 680 1185 700 C1185 680 1250 640 1250 600', 6.5, 0.5, { c: RED });
+    P('M1185 585 L1175 620 L1195 640 L1180 690', 6.95, 0.25, { c: RED, w: 4 });
+    T('a breakup', 1120, 720, 6.8, 0.45, { size: 46 });
+    P('M1340 650 q30 -60 70 -20 q40 -50 80 0 q50 0 30 50 q20 40 -40 40 q-30 30 -80 0 q-60 10 -60 -70', 7.5, 0.7, { c: GREY });
+    T('…', 1415, 640, 8.0, 0.3, { size: 60, c: GREY });
+  },
+  kate() { // "busy, missing meetings ... I quietly took their work on myself ... a teammate told me to stop carrying it all" (13.4 s)
+    D = 13.4; kick = 'FROM KATE’S LIFE';
+    P('M260 860 L1660 860', 0.1, 0.6, { c: GREY, w: 4 });
+    figure(760, 860, 360, 0.3, { arms: [-60, 60] }); T('me', 735, 880, 0.9, 0.3, { size: 42 });
+    T('a group project', 700, 170, 0.8, 0.6, { size: 50, c: GREY, light: 1 });
+    [[1180, 'busy', 2.1], [1360, 'exams', 2.35], [1540, 'away', 2.6]].forEach(([x, l, t0]) => { figure(x, 860, 240, t0 - 0.6, { c: GREY, w: 5 }); T(l, x, 880, t0, 0.35, { size: 38, c: GREY, center: 1 }); });
+    P('M1230 330 L1470 330 L1470 480 L1230 480 Z M1230 370 L1470 370', 3.0, 0.4, { w: 4 });
+    [[1265, 405], [1340, 405], [1415, 405], [1265, 445], [1340, 445]].forEach(([x, y], i) => P(`M${x - 14} ${y - 12} L${x + 14} ${y + 12} M${x + 14} ${y - 12} L${x - 14} ${y + 12}`, 3.2 + i * 0.08, 0.12, { c: RED, w: 4 }));
+    T('meetings', 1290, 285, 3.1, 0.35, { size: 36, c: GREY });
+    // her pile: pages that drop onto her arms, one per job she took on
+    const jobs = ['slides', 'research', 'script', 'edit', 'notes'];
+    jobs.forEach((j, i) => {
+      const y = 640 - i * 58, t0 = 5.9 + i * 0.36, g = G(t0, t => { const m = i >= 3 ? eo((t - 11.8) / 0.6) : 0; return `translate(${-200 * m} ${-(1 - eo((t - t0) / 0.35)) * 260 + m * 116})`; });
+      P(`M680 ${y} L860 ${y} L860 ${y + 48} L680 ${y + 48} Z`, t0, 0.01, { parent: g, w: 4, fill: '#f6efdc' });
+      T(j, 695, y + 4, t0 + 0.05, 0.2, { size: 36 }).follow = g;
+    });
+    // the teammate who noticed, and takes half
+    figure(560, 860, 330, 9.2, { c: BLUE, arms: [-40, 70] });
+    P('M610 640 Q650 610 690 625', 10.3, 0.3, { c: BLUE, w: 5 });
+  },
+  hannah() { // "democratic versus commanding leadership ... one of them had to be better" (7.6 s)
+    D = 7.6; kick = 'FROM HANNAH’S LIFE  ·  TUTORIAL 2 DEBATE';
+    P('M420 860 L700 860 L670 560 L450 560 Z', 0.05, 0.5); P('M1220 860 L1500 860 L1470 560 L1250 560 Z', 0.2, 0.5);
+    T('DEMOCRATIC', 560, 470, 0.6, 0.5, { size: 52, center: 1 }); T('COMMANDING', 1360, 470, 2.0, 0.5, { size: 52, center: 1 });
+    P('M960 860 L960 380 M900 860 L1020 860', 2.6, 0.4);
+    const beam = G(3.0, t => `rotate(${-11 * io((t - 5.6) / 0.6)} 960 380)`);
+    P('M780 380 L1140 380', 3.0, 0.3, { parent: beam });
+    P('M780 380 L740 470 M780 380 L820 470 M730 470 Q780 505 830 470', 3.2, 0.35, { parent: beam });
+    P('M1140 380 L1100 470 M1140 380 L1180 470 M1090 470 Q1140 505 1190 470', 3.35, 0.35, { parent: beam });
+    T('one of them has to be better…', 960, 200, 3.6, 1.3, { size: 54, center: 1, rot: -1.5 });
+    P('M760 272 Q960 262 1160 270', 6.6, 0.3, { c: RED, w: 6 });
+  },
+  amanda() { // "a dance team ... different training and styles ... highlighting each person's strengths ... even more unique" (11.5 s)
+    D = 11.5; kick = 'FROM AMANDA’S LIFE';
+    T('our dance team', 960, 150, 0.2, 0.6, { size: 50, c: GREY, center: 1, light: 1 });
+    P('M240 840 L1680 840', 0.3, 0.6, { c: GREY, w: 4 });
+    const xs = [440, 700, 960, 1220, 1480], styles = ['ballet', 'hip-hop', 'jazz', 'K-pop', 'contemporary'];
+    const cols = ['rgba(217,71,43,.55)', 'rgba(240,180,40,.6)', 'rgba(61,90,158,.55)', 'rgba(90,150,90,.55)', 'rgba(150,80,170,.5)'];
+    const poses = [{ arms: [150, -150], legs: [0, -25] }, { arms: [60, -110], legs: [25, -25] }, { arms: [120, -40], legs: [15, -40] }, { arms: [80, -80], legs: [20, -20] }, { arms: [170, -60], legs: [-5, -45] }];
+    xs.forEach((x, i) => {
+      W(x, 610, 150, 250, cols[i], 6.95 + i * 0.36, 0.7);
+      figure(x, 820, 320, 1.9 + i * 0.22, Object.assign({ w: 6 }, poses[i]));
+      T(styles[i], x, 860, 3.1 + i * 0.6, 0.4, { size: 42, center: 1 });
+    });
+    T('each person’s strengths', 960, 230, 7.0, 1.0, { size: 46, c: RED, center: 1 });
+  },
+  'bob-sat'() { // "increase my surface area. Try more things, because that's how you find what fits." (6.4 s)
+    D = 6.4; kick = 'FROM BOB’S LIFE';
+    P(circ(960, 560, 70), 0.15, 0.5); T('me', 960, 535, 0.5, 0.3, { size: 46, center: 1 });
+    [150, 240, 330].forEach((r, i) => P(circ(960, 560, r), 1.3 + i * 0.3, 0.5, { c: GREY, w: 4 }));
+    const tries = [['a debate', -130, 330], ['a dance team', -50, 330], ['a game', 25, 150], ['a new friend', 95, 330], ['a club', 160, 240], ['a new city', 215, 330]];
+    tries.forEach(([l, a, r], i) => { const x = 960 + Math.cos(a * Math.PI / 180) * r, y = 560 + Math.sin(a * Math.PI / 180) * r, t0 = 3.1 + i * 0.22;
+      P(circ(x, y, 12), t0, 0.15, { w: 5, fill: INK }); T(l, x + 22, y - 30, t0 + 0.05, 0.3, { size: 38 }); });
+    const [x, y] = [960 + Math.cos(25 * Math.PI / 180) * 150, 560 + Math.sin(25 * Math.PI / 180) * 150];
+    P(circ(x + 60, y - 6, 95).replace(/A95 95/g, 'A100 55'), 4.7, 0.5, { c: RED, w: 6 });
+    T('what fits', x + 170, y + 30, 5.0, 0.4, { size: 46, c: RED });
+  },
+};
+S[scene](); document.getElementById('kick').textContent = kick;
+const lens = new Map();
+items.forEach(it => { if (it.kind === 'path') { const L = it.el.getTotalLength(); lens.set(it, L); it.el.style.strokeDasharray = L + ' ' + L; } });
+window.render = t => {
+  document.getElementById('turb').setAttribute('seed', 1 + Math.floor(t * 8) % 5);     // line boil, 8 times a second
+  items.forEach(it => {
+    if (it.kind === 'path') { const p = clamp((t - it.t0) / it.dur); it.el.style.strokeDashoffset = lens.get(it) * (1 - eo(p)); if (it.o.fill) it.el.style.fillOpacity = p >= 1 ? 1 : 0; it.el.style.opacity = t < it.t0 ? 0 : 1; }
+    else if (it.kind === 'text') { it.el.style.clipPath = `inset(0 ${100 - eo((t - it.t0) / it.dur) * 100}% 0 0)`;
+      if (it.follow) { const m = (it.follow.getAttribute('transform') || '').match(/translate\(([-\d.e]+) ([-\d.e]+)\)/); if (m) it.el.style.transform = `translate(${m[1]}px, ${m[2]}px)`; } }
+    else if (it.kind === 'wash') it.el.style.opacity = eo((t - it.t0) / it.dur);
+    else if (it.kind === 'group') it.el.setAttribute('transform', it.fn(t));
+  });
+  document.body.style.opacity = Math.min(clamp(t / 0.35), clamp((D - t) / 0.35));
+};
+window.ready = true;
+</script></body></html>

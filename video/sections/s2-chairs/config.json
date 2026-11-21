@@ -109,6 +109,15 @@
    "gain": -22,
    "dur": 0.7,
    "annot": true
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 12.85,
+   "gain": -27,
+   "dur": 12.9,
+   "loop": true,
+   "fade": 0.4,
+   "sketch": true
   }
  ],
  "highlight": [
@@ -132,6 +141,10 @@
   {
    "file": "/home/user/CCGL-Journal/video/work/annot/s2-kit.mov",
    "t": 32.55
+  },
+  {
+   "file": "/home/user/CCGL-Journal/video/work/annot/sketch-kate.mov",
+   "t": 12.7
   }
  ]
 }

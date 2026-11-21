@@ -114,6 +114,15 @@
    "gain": -22,
    "dur": 0.7,
    "annot": true
+  },
+  {
+   "file": "video/media/sfx/pencil.mp3",
+   "t": 17.349999999999998,
+   "gain": -27,
+   "dur": 11.0,
+   "loop": true,
+   "fade": 0.4,
+   "sketch": true
   }
  ],
  "highlight": [
@@ -136,6 +145,10 @@
   {
    "file": "/home/user/CCGL-Journal/video/work/annot/s4-kit.mov",
    "t": 32.9
+  },
+  {
+   "file": "/home/user/CCGL-Journal/video/work/annot/sketch-amanda.mov",
+   "t": 17.2
   }
  ]
 }
