@@ -28,17 +28,14 @@ Each of us then chose the part of the game that matched something we had lived t
 
 ## Reference List
 
-**Course materials** (titles and dates as listed on the course Moodle page)
+**Course materials** (only those used in the film or the game)
 
-- CCGL9079 Leadership and Influence in a Dynamic World. Course Journal questions: Q1 "Defining Leadership" and Q2 "Decade of Decisions".
-- Leadership Styles, 9 September 2026.
-- *Martin Luther King, Jr.: A Young Minister Confronts the Challenges of Montgomery*, 16 September 2026.
-- *Leading the Marriott Way*, 23 September 2026.
-- *Two Tough Calls*, 30 September 2026.
-- Assigned Leader Group Exercise, 7 October 2026.
-- *Diversity in a Global Context: Making the Right Hire to Lead Asia*, 28 October 2026.
-- Tutorial 1, Value Exploration. Tutorial 2, Debate Preparation (democratic versus commanding leadership). Tutorial 3, Active Listening.
-- Guest speakers: Jennifer Stanzl, Chief of Diversity & Engagement, United Nations; Veronika Leng, professional ultra-distance trail runner (11 November 2026).
+- CCGL9079 Leadership and Influence in a Dynamic World. Course Journal question 1, "Defining Leadership": "What is your definition of leadership? Do you fit your definition of leadership?"
+- Lecture: Leadership Styles (9 Sep 2026).
+- Case: *Leading the Marriott Way* (23 Sep 2026).
+- Case: *Diversity in a Global Context: Making the Right Hire to Lead Asia* (28 Oct 2026).
+- Tutorial 2: Debate Preparation (democratic vs. commanding leadership).
+- Tutorial 3: Active Listening.
 
 **Leadership concepts used in the games**
 
