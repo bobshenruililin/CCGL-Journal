@@ -687,7 +687,16 @@ img.portrait { -webkit-mask-image: radial-gradient(ellipse 60% 62% at 50% 52%, #
 [data-layout='tall'] .filmcard .t { font-size: 1.4rem; }
 .filmdialog { border: 0; padding: 0 0 .8rem; width: min(1100px, 94vw); background: #0d0e1d; color: #f1e9d2; box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .7); }
 .filmdialog::backdrop { background: rgba(8, 8, 20, .82); }
+.film-program { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'head switch' 'screen screen'; align-items: center; }
+.film-program .filmhead { grid-area: head; }
+.film-screen { grid-area: screen; min-width: 0; }
 .filmdialog video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.filmdialog video[hidden] { display: none; }
+.film-switch { grid-area: switch; display: inline-flex; align-items: center; gap: .65rem; justify-self: end; margin: .75rem 1.25rem .75rem .25rem; padding: .3rem .6rem .3rem .3rem; border: 1px solid #494852; border-radius: .2rem; background: transparent; color: #e1d9c3; text-align: left; cursor: pointer; }
+.film-switch:is(:hover, :focus-visible) { border-color: #d7c491; color: #ffe9a8; }
+.film-switch-thumb { display: block; width: 4.25rem; aspect-ratio: 16 / 9; flex: none; background: #222331 center / cover no-repeat; }
+.film-switch-copy { display: grid; gap: .15rem; font: 1rem/1.1 'Newsreader', Georgia, serif; }
+.film-switch-time { color: #c9c3b5; font: .72rem/1.1 'Special Elite', monospace; }
 .filmdialog .acts { display: flex; justify-content: flex-end; padding: .6rem 1rem 0; }
 .filmdialog .acts button { background: none; border: 0; color: #f1e9d2; font: 1.3rem 'Caveat', cursive; text-decoration: underline dotted; cursor: pointer; }
 @media print { .filmcard, .filmdialog { display: none; } }
@@ -699,4 +708,9 @@ img.portrait { -webkit-mask-image: radial-gradient(ellipse 60% 62% at 50% 52%, #
 .filmdialog .acts button { font-size: 1.5rem; }
 .filmdialog.first .acts button { color: #ffe9a8; }
 [data-layout='tall'] .filmhead .t { font-size: 1.9rem; }
-.filmdialog video:focus, .filmdialog video:focus-visible, .filmdialog:focus-visible { outline: none; }
+.filmdialog video:focus-visible { outline: 2px solid #ffe9a8; outline-offset: -2px; }
+@media (max-width: 42rem) {
+  .film-program { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'head' 'screen' 'switch'; }
+  .film-switch { justify-self: start; margin: .6rem 1rem 0; }
+  .film-switch-thumb { width: 3.5rem; }
+}
