@@ -2,7 +2,8 @@
 // Needs a running server (npm run dev) — set JOURNAL_URL to test another address.
 import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
-import { play } from './play.mjs';
+import { enterGame, play } from './play.mjs';
+import { checkFilmProgram } from './film-check.mjs';
 const { chromium } = createRequire(import.meta.url)('playwright');
 const titles = { tarp: 'Under the Tarp', sheet: 'The Bedsheet Screening', leung: 'Mrs Leung’s Orders', half: 'Half a Queue' };
 const runs = [
@@ -13,6 +14,7 @@ const runs = [
   { route: { mon: 'find', wed: 'aside', fri: 'name' }, view: 'laptop', still: true, want: 'tarp' },
 ];
 const browser = await chromium.launch();
+await checkFilmProgram(browser);
 for (const r of runs) {
   const res = await play({ ...r, browser });
   const tag = JSON.stringify(r);
@@ -34,6 +36,7 @@ for (const r of runs) {
   await page.locator('.tab.sat').click(); await page.waitForSelector('.live .s-sat'); await page.locator('.corner.next').click(); await page.waitForSelector('.live .s-last');
   // Saved progress: reload, and the ribbon opens at the same page with the stub still in the pocket.
   await page.reload({ waitUntil: 'networkidle' });
+  await enterGame(page);
   await page.locator('.coverface').click();
   await page.waitForSelector('.live .s-last');
   await page.waitForFunction(() => !document.querySelector('.turnlayer'));

@@ -685,32 +685,55 @@ img.portrait { -webkit-mask-image: radial-gradient(ellipse 60% 62% at 50% 52%, #
 .filmcard { padding-right: 2.6rem; }
 [data-layout='tall'] .filmcard { left: 12px; bottom: 12px; padding: .5rem 2.2rem .55rem 1rem; }
 [data-layout='tall'] .filmcard .t { font-size: 1.4rem; }
-.filmdialog { border: 0; padding: 0 0 .8rem; width: min(1100px, 94vw); background: #0d0e1d; color: #f1e9d2; box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .7); }
-.filmdialog::backdrop { background: rgba(8, 8, 20, .82); }
-.film-program { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'head switch' 'screen screen'; align-items: center; }
-.film-program .filmhead { grid-area: head; }
-.film-screen { grid-area: screen; min-width: 0; }
-.filmdialog video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; }
-.filmdialog video[hidden] { display: none; }
-.film-switch { grid-area: switch; display: inline-flex; align-items: center; gap: .65rem; justify-self: end; margin: .75rem 1.25rem .75rem .25rem; padding: .3rem .6rem .3rem .3rem; border: 1px solid #494852; border-radius: .2rem; background: transparent; color: #e1d9c3; text-align: left; cursor: pointer; }
-.film-switch:is(:hover, :focus-visible) { border-color: #d7c491; color: #ffe9a8; }
-.film-switch-thumb { display: block; width: 4.25rem; aspect-ratio: 16 / 9; flex: none; background: #222331 center / cover no-repeat; }
-.film-switch-copy { display: grid; gap: .15rem; font: 1rem/1.1 'Newsreader', Georgia, serif; }
-.film-switch-time { color: #c9c3b5; font: .72rem/1.1 'Special Elite', monospace; }
-.filmdialog .acts { display: flex; justify-content: flex-end; padding: .6rem 1rem 0; }
-.filmdialog .acts button { background: none; border: 0; color: #f1e9d2; font: 1.3rem 'Caveat', cursive; text-decoration: underline dotted; cursor: pointer; }
-@media print { .filmcard, .filmdialog { display: none; } }
-.filmhead { padding: 1.1rem 1.4rem .8rem; }
-.filmhead p { margin: 0; }
-.filmhead .k { font: .72rem 'Special Elite', monospace; letter-spacing: .2em; text-transform: uppercase; color: #cfc6a8; }
-.filmhead .t { font: 700 2.4rem/1.05 'Caveat', cursive; color: #ffe9a8; margin-top: .2rem; }
-.filmhead .s { font: 1rem/1.4 'Newsreader', Georgia, serif; color: #d9d2bf; margin-top: .2rem; }
-.filmdialog .acts button { font-size: 1.5rem; }
-.filmdialog.first .acts button { color: #ffe9a8; }
-[data-layout='tall'] .filmhead .t { font-size: 1.9rem; }
-.filmdialog video:focus-visible { outline: 2px solid #ffe9a8; outline-offset: -2px; }
-@media (max-width: 42rem) {
-  .film-program { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'head' 'screen' 'switch'; }
-  .film-switch { justify-self: start; margin: .6rem 1rem 0; }
-  .film-switch-thumb { width: 3.5rem; }
+.filmdialog {
+  width: min(70rem, 95vw);
+  max-height: calc(100dvh - 1.5rem);
+  padding: clamp(1.15rem, 2.55vw, 2rem);
+  border: 1px solid #47434b;
+  background: #131420;
+  color: #f1e9d2;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .65);
+  overflow: auto;
+  overscroll-behavior: contain;
 }
+.filmdialog::backdrop { background: rgba(8, 8, 20, .87); }
+.screening-head { margin-bottom: clamp(.85rem, 1.55vw, 1.3rem); }
+.screening-series, .screening-meta { color: #d5c39c; font: .74rem/1.35 'Special Elite', monospace; letter-spacing: .1em; text-transform: uppercase; }
+.screening-series { margin: 0 0 .55rem; }
+.screening-head h2 { margin: 0; color: #f6edd9; font: 400 clamp(1.85rem, 3.15vw, 2.75rem)/1.06 'Newsreader', Georgia, serif; }
+.screening-program { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); align-items: start; gap: clamp(1rem, 2vw, 1.8rem); }
+.screening-choice { display: grid; width: 100%; min-width: 0; gap: .75rem; border: 0; padding: 0; background: none; color: inherit; text-align: left; cursor: pointer; }
+.screening-poster { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #0b0c12; }
+.screening-poster::after { content: ''; position: absolute; inset: 0; border: 1px solid rgba(239, 229, 209, .28); pointer-events: none; }
+.screening-poster img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.screening-play { display: grid; place-items: center; position: absolute; left: .72rem; bottom: .72rem; width: 2.1rem; aspect-ratio: 1; border-radius: 50%; background: rgba(12, 14, 23, .88); border: 1px solid rgba(248, 237, 211, .74); color: #faeed0; }
+.screening-play::before { content: ''; margin-left: .13rem; border-block: .29rem solid transparent; border-left: .46rem solid currentColor; }
+.screening-choice:is(:hover, :focus-visible) .screening-poster::after { border-color: #edcf8f; }
+.screening-choice:is(:hover, :focus-visible) .screening-play { color: #272434; background: #f0d99e; border-color: #f0d99e; }
+.screening-caption { display: grid; gap: .3rem; min-width: 0; }
+.screening-meta { display: flex; gap: .65rem; align-items: baseline; }
+.screening-meta span + span { letter-spacing: .01em; color: #c1bcc1; }
+.screening-name { color: #f4ecd9; font: 400 clamp(1.65rem, 2.55vw, 2.25rem)/1.08 'Newsreader', Georgia, serif; }
+.screening-choice[data-film='trailer'] .screening-name { font-size: clamp(1.42rem, 1.95vw, 1.7rem); }
+.screening-description { color: #d0c9be; max-width: 52ch; font: 1rem/1.35 'Newsreader', Georgia, serif; }
+.screening-player video { display: block; width: 100%; max-height: 68dvh; aspect-ratio: 16 / 9; object-fit: contain; background: #06070a; }
+.screening-player video[hidden], .screening-player[hidden] { display: none; }
+.screening-actions { display: flex; justify-content: flex-end; align-items: center; gap: .85rem; border-top: 1px solid #41404a; padding-top: .8rem; margin-top: clamp(1rem, 2vw, 1.55rem); }
+.screening-actions button { cursor: pointer; }
+.screening-enter { min-height: 2.7rem; border: 1px solid #ead39e; border-radius: .16rem; background: #ead39e; color: #262231; padding: .55rem 1rem; font: 1.05rem/1.1 'Newsreader', Georgia, serif; }
+.screening-enter span { margin-left: .4rem; }
+.screening-enter:hover { background: #f9e7b9; }
+.screening-back { margin-right: auto; min-height: 2.7rem; border: 0; padding: .3rem .15rem; color: #ded3bb; background: none; font: 1rem/1.1 'Newsreader', Georgia, serif; text-align: left; }
+.screening-back:hover { text-decoration: underline; }
+.filmdialog :is(button, video):focus-visible { outline: 2px solid #f4d68e; outline-offset: 3px; }
+@media (max-width: 42rem) {
+  .filmdialog { width: calc(100vw - 1.1rem); padding: 1rem; max-height: calc(100dvh - 1rem); }
+  .screening-program { grid-template-columns: minmax(0, 1fr); gap: 1.1rem; }
+  .screening-choice { gap: .55rem; }
+  .screening-choice[data-film='trailer'] { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: .8rem; }
+  .screening-series, .screening-meta { font-size: .65rem; }
+  .screening-play { left: .45rem; bottom: .45rem; width: 1.6rem; }
+  .screening-description { font-size: .9rem; }
+  .screening-actions { margin-top: 1rem; }
+}
+@media print { .filmcard, .filmdialog { display: none; } }

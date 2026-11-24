@@ -8,6 +8,13 @@ export const views = { desktop: { width: 1440, height: 900 }, phone: { width: 39
 const order = { mon: ['self', 'post', 'find'], wed: ['cut', 'aside', 'round'], fri: ['self', 'ask', 'name'] };
 const beatButtons = '.knockbtn, .tick.next, .typing, .unfold, .carry:not(.busy), .lampbtn, .passbtn';
 
+export async function enterGame(page) {
+  const program = page.getByRole('dialog', { name: 'Before you open the notebook' });
+  await program.getByRole('button', { name: /^Watch reflection film/i }).waitFor();
+  await program.getByRole('button', { name: /^Watch game trailer/i }).waitFor();
+  await program.getByRole('button', { name: 'Enter the game', exact: true }).click();
+}
+
 export async function play({ route, said = null, view = 'desktop', out = null, keys = false, still = false, url = process.env.JOURNAL_URL || 'http://127.0.0.1:5173/', browser, context: given, scale = 1, onSpread, pace = 0 }) {
   const own = !browser;
   browser ??= await chromium.launch();
@@ -32,8 +39,7 @@ export async function play({ route, said = null, view = 'desktop', out = null, k
   };
 
   await page.goto(url, { waitUntil: 'networkidle' });
-  // The behind-the-scenes film opens first on a fresh visit; a reader can skip it.
-  if (await page.locator('.filmdialog[open]').count()) { await page.locator('.filmdialog .acts button').click(); await page.waitForTimeout(150); }
+  await enterGame(page);
   await page.waitForSelector('.coverface');
   await page.evaluate(() => document.fonts.ready);
   await shot('cover');
