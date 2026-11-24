@@ -6,19 +6,13 @@ import {
 } from './state.ts';
 import { type Route, type BeatId, spreads, tabs, moods, choiceAt, beatFor, journalSections, journalText, isFull, ending, endings, MON, WED, FRI } from './story.ts';
 import { SpreadView, type Acts } from './Spreads';
+import { FilmScreening, type ScreeningView } from './FilmScreening';
 import { InkDefs } from './art';
 import { sfx } from './sound';
 import { read } from './interpret.ts';
 import { parseShow, wantsMaking, notesFor, makers } from './making.ts';
 
 const MAKING_KEY = 'six-flights-making';
-/** The group's reflection film on building the three games, served from public/film/. */
-const FILM = { src: '/film/six-flights-film.mp4', poster: '/film/poster.jpg', length: '5:25' };
-const TRAILER = { src: '/film/look-in-the-mirror.mp4', poster: '/film/look-in-the-mirror.webp', captions: '/film/look-in-the-mirror.en.vtt', length: '0:44' };
-type FilmView = 'reflection' | 'trailer';
-/** The film opens first, once per visit, before the notebook. Links that open a page (?show=) skip it. */
-const FILM_SEEN = 'six-flights-film-seen';
-function filmFirst(show: boolean): boolean { if (show) return false; try { return window.sessionStorage.getItem(FILM_SEEN) !== '1'; } catch { return true; } }
 /** A page opened from a ?show= link lives in memory, so it can never overwrite the reader's own notebook. */
 function memory(seed: string): Pick<Storage, 'getItem' | 'setItem'> { let v: string | null = seed; return { getItem: () => v, setItem: (_k, x) => { v = x; } }; }
 
@@ -47,43 +41,9 @@ export default function Journal() {
   const [resume] = useState(() => !show && hasSaved && s.furthest > 1);
   const [making, setMaking] = useState(() => { if (wantsMaking(window.location.search)) return true; if (show) return false; try { return window.localStorage.getItem(MAKING_KEY) === '1'; } catch { return false; } });
   const [slip, setSlip] = useState(false);
-  const [film, setFilm] = useState<FilmView | null>(() => filmFirst(!!show) ? 'reflection' : null);
-  const [filmIntro, setFilmIntro] = useState(() => filmFirst(!!show));
-  const filmDialog = useRef<HTMLDialogElement>(null);
-  const filmVideo = useRef<HTMLVideoElement>(null);
-  const trailerVideo = useRef<HTMLVideoElement>(null);
-  const resumeReflection = useRef(false);
-  const isTrailer = film === 'trailer';
-  const closeFilm = () => {
-    filmVideo.current?.pause();
-    trailerVideo.current?.pause();
-    resumeReflection.current = false;
-    setFilm(null);
-    setFilmIntro(false);
-    try { window.sessionStorage.setItem(FILM_SEEN, '1'); } catch { /* not kept */ }
-  };
-  const switchFilm = () => {
-    const reflection = filmVideo.current;
-    const trailer = trailerVideo.current;
-    if (!reflection || !trailer) return;
-    if (isTrailer) {
-      trailer.pause();
-      setFilm('reflection');
-      if (resumeReflection.current) void reflection.play().catch(() => { /* Native play remains available. */ });
-      resumeReflection.current = false;
-    } else {
-      resumeReflection.current = !reflection.paused && !reflection.ended;
-      reflection.pause();
-      // Assign the trailer source on the gesture so the reflection loads independently.
-      if (!trailer.hasAttribute('src')) trailer.src = TRAILER.src;
-      setFilm('trailer');
-      void trailer.play().catch(() => { /* Native play remains available. */ });
-    }
-    const player = isTrailer ? reflection : trailer;
-    requestAnimationFrame(() => {
-      if (filmDialog.current?.open && !player.hidden) player.focus({ preventScroll: true });
-    });
-  };
+  const [film, setFilm] = useState<ScreeningView>(show ? null : 'choices');
+  const [filmIntro, setFilmIntro] = useState(!show);
+  const closeFilm = () => { setFilm(null); setFilmIntro(false); };
   const slipDialog = useRef<HTMLDialogElement>(null);
   const setMakingPref = (on: boolean) => { setMaking(on); try { window.localStorage.setItem(MAKING_KEY, on ? '1' : '0'); } catch { /* not kept */ } };
   const [turn, setTurn] = useState<Turn | null>(null);
@@ -117,7 +77,14 @@ export default function Journal() {
   useEffect(() => { const d = tearDialog.current; if (pending && d && !d.open) d.showModal(); if (!pending && d?.open) d.close(); }, [pending]);
   useEffect(() => { const d = backDialog.current; if (backAsk && d && !d.open) d.showModal(); if (!backAsk && d?.open) d.close(); }, [backAsk]);
   useEffect(() => { const d = menuDialog.current; if (menu && d && !d.open) d.showModal(); if (!menu && d?.open) d.close(); }, [menu]);
-  useEffect(() => { const d = filmDialog.current; if (film && d && !d.open) d.showModal(); if (!film && d?.open) d.close(); }, [film]);
+  useEffect(() => {
+    if (show) return;
+    const showProgramOnReturn = (event: PageTransitionEvent) => {
+      if (event.persisted) { setFilmIntro(true); setFilm('choices'); }
+    };
+    window.addEventListener('pageshow', showProgramOnReturn);
+    return () => window.removeEventListener('pageshow', showProgramOnReturn);
+  }, [show]);
   useEffect(() => { const d = slipDialog.current; if (slip && d && !d.open) d.showModal(); if (!slip && d?.open) d.close(); }, [slip]);
 
   const startTurn = useCallback((from: Save, fromAt: number, toAt: number) => {
@@ -249,10 +216,9 @@ export default function Journal() {
         {at > 0 && <button type="button" className="ribbon" onClick={() => setMenu(true)} aria-label="Bookmark: reading and sound settings" />}
       </div>
       {at === 0 && (
-        <button type="button" className="filmcard" onClick={() => setFilm('reflection')}>
-          <span className="k">watch first</span>
-          <span className="t">How we made it</span>
-          <span className="m">a {FILM.length} film by the four of us</span>
+        <button type="button" className="filmcard" onClick={() => setFilm('choices')}>
+          <span className="t">Watch the films</span>
+          <span className="m">Our reflection and game trailer</span>
         </button>
       )}
       <p className="sr" role="status" aria-live="polite">{say}</p>
@@ -286,35 +252,13 @@ export default function Journal() {
         <div className="acts">
           <button type="button" autoFocus onClick={() => setMenu(false)}>Back to the page</button>
           <button type="button" onClick={() => { setMenu(false); acts.print(); }}>Print</button>
-          <button type="button" onClick={() => { setMenu(false); setFilm('reflection'); }}>How we made it ({FILM.length})</button>
+          <button type="button" onClick={() => { setMenu(false); setFilm('choices'); }}>Watch the films</button>
           <button type="button" className="danger" onClick={() => { if (window.confirm('Start a new, empty notebook? The pocket of ticket stubs is emptied too.')) { setMenu(false); go(fresh); setClosed(true); } }}>New notebook</button>
         </div>
         <p className="colophon">Six Flights is original fiction; the people and the roof are invented. Its situations draw on a leadership workbook by Amanda, refined by Hannah. It is a story, not an assessment.</p>
       </dialog>
 
-      <dialog ref={filmDialog} className={'filmdialog' + (filmIntro ? ' first' : '')} onCancel={closeFilm} aria-labelledby="film-title">
-        <div className="film-program">
-          <div className="filmhead">
-            <p className="k">{isTrailer ? `our game trailer · ${TRAILER.length}` : `our reflection film · ${FILM.length}`}</p>
-            <p id="film-title" className="t">{isTrailer ? 'Look in the Mirror' : filmIntro ? 'Before you open the notebook' : 'How we made it'}</p>
-            {!isTrailer && <p className="s">Four of us built three games for a leadership course. This film is our reflection: the stories we each brought, and what building them taught us.</p>}
-          </div>
-          <div className="film-screen" id="film-screen">
-            <video ref={filmVideo} src={FILM.src} poster={FILM.poster} hidden={isTrailer} controls preload="metadata" playsInline tabIndex={0} aria-label="Our reflection film" />
-            <video ref={trailerVideo} poster={isTrailer ? TRAILER.poster : undefined} hidden={!isTrailer} controls preload="none" playsInline tabIndex={0} aria-label="Look in the Mirror, our game trailer">
-              {isTrailer && <track kind="captions" src={TRAILER.captions} srcLang="en" label="English" />}
-            </video>
-          </div>
-          <button className="film-switch" type="button" onClick={switchFilm} aria-controls="film-screen">
-            <span className="film-switch-thumb" aria-hidden="true" style={{ backgroundImage: `url("${isTrailer ? FILM.poster : TRAILER.poster}")` }} />
-            <span className="film-switch-copy">
-              <span>{isTrailer ? 'Back to reflection' : 'Watch the trailer'}</span>
-              <span className="film-switch-time">{isTrailer ? FILM.length : TRAILER.length}</span>
-            </span>
-          </button>
-        </div>
-        <div className="acts"><button type="button" autoFocus onClick={closeFilm}>{filmIntro ? 'Skip to the game →' : 'Back to the notebook'}</button></div>
-      </dialog>
+      <FilmScreening view={film} intro={filmIntro} onView={setFilm} onExit={closeFilm} />
 
       <dialog ref={slipDialog} className="slipdialog makingslip" onCancel={() => setSlip(false)} aria-labelledby="making-title">
         <p id="making-title" className="pc">On the making of this page</p>
