@@ -8,8 +8,8 @@ const films = {
     description: 'Four of us built three games for a leadership course. This is our reflection on what we learned.',
   },
   trailer: {
-    title: 'The Face in the Mirror', kind: 'Game trailer', duration: '0:44',
-    poster: '/film/look-in-the-mirror.webp?v=810da3ab', src: '/film/look-in-the-mirror.mp4?v=815ebf0c',
+    title: 'The Face in the Mirror', kind: 'Game trailer', duration: '0:46',
+    poster: '/film/look-in-the-mirror.webp?v=be2081b1', src: '/film/look-in-the-mirror.mp4?v=09349671',
     description: 'Kit hasn’t replied. He lives one floor down.',
   },
 };
@@ -93,8 +93,8 @@ export function FilmScreening({ view, intro, onView, onExit }: {
         <video ref={trailer} hidden={view !== 'trailer'} poster={view === 'trailer' ? films.trailer.poster : undefined}
           controls preload="none" playsInline tabIndex={0} aria-label={`${films.trailer.title}, our game trailer`}>
           {view === 'trailer' && <>
-            <track kind="captions" src="/film/look-in-the-mirror.en.vtt" srcLang="en" label="English" />
-            <track kind="captions" src="/film/look-in-the-mirror.sdh.en.vtt" srcLang="en" label="English (SDH)" />
+            <track kind="captions" src="/film/look-in-the-mirror.en.vtt?v=1a24469c" srcLang="en" label="English" />
+            <track kind="captions" src="/film/look-in-the-mirror.sdh.en.vtt?v=4988e5b9" srcLang="en" label="English (SDH)" />
           </>}
         </video>
       </div>
