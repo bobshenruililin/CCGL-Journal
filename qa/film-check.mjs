@@ -11,7 +11,7 @@ export async function checkFilmProgram(browser, url = process.env.JOURNAL_URL ||
     });
     await page.goto(url, { waitUntil: 'networkidle' });
     const reflection = page.getByRole('button', { name: /^Watch reflection film/i });
-    const trailer = page.getByRole('button', { name: 'Watch game trailer: The Face in the Mirror (0:44)' });
+    const trailer = page.getByRole('button', { name: 'Watch game trailer: The Face in the Mirror (0:46)' });
     await reflection.waitFor();
     await trailer.waitFor();
     await page.waitForFunction(() => [...document.querySelectorAll('.screening-poster img')].filter(img => img.naturalWidth).length === 2);
@@ -40,13 +40,15 @@ export async function checkFilmProgram(browser, url = process.env.JOURNAL_URL ||
     assert(await mainVideo.evaluate(video => video.paused && video.currentTime >= 1.9), 'the reflection retains its place');
     await page.waitForFunction(() => {
       const video = document.querySelector('video[aria-label*="game trailer"]');
-      return video.videoWidth === 1920 && video.videoHeight === 1080 && video.duration === 44 && video.currentTime > 0;
+      return video.videoWidth === 1920 && video.videoHeight === 1080 && video.currentTime > 0;
     });
+    const duration = await trailerVideo.evaluate(video => video.duration);
+    assert(Math.abs(duration * 24 - 1115) < 1, 'the player loads the complete 1,115-frame campus cut');
     const tracks = await trailerVideo.evaluate(video => Array.from(video.textTracks, track => track.label));
     assert.deepEqual(tracks, ['English', 'English (SDH)']);
     await trailerVideo.evaluate(video => { video.textTracks[1].mode = 'hidden'; });
     await page.waitForFunction(() => Array.from(document.querySelector('video[aria-label*="game trailer"]').textTracks[1].cues ?? [])
-      .some(cue => cue.startTime < 34 && cue.text.includes('[latch clicks]')));
+      .some(cue => cue.startTime > 36 && cue.text.includes('[footsteps echo, then stop]')));
     await page.getByRole('button', { name: /Back to the films/ }).click();
     await reflection.click();
     assert(await mainVideo.evaluate(video => video.currentTime >= 1.9));
