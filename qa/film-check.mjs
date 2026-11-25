@@ -11,7 +11,7 @@ export async function checkFilmProgram(browser, url = process.env.JOURNAL_URL ||
     });
     await page.goto(url, { waitUntil: 'networkidle' });
     const reflection = page.getByRole('button', { name: /^Watch reflection film/i });
-    const trailer = page.getByRole('button', { name: /^Watch game trailer/i });
+    const trailer = page.getByRole('button', { name: 'Watch game trailer: The Face in the Mirror (0:44)' });
     await reflection.waitFor();
     await trailer.waitFor();
     await page.waitForFunction(() => [...document.querySelectorAll('.screening-poster img')].filter(img => img.naturalWidth).length === 2);
@@ -38,7 +38,15 @@ export async function checkFilmProgram(browser, url = process.env.JOURNAL_URL ||
     const trailerVideo = page.locator('video[aria-label*="game trailer"]');
     await trailerVideo.waitFor();
     assert(await mainVideo.evaluate(video => video.paused && video.currentTime >= 1.9), 'the reflection retains its place');
-    assert(await trailerVideo.locator('track[kind="captions"][srclang="en"]').count());
+    await page.waitForFunction(() => {
+      const video = document.querySelector('video[aria-label*="game trailer"]');
+      return video.videoWidth === 1920 && video.videoHeight === 1080 && video.duration === 44 && video.currentTime > 0;
+    });
+    const tracks = await trailerVideo.evaluate(video => Array.from(video.textTracks, track => track.label));
+    assert.deepEqual(tracks, ['English', 'English (SDH)']);
+    await trailerVideo.evaluate(video => { video.textTracks[1].mode = 'hidden'; });
+    await page.waitForFunction(() => Array.from(document.querySelector('video[aria-label*="game trailer"]').textTracks[1].cues ?? [])
+      .some(cue => cue.startTime < 34 && cue.text.includes('[latch clicks]')));
     await page.getByRole('button', { name: /Back to the films/ }).click();
     await reflection.click();
     assert(await mainVideo.evaluate(video => video.currentTime >= 1.9));
