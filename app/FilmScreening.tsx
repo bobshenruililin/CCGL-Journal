@@ -8,9 +8,9 @@ const films = {
     description: 'Four of us built three games for a leadership course. This is our reflection on what we learned.',
   },
   trailer: {
-    title: 'Look in the Mirror', kind: 'Game trailer', duration: '0:44',
-    poster: '/film/look-in-the-mirror.webp', src: '/film/look-in-the-mirror.mp4',
-    description: 'Twenty-three messages. Kit still hasn’t answered.',
+    title: 'The Face in the Mirror', kind: 'Game trailer', duration: '0:44',
+    poster: '/film/look-in-the-mirror.webp?v=810da3ab', src: '/film/look-in-the-mirror.mp4?v=810da3ab',
+    description: 'Kit hasn’t replied. He lives one floor down.',
   },
 };
 const program = ['reflection', 'trailer'] as const;
@@ -91,8 +91,11 @@ export function FilmScreening({ view, intro, onView, onExit }: {
         <video ref={reflection} hidden={view !== 'reflection'} poster={view === 'reflection' ? films.reflection.poster : undefined}
           controls preload="none" playsInline tabIndex={0} aria-label="How we made it, our reflection film" />
         <video ref={trailer} hidden={view !== 'trailer'} poster={view === 'trailer' ? films.trailer.poster : undefined}
-          controls preload="none" playsInline tabIndex={0} aria-label="Look in the Mirror, our game trailer">
-          {view === 'trailer' && <track kind="captions" src="/film/look-in-the-mirror.en.vtt" srcLang="en" label="English" />}
+          controls preload="none" playsInline tabIndex={0} aria-label={`${films.trailer.title}, our game trailer`}>
+          {view === 'trailer' && <>
+            <track kind="captions" src="/film/look-in-the-mirror.en.vtt" srcLang="en" label="English" />
+            <track kind="captions" src="/film/look-in-the-mirror.sdh.en.vtt" srcLang="en" label="English (SDH)" />
+          </>}
         </video>
       </div>
       <div className="screening-actions acts">
