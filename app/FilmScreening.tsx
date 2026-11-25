@@ -9,7 +9,7 @@ const films = {
   },
   trailer: {
     title: 'The Face in the Mirror', kind: 'Game trailer', duration: '0:44',
-    poster: '/film/look-in-the-mirror.webp?v=810da3ab', src: '/film/look-in-the-mirror.mp4?v=810da3ab',
+    poster: '/film/look-in-the-mirror.webp?v=810da3ab', src: '/film/look-in-the-mirror.mp4?v=815ebf0c',
     description: 'Kit hasn’t replied. He lives one floor down.',
   },
 };
